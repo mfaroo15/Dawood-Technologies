@@ -247,6 +247,8 @@ export function ContactForm() {
   return (
     <form
       className="contact-form"
+      // Keep contact details out of the URL if hydration or JavaScript fails.
+      method="post"
       onSubmit={onSubmit}
       onInput={() => {
         if (status === "success" || status === "error") {
