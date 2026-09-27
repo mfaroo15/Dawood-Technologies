@@ -42,7 +42,7 @@ export function Footer() {
         </nav>
         <nav className="footer-column" aria-label="Industry links">
           <strong>Industries</strong>
-          {industries.slice(0, 4).map((item) => <Link href="/industries" key={item.title}>{item.title}</Link>)}
+          {industries.map((item) => <Link href="/industries" key={item.title}>{item.title}</Link>)}
         </nav>
       </div>
       <div className="container footer-bottom">

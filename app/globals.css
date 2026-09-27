@@ -198,9 +198,11 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
 .technology-logo small { color: var(--muted); font-size: .65rem; line-height: 1.2; }
 .closing-cta, .contact-band { color: var(--white); background: var(--teal); }
 .closing-cta .container, .contact-band .container { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; }
-.closing-cta .kicker, .contact-band .kicker { grid-column: 1 / -1; margin-bottom: 0; color: var(--teal-bright); }
+.closing-cta .kicker, .contact-band .kicker { grid-column: 1 / -1; margin-bottom: 0; color: var(--white); }
 .closing-cta h2, .contact-band h2 { max-width: 900px; margin-bottom: 0; }
-.closing-cta .button, .contact-band .button { background: var(--ink); border-color: var(--ink); }
+.closing-cta .button, .contact-band .button { color: var(--white); background: var(--ink); border-color: var(--ink); }
+.closing-cta .button:is(:hover, :focus-visible, :active), .contact-band .button:is(:hover, :focus-visible, :active) { color: var(--ink); background: var(--white); border-color: var(--white); }
+.closing-cta .button:focus-visible, .contact-band .button:focus-visible { outline-color: var(--white); }
 
 /* Inner pages */
 .inner-hero, .case-hero { padding: 78px 0 64px; color: var(--ink); background: #f4f8fd; border-bottom: 1px solid var(--line); }
@@ -336,9 +338,6 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
 .contact-presence-composition { display: grid; grid-template-columns: 260px minmax(0, 1fr); column-gap: 12px; align-items: start; }
 .contact-presence-composition > .contact-information-block:first-child { position: relative; }
 .contact-presence-composition > .contact-information-block:first-child::after { position: absolute; bottom: 0; left: 0; width: min(100%, 96px); border-bottom: 1px solid var(--line); content: ""; }
-.contact-remote-engagement { grid-column: 1 / -1; }
-.contact-remote-engagement h2 { max-width: 560px; }
-.contact-information-block.contact-remote-engagement > p:last-child { max-width: 700px; }
 .contact-world-map { width: 500px; min-width: 0; grid-column: 2; grid-row: 1; justify-self: end; margin: 8px 0 0; }
 .contact-world-map img { width: 100%; height: auto; }
 .contact-information-block h2 { max-width: 300px; margin-bottom: 0; font-size: clamp(1.625rem, 2.5vw, 2rem); }
@@ -426,7 +425,6 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
   .principle-grid article { border-bottom: 1px solid var(--line); }
   .technology-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-grid { grid-template-columns: 1.2fr .8fr .9fr; }
-  .footer-grid .footer-column:last-child { display: none; }
   .ownership-flow { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .ownership-flow li:nth-child(4) { border-right: 0; }
   .ownership-flow li { border-bottom: 1px solid var(--line); }
@@ -596,7 +594,7 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
   .footer-contact-details { flex-direction: column; gap: 24px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-grid .footer-column { display: flex !important; }
-  .footer-grid .footer-column:nth-of-type(2), .footer-grid .footer-column:last-child { display: none !important; }
+  .footer-grid .footer-column:nth-of-type(2) { display: none !important; }
   .footer-bottom { flex-direction: column; }
 }
 

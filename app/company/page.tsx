@@ -30,6 +30,14 @@ const companySections = [
       "These disciplines are considered together so that decisions made during architecture and engineering remain practical through deployment, operation and support.",
     ],
   },
+  {
+    kicker: "REMOTE ENGAGEMENT",
+    title: "Built to work across locations.",
+    copy: [
+      "We work remotely with clients and distributed teams, from discovery and consultation through implementation, deployment and ongoing support. Secure access and communication support project collaboration across locations and time zones.",
+      "Clear project communication, coordinated schedules and defined delivery ownership keep managed engagements accountable. Geography does not prevent us from delivering and supporting technology for your business.",
+    ],
+  },
 ] as const;
 
 export default function CompanyPage() {
