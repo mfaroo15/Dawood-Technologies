@@ -257,6 +257,8 @@ export function ContactForm() {
       }}
     >
       <input type="hidden" name="_subject" value="Dawood Technologies Inquiry" />
+      {/* Formspree checks this honeypot on its server; keep it in the submitted FormData. */}
+      <input type="text" name="_gotcha" hidden tabIndex={-1} autoComplete="off" />
       <div className="form-grid">
         <label>
           <span>Name</span>

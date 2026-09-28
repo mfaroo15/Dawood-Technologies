@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "base-uri 'self'",
+  "base-uri 'none'",
   "object-src 'none'",
   "frame-ancestors 'none'",
   "form-action 'self'",
@@ -10,11 +10,11 @@ const contentSecurityPolicy = [
   "script-src-attr 'none'",
   "style-src 'self'",
   "style-src-attr 'unsafe-inline'",
-  "img-src 'self' data: blob:",
+  "img-src 'self'",
   "font-src 'self'",
-  "connect-src 'self' https://formspree.io https://www.google.com/recaptcha/",
+  "connect-src 'self' https://formspree.io/f/xkjgojzw https://www.google.com/recaptcha/",
   "frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/",
-  "media-src 'self'",
+  "media-src 'none'",
   "worker-src 'none'",
   "manifest-src 'self'",
   "upgrade-insecure-requests",
