@@ -34,6 +34,7 @@ export function Footer() {
         <nav className="footer-column" aria-label="Company links">
           <strong>Navigate</strong>
           {navLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+          <Link href="/careers">Careers</Link>
           <Link href="/contact">Contact</Link>
         </nav>
         <nav className="footer-column" aria-label="Capability links">

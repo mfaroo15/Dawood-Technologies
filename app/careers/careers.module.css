@@ -1,0 +1,11 @@
+.intro {
+  margin-bottom: 0;
+}
+
+.intro h2 {
+  margin-bottom: 0;
+}
+
+.principles {
+  border-block: 1px solid var(--line);
+}
