@@ -15,6 +15,7 @@ export const navLinks = [
   { href: "/solutions", label: "Solutions" },
   { href: "/work", label: "Work" },
   { href: "/company", label: "Company" },
+  { href: "/careers", label: "Careers" },
 ];
 
 export const legalLinks = [
