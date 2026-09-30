@@ -26,8 +26,8 @@ const homepageCapabilities = [
 ];
 
 export const metadata: Metadata = {
-  ...createPageMetadata({ title: "Technology That Keeps Business Moving", description: homeDescription, path: "/" }),
-  title: { absolute: "Dawood Technologies | Technology That Keeps Business Moving" },
+  ...createPageMetadata({ title: "Dawood Technologies | IT Infrastructure & Business Systems", description: homeDescription, path: "/" }),
+  title: { absolute: "Dawood Technologies | IT Infrastructure & Business Systems" },
 };
 
 export default function Home() {
