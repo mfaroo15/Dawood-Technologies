@@ -7,5 +7,5 @@
 }
 
 .principles {
-  border-block: 1px solid var(--line);
+  border-top: 1px solid var(--line);
 }

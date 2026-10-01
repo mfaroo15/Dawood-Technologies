@@ -1,5 +1,5 @@
 .home {
-  --home-section-space: clamp(64px, 6vw, 96px);
+  --home-section-space: clamp(56px, 5vw, 72px);
 }
 
 /* One typographic composition: the open space belongs to the headline. */
@@ -50,7 +50,7 @@
 .home :global(.capability-list + .container) { padding-top: 24px; }
 
 /* Real work gets a distinct editorial index, not a project-card treatment. */
-.home :global(.real-world) { padding-block: clamp(72px, 7vw, 112px); background: var(--paper); }
+.home :global(.real-world) { padding-block: var(--home-section-space) 0; background: var(--paper); }
 .home :global(.home-work-panel) { grid-template-columns: var(--editorial-columns); gap: var(--editorial-gap); padding-block: 40px; }
 .home :global(.work-project-meta) { gap: 0; padding-top: 0; }
 .home :global(.work-project-meta > span) { margin-bottom: 24px; font-variant-numeric: tabular-nums; }
@@ -66,8 +66,18 @@
 .home :global(.work-evidence-actions a:first-child) { color: var(--teal); }
 
 .home :global(.industry-section) { background: var(--white); }
-.home :global(.home-solutions) { padding-top: 0; }
-.home :global(.technology-section) { border-top: 1px solid var(--line); }
+.home :global(.industry-group) { max-width: 1120px; }
+.home :global(.industry-experience-groups) { gap: 0; }
+.home :global(.industry-group-heading) { padding-block: 16px 0; margin-bottom: 0; border-top: 2px solid var(--line); }
+.home :global(.industry-group + .industry-group .industry-group-heading) { border-top: 0; }
+.home :global(.industry-list) { border-top: 0; }
+.home :global(.industry-list article) {
+  min-height: 0;
+  grid-template-columns: 36px minmax(0, min(36%, 360px)) minmax(0, 1fr);
+  padding-block: 24px;
+}
+.home :global(.home-solutions) { padding-block: 0; }
+.home :global(.technology-section) { border-top: 0; }
 .home :global(.principles) { padding-block: 64px; }
 .home :global(.principle-grid) { margin-top: 28px; }
 .home :global(.principle-grid article) { min-height: 0; }
@@ -79,6 +89,7 @@
 }
 
 @media (max-width: 800px) {
+  .home :global(.industry-list article) { grid-template-columns: 34px minmax(0, 1fr); }
   .home :global(.home-origin h2) { max-width: 24ch; }
   .home :global(.home-origin .story-grid) { margin-bottom: 36px; }
   .home :global(.home-work-panel) { gap: 28px; }
