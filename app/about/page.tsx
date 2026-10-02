@@ -39,7 +39,7 @@ export default function AboutPage() {
 
       <section className="section process-section">
         <div className="container">
-          <div className="editorial-intro editorial-pair">
+          <div className="editorial-intro intro-block">
             <div>
               <div className="section-kicker">HOW THE COMPANY WORKS</div>
               <h2 className="section-title">Requirements before implementation.</h2>
@@ -65,7 +65,7 @@ export default function AboutPage() {
 
       <section className="section locations-section">
         <div className="container">
-          <div className="editorial-intro editorial-pair">
+          <div className="editorial-intro intro-block">
             <div><div className="section-kicker">MARKETS AND LOCATIONS SERVED</div><h2 className="section-title">Support across key business markets.</h2></div>
             <p className="section-intro editorial-copy">These are presented as markets and locations served, not as claims of physical offices in every location.</p>
           </div>

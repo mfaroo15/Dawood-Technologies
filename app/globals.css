@@ -404,6 +404,19 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
 /* Bound related heading/copy tracks without moving the established page gutters. */
 .editorial-pair { grid-template-columns: minmax(0, min(40%, 400px)) minmax(0, 600px); }
 
+/* Short explanatory copy belongs below its heading; body sections can retain editorial columns. */
+.editorial-intro.intro-block,
+.industry-detail-heading.intro-block,
+.inner-hero-grid.intro-block,
+.page-hero-inner.intro-block,
+.case-hero-text.intro-block {
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--space-intro-flow);
+}
+.intro-block > :first-child { max-width: 780px; }
+.intro-block > :first-child > :last-child { margin-bottom: 0; }
+.intro-block > :last-child { max-width: var(--editorial-copy); }
+
 @media (max-width: 1600px) {
   :root { --page-gutter: 48px; }
 }

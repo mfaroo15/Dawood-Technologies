@@ -13,7 +13,6 @@ export default function PrivacyPolicyPage() {
   return (
     <main className="legal-page" id="main-content">
       <PageHero
-        compact
         eyebrow="LEGAL"
         title="Privacy Policy"
         text="This policy explains how Dawood Technologies collects, uses and protects information shared through this website, contact forms and project conversations."
