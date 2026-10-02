@@ -1,0 +1,21 @@
+.company :global(.inner-hero-grid),
+.company :global(.company-story-grid) {
+  max-width: 1120px;
+}
+
+.company :global(.inner-hero-grid),
+.company :global(.company-story-row) {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+@media (max-width: 1024px) {
+  .company :global(.inner-hero-grid) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .company :global(.company-story-row) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

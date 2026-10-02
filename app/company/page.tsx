@@ -2,6 +2,7 @@ import { ContactBand } from "@/app/components/ContactBand";
 import { InnerHero } from "@/app/components/InnerHero";
 import { foundingYear } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
+import styles from "./company.module.css";
 
 export const metadata = createPageMetadata({ title: "Company", description: `Founded in ${foundingYear}, Dawood Technologies developed from the technology needs of operating businesses and brings that ownership-driven approach to other organizations.`, path: "/company" });
 
@@ -45,7 +46,7 @@ const companySections = [
 ] as const;
 
 export default function CompanyPage() {
-  return <main id="main-content"><InnerHero kicker="COMPANY" title="Technology capability built from operating experience." intro="Dawood Technologies developed from the technology responsibilities of Dawood operating businesses and extends that ownership-driven approach to other organizations." />
+  return <main id="main-content" className={styles.company}><InnerHero kicker="COMPANY" title="Technology capability built from operating experience." intro="Dawood Technologies developed from the technology responsibilities of Dawood operating businesses and extends that ownership-driven approach to other organizations." />
     <section className="section company-story"><div className="container company-story-grid">{companySections.map((section) => <article className={`company-story-row${section.compactIntro ? " editorial-pair" : ""}`} key={section.kicker}><div><p className="kicker">{section.kicker}</p><h2>{section.title}</h2></div><div className="editorial-copy story-copy">{section.copy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>)}</div></section>
     <ContactBand /></main>;
 }
