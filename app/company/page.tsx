@@ -17,7 +17,6 @@ const companySections = [
   },
   {
     kicker: "OUR APPROACH",
-    stacked: true,
     title: "Technology decision-making grounded in real operations.",
     copy: [
       "Dawood Technologies approaches technology through practical operating requirements, maintainability, security and long-term ownership.",
@@ -44,6 +43,6 @@ const companySections = [
 
 export default function CompanyPage() {
   return <main id="main-content" className={styles.company}><InnerHero kicker="COMPANY" title="Technology capability built from operating experience." intro="Dawood Technologies developed from the technology responsibilities of Dawood operating businesses and extends that ownership-driven approach to other organizations." />
-    <section className="section company-story"><div className="container company-story-grid">{companySections.map((section) => <article className={`company-story-row${"stacked" in section ? " intro-block" : ""}`} key={section.kicker}><div><p className="kicker">{section.kicker}</p><h2>{section.title}</h2></div><div className="editorial-copy story-copy">{section.copy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>)}</div></section>
+    <section className="section company-story"><div className="container company-story-grid">{companySections.map((section) => <article className="company-story-row" key={section.kicker}><div><p className="kicker">{section.kicker}</p><h2>{section.title}</h2></div><div className="editorial-copy story-copy">{section.copy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>)}</div></section>
     <ContactBand /></main>;
 }
