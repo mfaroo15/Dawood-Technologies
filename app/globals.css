@@ -303,9 +303,8 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
 .ownership-flow strong { font-size: .86rem; line-height: 1.35; }
 .principles { color: var(--ink); background: #edf4fc; }
 .principles .kicker { color: var(--teal); }
-.principle-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 48px; border-top: 1px solid var(--line); }
-.principle-grid article { min-height: 280px; padding: 24px; border-right: 1px solid var(--line); }
-.principle-grid article:last-child { border: 0; }
+.principle-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--grid-gap); margin-top: 48px; border-top: 1px solid var(--line); }
+.principle-grid article { min-height: 280px; padding: 24px 0; }
 .principle-grid span { color: var(--teal); font-size: .7rem; }
 .principle-grid h3 { margin-top: 72px; }
 .principle-grid p { color: var(--muted); font-size: .88rem; }
@@ -402,6 +401,9 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 24px; padding-block: 22px; color: #78908d; border-top: 1px solid rgba(255,255,255,.14); font-size: .8125rem; }
 .footer-bottom div { display: flex; gap: 20px; }
 
+/* Bound related heading/copy tracks without moving the established page gutters. */
+.editorial-pair { grid-template-columns: minmax(0, min(40%, 400px)) minmax(0, 600px); }
+
 @media (max-width: 1600px) {
   :root { --page-gutter: 48px; }
 }
@@ -419,9 +421,7 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
   .approach-step { padding: 32px 0; }
   .solutions-editorial { gap: 48px; }
   .industry-editorial { gap: 56px; }
-  .principle-grid { grid-template-columns: repeat(2, 1fr); }
-  .principle-grid article:nth-child(2) { border-right: 0; }
-  .principle-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .principle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .technology-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-grid { grid-template-columns: 1.2fr .8fr .9fr; }
   .ownership-flow { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -459,7 +459,7 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
   .brand-logo { width: min(166px, calc(100vw - 96px)); }
   .approach-hero { padding-block: 72px 78px; }
   .approach-intro h1 { font-size: 3rem; }
-  .editorial-intro, .split-heading, .section-top, .inner-hero-grid, .story-grid, .page-hero-inner, .industry-detail-heading, .numbered-section { grid-template-columns: 1fr; gap: 24px; }
+  .editorial-intro, .split-heading, .section-top, .inner-hero-grid, .story-grid, .page-hero-inner, .industry-detail-heading, .numbered-section, .editorial-pair { grid-template-columns: 1fr; gap: 24px; }
   .home-origin .story-copy { padding-top: 0; }
   .editorial-intro, .split-heading, .section-top { margin-bottom: 40px; }
   .section-top .text-link { justify-self: start; }
@@ -580,7 +580,7 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
   .work-index-row > div:nth-of-type(2) { grid-column: 2; }
   .work-index-row > svg { grid-column: 3; grid-row: 1 / 3; }
   .principle-grid { grid-template-columns: 1fr; }
-  .principle-grid article { min-height: 220px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .principle-grid article { min-height: 220px; }
   .principle-grid h3 { margin-top: 45px; }
   .value-card-grid { grid-template-columns: 1fr; }
   .value-card, .value-card:nth-child(3) { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }

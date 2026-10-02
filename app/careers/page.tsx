@@ -25,7 +25,7 @@ export default function CareersPage() {
       />
 
       <section className="section company-story" aria-labelledby="careers-work-title">
-        <div className={`container editorial-intro ${styles.intro}`}>
+        <div className={`container editorial-intro editorial-pair ${styles.intro}`}>
           <div>
             <p className="kicker">01 — WORKING AT DAWOOD TECHNOLOGIES</p>
             <h2 id="careers-work-title">Technology work connected to the operation.</h2>
@@ -52,7 +52,7 @@ export default function CareersPage() {
       </section>
 
       <section className="section company-story" aria-labelledby="careers-positions-title">
-        <div className={`container editorial-intro ${styles.intro}`}>
+        <div className={`container editorial-intro editorial-pair ${styles.intro}`}>
           <div>
             <p className="kicker">03 — OPEN POSITIONS</p>
             <h2 id="careers-positions-title">No open positions right now.</h2>

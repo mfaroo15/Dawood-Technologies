@@ -5,12 +5,13 @@ type PageHeroProps = {
   title: ReactNode;
   text: string;
   children?: ReactNode;
+  compact?: boolean;
 };
 
-export function PageHero({ eyebrow, title, text, children }: PageHeroProps) {
+export function PageHero({ eyebrow, title, text, children, compact = false }: PageHeroProps) {
   return (
     <section className="page-hero">
-      <div className="container page-hero-inner">
+      <div className={`container page-hero-inner${compact ? " editorial-pair" : ""}`}>
         <div>
           <div className="eyebrow">{eyebrow}</div>
           <h1>{title}</h1>
