@@ -83,10 +83,8 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
 .hero-word-rotator > span:nth-child(3) { animation-delay: 5.4s; }
 .hero-word-rotator > span:nth-child(4) { animation-delay: 8.4s; }
 .approach-intro > p:last-child { max-width: 860px; margin-bottom: 0; color: var(--muted); font-size: 1.08rem; line-height: 1.75; }
-.approach-process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-.approach-step { min-width: 0; min-height: 190px; padding: 32px 30px 0; }
-.approach-step:first-child { padding-left: 0; }
-.approach-step + .approach-step { border-left: 1px solid var(--line); }
+.approach-process { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--grid-gap); border-top: 1px solid var(--line); }
+.approach-step { min-width: 0; min-height: 190px; padding: 32px 0 0; }
 .approach-step-index { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; color: var(--teal); font-size: .7rem; font-weight: 700; }
 .approach-step-index i { width: 38px; height: 1px; background: currentColor; }
 .approach-step h2 { margin-bottom: 13px; font-size: 1.25rem; font-weight: 600; }
@@ -163,7 +161,7 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
 .work-logo-block .evidence-logo img { object-position: center; }
 .work-logo-block > strong { font-size: .86rem; }
 .home-work-showcase, .work-case-list { display: grid; }
-.home-work-panel, .work-case-feature { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 70px; align-items: start; padding: 46px 0; border-top: 1px solid var(--line); }
+.home-work-panel, .work-case-feature { max-width: 1120px; display: grid; grid-template-columns: minmax(0, min(32%, 360px)) minmax(0, 1fr); gap: var(--editorial-gap); align-items: start; padding: 46px 0; border-top: 1px solid var(--line); }
 .home-work-panel:last-child, .work-case-feature:last-child { border-bottom: 1px solid var(--line); }
 .home-work-copy h3, .work-case-copy h2 { max-width: 700px; margin-bottom: 18px; }
 .home-work-copy p, .work-case-copy p { max-width: 620px; color: var(--muted); }
@@ -258,7 +256,7 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
 .work-index-row p { margin-bottom: 10px; color: var(--teal); font-size: .7rem; font-weight: 700; text-transform: uppercase; }
 .work-index-row h2 { max-width: 720px; margin-bottom: 14px; font-size: clamp(1.5rem, 2.2vw, 2rem); }
 .work-index-row small { color: var(--muted); font-size: .86rem; }
-.work-index-actions { display: flex; gap: 22px; margin-top: 18px; }
+.work-index-actions { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 18px; }
 .case-hero-grid { display: grid; grid-template-columns: 1.2fr .65fr; gap: 80px; align-items: center; }
 .case-hero-text { grid-template-columns: var(--editorial-columns); gap: var(--editorial-gap); align-items: start; }
 .case-hero p:not(.kicker) { max-width: 650px; color: var(--muted); }
@@ -418,9 +416,7 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
   .desktop-nav { gap: 18px; }
   .desktop-nav a { font-size: .76rem; }
   .approach-process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .approach-step { padding: 32px; }
-  .approach-step:nth-child(odd) { padding-left: 0; border-left: 0; }
-  .approach-step:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .approach-step { padding: 32px 0; }
   .solutions-editorial { gap: 48px; }
   .industry-editorial { gap: 56px; }
   .principle-grid { grid-template-columns: repeat(2, 1fr); }
@@ -551,8 +547,7 @@ h3 { font-size: clamp(1.25rem, 1.7vw, 1.625rem); font-weight: 600; }
   .approach-intro h1 { max-width: 100%; margin-bottom: 22px; font-size: 2rem; line-height: 1.1; text-wrap: wrap; }
   .approach-intro > p:last-child { font-size: 1rem; }
   .approach-process { grid-template-columns: 1fr; }
-  .approach-step, .approach-step:nth-child(odd), .approach-step + .approach-step { min-height: 0; padding: 28px 0; border-left: 0; border-bottom: 1px solid var(--line); }
-  .approach-step:last-child { border-bottom: 0; }
+  .approach-step { min-height: 0; padding: 28px 0; }
   .approach-step-index { margin-bottom: 20px; }
   .evidence-item { min-height: 125px; grid-template-columns: 28px 1fr 20px; }
   .evidence-logo { width: 130px; grid-column: 2; }

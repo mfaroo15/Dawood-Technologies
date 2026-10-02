@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ContactBand } from "@/app/components/ContactBand";
 import { InnerHero } from "@/app/components/InnerHero";
 import { work } from "@/app/data/site";
@@ -13,7 +13,7 @@ export default function WorkPage() {
     <section className="section work-index"><div className="container work-case-list">
       {work.map((item, index) => <article className="work-case-feature" key={item.slug}>
         <div className="work-project-meta"><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.name}</strong><small>{item.sector}</small></div>
-        <div className="work-case-copy"><h2><Link href={`/work/${item.slug}`}>{item.title}</Link></h2><p>{item.overview}</p><ul className="work-capability-list">{item.built.slice(0, 3).map((capability) => <li key={capability}>{capability}</li>)}</ul><div className="work-index-actions"><Link href={`/work/${item.slug}`}>View case study <ArrowUpRight aria-hidden="true" size={15} /></Link><a href={item.website} target="_blank" rel="noopener noreferrer">Visit website <ArrowUpRight aria-hidden="true" size={15} /></a></div></div>
+        <div className="work-case-copy"><h2><Link href={`/work/${item.slug}`}>{item.title}</Link></h2><p>{item.overview}</p><div className="work-index-actions"><Link href={`/work/${item.slug}`}>View case study <ArrowRight aria-hidden="true" size={15} /></Link><a href={item.website} target="_blank" rel="noopener noreferrer">Visit website <ArrowUpRight aria-hidden="true" size={15} /></a></div></div>
       </article>)}
     </div></section>
     <ContactBand title="Tell us what your business needs technology to do." />
