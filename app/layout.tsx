@@ -30,10 +30,8 @@ export const metadata: Metadata = {
   twitter: { card: "summary", title: "Dawood Technologies | IT Infrastructure & Business Systems", description: "Business applications, enterprise integrations, cloud infrastructure, data, AI automation and ongoing technology operations." },
   icons: {
     icon: [
-      { url: "/favicon.png?v=4", type: "image/png", sizes: "192x192" },
-      { url: "/icon.svg?v=4", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "192x192" },
     ],
-    apple: [{ url: "/apple-icon.png?v=4", type: "image/png", sizes: "180x180" }],
   },
 };
 

@@ -17,11 +17,13 @@ export function createPageMetadata({ title, description, path }: PageMetadata): 
       title,
       description,
       url: path,
+      images: [{ url: "/dawood-technologies-logo.png", width: 2125, height: 281, alt: "Dawood Technologies" }],
     },
     twitter: {
       card: "summary",
       title,
       description,
+      images: [{ url: "/favicon.png", alt: "Dawood Technologies brand mark" }],
     },
   };
 }

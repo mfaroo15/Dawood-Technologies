@@ -37,7 +37,7 @@ export function Header() {
             alt=""
             width={2125}
             height={281}
-            priority
+            preload
           />
         </Link>
 
