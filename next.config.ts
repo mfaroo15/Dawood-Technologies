@@ -48,6 +48,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   async redirects() {
     return [
+      { source: "/about", destination: "/company", permanent: true },
       { source: "/capabilities", destination: "/services", permanent: true },
       { source: "/capabilities/:path*", destination: "/services", permanent: true },
       { source: "/process", destination: "/services", permanent: true },

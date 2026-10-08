@@ -64,10 +64,12 @@ for (const url of urls) {
     assert.ok("alt" in attributes(tag), `Image missing alt: ${path}`);
   }
 }
-for (const path of ["/", "/services", "/solutions", "/work", "/company", "/careers", "/contact"]) {
+for (const path of ["/", "/services", "/solutions", "/work", "/company", "/careers", "/contact", "/industries", "/services/data-services"]) {
   assert.ok(urls.includes(`${origin}${path}`), `Primary page missing: ${path}`);
 }
-assert.ok(!urls.some((url) => /insights|capabilities|process/.test(new URL(url).pathname)), "Noncanonical route in sitemap");
+assert.ok(!urls.some((url) => /insights|capabilities|process/.test(new URL(url).pathname) || new URL(url).pathname === "/about"), "Noncanonical route in sitemap");
+const routesManifest = JSON.parse(readFileSync(join(process.cwd(), ".next/routes-manifest.json"), "utf8"));
+assert.ok(routesManifest.redirects.some((redirect) => redirect.source === "/about" && redirect.destination === "/company" && redirect.statusCode === 308), "Missing permanent About redirect");
 const robots = readFileSync(join(output, "robots.txt.body"), "utf8");
 assert.ok(robots.includes(`Sitemap: ${origin}/sitemap.xml`));
 assert.ok(robots.includes("Allow: /"));
