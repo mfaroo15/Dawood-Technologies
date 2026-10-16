@@ -50,7 +50,7 @@ export function Header() {
         </nav>
 
         <Link className="header-cta" href="/contact">
-          Let&apos;s Talk <ArrowUpRight aria-hidden="true" size={16} />
+          Contact Us <ArrowUpRight aria-hidden="true" size={16} />
         </Link>
 
         <button

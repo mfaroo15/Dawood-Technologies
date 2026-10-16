@@ -8,7 +8,7 @@ type PageMetadata = {
 
 export function createPageMetadata({ title, description, path }: PageMetadata): Metadata {
   return {
-    title,
+    title: title.includes("Dawood Technologies") ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
     openGraph: {

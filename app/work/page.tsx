@@ -5,7 +5,7 @@ import { InnerHero } from "@/app/components/InnerHero";
 import { work } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 
-export const metadata = createPageMetadata({ title: "Work", description: "Selected Dawood Technologies work in operating businesses across manufacturing, infrastructure and international trade.", path: "/work" });
+export const metadata = createPageMetadata({ title: "Our Work & Technology Projects | Dawood Technologies", description: "Explore projects, capabilities, and technology solutions delivered by Dawood Technologies.", path: "/work" });
 
 export default function WorkPage() {
   return <main id="main-content">

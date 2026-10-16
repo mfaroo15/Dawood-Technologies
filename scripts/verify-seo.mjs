@@ -8,6 +8,14 @@ const origin = "https://www.dawoodtech.com";
 const sitemap = readFileSync(join(output, "sitemap.xml.body"), "utf8");
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
 assert.equal(new Set(urls).size, urls.length, "Duplicate sitemap URLs");
+const expectedTitles = {
+  "/": "Dawood Technologies | IT Infrastructure & Business Systems",
+  "/services": "IT Services & Consulting | Dawood Technologies",
+  "/solutions": "Business Technology Solutions | Dawood Technologies",
+  "/company": "About Dawood Technologies | Company & Expertise",
+  "/work": "Our Work & Technology Projects | Dawood Technologies",
+  "/contact": "Contact Dawood Technologies | IT Consulting & Support",
+};
 const titles = new Set();
 const descriptions = new Set();
 const attributes = (tag) => Object.fromEntries([...tag.matchAll(/([\w:-]+)="([^"]*)"/g)].map((match) => [match[1], match[2]]));
@@ -20,6 +28,7 @@ for (const url of urls) {
   const title = titleTags[0][1];
   assert.ok(title && !titles.has(title), `Empty/duplicate title: ${path}`);
   titles.add(title);
+  if (expectedTitles[path]) assert.equal(title.replaceAll("&amp;", "&"), expectedTitles[path], `Unexpected primary title: ${path}`);
   const tags = [...html.matchAll(/<(?:meta|link)\b[^>]*>/g)].map(([tag]) => attributes(tag));
   const descriptionTags = tags.filter((tag) => tag.name === "description");
   assert.equal(descriptionTags.length, 1, `Description count: ${path}`);
@@ -39,6 +48,9 @@ for (const url of urls) {
   assert.ok(!tags.some((tag) => tag.name === "robots" && /noindex|nofollow/.test(tag.content)), `Robots restriction: ${path}`);
   const schemas = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
   if (path === "/") {
+    for (const target of ["/services", "/solutions", "/company", "/work", "/contact"]) {
+      assert.ok(html.includes('href="' + target + '"'), 'Missing primary homepage link: ' + target);
+    }
     const graph = schemas.flatMap((schema) => schema["@graph"] ?? [schema]);
     for (const type of ["Organization", "WebSite"]) {
       assert.equal(graph.filter((schema) => schema["@type"] === type).length, 1, `Schema count: ${type}`);

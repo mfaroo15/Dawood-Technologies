@@ -4,8 +4,8 @@ import { contactPhone, contactPresence } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Contact",
-  description: "Contact Dawood Technologies about technology consulting, software, cloud, enterprise systems, data, AI, cybersecurity or managed technology.",
+  title: "Contact Dawood Technologies | IT Consulting & Support",
+  description: "Contact Dawood Technologies to discuss IT consulting, business systems, cloud infrastructure, software development, or technology solutions.",
   path: "/contact",
 });
 

@@ -4,7 +4,7 @@ import { foundingYear } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./company.module.css";
 
-export const metadata = createPageMetadata({ title: "Company", description: `Founded in ${foundingYear}, Dawood Technologies developed from the technology needs of operating businesses and brings that ownership-driven approach to other organizations.`, path: "/company" });
+export const metadata = createPageMetadata({ title: "About Dawood Technologies | Company & Expertise", description: "Learn about Dawood Technologies, our expertise, our approach, and how we help organizations implement and support business technology.", path: "/company" });
 
 const companySections = [
   {
