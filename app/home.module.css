@@ -11,7 +11,7 @@
 .home :global(.approach-intro h1) {
   max-width: 1120px;
   margin-bottom: 32px;
-  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-size: var(--type-home-hero);
   font-weight: 500;
   letter-spacing: -.035em;
   line-height: 1.08;
@@ -24,9 +24,9 @@
 /* The operating story and its practical model form a single signature section. */
 .home :global(.home-origin) { background: var(--paper); border-top: 1px solid var(--line); }
 .home :global(.home-origin .story-grid) { margin-bottom: 48px; }
-.home :global(.home-origin h2) { max-width: 19ch; margin-bottom: 0; font-size: clamp(2rem, 3vw, 2.75rem); }
+.home :global(.home-origin h2) { max-width: 19ch; margin-bottom: 0; font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.75rem); }
 .home :global(.home-origin .story-copy) { padding-top: 0; }
-.home :global(.approach-process) { border-top: 2px solid var(--teal); }
+.home :global(.approach-process) { border-top: 1px solid var(--line); }
 .home :global(.approach-step) { min-height: 0; padding-top: 26px; }
 .home :global(.approach-step-index) { margin-bottom: 20px; font-variant-numeric: tabular-nums; }
 .home :global(.approach-step h3) { margin-bottom: 12px; font-size: 1.125rem; font-weight: 600; }
@@ -41,7 +41,7 @@
 }
 .home :global(.capability-row:hover) { padding-inline: 0; background: var(--paper); }
 .home :global(.capability-row > span) { align-self: start; padding-top: 8px; font-variant-numeric: tabular-nums; }
-.home :global(.capability-row h3) { margin-bottom: 10px; font-size: clamp(1.375rem, 2.4vw, 2rem); font-weight: 500; letter-spacing: -.025em; }
+.home :global(.capability-row h3) { margin-bottom: 10px; font-size: clamp(1.375rem, 1.1rem + 1vw, 2rem); font-weight: 500; letter-spacing: -.025em; }
 .home :global(.capability-row p) { max-width: 68ch; font-size: .95rem; }
 .home :global(.capability-row > svg) { transition: transform .2s ease; }
 .home :global(.capability-row:hover > svg),
@@ -53,16 +53,16 @@
 .home :global(.real-world) { padding-block: var(--home-section-space) 0; background: var(--paper); }
 .home :global(.home-work-panel) { padding-block: 40px; }
 .home :global(.work-project-meta) { gap: 0; padding-top: 0; }
-.home :global(.work-project-meta > span) { margin-bottom: 24px; font-variant-numeric: tabular-nums; }
-.home :global(.work-project-meta h3) { margin-bottom: 14px; font-size: clamp(1.75rem, 2.6vw, 2.375rem); font-weight: 500; letter-spacing: -.03em; }
+.home :global(.work-project-meta > span) { margin-bottom: 14px; font-variant-numeric: tabular-nums; }
+.home :global(.work-project-meta h3) { margin-bottom: 0; font-size: clamp(1.375rem, 1.2rem + .65vw, 1.75rem); font-weight: 500; letter-spacing: -.03em; }
 .home :global(.work-project-meta h3 a:hover) { color: var(--teal); }
-.home :global(.work-project-meta small) { font-size: .78rem; }
-.home .workStatement { max-width: 28ch; margin-bottom: 18px; color: var(--ink); font-size: clamp(1.375rem, 1.8vw, 1.625rem); line-height: 1.3; letter-spacing: -.015em; }
+.home :global(.work-project-meta small) { margin-bottom: 10px; font-size: var(--type-meta); }
+.home .workStatement { max-width: 40ch; margin-bottom: 18px; color: var(--ink); font-size: clamp(1.25rem, 1.1rem + .6vw, 1.625rem); line-height: 1.3; letter-spacing: -.015em; }
 .home :global(.home-work-copy .work-capability-list) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; margin-block: 24px; }
 .home :global(.home-work-copy .work-capability-list li) { display: block; padding: 12px 0; border-top: 1px solid var(--line); line-height: 1.5; }
 .home :global(.home-work-copy .work-capability-list li::after) { display: none; }
 .home :global(.work-evidence-actions) { justify-content: flex-start; flex-wrap: wrap; gap: 12px 24px; }
-.home :global(.work-evidence-actions a) { min-height: 40px; }
+.home :global(.work-evidence-actions a) { min-height: 44px; }
 .home :global(.work-evidence-actions a:first-child) { color: var(--teal); }
 
 .home :global(.industry-section) { background: var(--white); }
@@ -72,7 +72,7 @@
   grid-template-columns: 36px minmax(0, min(36%, 360px)) minmax(0, 1fr);
   padding-block: 24px;
 }
-.home :global(.home-solutions) { padding-block: 0; }
+.home :global(.home-solutions) { padding-block: var(--home-section-space); }
 .home :global(.technology-section) { border-top: 0; }
 .home :global(.principles) { padding-block: 64px; }
 .home :global(.principle-grid) { margin-top: 28px; }
@@ -95,8 +95,7 @@
 }
 
 @media (max-width: 520px) {
-  .home :global(.approach-intro h1) { margin-bottom: 24px; font-size: clamp(1.75rem, 7.7vw, 2rem); }
-  .home :global(.home-origin h2) { font-size: 1.75rem; }
+  .home :global(.approach-intro h1) { margin-bottom: 24px; font-size: var(--type-home-hero); }
   .home :global(.approach-intro > p:last-child) { font-size: 1rem; }
   .home :global(.approach-step) { min-height: 0; padding-block: 24px; }
   .home :global(.home-work-copy .work-capability-list) { grid-template-columns: 1fr; }
@@ -108,4 +107,31 @@
 
 @media (prefers-reduced-motion: reduce) {
   .home :global(.capability-row > svg) { transition: none; transform: none; }
+}
+
+/* Phase 1 refinements stay within the four homepage sections. */
+.home .sectionButton { margin-top: 24px; max-width: 100%; }
+.home .sectionButton svg { flex-shrink: 0; }
+.home :global(.home-origin .story-grid) { column-gap: clamp(32px, 5vw, 72px); }
+.home :global(.approach-step-index)::after { content: ""; width: 32px; height: 1px; background: var(--line); }
+.home :global(.home-work-panel) { max-width: none; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); column-gap: clamp(32px, 5vw, 72px); }
+.home :global(.home-work-copy > p:last-of-type) { margin-bottom: 20px; }
+.home :global(.real-world > .container:last-child) { padding-block: 20px 32px; }
+.home :global(.industry-section .editorial-intro),
+.home :global(.home-solutions .editorial-intro) {
+  grid-template-columns: var(--editorial-columns);
+  column-gap: clamp(32px, 5vw, 72px);
+  margin-bottom: 32px;
+}
+.home :global(.industry-section h2),
+.home :global(.home-solutions h2) { max-width: 22ch; margin-bottom: 0; }
+.home :global(.solution-lineup article) { padding-block: 26px; }
+@media (max-width: 800px) {
+  .home :global(.home-work-panel),
+  .home :global(.industry-section .editorial-intro),
+  .home :global(.home-solutions .editorial-intro) { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .home :global(.home-work-panel) { padding-block: 32px; }
+}
+@media (max-width: 520px) {
+  .home :global(.approach-step + .approach-step) { border-top: 1px solid var(--line); }
 }
