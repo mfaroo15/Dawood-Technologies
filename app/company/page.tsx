@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ContactBand } from "@/app/components/ContactBand";
 import { InnerHero } from "@/app/components/InnerHero";
 import { foundingYear } from "@/app/data/site";
@@ -11,7 +12,7 @@ const companySections = [
     kicker: "BUILT FROM OPERATING EXPERIENCE",
     title: "Technology responsibility became a dedicated company.",
     copy: [
-      `Dawood Technologies was founded in ${foundingYear} from the technology needs of Dawood operating businesses. What began as an internal capability to manage applications, infrastructure, systems, security, data and day-to-day technology operations developed into a dedicated technology company.`,
+      <>Dawood Technologies was founded in {foundingYear} from the technology needs of <Link href="/work">Dawood operating businesses</Link>. What began as an internal capability to manage <Link href="/services">applications, infrastructure, systems</Link>, security, data and day-to-day technology operations developed into a dedicated technology company.</>,
       "Today, Dawood Technologies brings that ownership-driven approach to organizations beyond Dawood, connecting technology decisions to how businesses actually operate.",
     ],
   },
@@ -27,7 +28,7 @@ const companySections = [
     kicker: "OUR TEAM",
     title: "Engineers who understand business operations.",
     copy: [
-      "Our team brings together engineers and technology professionals across applications, cloud infrastructure, data, enterprise systems, automation, cybersecurity and technology operations.",
+      <>Our team brings together <Link href="/careers">engineers and technology professionals</Link> across applications, cloud infrastructure, data, enterprise systems, automation, cybersecurity and technology operations.</>,
       "These disciplines are considered together so that decisions made during architecture and engineering remain practical through deployment, operation and support.",
     ],
   },
@@ -43,6 +44,6 @@ const companySections = [
 
 export default function CompanyPage() {
   return <main id="main-content" className={styles.company}><InnerHero kicker="COMPANY" title="Technology capability built from operating experience." intro="Dawood Technologies developed from the technology responsibilities of Dawood operating businesses and extends that ownership-driven approach to other organizations." />
-    <section className="section company-story"><div className="container company-story-grid">{companySections.map((section) => <article className="company-story-row" key={section.kicker}><div><p className="kicker">{section.kicker}</p><h2>{section.title}</h2></div><div className="editorial-copy story-copy">{section.copy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>)}</div></section>
+    <section className="section company-story"><div className="container company-story-grid">{companySections.map((section) => <article className="company-story-row" key={section.kicker}><div><p className="kicker">{section.kicker}</p><h2>{section.title}</h2></div><div className="editorial-copy story-copy">{section.copy.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div></article>)}</div></section>
     <ContactBand /></main>;
 }
