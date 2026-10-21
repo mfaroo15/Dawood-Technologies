@@ -1,18 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { FooterLead } from "@/app/components/FooterLead";
 import { capabilities, contactEmail, contactPhone, contactPresence, industries, legalLinks, navLinks } from "@/app/data/site";
 
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="container footer-lead">
-        <div>
-          <p className="kicker">BUILD WITH US</p>
-          <h2>Technology should keep working after launch.</h2>
-        </div>
-        <Link className="footer-talk" href="/contact">Start a conversation <ArrowUpRight aria-hidden="true" /></Link>
-      </div>
+      <FooterLead />
       <div className="container footer-grid">
         <div className="footer-brand">
           <Link href="/" aria-label="Dawood Technologies home">
