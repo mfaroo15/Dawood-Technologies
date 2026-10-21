@@ -1,6 +1,6 @@
-import Image from "next/image";
+import { GlobalPresence } from "@/app/contact/GlobalPresence";
 import { ContactForm } from "@/app/contact/ContactForm";
-import { contactPhone, contactPresence } from "@/app/data/site";
+import { contactPhone } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -30,17 +30,7 @@ export default function ContactPage() {
                 <p>We&apos;re available to discuss your requirements and answer any questions.</p>
               </section>
 
-              <div className="contact-presence-composition">
-                <section className="contact-information-block">
-                  <p className="section-kicker">OUR PRESENCE</p>
-                  <div className="contact-presence">
-                    {contactPresence.map((location) => <span key={location}>{location}</span>)}
-                  </div>
-                </section>
-                <figure className="contact-world-map" aria-hidden="true">
-                  <Image src="/world-map-dots.svg" alt="" width={900} height={470} />
-                </figure>
-              </div>
+              <GlobalPresence />
             </aside>
           </div>
         </div>

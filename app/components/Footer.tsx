@@ -20,7 +20,7 @@ export function Footer() {
               <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
             </div>
             <div>
-              <strong>Locations</strong>
+              <strong>Team presence</strong>
               {contactPresence.map((location) => <span key={location}>{location}</span>)}
             </div>
           </div>

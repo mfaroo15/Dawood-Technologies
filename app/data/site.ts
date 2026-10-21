@@ -1,3 +1,5 @@
+import { teamLocations } from "@/app/data/global-presence";
+
 export const siteUrl = "https://www.dawoodtech.com";
 export const foundingYear = 2026;
 export const contactEmail = "info@dawoodtech.com";
@@ -6,7 +8,7 @@ export const contactPhone = {
   href: "tel:+12245987275",
   schema: "+1-224-598-7275",
 } as const;
-export const contactPresence = ["Chicago, Illinois", "Karachi, Pakistan"] as const;
+export const contactPresence = teamLocations.map(({ city, countryState }) => `${city}, ${countryState}`);
 export const legalUpdated = "September 21, 2026";
 
 export const navLinks = [

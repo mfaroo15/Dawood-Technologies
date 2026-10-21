@@ -63,14 +63,14 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 
 /* Header */
 .site-header { position: sticky; z-index: 100; top: 0; color: var(--ink); background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
-.header-inner { min-height: var(--header-height); display: flex; align-items: center; gap: 28px; }
+.header-inner { min-height: var(--header-height); display: grid; grid-template-columns: minmax(0, 1fr) max-content minmax(0, 1fr); align-items: center; gap: 28px; }
 .brand { margin-right: auto; display: flex; align-items: center; }
 .brand-logo { width: clamp(168px, 13vw, 208px); height: auto; }
-.desktop-nav { min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 30px; }
+.desktop-nav { min-width: 0; display: flex; flex-wrap: nowrap; justify-self: center; align-items: center; gap: 30px; }
 .desktop-nav a { position: relative; padding: 26px 0 24px; color: #3f4857; font-size: var(--type-nav); font-weight: 600; }
 .desktop-nav a::after { content: ""; position: absolute; right: 0; bottom: 18px; left: 0; height: 2px; background: var(--teal-bright); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
 .desktop-nav a:hover::after, .desktop-nav a[aria-current="page"]::after { transform: scaleX(1); }
-.header-cta { min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 15px; color: var(--white); background: var(--teal); border-radius: var(--radius); font-size: .82rem; font-weight: 700; transition: background .2s ease; }
+.header-cta { min-height: 40px; display: flex; justify-self: end; align-items: center; gap: 8px; padding: 0 15px; color: var(--white); background: var(--teal); border-radius: var(--radius); font-size: .82rem; font-weight: 700; transition: background .2s ease; }
 .header-cta:hover { background: #4e7fff; }
 .menu-toggle { width: 42px; height: 42px; display: none; align-items: center; justify-content: center; padding: 0; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: var(--radius); }
 .mobile-panel { display: none; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; color: var(--ink); background: var(--white); border-top: 1px solid var(--line); }
@@ -341,12 +341,24 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 .contact-information-block > p:last-child { max-width: 48ch; margin: 18px 0 0; color: var(--muted); }
 .contact-phone { display: inline-block; color: var(--ink); font-size: 1.5rem; font-weight: 600; line-height: 1.2; }
 .contact-phone:hover { color: var(--teal); }
-.contact-presence { display: grid; gap: 7px; color: var(--ink); font-size: 1.12rem; font-weight: 600; }
-.contact-presence-composition { display: grid; grid-template-columns: 260px minmax(0, 1fr); column-gap: 12px; align-items: start; }
-.contact-presence-composition > .contact-information-block:first-child { position: relative; }
-.contact-presence-composition > .contact-information-block:first-child::after { position: absolute; bottom: 0; left: 0; width: min(100%, 96px); border-bottom: 1px solid var(--line); content: ""; }
-.contact-world-map { width: 500px; min-width: 0; grid-column: 2; grid-row: 1; justify-self: end; margin: 8px 0 0; }
-.contact-world-map img { width: 100%; height: auto; }
+/* Remote team presence: the land asset and markers share an equirectangular projection. */
+.global-presence { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px; align-items: center; padding-block: 32px; background: var(--white); }
+.global-presence-copy { min-width: 0; }
+.global-presence .section-kicker { margin-bottom: 16px; }
+.global-presence h2 { margin-bottom: 18px; font-size: clamp(1.5rem, 1.25rem + .5vw, 1.875rem); line-height: 1.2; }
+.global-presence-description { margin: 0; color: var(--muted); font-size: var(--type-body-small); }
+.global-presence-locations { list-style: none; margin: 24px 0 0; padding: 0; }
+.global-presence-locations li { display: flex; gap: 10px; align-items: start; padding-block: 15px; }
+.global-presence-locations li + li { border-top: 1px solid var(--line); }
+.global-presence-locations svg { flex-shrink: 0; margin-top: 3px; color: var(--teal); }
+.global-presence-locations strong { display: block; font-size: var(--type-body-small); font-weight: 600; }
+.global-presence-locations span { display: block; margin-top: 3px; color: var(--muted); font-size: var(--type-meta); }
+.global-presence-map { display: block; min-width: 0; width: 100%; height: auto; aspect-ratio: 900 / 390; align-self: start; margin-top: 36px; }
+.global-presence-marker-leader { stroke: var(--teal); stroke-width: 1.5; opacity: .4; }
+.global-presence-marker-halo { fill: #d5e8ff; }
+.global-presence-marker-dot { fill: var(--teal); }
+.global-presence-marker-label rect { fill: var(--teal); }
+.global-presence-marker-label text { fill: var(--white); font-size: 26px; font-weight: 700; letter-spacing: .04em; }
 .contact-information-block h2 { max-width: 300px; margin-bottom: 0; font-size: clamp(1.625rem, 1.4rem + .7vw, 2rem); }
 .section-kicker { margin-bottom: 20px; color: var(--teal); font-size: var(--type-label); font-weight: 700; letter-spacing: .1em; }
 .section-title { font-size: var(--type-section); }
@@ -455,16 +467,10 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
   .value-card:nth-child(3) { border-right: 0; }
   .value-card:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
   .contact-layout { grid-template-columns: 1fr; gap: 56px; }
-  .contact-presence-composition { grid-template-columns: minmax(220px, .55fr) minmax(280px, 1fr); }
-  .contact-world-map { width: min(calc(100% + 24px), 430px); }
 }
 
 @media (max-width: 1180px) {
   .technology-system { grid-template-columns: 1fr; }
-}
-
-@media (min-width: 1025px) and (max-width: 1300px) {
-  .contact-world-map { width: calc(100% + 24px); }
 }
 
 @media (max-width: 1024px) {
@@ -473,12 +479,17 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
   .capability-overview-services { grid-column: 2; }
 }
 
-@media (max-width: 800px) {
-  :root { --page-gutter: 24px; --editorial-columns: minmax(0, 1fr); --editorial-gap: 24px; }
-  .section { padding: var(--space-section) 0; }
+/* Use the existing menu before centered desktop links crowd the logo. */
+@media (max-width: 900px) {
+  .header-inner { display: flex; }
   .desktop-nav, .header-cta { display: none; }
   .menu-toggle { display: flex; }
   .mobile-panel { display: block; }
+}
+
+@media (max-width: 800px) {
+  :root { --page-gutter: 24px; --editorial-columns: minmax(0, 1fr); --editorial-gap: 24px; }
+  .section { padding: var(--space-section) 0; }
   .brand-logo { width: min(166px, calc(100vw - 96px)); }
   .approach-hero { padding-block: 72px 78px; }
   .approach-intro h1 { font-size: 3rem; }
@@ -554,8 +565,8 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
   .engineering-layer { grid-template-columns: 1fr; gap: 8px; padding: 24px 0; align-items: start; }
   .engineering-tags { padding-top: 8px; gap: 8px; }
   .engineering-tags li { min-height: 29px; white-space: normal; }
-  .contact-presence-composition { grid-template-columns: 1fr; }
-  .contact-world-map { width: min(100%, 430px); grid-column: 1; grid-row: auto; justify-self: start; margin: 0 0 22px; }
+  .global-presence { grid-template-columns: 1fr; gap: 20px; }
+  .global-presence-map { margin-top: 0; }
 }
 
 @media (max-width: 520px) {
