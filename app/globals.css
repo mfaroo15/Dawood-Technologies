@@ -63,7 +63,7 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 
 /* Header */
 .site-header { position: sticky; z-index: 100; top: 0; color: var(--ink); background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
-.header-inner { min-height: var(--header-height); display: grid; grid-template-columns: minmax(0, 1fr) max-content minmax(0, 1fr); align-items: center; gap: 28px; }
+.header-inner { min-height: var(--header-height); display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content; align-items: center; gap: 28px; }
 .brand { margin-right: auto; display: flex; align-items: center; }
 .brand-logo { width: clamp(168px, 13vw, 208px); height: auto; }
 .desktop-nav { min-width: 0; display: flex; flex-wrap: nowrap; justify-self: center; align-items: center; gap: 30px; }
