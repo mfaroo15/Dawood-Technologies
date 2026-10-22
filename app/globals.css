@@ -22,7 +22,7 @@
   --editorial-columns: minmax(0, min(40%, 480px)) minmax(0, 1fr);
   --editorial-copy: 60ch;
   /* Rem-based bounds preserve user font preferences; fluid terms cap on wide screens. */
-  --type-home-hero: clamp(1.75rem, .95rem + 3.95vw, 4.5rem);
+  --type-home-hero: clamp(1.75rem, .95rem + 3.95vw, 4rem);
   --type-interior-hero: clamp(2rem, 1.5rem + 2vw, 3.25rem);
   --type-section: clamp(1.875rem, 1.5rem + 1vw, 2.375rem);
   --type-heading: clamp(1.25rem, 1.1rem + .6vw, 1.625rem);
@@ -294,6 +294,11 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 .industry-detail-heading h2 { max-width: 520px; margin: 0; }
 .industry-detail-heading > p:last-child { max-width: var(--editorial-copy); margin: 0; font-size: 1rem; }
 .industry-team { background: var(--paper); }
+/* Omit only the opening content rules; keep subsequent row separators. */
+.detail-list > .container > .capability-overview-row:first-child,
+.solutions-detail > .container > article:first-child,
+.work-index > .work-case-list > .work-case-feature:first-child { border-top: 0; }
+
 .company-story { background: var(--white); }
 .company-engineering { background: var(--paper); }
 .story-grid { grid-template-columns: var(--editorial-columns); gap: var(--editorial-gap); align-items: start; margin-bottom: 0; }

@@ -2,10 +2,6 @@
   border-top: 0;
 }
 
-.company :global(.company-story-row:first-child) {
-  border-top: 1px solid var(--line);
-}
-
 .company :global(.company-story-row) {
   grid-template-columns: minmax(0, min(40%, 400px)) minmax(0, 1fr);
 }
