@@ -1,3 +1,7 @@
+.page :global(.inner-hero-copy) { width: 100%; max-width: 60rem; }
+/* Retain the hero's original two-line text space when the sentence fits one line. */
+.page :global(.inner-hero-copy) > p { max-width: 100%; min-block-size: 2lh; }
+
 .intro {
   margin-bottom: 0;
 }

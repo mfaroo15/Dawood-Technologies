@@ -15,6 +15,7 @@ export const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
   { href: "/solutions", label: "Solutions" },
+  { href: "/services/ai-automation", label: "AI Nexus" },
   { href: "/work", label: "Our Work" },
   { href: "/company", label: "About Us" },
   { href: "/careers", label: "Careers" },
@@ -36,7 +37,7 @@ export const capabilities = [
     industries: ["FinTech", "HealthTech", "Retail & E-commerce", "Manufacturing & Infrastructure", "Professional Services"],
   },
   {
-    code: "02", slug: "ai-automation", title: "AI & Automation",
+    code: "02", slug: "ai-automation", title: "AI Nexus", listedUnderServices: false,
     summary: "AI applications and workflow automation integrated into defined business processes with appropriate controls.",
     introduction: "We identify repeatable workflows, evaluate where AI or automation is appropriate, and build the applications, integrations and controls required for production use.",
     items: ["AI consulting", "AI application development", "AI integration", "Intelligent automation", "Workflow automation", "Business process automation", "AI-enabled business applications"],
@@ -99,6 +100,9 @@ export const capabilities = [
     industries: ["Manufacturing & Infrastructure", "International Trade & Commerce", "Retail & Commerce", "Agriculture & Dairy", "Professional Services"],
   },
 ] as const;
+
+// Directory visibility is separate from route existence and contextual references.
+export const serviceDirectory = capabilities.filter((item) => !("listedUnderServices" in item) || item.listedUnderServices);
 
 export const industries = [
   { code: "01", basis: "operating", title: "Construction & Infrastructure", text: "Technology supporting operational businesses across manufacturing, construction, infrastructure and related environments.", needs: ["Business applications", "Digital presence", "Reporting", "Technology infrastructure"] },

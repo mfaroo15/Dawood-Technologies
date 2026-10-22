@@ -17,7 +17,7 @@ const principles = [
 
 export default function CareersPage() {
   return (
-    <main id="main-content">
+    <main id="main-content" className={styles.page}>
       <InnerHero
         kicker="CAREERS"
         title="Build technology that stays useful."

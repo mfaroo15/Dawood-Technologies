@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FooterLead } from "@/app/components/FooterLead";
-import { capabilities, contactEmail, contactPhone, contactPresence, industries, legalLinks, navLinks } from "@/app/data/site";
+import { serviceDirectory, contactEmail, contactPhone, contactPresence, industries, legalLinks, navLinks } from "@/app/data/site";
 
 export function Footer() {
   return (
@@ -32,7 +32,7 @@ export function Footer() {
         </nav>
         <nav className="footer-column" aria-label="Capability links">
           <strong>Services</strong>
-          {capabilities.slice(0, 5).map((item) => <Link href={`/services/${item.slug}`} key={item.title}>{item.title}</Link>)}
+          {serviceDirectory.slice(0, 5).map((item) => <Link href={`/services/${item.slug}`} key={item.title}>{item.title}</Link>)}
         </nav>
         <nav className="footer-column" aria-label="Industry links">
           <strong>Industries</strong>

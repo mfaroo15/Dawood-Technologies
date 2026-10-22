@@ -21,6 +21,7 @@
   --editorial-gap: clamp(32px, 3vw, 48px);
   --editorial-columns: minmax(0, min(40%, 480px)) minmax(0, 1fr);
   --editorial-copy: 60ch;
+  --intro-copy: 48rem;
   /* Rem-based bounds preserve user font preferences; fluid terms cap on wide screens. */
   --type-home-hero: clamp(1.75rem, .95rem + 3.95vw, 4rem);
   --type-interior-hero: clamp(2rem, 1.5rem + 2vw, 3.25rem);
@@ -444,6 +445,18 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 .intro-block > :first-child > :last-child { margin-bottom: 0; }
 .intro-block > :last-child { max-width: var(--editorial-copy); }
 
+/* Wider introductory copy; retain the shorter measure for body text and columns. */
+.inner-hero-grid.intro-block,
+.industry-detail-heading.intro-block,
+.case-hero-text.intro-block,
+.company-story > .editorial-intro.intro-block,
+.contact-intro { --editorial-copy: var(--intro-copy); }
+.inner-hero-grid.intro-block > :first-child,
+.industry-detail-heading.intro-block > :first-child { max-width: 60rem; }
+.industry-detail-heading.intro-block h2 { max-width: 60rem; }
+.case-hero-text .inner-hero-copy > p { max-width: var(--editorial-copy); }
+.contact-intro { max-width: var(--intro-copy); }
+
 @media (max-width: 1600px) {
   :root { --page-gutter: 48px; }
 }
@@ -485,7 +498,7 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 }
 
 /* Font-relative threshold also accommodates larger browser default text sizes. */
-@media (max-width: 56.25em) {
+@media (max-width: 64em) {
   .header-inner { display: flex; }
   .desktop-nav, .header-cta { display: none; }
   .menu-toggle { display: flex; }
