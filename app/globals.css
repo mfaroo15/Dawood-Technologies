@@ -67,10 +67,10 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 .brand { margin-right: auto; display: flex; align-items: center; }
 .brand-logo { width: clamp(168px, 13vw, 208px); height: auto; }
 .desktop-nav { min-width: 0; display: flex; flex-wrap: nowrap; justify-self: center; align-items: center; gap: 30px; }
-.desktop-nav a { position: relative; padding: 26px 0 24px; color: #3f4857; font-size: var(--type-nav); font-weight: 600; }
+.desktop-nav a { position: relative; padding: 26px 0 24px; color: #3f4857; font-size: var(--type-nav); font-weight: 600; white-space: nowrap; }
 .desktop-nav a::after { content: ""; position: absolute; right: 0; bottom: 18px; left: 0; height: 2px; background: var(--teal-bright); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
 .desktop-nav a:hover::after, .desktop-nav a[aria-current="page"]::after { transform: scaleX(1); }
-.header-cta { min-height: 40px; display: flex; justify-self: end; align-items: center; gap: 8px; padding: 0 15px; color: var(--white); background: var(--teal); border-radius: var(--radius); font-size: .82rem; font-weight: 700; transition: background .2s ease; }
+.header-cta { min-height: 40px; display: flex; justify-self: end; align-items: center; gap: 8px; padding: 0 15px; color: var(--white); background: var(--teal); border-radius: var(--radius); font-size: .82rem; font-weight: 700; white-space: nowrap; transition: background .2s ease; }
 .header-cta:hover { background: #4e7fff; }
 .menu-toggle { width: 42px; height: 42px; display: none; align-items: center; justify-content: center; padding: 0; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: var(--radius); }
 .mobile-panel { display: none; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; color: var(--ink); background: var(--white); border-top: 1px solid var(--line); }
@@ -479,8 +479,8 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
   .capability-overview-services { grid-column: 2; }
 }
 
-/* Use the existing menu before centered desktop links crowd the logo. */
-@media (max-width: 900px) {
+/* Font-relative threshold also accommodates larger browser default text sizes. */
+@media (max-width: 56.25em) {
   .header-inner { display: flex; }
   .desktop-nav, .header-cta { display: none; }
   .menu-toggle { display: flex; }

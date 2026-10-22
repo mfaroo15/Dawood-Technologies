@@ -65,15 +65,27 @@
 .home :global(.work-evidence-actions a) { min-height: 44px; }
 .home :global(.work-evidence-actions a:first-child) { color: var(--teal); }
 
-.home :global(.industry-section) { background: var(--white); }
+/* Full-width bands share the existing editorial grid and page gutters. */
+.home :global(.industry-section),
+.home :global(.home-solutions) { padding-block: clamp(80px, 6.25vw, 100px); }
+.home :global(.industry-section) { background: var(--paper); }
+.home :global(.home-solutions) { background: var(--white); }
+.home :global(.industry-section .kicker)::after,
+.home :global(.home-solutions .kicker)::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin-top: 14px;
+  background: var(--teal);
+}
 .home :global(.home-industry-list) { max-width: 1120px; }
 .home :global(.industry-list article) {
   min-height: 0;
   grid-template-columns: 36px minmax(0, min(36%, 360px)) minmax(0, 1fr);
   padding-block: 24px;
 }
-/* At these adjoining sections, the preceding section already supplies the full gap. */
-.home :global(.home-solutions) { padding-block: 0 var(--home-section-space); }
+/* The following section retains its existing spacing. */
 .home :global(.technology-section) { padding-top: 0; border-top: 0; }
 .home :global(.principles) { padding-block: 64px; }
 .home :global(.principle-grid) { margin-top: 28px; }
@@ -86,6 +98,8 @@
 }
 
 @media (max-width: 800px) {
+  .home :global(.industry-section),
+  .home :global(.home-solutions) { padding-block: clamp(48px, 8vw, 64px); }
   .home :global(.industry-list article) { grid-template-columns: 34px minmax(0, 1fr); }
   .home :global(.home-origin h2) { max-width: 24ch; }
   .home :global(.home-origin .story-grid) { margin-bottom: 36px; }
@@ -122,6 +136,7 @@
 .home :global(.home-solutions .editorial-intro) {
   grid-template-columns: var(--editorial-columns);
   column-gap: clamp(32px, 5vw, 72px);
+  align-items: center;
   margin-bottom: 32px;
 }
 .home :global(.industry-section h2),
