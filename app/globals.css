@@ -68,7 +68,7 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 .brand { margin-right: auto; display: flex; align-items: center; }
 .brand-logo { width: clamp(168px, 13vw, 208px); height: auto; }
 .desktop-nav { min-width: 0; display: flex; flex-wrap: nowrap; justify-self: center; align-items: center; gap: 30px; }
-.desktop-nav a { position: relative; padding: 26px 0 24px; color: #3f4857; font-size: var(--type-nav); font-weight: 600; white-space: nowrap; }
+.desktop-nav a { position: relative; padding: 25px 0 24px; color: #3f4857; font-size: 1.0625rem; font-weight: 600; white-space: nowrap; }
 .desktop-nav a::after { content: ""; position: absolute; right: 0; bottom: 18px; left: 0; height: 2px; background: var(--teal-bright); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
 .desktop-nav a:hover::after, .desktop-nav a[aria-current="page"]::after { transform: scaleX(1); }
 .header-cta { min-height: 40px; display: flex; justify-self: end; align-items: center; gap: 8px; padding: 0 15px; color: var(--white); background: var(--teal); border-radius: var(--radius); font-size: .82rem; font-weight: 700; white-space: nowrap; transition: background .2s ease; }
@@ -469,7 +469,7 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
   :root { --page-gutter: 32px; --editorial-gap: 48px; }
   .inner-hero-grid, .case-hero-grid, .page-hero-inner { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .desktop-nav { gap: 18px; }
-  .desktop-nav a { font-size: var(--type-nav); }
+  .desktop-nav a { font-size: 1.0625rem; }
   .approach-process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .approach-step { padding: 32px 0; }
   .solutions-editorial { gap: 48px; }
@@ -489,6 +489,7 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 
 @media (max-width: 1180px) {
   .technology-system { grid-template-columns: 1fr; }
+  .desktop-nav { gap: 22px; }
 }
 
 @media (max-width: 1024px) {

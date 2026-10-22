@@ -60,6 +60,10 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      {
+        source: "/",
+        headers: [{ key: "Content-Security-Policy", value: contentSecurityPolicy.replace("media-src 'none'", "media-src 'self'") }],
+      },
     ];
   },
 };

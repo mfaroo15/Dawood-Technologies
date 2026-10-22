@@ -1,0 +1,37 @@
+/* Width follows hero height so wide viewports frame the globe like 1280px instead of zooming the cover crop. */
+.visual { position: absolute; right: 0; top: 0; height: 100%; aspect-ratio: 6 / 5; max-width: min(52vw, 1050px); }
+.scene, .panels { position: absolute; inset: 0; }
+.poster, .video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.video { position: absolute; inset: 0; opacity: 0; }
+.video[data-ready="true"] { opacity: 1; }
+.panels { list-style: none; margin: 0; padding: 0; }
+.panels > li { position: absolute; display: grid; gap: 12px; min-width: 128px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); color: var(--ink); font-size: .9375rem; font-weight: 600; box-shadow: 0 10px 28px rgba(18,104,232,.06); animation: panel-float 7s ease-in-out infinite; animation-play-state: paused; }
+.visual[data-playing="true"] .panels > li { animation-play-state: running; }
+.data { left: 25%; top: 13%; }
+.panels .ai { right: 8%; top: 13%; animation-delay: -2s; }
+.panels .automation { left: 21%; top: 43%; animation-delay: -4s; }
+.panels .integration { right: 8%; top: 46%; animation-delay: -1s; }
+.panels .outcomes { left: 30%; top: 78%; animation-delay: -3s; }
+.icon { display: flex; align-items: center; height: 22px; color: var(--teal); }
+.control { position: absolute; left: 61%; bottom: 4%; min-height: 44px; background: transparent; color: var(--muted); font-size: .8125rem; border: 0; padding: 10px; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+/* Available to screen readers and revealed only for keyboard focus. */
+.control:not(:focus-visible) { width: 1px; height: 1px; min-height: 0; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes panel-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+/* Wide, short heroes need a little more cover crop to close the gap to the copy column. */
+@media (min-width: 1700px) { .visual { aspect-ratio: 4 / 3; } }
+/* Ultrawide: hold the globe 240px past the content column instead of the viewport edge, fading its clipped side. */
+@media (min-width: 1921px) {
+  .visual { right: calc((100vw - var(--container)) / 2 - 240px); }
+  .scene { mask-image: linear-gradient(to left, transparent, #000 24%); }
+}
+@media (max-width: 1100px) and (min-width: 821px) { .panels > li { padding: 12px; min-width: 100px; } }
+@media (max-width: 64em) {
+  .visual { position: relative; top: auto; right: auto; width: min(100%, 580px); height: auto; aspect-ratio: auto; max-width: none; margin: 8px 0 0 auto; }
+  .scene { position: relative; aspect-ratio: 10 / 7; overflow: hidden; }
+  .poster { position: absolute; inset: 0; }
+  .panels { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 0 20px 24px; }
+  .panels > li, .panels .ai { position: static; display: block; animation: none; padding: 8px 12px; min-width: 0; font-size: .875rem; box-shadow: none; }
+  .panels > li > span + span { display: none; }
+  .control { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .panels > li { animation: none; } }

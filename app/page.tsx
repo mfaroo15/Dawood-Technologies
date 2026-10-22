@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, AppWindow, BrainCircuit, Workflow, Globe } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
+import { HeroTechnologyVisual } from "@/app/components/HeroTechnologyVisual";
 import { contactEmail, contactPhone, foundingYear, siteUrl } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
 
 const capabilityLinks = [
-  { title: "Services", description: "Development, infrastructure, and technology operations.", href: "/services", icon: AppWindow },
-  { title: "AI Nexus", description: "Artificial intelligence and business automation.", href: "/services/ai-automation", icon: BrainCircuit },
-  { title: "Solutions", description: "Systems designed around business needs.", href: "/solutions", icon: Workflow },
-  { title: "Industries", description: "Technology across operating environments.", href: "/industries", icon: Globe },
+  { title: "Services", description: "Development, infrastructure, and technology operations.", href: "/services", image: "/capability-images/services.webp" },
+  { title: "AI Nexus", description: "Artificial intelligence and business automation.", href: "/services/ai-automation", image: "/capability-images/ai-nexus.webp" },
+  { title: "Solutions", description: "Systems designed around business needs.", href: "/solutions", image: "/capability-images/solutions-dashboard.webp" },
+  { title: "Industries", description: "Technology across operating environments.", href: "/industries", image: "/capability-images/industries.webp" },
 ];
 
 const homeDescription = "Dawood Technologies provides IT consulting, software development, cloud infrastructure, enterprise networking, automation, and business technology solutions.";
@@ -47,7 +49,7 @@ export default function Home() {
   return <main id="main-content" className={styles.home}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
     <section className={`${styles.hero} ${styles.tinted}`} aria-labelledby="home-title">
-      <div className="container">
+      <div className={`container ${styles.heroLayout}`}><div className={styles.heroCopy}>
         <p className={`kicker ${styles.label}`}>DAWOOD TECHNOLOGIES</p>
         <h1 className={styles.heroHeading} id="home-title">Technology built around how businesses <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
         <p className={styles.heroDescription}>We design, develop, integrate, and support technology solutions that help organizations operate and grow.</p>
@@ -56,6 +58,8 @@ export default function Home() {
           <ButtonLink href="/company" variant="secondary">About Us <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
         </div>
       </div>
+      </div>
+      <HeroTechnologyVisual />
     </section>
 
     <section className={styles.section} aria-labelledby="approach-title">
@@ -73,14 +77,14 @@ export default function Home() {
           <p className={`kicker ${styles.label}`}>WHAT WE DO</p>
           <h2 className={styles.sectionHeading} id="capabilities-title">Explore our capabilities.</h2>
         </div>
-        <div className={styles.capabilityGrid}>{capabilityLinks.map((item) => {
-          const Icon = item.icon;
-          return <Link className={styles.capabilityCard} href={item.href} key={item.title} aria-labelledby={`capability-${item.title.toLowerCase().replaceAll(" ", "-")}`}>
-            <div className={styles.cardTop}><Icon size={24} strokeWidth={1.6} aria-hidden="true" /><ArrowUpRight size={18} aria-hidden="true" /></div>
+        <div className={styles.capabilityGrid}>{capabilityLinks.map((item) => <Link className={styles.capabilityCard} href={item.href} key={item.title} aria-labelledby={`capability-${item.title.toLowerCase().replaceAll(" ", "-")}`}>
+          <div className={styles.cardImage}><Image src={item.image} alt="" width={960} height={640} sizes="(max-width: 37.5em) 100vw, (max-width: 75em) 50vw, (max-width: 1536px) 25vw, 342px" /></div>
+          <div className={styles.cardContent}>
             <h3 id={`capability-${item.title.toLowerCase().replaceAll(" ", "-")}`}>{item.title}</h3>
             <p>{item.description}</p>
-          </Link>;
-        })}</div>
+            <span className={styles.cardArrow} aria-hidden="true"><ArrowUpRight size={18} strokeWidth={1.6} /></span>
+          </div>
+        </Link>)}</div>
       </div>
     </section>
 

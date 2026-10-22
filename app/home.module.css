@@ -1,7 +1,13 @@
 .home { background: var(--white); }
 .tinted { background: #f4f8fd; }
 .section { padding-block: clamp(48px, 5vw, 72px); }
-.hero { padding-block: clamp(64px, 6vw, 96px); }
+.hero { position: relative; overflow: hidden; padding-block: clamp(64px, 6vw, 96px); }
+.heroLayout { position: relative; z-index: 1; pointer-events: none; }
+.heroCopy { width: 50%; pointer-events: auto; }
+@media (max-width: 64em) {
+  .heroCopy { width: 100%; }
+  .hero { padding-bottom: 0; }
+}
 .label { display: flex; align-items: center; gap: 12px; }
 .heroHeading {
   max-width: 20ch;
@@ -23,21 +29,30 @@
 .sectionIntro .sectionHeading { margin-bottom: 0; }
 .capabilityGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 24px; }
 .capabilityCard {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
-  padding: 24px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  transition: border-color .18s ease, background-color .18s ease;
+  transition: border-color .18s ease;
 }
-.cardTop { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; color: var(--teal); }
+.cardImage { position: relative; flex: 0 0 auto; height: 210px; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; }
+.cardImage img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
+.cardContent { display: flex; flex-direction: column; align-items: flex-start; flex: 1; min-height: 174px; padding: 22px; }
 .capabilityCard h3 { margin-bottom: 12px; font-size: var(--type-heading); font-weight: 600; }
 .capabilityCard p { margin-bottom: 0; color: var(--muted); }
-.capabilityCard:hover { border-color: var(--teal); background: var(--paper); }
-@media (max-width: 1100px) { .capabilityGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .capabilityGrid { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
+.cardArrow { display: grid; place-items: center; width: 32px; height: 32px; margin-top: auto; align-self: flex-end; border: 1px solid var(--line); border-radius: 50%; color: var(--teal); transition: border-color .18s ease, background-color .18s ease; }
+.capabilityCard:hover, .capabilityCard:focus-visible { border-color: var(--teal); }
+.capabilityCard:hover .cardImage img { transform: scale(1.025); }
+.capabilityCard:is(:hover, :focus-visible) .cardArrow { border-color: var(--teal); background: var(--mist); }
+@media (max-width: 75em) { .capabilityGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 37.5em) { .capabilityGrid { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
 @media (max-width: 520px) {
   .heroDescription { font-size: 1rem; }
   .actions { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
-@media (prefers-reduced-motion: reduce) { .capabilityCard { transition: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .capabilityCard, .cardImage img, .cardArrow { transition: none; }
+  .capabilityCard:hover .cardImage img { transform: none; }
+}
