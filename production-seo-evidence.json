@@ -1,0 +1,2251 @@
+{
+  "checkedAt": "2026-10-18T04:12:36.979Z",
+  "sitemap": {
+    "status": 200,
+    "urls": [
+      "https://www.dawoodtech.com/",
+      "https://www.dawoodtech.com/services",
+      "https://www.dawoodtech.com/solutions",
+      "https://www.dawoodtech.com/work",
+      "https://www.dawoodtech.com/industries",
+      "https://www.dawoodtech.com/company",
+      "https://www.dawoodtech.com/careers",
+      "https://www.dawoodtech.com/contact",
+      "https://www.dawoodtech.com/privacy",
+      "https://www.dawoodtech.com/terms",
+      "https://www.dawoodtech.com/services/technology-consulting",
+      "https://www.dawoodtech.com/services/ai-automation",
+      "https://www.dawoodtech.com/services/cloud-devops",
+      "https://www.dawoodtech.com/services/application-development",
+      "https://www.dawoodtech.com/services/enterprise-erp",
+      "https://www.dawoodtech.com/services/data-services",
+      "https://www.dawoodtech.com/services/cybersecurity",
+      "https://www.dawoodtech.com/services/managed-technology",
+      "https://www.dawoodtech.com/work/dawood-rcc-pipe",
+      "https://www.dawoodtech.com/work/dawood-traders"
+    ],
+    "matchesLocal": true
+  },
+  "robots": {
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "body": "User-Agent: *\nAllow: /\n\nHost: https://www.dawoodtech.com\nSitemap: https://www.dawoodtech.com/sitemap.xml\n"
+  },
+  "pages": [
+    {
+      "url": "https://www.dawoodtech.com/",
+      "status": 200,
+      "title": "Dawood Technologies | IT Infrastructure &amp; Business Systems",
+      "description": [
+        "Dawood Technologies provides IT consulting, software development, cloud infrastructure, enterprise networking, automation, and business technology solutions."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://www.dawoodtech.com/#organization",
+              "name": "Dawood Technologies",
+              "url": "https://www.dawoodtech.com/",
+              "logo": "https://www.dawoodtech.com/dawood-technologies-logo.png",
+              "telephone": "+1-224-598-7275",
+              "email": "info@dawoodtech.com",
+              "foundingDate": "2026",
+              "description": "Dawood Technologies grew from the technology needs of operating businesses and designs, builds, modernizes and supports business technology."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.dawoodtech.com/#website",
+              "name": "Dawood Technologies",
+              "url": "https://www.dawoodtech.com/",
+              "publisher": {
+                "@id": "https://www.dawoodtech.com/#organization"
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/company",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/services/cloud-devops",
+        "/services/data-services",
+        "/services/managed-technology",
+        "/services",
+        "/work/dawood-rcc-pipe",
+        "/work/dawood-rcc-pipe",
+        "https://dawoodrccpipe.com",
+        "/work/dawood-traders",
+        "/work/dawood-traders",
+        "https://dawoodtraderspk.com",
+        "/work",
+        "/industries",
+        "/solutions",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services",
+      "status": 200,
+      "title": "IT Services &amp; Consulting | Dawood Technologies",
+      "description": [
+        "Explore IT consulting, infrastructure, cloud, networking, application development, and technology support services from Dawood Technologies."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/services/data-services",
+        "/services/cybersecurity",
+        "/services/managed-technology",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/solutions",
+      "status": 200,
+      "title": "Business Technology Solutions | Dawood Technologies",
+      "description": [
+        "Discover business technology solutions covering digital transformation, enterprise systems, cloud infrastructure, automation, and software."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/solutions"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/services/data-services",
+        "/services/enterprise-erp",
+        "/services/ai-automation",
+        "/services/enterprise-erp",
+        "/services/data-services",
+        "/services/data-services",
+        "/services/ai-automation",
+        "/services/ai-automation",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/cloud-devops",
+        "/services/cloud-devops",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/work",
+      "status": 200,
+      "title": "Our Work &amp; Technology Projects | Dawood Technologies",
+      "description": [
+        "Explore projects, capabilities, and technology solutions delivered by Dawood Technologies."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/work"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/work/dawood-rcc-pipe",
+        "/work/dawood-rcc-pipe",
+        "https://dawoodrccpipe.com",
+        "/work/dawood-traders",
+        "/work/dawood-traders",
+        "https://dawoodtraderspk.com",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/industries",
+      "status": 200,
+      "title": "Industry Experience &amp; Applications | Dawood Technologies",
+      "description": [
+        "Dawood Technologies operating experience in construction, infrastructure and international trade, with broader team experience across technology environments."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/industries"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/work/dawood-rcc-pipe",
+        "/work/dawood-traders",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/company",
+      "status": 200,
+      "title": "About Dawood Technologies | Company &amp; Expertise",
+      "description": [
+        "Learn about Dawood Technologies, our expertise, our approach, and how we help organizations implement and support business technology."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/company"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/work",
+        "/services",
+        "/careers",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/careers",
+      "status": 200,
+      "title": "Careers | Dawood Technologies",
+      "description": [
+        "Explore career opportunities at Dawood Technologies across software, cloud infrastructure, data, enterprise systems and technology operations."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/careers"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/contact",
+      "status": 200,
+      "title": "Contact Dawood Technologies | IT Consulting &amp; Support",
+      "description": [
+        "Contact Dawood Technologies to discuss IT consulting, business systems, cloud infrastructure, software development, or technology solutions."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/contact"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/world-map-dots.svg",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "tel:+12245987275",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/privacy",
+      "status": 200,
+      "title": "Privacy Policy | Dawood Technologies",
+      "description": [
+        "Privacy Policy for Dawood Technologies website visitors, prospects and clients."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/privacy"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "mailto:info@dawoodtech.com",
+        "mailto:info@dawoodtech.com",
+        "/terms",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/terms",
+      "status": 200,
+      "title": "Terms &amp; Conditions | Dawood Technologies",
+      "description": [
+        "Terms and Conditions for using the Dawood Technologies website and requesting services."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/terms"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "mailto:info@dawoodtech.com",
+        "mailto:info@dawoodtech.com",
+        "/privacy",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services/technology-consulting",
+      "status": 200,
+      "title": "Technology Consulting | Dawood Technologies",
+      "description": [
+        "Technology assessments, architecture decisions and implementation roadmaps based on business requirements and existing systems."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services/technology-consulting"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.dawoodtech.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Technology Consulting",
+              "item": "https://www.dawoodtech.com/services/technology-consulting"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/industries",
+        "/industries",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services/ai-automation",
+      "status": 200,
+      "title": "AI &amp; Automation | Dawood Technologies",
+      "description": [
+        "AI applications and workflow automation integrated into defined business processes with appropriate controls."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services/ai-automation"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.dawoodtech.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "AI & Automation",
+              "item": "https://www.dawoodtech.com/services/ai-automation"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/industries",
+        "/industries",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services/cloud-devops",
+      "status": 200,
+      "title": "Cloud &amp; DevOps | Dawood Technologies",
+      "description": [
+        "Cloud architecture, migration, infrastructure automation and deployment pipelines for business applications."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services/cloud-devops"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.dawoodtech.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Cloud & DevOps",
+              "item": "https://www.dawoodtech.com/services/cloud-devops"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/industries",
+        "/industries",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services/application-development",
+      "status": 200,
+      "title": "Application Development | Dawood Technologies",
+      "description": [
+        "Web and mobile applications, internal platforms, APIs and integrations built around defined users and workflows."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services/application-development"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.dawoodtech.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Application Development",
+              "item": "https://www.dawoodtech.com/services/application-development"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/industries",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services/enterprise-erp",
+      "status": 200,
+      "title": "Enterprise &amp; ERP | Dawood Technologies",
+      "description": [
+        "CRM, ERP and workflow systems configured and integrated around day-to-day business operations."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services/enterprise-erp"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.dawoodtech.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Enterprise & ERP",
+              "item": "https://www.dawoodtech.com/services/enterprise-erp"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/industries",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services/data-services",
+      "status": 200,
+      "title": "Data Services | Dawood Technologies",
+      "description": [
+        "Data pipelines, integrations, reporting and analytics for operational and management information."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services/data-services"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.dawoodtech.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Data Services",
+              "item": "https://www.dawoodtech.com/services/data-services"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/industries",
+        "/industries",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services/cybersecurity",
+      "status": 200,
+      "title": "Cybersecurity | Dawood Technologies",
+      "description": [
+        "Security assessments and controls for identities, applications, cloud environments and infrastructure."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services/cybersecurity"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.dawoodtech.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Cybersecurity",
+              "item": "https://www.dawoodtech.com/services/cybersecurity"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/industries",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/services/managed-technology",
+      "status": 200,
+      "title": "Managed Technology | Dawood Technologies",
+      "description": [
+        "Ongoing monitoring, administration, support and maintenance for applications and infrastructure."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/services/managed-technology"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.dawoodtech.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Managed Technology",
+              "item": "https://www.dawoodtech.com/services/managed-technology"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/industries",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/work/dawood-rcc-pipe",
+      "status": 200,
+      "title": "Dawood RCC Pipe | Dawood Technologies",
+      "description": [
+        "Digital presence and ongoing technology support for an established RCC pipe manufacturer."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/work/dawood-rcc-pipe"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Work",
+              "item": "https://www.dawoodtech.com/work"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Dawood RCC Pipe",
+              "item": "https://www.dawoodtech.com/work/dawood-rcc-pipe"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "https://dawoodrccpipe.com",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    },
+    {
+      "url": "https://www.dawoodtech.com/work/dawood-traders",
+      "status": 200,
+      "title": "Dawood Traders | Dawood Technologies",
+      "description": [
+        "Digital presence and technology support for international trade operations."
+      ],
+      "canonical": [
+        "https://www.dawoodtech.com/work/dawood-traders"
+      ],
+      "robotsHeader": null,
+      "robotsMeta": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        },
+        {
+          "src": "/_next/image?url=%2Fdawood-technologies-logo.png&amp;w=3840&amp;q=75",
+          "alt": "",
+          "hasAlt": true
+        }
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.dawoodtech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Work",
+              "item": "https://www.dawoodtech.com/work"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Dawood Traders",
+              "item": "https://www.dawoodtech.com/work/dawood-traders"
+            }
+          ]
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "https://dawoodtraderspk.com",
+        "/contact",
+        "/contact",
+        "/",
+        "tel:+12245987275",
+        "mailto:info@dawoodtech.com",
+        "/services",
+        "/industries",
+        "/solutions",
+        "/work",
+        "/company",
+        "/careers",
+        "/contact",
+        "/services/technology-consulting",
+        "/services/ai-automation",
+        "/services/cloud-devops",
+        "/services/application-development",
+        "/services/enterprise-erp",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/industries",
+        "/privacy",
+        "/terms"
+      ],
+      "h1Count": 1,
+      "localTitleMatches": true,
+      "localCanonicalMatches": true
+    }
+  ],
+  "probes": [
+    {
+      "url": "http://dawoodtech.com/",
+      "status": 308,
+      "location": "https://dawoodtech.com/"
+    },
+    {
+      "url": "http://www.dawoodtech.com/",
+      "status": 308,
+      "location": "https://www.dawoodtech.com/"
+    },
+    {
+      "url": "https://dawoodtech.com/",
+      "status": 308,
+      "location": "https://www.dawoodtech.com/"
+    },
+    {
+      "url": "https://dawoodtech.com/services",
+      "status": 308,
+      "location": "https://www.dawoodtech.com/services"
+    },
+    {
+      "url": "https://www.dawoodtech.com/about",
+      "status": 308,
+      "location": "/company"
+    },
+    {
+      "url": "https://www.dawoodtech.com/capabilities",
+      "status": 308,
+      "location": "/services"
+    },
+    {
+      "url": "https://www.dawoodtech.com/process",
+      "status": 308,
+      "location": "/services"
+    }
+  ],
+  "bots": [
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/solutions",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/solutions"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/work",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/work"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/industries",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/industries"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/company",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/company"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/careers",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/careers"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/contact",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/contact"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/privacy",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/privacy"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/terms",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/terms"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services/technology-consulting",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/technology-consulting"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services/ai-automation",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/ai-automation"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services/cloud-devops",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/cloud-devops"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services/application-development",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/application-development"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services/enterprise-erp",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/enterprise-erp"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services/data-services",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/data-services"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services/cybersecurity",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/cybersecurity"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/services/managed-technology",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/managed-technology"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/work/dawood-rcc-pipe",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/work/dawood-rcc-pipe"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/work/dawood-traders",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/work/dawood-traders"
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/robots.txt",
+      "status": 200,
+      "robots": null,
+      "hasMain": false
+    },
+    {
+      "agent": "Googlebot",
+      "url": "https://www.dawoodtech.com/sitemap.xml",
+      "status": 200,
+      "robots": null,
+      "hasMain": false
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/solutions",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/solutions"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/work",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/work"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/industries",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/industries"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/company",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/company"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/careers",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/careers"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/contact",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/contact"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/privacy",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/privacy"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/terms",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/terms"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services/technology-consulting",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/technology-consulting"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services/ai-automation",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/ai-automation"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services/cloud-devops",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/cloud-devops"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services/application-development",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/application-development"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services/enterprise-erp",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/enterprise-erp"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services/data-services",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/data-services"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services/cybersecurity",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/cybersecurity"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/services/managed-technology",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/services/managed-technology"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/work/dawood-rcc-pipe",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/work/dawood-rcc-pipe"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/work/dawood-traders",
+      "status": 200,
+      "robots": null,
+      "hasMain": true,
+      "canonical": "https://www.dawoodtech.com/work/dawood-traders"
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/robots.txt",
+      "status": 200,
+      "robots": null,
+      "hasMain": false
+    },
+    {
+      "agent": "bingbot",
+      "url": "https://www.dawoodtech.com/sitemap.xml",
+      "status": 200,
+      "robots": null,
+      "hasMain": false
+    }
+  ]
+}

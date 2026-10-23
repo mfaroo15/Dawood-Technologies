@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
+import CapabilityShowcase, { type Capability } from "@/app/components/CapabilityShowcase";
+import HeroGlass from "@/app/components/HeroGlass";
 import { contactEmail, contactPhone, foundingYear, siteUrl } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
 
-const capabilityLinks = [
+const capabilityLinks: Capability[] = [
   { title: "Services", description: "Development, infrastructure, and technology operations.", href: "/services", image: "/capability-images/services.webp" },
   { title: "AI Nexus", description: "Artificial intelligence and business automation.", href: "/services/ai-automation", image: "/capability-images/ai-nexus.webp" },
   { title: "Solutions", description: "Systems designed around business needs.", href: "/solutions", image: "/capability-images/solutions-dashboard.webp" },
@@ -48,7 +49,9 @@ export default function Home() {
   return <main id="main-content" className={styles.home}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
     <section className={`${styles.hero} ${styles.tinted}`} aria-labelledby="home-title">
-      <div className="container">
+      <HeroGlass />
+      <div className={styles.heroOverlay} aria-hidden="true" />
+      <div className={`container ${styles.heroContent}`}>
         <p className={`kicker ${styles.label}`}>DAWOOD TECHNOLOGIES</p>
         <h1 className={styles.heroHeading} id="home-title"><span className={styles.heroLine}>Technology built</span> <span className={styles.heroLine}>around how businesses</span> <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
         <p className={styles.heroDescription}>We design, develop, integrate, and support technology solutions that help organizations operate and grow.</p>
@@ -68,20 +71,13 @@ export default function Home() {
       </div></div>
     </section>
 
-    <section className={`${styles.section} ${styles.tinted}`} aria-labelledby="capabilities-title">
+    <section className={`${styles.section} ${styles.tinted} ${styles.capabilitiesSection}`} aria-labelledby="capabilities-title">
       <div className="container">
         <div className={styles.sectionIntro}>
           <p className={`kicker ${styles.label}`}>WHAT WE DO</p>
           <h2 className={styles.sectionHeading} id="capabilities-title">Explore our capabilities.</h2>
         </div>
-        <div className={styles.capabilityGrid}>{capabilityLinks.map((item) => <Link className={styles.capabilityCard} href={item.href} key={item.title} aria-labelledby={`capability-${item.title.toLowerCase().replaceAll(" ", "-")}`}>
-          <div className={styles.cardImage}><Image src={item.image} alt="" width={960} height={640} sizes="(max-width: 37.5em) 100vw, (max-width: 75em) 50vw, (max-width: 1536px) 25vw, 342px" /></div>
-          <div className={styles.cardContent}>
-            <h3 id={`capability-${item.title.toLowerCase().replaceAll(" ", "-")}`}>{item.title}</h3>
-            <p>{item.description}</p>
-            <span className={styles.cardArrow} aria-hidden="true"><ArrowUpRight size={18} strokeWidth={1.6} /></span>
-          </div>
-        </Link>)}</div>
+        <CapabilityShowcase items={capabilityLinks} />
       </div>
     </section>
 

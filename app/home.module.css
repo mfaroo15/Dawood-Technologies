@@ -1,8 +1,37 @@
 .home { background: var(--white); }
 .tinted { background: #f4f8fd; }
 .section { padding-block: clamp(48px, 5vw, 72px); }
-.hero { padding-block: clamp(64px, 6vw, 96px); }
+/* Dark hero: the CSS background paints first and is the fallback when WebGL is unavailable. */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(55% 65% at 72% 45%, rgba(18, 104, 232, .22), transparent 70%), linear-gradient(180deg, #121722 0%, #0b0f17 100%);
+}
+.heroOverlay { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(11, 15, 23, .9) 0%, rgba(11, 15, 23, .55) 38%, rgba(11, 15, 23, 0) 66%); }
+.heroContent { position: relative; z-index: 2; padding-block: 96px; }
 .label { display: flex; align-items: center; gap: 12px; }
+.hero .label { color: #83bfff; letter-spacing: .14em; }
+.hero .heroHeading { color: #fff; }
+.hero :global(.hero-word-rotator) { color: #4aa6ff; }
+.hero .heroDescription { color: rgba(255, 255, 255, .74); }
+.hero :global(.button-primary) { background: #1268e8; border-color: #1268e8; }
+.hero :global(.button-primary):hover { background: #0f5ad0; border-color: #0f5ad0; }
+.hero :global(.button:not(.button-primary)) {
+  color: #fff;
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .45);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+.hero :global(.button:not(.button-primary)):hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .7); }
+.hero a:focus-visible { outline: 2px solid #83bfff; outline-offset: 3px; }
+@media (max-width: 699px) {
+  .heroOverlay { background: linear-gradient(180deg, rgba(11, 15, 23, .55) 0%, rgba(11, 15, 23, .85) 100%); }
+}
 .heroHeading {
   margin-bottom: 28px;
   font-size: var(--type-home-hero);
@@ -22,32 +51,24 @@
 .textLink svg { flex-shrink: 0; }
 .sectionIntro { margin-bottom: 28px; }
 .sectionIntro .sectionHeading { margin-bottom: 0; }
-.capabilityGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 24px; }
-.capabilityCard {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  transition: border-color .18s ease;
+.capabilitiesSection {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  padding-block: 104px;
+  background:
+    radial-gradient(50% 60% at 85% 0%, rgba(18, 104, 232, 0.18), transparent 70%),
+    linear-gradient(180deg, #0e121b 0%, #0b0f17 100%);
 }
-.cardImage { position: relative; flex: 0 0 auto; height: 210px; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; }
-.cardImage img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
-.cardContent { display: flex; flex-direction: column; align-items: flex-start; flex: 1; min-height: 174px; padding: 22px; }
-.capabilityCard h3 { margin-bottom: 12px; font-size: var(--type-heading); font-weight: 600; }
-.capabilityCard p { margin-bottom: 0; color: var(--muted); }
-.cardArrow { display: grid; place-items: center; width: 32px; height: 32px; margin-top: auto; align-self: flex-end; border: 1px solid var(--line); border-radius: 50%; color: var(--teal); transition: border-color .18s ease, background-color .18s ease; }
-.capabilityCard:hover, .capabilityCard:focus-visible { border-color: var(--teal); }
-.capabilityCard:hover .cardImage img { transform: scale(1.025); }
-.capabilityCard:is(:hover, :focus-visible) .cardArrow { border-color: var(--teal); background: var(--mist); }
-@media (max-width: 75em) { .capabilityGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 37.5em) { .capabilityGrid { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
+.capabilitiesSection .label { color: #83bfff; letter-spacing: 0.14em; }
+.capabilitiesSection .sectionHeading {
+  color: #fff;
+  font-size: clamp(2rem, 1.4rem + 2vw, 3.25rem);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.capabilitiesSection .sectionIntro { margin-bottom: 48px; }
 @media (max-width: 520px) {
   .heroDescription { font-size: 1rem; }
   .actions { flex-direction: column; align-items: flex-start; gap: 12px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .capabilityCard, .cardImage img, .cardArrow { transition: none; }
-  .capabilityCard:hover .cardImage img { transform: none; }
 }
