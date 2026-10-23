@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
-import { HeroTechnologyVisual } from "@/app/components/HeroTechnologyVisual";
 import { contactEmail, contactPhone, foundingYear, siteUrl } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
@@ -49,17 +48,15 @@ export default function Home() {
   return <main id="main-content" className={styles.home}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
     <section className={`${styles.hero} ${styles.tinted}`} aria-labelledby="home-title">
-      <div className={`container ${styles.heroLayout}`}><div className={styles.heroCopy}>
+      <div className="container">
         <p className={`kicker ${styles.label}`}>DAWOOD TECHNOLOGIES</p>
-        <h1 className={styles.heroHeading} id="home-title">Technology built around how businesses <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
+        <h1 className={styles.heroHeading} id="home-title"><span className={styles.heroLine}>Technology built</span> <span className={styles.heroLine}>around how businesses</span> <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
         <p className={styles.heroDescription}>We design, develop, integrate, and support technology solutions that help organizations operate and grow.</p>
         <div className={styles.actions}>
           <ButtonLink href="/services" variant="primary">Explore Our Services <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
           <ButtonLink href="/company" variant="secondary">About Us <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
         </div>
       </div>
-      </div>
-      <HeroTechnologyVisual />
     </section>
 
     <section className={styles.section} aria-labelledby="approach-title">
