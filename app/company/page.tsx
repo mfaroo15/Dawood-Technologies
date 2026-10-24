@@ -1,4 +1,5 @@
 import { BadgeCheck, FolderKanban, MessagesSquare, Network, RefreshCw, Video, Wrench } from "lucide-react";
+import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { IconTiles } from "@/app/components/sections/IconTiles";
 import { Locations } from "@/app/components/sections/Locations";
@@ -27,6 +28,7 @@ const engagement = [
 export default function CompanyPage() {
   return (
     <main id="main-content">
+      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "About Us", path: "/company" }]} />
       <PageHero kicker="About us" title="Technology capability built from operating experience." lead="We began by running the technology behind manufacturing and trading businesses. Today we bring that same ownership to every organization we work with." />
 
       <section className={typography.lightSection} aria-labelledby="story-title">

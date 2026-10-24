@@ -1,4 +1,5 @@
 import { Cloud, Code, Compass, Cpu, Database, LayoutGrid, Settings, ShieldCheck, type LucideIcon } from "lucide-react";
+import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { Faq } from "@/app/components/sections/Faq";
 import { IconTiles } from "@/app/components/sections/IconTiles";
@@ -25,6 +26,7 @@ const services: { title: string; text: string; href: string; icon: LucideIcon }[
 export default function ServicesPage() {
   return (
     <main id="main-content">
+      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]} />
       <PageHero kicker="Services" title="Technology services organized around business needs." lead="Consulting, engineering, integration and ongoing operation. Each service can stand alone or combine into a complete technology program." />
 
       <section className={typography.lightSection} aria-labelledby="services-title">

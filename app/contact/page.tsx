@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import BookingCalendar from "@/app/components/BookingCalendar";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
@@ -17,6 +18,7 @@ export const metadata = createPageMetadata({
 export default function ContactPage() {
   return (
     <main id="main-content">
+      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
       <PageHero kicker="Contact" title="Let's talk." lead="Tell us about your organization and what you're looking to build. We reply within one business day." />
 
       {/* The Cal.com embed sizes itself from its container, so this section is not animated. */}

@@ -1,4 +1,5 @@
 import { Building2, CreditCard, GraduationCap, HeartPulse, MonitorPlay, Package, Plane, Ship } from "lucide-react";
+import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { IconTiles } from "@/app/components/sections/IconTiles";
 import { PageHero } from "@/app/components/sections/PageHero";
@@ -26,6 +27,7 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <main id="main-content">
+      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Industries", path: "/industries" }]} />
       <PageHero kicker="Industries" title="Industries we serve." lead="We design, build and run the systems behind day-to-day operations, from websites and CRM to ERP and reporting, for businesses across industries and time zones." />
 
       <section className={typography.tintedSection} aria-labelledby="industries-title">

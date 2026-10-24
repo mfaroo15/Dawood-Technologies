@@ -1,4 +1,5 @@
 import { Code, Globe, Mail, Target, TrendingUp } from "lucide-react";
+import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { IconTiles } from "@/app/components/sections/IconTiles";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
@@ -25,6 +26,7 @@ const cvLink = `mailto:${contactEmail}?subject=CV%20-%20Dawood%20Technologies`;
 export default function CareersPage() {
   return (
     <main id="main-content">
+      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Careers", path: "/careers" }]} />
       <PageHero kicker="Careers" title="Build technology that stays useful." lead="Work across applications, cloud, data and AI, on systems that real businesses depend on every day." />
 
       <section className={typography.lightSection} aria-labelledby="why-title">

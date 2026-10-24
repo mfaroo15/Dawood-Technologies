@@ -37,7 +37,7 @@ try {
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
   assert.equal(urls.length, 20, "Expected 20 canonical pages");
   const pages = new Map();
-  const resources = new Set(["/icon.svg", "/apple-icon.png", "/favicon.png"]);
+  const resources = new Set(["/favicon.ico", "/icon.png", "/icon.svg", "/apple-icon.png", "/og-image.png", "/logo-square.png"]);
   const links = [];
   for (const url of urls) {
     assert.equal(new URL(url).origin, origin);

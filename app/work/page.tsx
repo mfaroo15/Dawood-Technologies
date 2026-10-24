@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { BrowserFrame } from "@/app/components/sections/BrowserFrame";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
@@ -15,6 +16,7 @@ const systems = ["Company website", "Product catalogue", "Inventory management",
 export default function WorkPage() {
   return (
     <main id="main-content">
+      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Our Work", path: "/work" }]} />
       <PageHero kicker="Our work" title="Systems we build and run." lead="Case studies from businesses that rely on our technology every day, from public websites to the ERP and CRM behind their operations." />
 
       <section className={typography.lightSection} aria-label="Case studies">

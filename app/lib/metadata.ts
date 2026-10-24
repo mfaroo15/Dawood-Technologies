@@ -6,6 +6,9 @@ type PageMetadata = {
   path: `/${string}` | "/";
 };
 
+// 1200x630 share image used by every page.
+export const shareImage = { url: "/og-image.png", width: 1200, height: 630, alt: "Dawood Technologies: Technology built around how businesses operate." };
+
 export function createPageMetadata({ title, description, path }: PageMetadata): Metadata {
   return {
     title: title.includes("Dawood Technologies") ? { absolute: title } : title,
@@ -17,13 +20,13 @@ export function createPageMetadata({ title, description, path }: PageMetadata): 
       title,
       description,
       url: path,
-      images: [{ url: "/dawood-technologies-logo.png", width: 2125, height: 281, alt: "Dawood Technologies" }],
+      images: [shareImage],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
-      images: [{ url: "/favicon.png", alt: "Dawood Technologies brand mark" }],
+      images: [shareImage],
     },
   };
 }

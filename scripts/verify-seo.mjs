@@ -54,7 +54,7 @@ for (const url of urls) {
     for (const type of ["Organization", "WebSite"]) {
       assert.equal(graph.filter((schema) => schema["@type"] === type).length, 1, `Schema count: ${type}`);
     }
-    assert.ok(tags.some((tag) => tag.rel === "icon" && tag.href === "/favicon.png"), "Stable PNG favicon missing");
+    assert.ok(tags.some((tag) => tag.rel === "icon" && tag.href.startsWith("/favicon.ico")), "favicon.ico link missing");
   }
   if (/^\/(services|work)\/.+/.test(path)) {
     const breadcrumbs = schemas.filter((schema) => schema["@type"] === "BreadcrumbList");
@@ -84,5 +84,5 @@ assert.ok(routesManifest.redirects.some((redirect) => redirect.source === "/abou
 const robots = readFileSync(join(output, "robots.txt.body"), "utf8");
 assert.ok(robots.includes(`Sitemap: ${origin}/sitemap.xml`));
 assert.ok(robots.includes("Allow: /"));
-assert.ok(existsSync(join(process.cwd(), "public/favicon.png")));
+for (const file of ["app/favicon.ico", "app/icon.png", "app/apple-icon.png", "public/og-image.png", "public/logo-square.png"]) assert.ok(existsSync(join(process.cwd(), file)), `Missing ${file}`);
 console.log(`SEO checks passed for ${urls.length} canonical pages: unique metadata, social tags, H1s, JSON-LD, internal links, image alt attributes, sitemap and robots.`);

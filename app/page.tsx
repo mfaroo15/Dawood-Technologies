@@ -10,7 +10,6 @@ import { Reveal } from "@/app/components/sections/Reveal";
 import { StatCards } from "@/app/components/sections/StatCards";
 import { TechChips } from "@/app/components/sections/TechChips";
 import typography from "@/app/components/sections/typography.module.css";
-import { contactEmail, contactPhone, foundingYear, siteUrl } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
 
@@ -31,31 +30,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${siteUrl}/#organization`,
-        name: "Dawood Technologies",
-        url: `${siteUrl}/`,
-        logo: `${siteUrl}/dawood-technologies-logo.png`,
-        telephone: contactPhone.schema,
-        email: contactEmail,
-        foundingDate: String(foundingYear),
-        description: "Dawood Technologies grew from the technology needs of operating businesses and designs, builds, modernizes and supports business technology.",
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${siteUrl}/#website`,
-        name: "Dawood Technologies",
-        url: `${siteUrl}/`,
-        publisher: { "@id": `${siteUrl}/#organization` },
-      },
-    ],
-  };
   return <main id="main-content" className={styles.home}>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
     <section className={`${styles.hero} ${styles.tinted}`} aria-labelledby="home-title">
       <HeroOcean />
       <div className={styles.heroOverlay} aria-hidden="true" />
