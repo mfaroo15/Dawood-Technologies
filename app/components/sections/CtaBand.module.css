@@ -1,0 +1,10 @@
+.band { padding-block: 68px; color: #fff; background: var(--blue); }
+.inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.heading { margin: 0 0 10px; font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.4rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.15; }
+.text { margin: 0; color: rgba(255, 255, 255, .85); font-size: 1.1rem; }
+.button { flex-shrink: 0; display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; color: var(--blue); font-weight: 600; background: #fff; border-radius: 4px; transition: background .2s ease; }
+.button:hover { background: #edf4fc; }
+
+@media (max-width: 760px) {
+  .inner { flex-direction: column; align-items: flex-start; }
+}

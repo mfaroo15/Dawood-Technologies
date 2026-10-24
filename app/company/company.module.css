@@ -1,6 +1,10 @@
-.storySection { background: var(--white); }
-.storySection:nth-of-type(odd) { background: #f4f8fd; }
-.storyContent { max-width: 54rem; }
-.storyContent h2 { margin-bottom: 24px; }
-.storyCopy { color: var(--muted); font-size: 1.05rem; }
-.storyCopy > p:last-child { margin-bottom: 0; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.story { max-width: 62ch; color: var(--muted); font-size: 1.15rem; line-height: 1.7; }
+.story p:last-child { margin-bottom: 0; }
+.spacedHeading { margin-bottom: 40px; }
+/* Separates two consecutive white sections. */
+.divided { border-top: 1px solid var(--line); }
+
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; }
+}

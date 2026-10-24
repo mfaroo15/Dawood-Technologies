@@ -1,4 +1,9 @@
-import { InnerHero } from "@/app/components/InnerHero";
+import { Code, Globe, Mail, Target, TrendingUp } from "lucide-react";
+import { IconTiles } from "@/app/components/sections/IconTiles";
+import { PageHero } from "@/app/components/sections/PageHero";
+import { Reveal } from "@/app/components/sections/Reveal";
+import typography from "@/app/components/sections/typography.module.css";
+import { contactEmail } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./careers.module.css";
 
@@ -8,60 +13,39 @@ export const metadata = createPageMetadata({
   path: "/careers",
 });
 
-const principles = [
-  { code: "01", title: "Ownership", description: "Take responsibility beyond initial delivery." },
-  { code: "02", title: "Practical engineering", description: "Build around actual requirements rather than unnecessary complexity." },
-  { code: "03", title: "Connected thinking", description: "Consider applications, infrastructure, data and operations together." },
-  { code: "04", title: "Continuous improvement", description: "Technology continues to evolve after launch." },
+const reasons = [
+  { title: "Real impact", text: "Build systems that businesses rely on every day.", icon: Target },
+  { title: "Modern stack", text: "Next.js, cloud platforms and AI tools.", icon: Code },
+  { title: "Remote-first", text: "Work with colleagues in Chicago, Karachi and Dubai.", icon: Globe },
+  { title: "Room to grow", text: "Take on more responsibility as you and the team grow.", icon: TrendingUp },
 ];
+
+const cvLink = `mailto:${contactEmail}?subject=CV%20-%20Dawood%20Technologies`;
 
 export default function CareersPage() {
   return (
-    <main id="main-content" className={styles.page}>
-      <InnerHero
-        kicker="CAREERS"
-        title="Build technology that stays useful."
-        intro="Work across applications, infrastructure, data and business systems designed around real operating needs."
-      />
+    <main id="main-content">
+      <PageHero kicker="Careers" title="Build technology that stays useful." lead="Work across applications, cloud, data and AI, on systems that real businesses depend on every day." />
 
-      <section className="section company-story" aria-labelledby="careers-work-title">
-        <div className={`container editorial-intro intro-block ${styles.intro}`}>
-          <div>
-            <p className="kicker">01 — WORKING AT DAWOOD TECHNOLOGIES</p>
-            <h2 id="careers-work-title">Technology work connected to the operation.</h2>
-          </div>
-          <div className="editorial-copy story-copy">
-            <p>Our work spans software engineering, cloud infrastructure, enterprise systems, data, automation and ongoing technology operations.</p>
-          </div>
-        </div>
+      <section className={typography.lightSection} aria-labelledby="why-title">
+        <Reveal className="container">
+          <p className={typography.kicker}>Why work with us</p>
+          <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="why-title">What you can expect.</h2>
+          <IconTiles items={reasons} />
+        </Reveal>
       </section>
 
-      <section className={`section ${styles.principles}`} aria-labelledby="careers-principles-title">
-        <div className="container">
-          <h2 className="kicker" id="careers-principles-title">02 — HOW WE WORK</h2>
-          <div className="industry-list">
-            {principles.map((principle) => (
-              <article key={principle.code}>
-                <span>{principle.code}</span>
-                <h3>{principle.title}</h3>
-                <p>{principle.description}</p>
-              </article>
-            ))}
+      <section className={typography.tintedSection} aria-labelledby="positions-title">
+        <Reveal className="container">
+          <p className={typography.kicker}>Open positions</p>
+          <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="positions-title">Current openings.</h2>
+          <div className={styles.empty}>
+            <h3 className={styles.emptyTitle}>No open positions right now.</h3>
+            <p className={styles.emptyText}>We&apos;re always glad to hear from talented engineers. Send us your CV and we&apos;ll be in touch when a role opens.</p>
+            <a className={styles.button} href={cvLink}><Mail aria-hidden="true" size={18} />Send your CV</a>
+            <p className={styles.email}>{contactEmail}</p>
           </div>
-        </div>
-      </section>
-
-      <section className="section company-story" aria-labelledby="careers-positions-title">
-        <div className={`container editorial-intro intro-block ${styles.intro}`}>
-          <div>
-            <p className="kicker">03 — OPEN POSITIONS</p>
-            <h2 id="careers-positions-title">No open positions right now.</h2>
-          </div>
-          <div className="editorial-copy story-copy">
-            <p>We don&apos;t currently have any open roles. As Dawood Technologies grows, new opportunities will be posted here.</p>
-            <p>Check back for future opportunities.</p>
-          </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

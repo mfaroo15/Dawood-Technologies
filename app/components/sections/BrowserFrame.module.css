@@ -1,0 +1,7 @@
+.browser { min-width: 0; overflow: hidden; background: #fff; border-radius: 8px 8px 0 0; box-shadow: 0 20px 50px -20px rgba(18, 40, 90, .35); }
+.bar { display: flex; align-items: center; gap: 14px; padding: 10px 14px; background: #f7f9fc; border-bottom: 1px solid #e6ecf3; }
+.dots { display: flex; flex-shrink: 0; gap: 6px; }
+.dots i { width: 9px; height: 9px; background: #d5dce6; border-radius: 50%; }
+.url { min-width: 0; overflow: hidden; padding: 3px 14px; color: var(--muted); font-size: 12px; line-height: 1.4; white-space: nowrap; text-overflow: ellipsis; background: #fff; border: 1px solid #e6ecf3; border-radius: 999px; }
+.shot { overflow: hidden; }
+.shot img { width: 100%; height: auto; aspect-ratio: 1440 / 900; object-fit: cover; object-position: top center; }

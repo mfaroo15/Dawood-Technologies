@@ -15,7 +15,7 @@ let serverLogs = "";
 server?.stdout.on("data", (chunk) => { serverLogs += chunk; });
 server?.stderr.on("data", (chunk) => { serverLogs += chunk; });
 const services = ["technology-consulting", "ai-automation", "cloud-devops", "application-development", "enterprise-erp", "data-services", "cybersecurity", "managed-technology"];
-const paths = ["/services", "/solutions", "/industries", "/company", ...services.map((slug) => `/services/${slug}`)];
+const paths = ["/services", "/industries", "/company", ...services.map((slug) => `/services/${slug}`)];
 const sizes = [{ name: "desktop", width: 1440, height: 1000 }, { name: "tablet", width: 768, height: 1024 }, { name: "mobile", width: 390, height: 844 }];
 const cases = sizes.flatMap((size) => [size, { name: `${size.name}-zoom200-equivalent`, width: size.width / 2, height: size.height / 2 }]);
 const results = [];

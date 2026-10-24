@@ -1,67 +1,66 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { ContactBand } from "@/app/components/ContactBand";
-import { InnerHero } from "@/app/components/InnerHero";
+import { BadgeCheck, FolderKanban, MessagesSquare, Network, RefreshCw, Video, Wrench } from "lucide-react";
+import { CtaBand } from "@/app/components/sections/CtaBand";
+import { IconTiles } from "@/app/components/sections/IconTiles";
+import { Locations } from "@/app/components/sections/Locations";
+import { PageHero } from "@/app/components/sections/PageHero";
+import { Reveal } from "@/app/components/sections/Reveal";
+import typography from "@/app/components/sections/typography.module.css";
 import { foundingYear } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./company.module.css";
 
 export const metadata = createPageMetadata({ title: "About Dawood Technologies | Company & Expertise", description: "Learn about Dawood Technologies, our expertise, our approach, and how we help organizations implement and support business technology.", path: "/company" });
 
-const companySections = [
-  {
-    kicker: "BUILT FROM OPERATING EXPERIENCE",
-    title: "Technology responsibility became a dedicated company.",
-    copy: [
-      <>Dawood Technologies was founded in {foundingYear} from the technology needs of <Link href="/work">Dawood operating businesses</Link>. What began as an internal capability to manage <Link href="/services">applications, infrastructure, systems</Link>, security, data and day-to-day technology operations developed into a dedicated technology company.</>,
-      "Today, Dawood Technologies brings that ownership-driven approach to organizations beyond Dawood, connecting technology decisions to how businesses actually operate.",
-      <Link className="text-link" href="/work" key="explore-work">Explore Our Work <ArrowRight size={16} aria-hidden="true" /></Link>,
-    ],
-  },
-  {
-    kicker: "OUR APPROACH",
-    title: "Engineering technology around how businesses evolve.",
-    copy: [
-      "Dawood Technologies approaches technology through practical operating requirements, maintainability, security and long-term ownership.",
-      "Architecture, implementation, deployment, ongoing support and continuous improvement are planned together, with security and maintainability considered throughout.",
-    ],
-  },
-  {
-    kicker: "OUR TEAM",
-    title: "A distributed team with a shared perspective.",
-    copy: [
-      "Our team combines business understanding with technical expertise, working collaboratively across Chicago, Karachi, and Dubai. This remote-first approach gives us access to talent across regions while maintaining the flexibility to support clients wherever they operate.",
-      <>Our team brings together <Link href="/careers">engineers and technology professionals</Link> across applications, cloud infrastructure, data, enterprise systems, automation, cybersecurity and technology operations.</>,
-      "We consider these disciplines together so that decisions made during architecture and engineering remain practical through deployment, operation and support.",
-    ],
-  },
-  {
-    kicker: "REMOTE ENGAGEMENT",
-    title: "Built to work across locations.",
-    copy: [
-      "Our remote-first approach supports collaboration across locations and time zones. We use structured communication, shared documentation, and clearly defined responsibilities to keep technology projects coordinated from planning through implementation and ongoing support.",
-      "Clear communication, coordinated schedules, secure access and defined delivery ownership guide how we work together across locations.",
-    ],
-  },
-  {
-    kicker: "HOW WE WORK",
-    title: "Practical, collaborative and focused on outcomes.",
-    copy: [
-      "We begin by understanding business requirements and agreeing realistic plans, responsibilities and implementation priorities. Collaboration continues through technology implementation, ongoing support and continuous improvement.",
-    ],
-  },
-  {
-    kicker: "OUR WORK",
-    title: "From operating experience to client engagements.",
-    copy: [
-      "Work with Dawood RCC Pipe and Dawood Traders helped develop the ownership-driven approach that now defines Dawood Technologies.",
-      <Link className="text-link" href="/work" key="our-work">Explore Our Work <ArrowRight size={16} aria-hidden="true" /></Link>,
-    ],
-  },
-] as const;
+const beliefs = [
+  { title: "Ownership", text: "We take responsibility beyond initial delivery.", icon: BadgeCheck },
+  { title: "Practical engineering", text: "Built around real requirements, not unnecessary complexity.", icon: Wrench },
+  { title: "Connected thinking", text: "Applications, infrastructure, data and operations together.", icon: Network },
+  { title: "Continuous improvement", text: "Technology keeps evolving after launch.", icon: RefreshCw },
+];
+
+const engagement = [
+  { title: "Video calls", text: "Meetings on Microsoft Teams, scheduled in your time zone.", icon: Video },
+  { title: "Shared workspace", text: "Plans, files and progress in one place you can see anytime.", icon: FolderKanban },
+  { title: "Regular updates", text: "Demos and progress updates throughout the project.", icon: MessagesSquare },
+];
 
 export default function CompanyPage() {
-  return <main id="main-content"><InnerHero kicker="COMPANY" title="Technology capability built from operating experience." intro="Dawood Technologies developed from the technology responsibilities of Dawood operating businesses and extends that ownership-driven approach to other organizations." />
-    {companySections.map((section, sectionIndex) => <section className={`section ${styles.storySection}`} key={section.kicker} aria-labelledby={`company-story-${sectionIndex}`}><div className="container"><div className={styles.storyContent}><p className="kicker">{section.kicker}</p><h2 id={`company-story-${sectionIndex}`}>{section.title}</h2><div className={styles.storyCopy}>{section.copy.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div></div></div></section>)}
-    <ContactBand /></main>;
+  return (
+    <main id="main-content">
+      <PageHero kicker="About us" title="Technology capability built from operating experience." lead="We began by running the technology behind manufacturing and trading businesses. Today we bring that same ownership to every organization we work with." />
+
+      <section className={typography.lightSection} aria-labelledby="story-title">
+        <Reveal className={`container ${styles.split}`}>
+          <div>
+            <p className={typography.kicker}>Our story</p>
+            <h2 className={typography.heading} id="story-title">From internal capability to technology company.</h2>
+          </div>
+          <div className={styles.story}>
+            <p>Dawood Technologies was founded in {foundingYear}. What began as the team managing applications, infrastructure, security and daily technology operations for operating businesses became a dedicated technology company.</p>
+            <p>That background shapes how we work: technology has to fit how a business actually runs, and it has to keep working long after launch.</p>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className={`${typography.lightSection} ${styles.divided}`} aria-labelledby="engage-title">
+        <Reveal className="container">
+          <p className={typography.kicker}>How we engage</p>
+          <h2 className={typography.heading} id="engage-title">Remote by design.</h2>
+          <p className={typography.intro}>Our team works remotely across Chicago, Karachi and Dubai. That gives clients access to talent across regions, longer working hours and the same accountable team from start to finish.</p>
+          <IconTiles columns={3} items={engagement} />
+        </Reveal>
+      </section>
+
+      <section className={typography.tintedSection} aria-labelledby="beliefs-title">
+        <Reveal className="container">
+          <p className={typography.kicker}>What we believe</p>
+          <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="beliefs-title">Our principles.</h2>
+          <IconTiles items={beliefs} />
+        </Reveal>
+      </section>
+
+      <Locations intro="A remote-first team across three time zones, so someone is always working on your project." />
+      <CtaBand heading="Work with a team that stays after launch." />
+    </main>
+  );
 }

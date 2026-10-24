@@ -1,15 +1,11 @@
-.page :global(.inner-hero-copy) { width: 100%; max-width: 60rem; }
-/* Retain the hero's original two-line text space when the sentence fits one line. */
-.page :global(.inner-hero-copy) > p { max-width: 100%; min-block-size: 2lh; }
+.spacedHeading { margin-bottom: 40px; }
+.empty { display: flex; flex-direction: column; align-items: center; padding: 48px; text-align: center; background: #fff; border: 1px dashed #b9c6d8; border-radius: 8px; }
+.emptyTitle { margin: 0 0 12px; font-size: 1.5rem; font-weight: 600; }
+.emptyText { max-width: 52ch; margin: 0 0 28px; color: var(--muted); font-size: 1.05rem; }
+.button { min-height: 50px; display: inline-flex; align-items: center; gap: 10px; padding: 0 24px; color: #fff; font-weight: 600; background: var(--blue); border-radius: 4px; transition: background .2s ease; }
+.button:hover { background: var(--blue-hover); }
+.email { margin: 14px 0 0; color: var(--muted); font-size: .95rem; }
 
-.intro {
-  margin-bottom: 0;
-}
-
-.intro h2 {
-  margin-bottom: 0;
-}
-
-.principles {
-  border-top: 1px solid var(--line);
+@media (max-width: 640px) {
+  .empty { padding: 36px 20px; }
 }

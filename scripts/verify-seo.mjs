@@ -11,7 +11,6 @@ assert.equal(new Set(urls).size, urls.length, "Duplicate sitemap URLs");
 const expectedTitles = {
   "/": "Dawood Technologies | IT Infrastructure & Business Systems",
   "/services": "IT Services & Consulting | Dawood Technologies",
-  "/solutions": "Business Technology Solutions | Dawood Technologies",
   "/company": "About Dawood Technologies | Company & Expertise",
   "/work": "Our Work & Technology Projects | Dawood Technologies",
   "/contact": "Contact Dawood Technologies | IT Consulting & Support",
@@ -48,7 +47,7 @@ for (const url of urls) {
   assert.ok(!tags.some((tag) => tag.name === "robots" && /noindex|nofollow/.test(tag.content)), `Robots restriction: ${path}`);
   const schemas = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
   if (path === "/") {
-    for (const target of ["/services", "/solutions", "/company", "/work", "/contact"]) {
+    for (const target of ["/services", "/company", "/work", "/contact"]) {
       assert.ok(html.includes('href="' + target + '"'), 'Missing primary homepage link: ' + target);
     }
     const graph = schemas.flatMap((schema) => schema["@graph"] ?? [schema]);
@@ -76,7 +75,7 @@ for (const url of urls) {
     assert.ok("alt" in attributes(tag), `Image missing alt: ${path}`);
   }
 }
-for (const path of ["/", "/services", "/solutions", "/work", "/company", "/careers", "/contact", "/industries", "/services/data-services"]) {
+for (const path of ["/", "/services", "/work", "/company", "/careers", "/contact", "/industries", "/services/data-services"]) {
   assert.ok(urls.includes(`${origin}${path}`), `Primary page missing: ${path}`);
 }
 assert.ok(!urls.some((url) => /insights|capabilities|process/.test(new URL(url).pathname) || new URL(url).pathname === "/about"), "Noncanonical route in sitemap");

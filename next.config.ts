@@ -52,6 +52,7 @@ const nextConfig: NextConfig = {
       { source: "/capabilities", destination: "/services", permanent: true },
       { source: "/capabilities/:path*", destination: "/services", permanent: true },
       { source: "/process", destination: "/services", permanent: true },
+      { source: "/solutions", destination: "/services", permanent: true },
     ];
   },
   async headers() {

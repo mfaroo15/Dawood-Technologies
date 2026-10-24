@@ -1,12 +1,60 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { ContactBand } from "@/app/components/ContactBand";
-import { InnerHero } from "@/app/components/InnerHero";
-import { TechnologyLogo } from "@/app/components/TechnologyLogo";
-import { serviceDirectory } from "@/app/data/site";
+import { Cloud, Code, Compass, Cpu, Database, LayoutGrid, Settings, ShieldCheck, type LucideIcon } from "lucide-react";
+import { CtaBand } from "@/app/components/sections/CtaBand";
+import { Faq } from "@/app/components/sections/Faq";
+import { IconTiles } from "@/app/components/sections/IconTiles";
+import { PageHero } from "@/app/components/sections/PageHero";
+import { ProcessSteps } from "@/app/components/sections/ProcessSteps";
+import { Reveal } from "@/app/components/sections/Reveal";
+import typography from "@/app/components/sections/typography.module.css";
 import { createPageMetadata } from "@/app/lib/metadata";
+import styles from "./services.module.css";
 
 export const metadata = createPageMetadata({ title: "IT Services & Consulting | Dawood Technologies", description: "Explore IT consulting, infrastructure, cloud, networking, application development, and technology support services from Dawood Technologies.", path: "/services" });
 
-export default function ServicesPage() { return <main id="main-content"><InnerHero kicker="SERVICES" title="Technology services organized around business needs." intro="We connect consulting, engineering, integration and ongoing operation across seven service families. Each can stand alone or combine into a broader technology program." />
-  <section className="section detail-list"><div className="container">{serviceDirectory.map((item, index) => <article className="capability-overview-row" key={item.title}><span className="detail-code">{String(index + 1).padStart(2, "0")}</span><div className="capability-overview-intro"><h2>{item.title}</h2><p>{item.summary}</p><Link className="text-link" href={`/services/${item.slug}`}>Explore {item.title} <ArrowRight aria-hidden="true" size={16} /></Link></div><div className="capability-overview-services"><strong>Selected services</strong><ul>{item.items.slice(0, 5).map((entry) => <li key={entry}>{entry}</li>)}</ul></div><div className="capability-overview-platforms"><strong>Technology context</strong>{item.platforms.length ? <div>{item.platforms.slice(0, 3).map((platform) => <TechnologyLogo key={platform.name} {...platform} />)}</div> : null}{item.engineeringTechnologies.length ? <p className="overview-engineering-technologies">{item.engineeringTechnologies.join(" · ")}</p> : null}{!item.platforms.length && !item.engineeringTechnologies.length ? <p>Selected around the environment and requirements.</p> : null}</div></article>)}</div></section><ContactBand title="Tell us what your business needs technology to do." /></main>; }
+const services: { title: string; text: string; href: string; icon: LucideIcon }[] = [
+  { title: "Technology Consulting", text: "Assessments, architecture and implementation roadmaps.", href: "/services/technology-consulting", icon: Compass },
+  { title: "Application Development", text: "Web and mobile apps, portals, APIs and integrations.", href: "/services/application-development", icon: Code },
+  { title: "Enterprise & ERP", text: "CRM, ERP and business systems that connect your operations.", href: "/services/enterprise-erp", icon: LayoutGrid },
+  { title: "Cloud & DevOps", text: "Cloud architecture, migration and deployment pipelines.", href: "/services/cloud-devops", icon: Cloud },
+  { title: "Data Services", text: "Integration, reporting and dashboards for decisions.", href: "/services/data-services", icon: Database },
+  { title: "AI Nexus", text: "AI applications and automation for real workflows.", href: "/services/ai-automation", icon: Cpu },
+  { title: "Cybersecurity", text: "Risk assessments and practical security controls.", href: "/services/cybersecurity", icon: ShieldCheck },
+  { title: "Managed Technology", text: "Monitoring, support and continuous improvement.", href: "/services/managed-technology", icon: Settings },
+];
+
+export default function ServicesPage() {
+  return (
+    <main id="main-content">
+      <PageHero kicker="Services" title="Technology services organized around business needs." lead="Consulting, engineering, integration and ongoing operation. Each service can stand alone or combine into a complete technology program." />
+
+      <section className={typography.lightSection} aria-labelledby="services-title">
+        <Reveal className="container">
+          <p className={typography.kicker}>What we do</p>
+          <h2 className={typography.heading} id="services-title">Eight services, one accountable team.</h2>
+          <p className={typography.intro}>Choose a single service or let us run your technology end to end.</p>
+          <IconTiles items={services} />
+        </Reveal>
+      </section>
+
+      <section className={typography.tintedSection} aria-labelledby="process-title">
+        <Reveal className="container">
+          <p className={typography.kicker}>Our process</p>
+          <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="process-title">How every engagement runs.</h2>
+          <ProcessSteps />
+        </Reveal>
+      </section>
+
+      <section className={typography.lightSection} aria-labelledby="faq-title">
+        <Reveal className={`container ${styles.split}`}>
+          <div>
+            <p className={typography.kicker}>FAQ</p>
+            <h2 className={typography.heading} id="faq-title">Common questions.</h2>
+          </div>
+          <Faq />
+        </Reveal>
+      </section>
+
+      <CtaBand heading="Not sure which service you need?" />
+    </main>
+  );
+}

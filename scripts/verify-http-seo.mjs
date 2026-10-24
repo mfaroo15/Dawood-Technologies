@@ -23,7 +23,7 @@ const started = new Promise((resolve, reject) => {
 });
 const attrs = (tag) => Object.fromEntries([...tag.matchAll(/([\w:-]+)="([^"]*)"/g)].map((match) => [match[1], match[2]]));
 const decode = (value) => value.replaceAll("&amp;", "&").replaceAll("&quot;", '"').replaceAll("&#x27;", "'");
-const targets = ["/services", "/solutions", "/company", "/work", "/contact"];
+const targets = ["/services", "/company", "/work", "/contact"];
 try {
   await started;
   clearTimeout(ready);

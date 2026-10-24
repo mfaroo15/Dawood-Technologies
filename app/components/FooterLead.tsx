@@ -5,7 +5,11 @@ import { usePathname } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 
 export function FooterLead() {
-  const isContactPage = usePathname() === "/contact";
+  const pathname = usePathname();
+  const isContactPage = pathname === "/contact";
+
+  // The homepage ends with its own call-to-action band.
+  if (pathname === "/") return null;
 
   return (
     <div className={`container footer-lead${isContactPage ? " footer-lead-contact" : ""}`}>

@@ -6,10 +6,10 @@ The selected 1536 × 1024 originals remain in the local Codex generated-images d
 
 | Project asset | Generated source filename | Subject |
 | --- | --- | --- |
-| `public/capability-images/services.webp` | `exec-bc83f200-1ceb-4dbc-a11c-d0a8786576d6.png` | Enterprise infrastructure |
-| `public/capability-images/ai-nexus.webp` | `exec-3e2607e0-5c2c-489e-b57b-1288b45d4347.png` | Digital intelligence network |
-| `public/capability-images/solutions-dashboard.webp` | Unsplash photo `hpjSkU2UYSU` by Carlos Muza (stock, see below) | Business analytics dashboard on a laptop |
-| `public/capability-images/industries.webp` | `exec-e318ca60-f979-49f1-bc2b-f739741ab49f.png` | Commercial operating environment |
+| `public/capability-images/cloud-infrastructure.webp` | `exec-bc83f200-1ceb-4dbc-a11c-d0a8786576d6.png` | Enterprise infrastructure |
+| `public/capability-images/ai-automation.webp` | `exec-3e2607e0-5c2c-489e-b57b-1288b45d4347.png` | Digital intelligence network |
+| `public/capability-images/application-development.webp` | Unsplash photo `hpjSkU2UYSU` by Carlos Muza (stock, see below) | Business analytics dashboard on a laptop |
+| `public/capability-images/enterprise-erp.webp` | `exec-e318ca60-f979-49f1-bc2b-f739741ab49f.png` | Commercial operating environment |
 
 ## Generation prompts
 

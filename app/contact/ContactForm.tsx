@@ -4,6 +4,7 @@ import type { FormEvent } from "react";
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
 import { contactServiceOptions } from "@/app/data/site";
+import styles from "./ContactForm.module.css";
 
 const budgetRanges = ["Not sure yet", "Under $5,000", "$5,000 - $15,000", "$15,000 - $50,000", "$50,000+"];
 const timelines = ["Not sure yet", "As soon as possible", "1 - 3 months", "3 - 6 months", "6+ months"];
@@ -246,7 +247,7 @@ export function ContactForm() {
 
   return (
     <form
-      className="contact-form"
+      className={styles.form}
       // Keep contact details out of the URL if hydration or JavaScript fails.
       method="post"
       onSubmit={onSubmit}
@@ -259,24 +260,24 @@ export function ContactForm() {
       <input type="hidden" name="_subject" value="Dawood Technologies Inquiry" />
       {/* Formspree checks this honeypot on its server; keep it in the submitted FormData. */}
       <input type="text" name="_gotcha" hidden tabIndex={-1} autoComplete="off" />
-      <div className="form-grid">
-        <label>
+      <div className={styles.grid}>
+        <label className={styles.field}>
           <span>Name</span>
           <input name="name" type="text" autoComplete="name" required maxLength={fieldLimits.name} />
         </label>
-        <label>
+        <label className={styles.field}>
           <span>Work email</span>
           <input name="email" type="email" autoComplete="email" required maxLength={fieldLimits.email} />
         </label>
-        <label>
+        <label className={styles.field}>
           <span>Phone number</span>
           <input name="phone" type="tel" autoComplete="tel" maxLength={fieldLimits.phone} />
         </label>
-        <label>
+        <label className={styles.field}>
           <span>Company name</span>
           <input name="company" type="text" autoComplete="organization" maxLength={fieldLimits.company} />
         </label>
-        <label>
+        <label className={styles.field}>
           <span>Service required</span>
           <select name="service" required defaultValue="">
             <option value="" disabled>
@@ -289,7 +290,7 @@ export function ContactForm() {
             ))}
           </select>
         </label>
-        <label>
+        <label className={styles.field}>
           <span>Budget range</span>
           <select name="budget" required defaultValue="Not sure yet">
             {budgetRanges.map((item) => (
@@ -299,7 +300,7 @@ export function ContactForm() {
             ))}
           </select>
         </label>
-        <label>
+        <label className={styles.field}>
           <span>Project timeline</span>
           <select name="timeline" required defaultValue="Not sure yet">
             {timelines.map((item) => (
@@ -309,7 +310,7 @@ export function ContactForm() {
             ))}
           </select>
         </label>
-        <label>
+        <label className={styles.field}>
           <span>Preferred contact method</span>
           <select name="contactMethod" required defaultValue="Email">
             {contactMethods.map((item) => (
@@ -320,7 +321,7 @@ export function ContactForm() {
           </select>
         </label>
       </div>
-      <label>
+      <label className={`${styles.field} ${styles.full}`}>
         <span>What does your business need technology to do?</span>
         <textarea
           name="description"
@@ -330,18 +331,18 @@ export function ContactForm() {
           maxLength={fieldLimits.description}
         />
       </label>
-      <div ref={recaptchaField} className="recaptcha-field">
+      <div ref={recaptchaField} className={styles.recaptcha}>
         <div key={recaptchaSize ?? "pending"} ref={recaptchaContainer} />
         {recaptchaError ? (
-          <p className="recaptcha-error" role="alert">
+          <p className={styles.recaptchaError} role="alert">
             {recaptchaError}
           </p>
         ) : null}
       </div>
-      <button className="button button-primary" type="submit" disabled={status === "submitting"}>
+      <button className={styles.submit} type="submit" disabled={status === "submitting"}>
         {status === "submitting" ? "Submitting..." : "Submit Inquiry"}
       </button>
-      <p className="form-note" role="status" aria-live="polite">
+      <p className={styles.note} role="status" aria-live="polite">
         {status === "success"
           ? "Thank you. Your inquiry has been sent."
           : status === "error"

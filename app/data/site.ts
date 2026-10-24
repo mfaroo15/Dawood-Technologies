@@ -8,13 +8,12 @@ export const contactPhone = {
   href: "tel:+12245987275",
   schema: "+1-224-598-7275",
 } as const;
-export const contactPresence = teamLocations.map(({ city, countryState }) => `${city}, ${countryState}`);
+export const contactPresence = teamLocations.map(({ city, countryState }) => `${city}, ${countryState.split(", ").at(-1)}`);
 export const legalUpdated = "September 21, 2026";
 
 export const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
-  { href: "/solutions", label: "Solutions" },
   { href: "/services/ai-automation", label: "AI Nexus" },
   { href: "/work", label: "Our Work" },
   { href: "/company", label: "About Us" },
@@ -121,34 +120,46 @@ export const work = [
   {
     slug: "dawood-rcc-pipe",
     name: "Dawood RCC Pipe",
-    sector: "Construction & Infrastructure",
-    title: "Digital foundations for an operating infrastructure manufacturer",
-    summary: "Digital presence and ongoing technology support for an established RCC pipe manufacturer.",
-    logo: "/logos/dawood-rcc-pipe.png",
-    website: "https://dawoodrccpipe.com",
-    overview: "Dawood RCC Pipe required a clear public digital presence that reflects an established infrastructure manufacturing business and can be maintained as business needs evolve.",
-    challenge: "The technology work needed to present essential company information clearly while keeping the platform simple enough to support over time.",
-    built: ["Public website presence", "Structured company and product information", "Responsive user experience", "Ongoing website support"],
-    approach: "The engagement prioritizes clear information architecture, maintainable implementation and continuity of support after launch.",
-    system: ["Public experience", "Content and brand presentation", "Hosting and deployment", "Maintenance and updates"],
-    outcome: "The business has a dedicated digital presence supported by Dawood Technologies.",
-    support: "Dawood Technologies continues to support the website and related technology requirements as approved updates are needed.",
+    industry: "Construction & Infrastructure",
+    summary: "Website, ERP and operations platform for an established infrastructure manufacturer.",
+    title: "Website, ERP and operations platform for an infrastructure manufacturer.",
+    image: "/work/rcc-pipe.png",
+    domain: "dawoodrccpipe.com",
+    services: "Web, ERP, CRM, Managed technology",
+    challengeHeading: "A manufacturer with a lot to manage.",
+    challenge: "An established RCC pipe manufacturer needed a professional online presence for its products and quality standards, with quote requests, inventory and business records managed together in one place.",
+    builtHeading: "Built for manufacturing.",
+    built: [
+      { title: "Company website", text: "Presents the company, its products and quality standards." },
+      { title: "Product catalogue", text: "Pipe ranges and specifications, managed in one place." },
+      { title: "Inventory", text: "Stock levels and movement tracked day to day." },
+      { title: "CRM", text: "Quote requests and client records in one pipeline." },
+      { title: "ERP", text: "Core operations connected in a single system." },
+      { title: "Reporting", text: "Records and reports for management decisions." },
+    ],
+    ctaHeading: "Running a manufacturing business?",
   },
   {
     slug: "dawood-traders",
     name: "Dawood Traders",
-    sector: "International Trade & Commerce",
-    title: "Technology supporting modern trade operations",
-    summary: "Digital presence and technology support for international trade operations.",
-    logo: "/logos/dawood-traders.png",
-    website: "https://dawoodtraderspk.com",
-    overview: "Dawood Traders needed a professional digital presence for an international trade business, with technology support aligned to ongoing operating requirements.",
-    challenge: "The work needed to communicate the business clearly online without adding unnecessary system complexity or unsupported claims.",
-    built: ["Public website presence", "Business information structure", "Responsive user experience", "Ongoing technology support"],
-    approach: "The implementation is kept focused on credible business presentation, maintainability and continued support.",
-    system: ["Public experience", "Business content structure", "Hosting and deployment", "Maintenance and updates"],
-    outcome: "The business has a maintained digital presence supported by Dawood Technologies.",
-    support: "Dawood Technologies provides continued support for published digital presence and approved technology updates.",
+    industry: "International Trade & Commerce",
+    summary: "Products, clients and enquiries managed in one system for an international trading business.",
+    title: "Connected systems for an international trading business.",
+    image: "/work/traders.png",
+    domain: "dawoodtraderspk.com",
+    services: "Web, CRM, ERP, Managed technology",
+    challengeHeading: "Many clients, many enquiries, one team.",
+    challenge: "An international trading business needed one place to manage its product range, client relationships and incoming enquiries, with records the team could rely on.",
+    builtHeading: "Built for trade.",
+    built: [
+      { title: "Company website", text: "Presents the business and its trading capabilities." },
+      { title: "Product range", text: "Products and details, managed in one place." },
+      { title: "Inventory", text: "Stock and availability tracked across the business." },
+      { title: "CRM & enquiries", text: "Every client and enquiry followed up from one system." },
+      { title: "ERP", text: "Trading operations connected in one system." },
+      { title: "Records & reporting", text: "Business records and reports in one place." },
+    ],
+    ctaHeading: "Working across markets?",
   },
 ] as const;
 
@@ -189,5 +200,3 @@ export const solutions = [
   { label: "06", title: "AI-powered Business Solutions", text: "AI-assisted applications and automation for defined tasks, workflows and business rules.", services: ["AI integration", "Intelligent automation", "AI applications"] },
   { label: "07", title: "Cloud & Infrastructure Solutions", text: "Cloud architecture, deployment pipelines, monitoring and managed infrastructure for business applications.", services: ["Cloud architecture", "DevOps", "Managed cloud"] },
 ] as const;
-export const locations = ["Pakistan", "United States", "Remote engagements"];
-export const values = ["Clarity", "Reliability", "Security", "Practical Innovation", "Long-Term Value"];
