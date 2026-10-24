@@ -294,12 +294,6 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 .industry-detail h2 { margin-bottom: 14px; font-size: clamp(1.5rem, 1.25rem + .85vw, 2rem); }
 .industry-detail p, .industry-detail li { color: var(--muted); }
 .industry-detail ul { margin: 2px 0 0; padding-left: 18px; }
-.industry-detail-heading { display: grid; grid-template-columns: var(--editorial-columns); gap: var(--editorial-gap); align-items: start; padding-bottom: var(--space-intro); }
-.industry-detail-heading > div { grid-column: auto; }
-.industry-detail-heading .kicker { margin-bottom: 18px; }
-.industry-detail-heading h2 { max-width: 520px; margin: 0; }
-.industry-detail-heading > p:last-child { max-width: var(--editorial-copy); margin: 0; font-size: 1rem; }
-.industry-team { background: var(--paper); }
 /* Omit only the opening content rules; keep subsequent row separators. */
 .detail-list > .container > .capability-overview-row:first-child,
 .solutions-detail > .container > article:first-child,
@@ -448,7 +442,6 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 
 /* Short explanatory copy belongs below its heading; body sections can retain editorial columns. */
 .editorial-intro.intro-block,
-.industry-detail-heading.intro-block,
 .inner-hero-grid.intro-block,
 .page-hero-inner.intro-block,
 .case-hero-text.intro-block {
@@ -461,13 +454,10 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 
 /* Wider introductory copy; retain the shorter measure for body text and columns. */
 .inner-hero-grid.intro-block,
-.industry-detail-heading.intro-block,
 .case-hero-text.intro-block,
 .company-story > .editorial-intro.intro-block,
 .contact-intro { --editorial-copy: var(--intro-copy); }
-.inner-hero-grid.intro-block > :first-child,
-.industry-detail-heading.intro-block > :first-child { max-width: 60rem; }
-.industry-detail-heading.intro-block h2 { max-width: 60rem; }
+.inner-hero-grid.intro-block > :first-child { max-width: 60rem; }
 .case-hero-text .inner-hero-copy > p { max-width: var(--editorial-copy); }
 .contact-intro { max-width: var(--intro-copy); }
 
@@ -528,7 +518,7 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
   .brand-logo { width: min(166px, calc(100vw - 96px)); }
   .approach-hero { padding-block: 72px 78px; }
   .approach-intro h1 { font-size: 3rem; }
-  .editorial-intro, .split-heading, .section-top, .inner-hero-grid, .story-grid, .page-hero-inner, .industry-detail-heading, .numbered-section, .editorial-pair { grid-template-columns: 1fr; gap: 24px; }
+  .editorial-intro, .split-heading, .section-top, .inner-hero-grid, .story-grid, .page-hero-inner, .numbered-section, .editorial-pair { grid-template-columns: 1fr; gap: 24px; }
   .home-origin .story-copy { padding-top: 0; }
   .editorial-intro, .split-heading, .section-top { margin-bottom: 40px; }
   .section-top .text-link { justify-self: start; }
@@ -567,8 +557,6 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
   .case-layout aside { position: static; grid-template-columns: 70px 1fr; }
   .case-layout aside span { margin-top: 0; }
   .industry-detail article { grid-template-columns: 34px 1fr; gap: 20px; }
-  .industry-detail-heading { grid-template-columns: 1fr; gap: 24px; }
-  .industry-detail-heading > div, .industry-detail-heading > p:last-child { grid-column: auto; }
   .industry-detail ul { grid-column: 2; }
   .ownership-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ownership-flow li:nth-child(2), .ownership-flow li:nth-child(6) { border-right: 0; }
