@@ -102,10 +102,12 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 .approach-step h2 { margin-bottom: 13px; font-size: 1.25rem; font-weight: 600; }
 .approach-step p { max-width: 25ch; margin-bottom: 0; color: var(--muted); font-size: .9rem; line-height: 1.65; }
 
+/* Each word owns a 3s quarter of the cycle: in over 0.3s, out over its last 0.3s,
+   so the outgoing word is fully hidden before the next one starts fading in. */
 @keyframes hero-word-cycle {
   0% { opacity: 0; transform: translateY(.12em); }
-  4%, 25% { opacity: 1; transform: translateY(0); }
-  29%, 100% { opacity: 0; transform: translateY(-.12em); }
+  2.5%, 22.5% { opacity: 1; transform: translateY(0); }
+  25%, 100% { opacity: 0; transform: translateY(-.12em); }
 }
 
 /* Homepage sections */

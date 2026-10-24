@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
 import CapabilityShowcase, { type Capability } from "@/app/components/CapabilityShowcase";
-import HeroGlass from "@/app/components/HeroGlass";
+import HeroOcean from "@/app/components/HeroOcean";
 import { contactEmail, contactPhone, foundingYear, siteUrl } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
@@ -49,7 +49,7 @@ export default function Home() {
   return <main id="main-content" className={styles.home}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
     <section className={`${styles.hero} ${styles.tinted}`} aria-labelledby="home-title">
-      <HeroGlass />
+      <HeroOcean />
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={`container ${styles.heroContent}`}>
         <p className={`kicker ${styles.label}`}>DAWOOD TECHNOLOGIES</p>
