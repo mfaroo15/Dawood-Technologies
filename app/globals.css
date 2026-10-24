@@ -345,13 +345,22 @@ h3 { font-size: var(--type-heading); font-weight: 600; }
 .contact-intro .section-kicker { margin-bottom: 22px; }
 .contact-intro h1 { margin-bottom: 24px; font-size: var(--type-interior-hero); }
 .contact-intro > p:last-child { max-width: var(--editorial-copy); margin-bottom: 0; color: var(--muted); font-size: 1.05rem; }
+.contact-booking { min-width: 0; margin-bottom: var(--space-section); }
+.contact-booking h2 { margin-bottom: 16px; }
+.contact-booking > p:not(.section-kicker) { max-width: var(--editorial-copy); margin-bottom: 28px; color: var(--muted); }
+/* min-width/overflow keep the embed iframe from widening the page on phones. */
+.booking-calendar { width: 100%; min-width: 0; min-height: 700px; overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: 6px; }
+/* The CSP blocks embed.js's injected <style> tags, so reset the iframe's default border here. */
+.booking-calendar iframe { display: block; max-width: 100%; border: 0; }
 .contact-information { border-top: 2px solid var(--ink); }
 .contact-information-block { padding: 30px 0; }
 .contact-information > .contact-information-block:first-child { border-bottom: 1px solid var(--line); }
 .contact-information-block .section-kicker { margin-bottom: 18px; }
 .contact-information-block > p:last-child { max-width: 48ch; margin: 18px 0 0; color: var(--muted); }
-.contact-phone { display: inline-block; color: var(--ink); font-size: 1.5rem; font-weight: 600; line-height: 1.2; }
-.contact-phone:hover { color: var(--teal); }
+.contact-phone, .contact-info-email { display: inline-block; color: var(--ink); font-size: 1.5rem; font-weight: 600; line-height: 1.2; }
+.contact-phone:hover, .contact-info-email:hover { color: var(--teal); }
+/* Block-level so it stacks under the phone number; fit-content keeps the hit area to the text. */
+.contact-info-email { display: block; width: fit-content; max-width: 100%; margin-top: 6px; }
 /* Remote team presence: the land asset and markers share an equirectangular projection. */
 .global-presence { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px; align-items: center; padding-block: 32px; background: var(--white); }
 .global-presence-copy { min-width: 0; }
