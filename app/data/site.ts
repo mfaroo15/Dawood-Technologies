@@ -1,7 +1,7 @@
 import { teamLocations } from "@/app/data/global-presence";
 
 export const siteUrl = "https://www.dawoodtech.com";
-export const foundingYear = 2026;
+export const foundingYear = 2022;
 export const contactEmail = "info@dawoodtech.com";
 export const contactPhone = {
   display: "224-598-7275",
