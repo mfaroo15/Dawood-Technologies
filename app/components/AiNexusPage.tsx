@@ -20,7 +20,7 @@ const useCases = [
 ];
 
 const relatedServices = [
-  { label: "Application Development", href: "/services/application-development" },
+  { label: "Software & Application Development", href: "/services/application-development" },
   { label: "Enterprise & ERP", href: "/services/enterprise-erp" },
   { label: "Data Services", href: "/services/data-services" },
   { label: "Managed Technology", href: "/services/managed-technology" },

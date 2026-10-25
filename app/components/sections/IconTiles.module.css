@@ -1,5 +1,7 @@
 .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
 .three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* Ten tiles: 5 columns, then 2, then 1, so every row stays full. */
+.five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .tile { height: 100%; display: flex; flex-direction: column; padding: 26px; background: #fff; border: 1px solid var(--line); border-radius: 6px; transition: border-color .3s ease, transform .3s ease; }
 .linked:hover { border-color: var(--blue-soft); transform: translateY(-2px); }
 .icon { width: 44px; height: 44px; display: grid; place-items: center; margin-bottom: 20px; color: var(--blue); background: #edf4fc; border-radius: 8px; }
@@ -7,12 +9,16 @@
 .text { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.55; }
 .more { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 20px; color: var(--blue); font-size: .92rem; font-weight: 600; }
 
+@media (max-width: 1279px) {
+  .five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 1024px) {
   .grid, .three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px) {
-  .grid, .three { grid-template-columns: 1fr; }
+  .grid, .three, .five { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

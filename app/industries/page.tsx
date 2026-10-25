@@ -1,4 +1,4 @@
-import { Building2, CreditCard, GraduationCap, HeartPulse, MonitorPlay, Package, Plane, Ship } from "lucide-react";
+import { Building2, CreditCard, GraduationCap, HeartPulse, Megaphone, MonitorPlay, Package, Plane, Ship, Trophy } from "lucide-react";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { IconTiles } from "@/app/components/sections/IconTiles";
@@ -22,6 +22,8 @@ const industries = [
   { title: "HealthTech", text: "Secure data workflows and operational systems.", icon: HeartPulse },
   { title: "PropTech", text: "Property workflows, CRM integration and analytics.", icon: Building2 },
   { title: "Media & Entertainment", text: "Content platforms, audiences and cloud infrastructure.", icon: MonitorPlay },
+  { title: "Sports", text: "Digital platforms, fan experiences, web and mobile apps, and performance data.", icon: Trophy },
+  { title: "AdTech", text: "Campaign workflows, reporting, automation and data integration.", icon: Megaphone },
 ];
 
 export default function IndustriesPage() {
@@ -35,7 +37,7 @@ export default function IndustriesPage() {
           <p className={typography.kicker}>Where we deliver</p>
           <h2 className={typography.heading} id="industries-title">Where our team has delivered.</h2>
           <p className={typography.intro}>Hands-on experience across operating environments, ready to apply to your business.</p>
-          <IconTiles items={industries} />
+          <IconTiles columns={5} items={industries} />
         </Reveal>
       </section>
 

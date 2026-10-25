@@ -67,7 +67,7 @@ export default async function ServicePage({ params }: Props) {
         </Reveal>
       </section>
 
-      <CtaBand heading={`Let's talk about ${item.title.toLowerCase()}.`} />
+      <CtaBand heading={"ctaHeading" in item ? item.ctaHeading : `Let's talk about ${item.title.toLowerCase()}.`} />
     </main>
   );
 }

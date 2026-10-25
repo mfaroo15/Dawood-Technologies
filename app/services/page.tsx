@@ -10,11 +10,11 @@ import typography from "@/app/components/sections/typography.module.css";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./services.module.css";
 
-export const metadata = createPageMetadata({ title: "IT Services & Consulting | Dawood Technologies", description: "Explore IT consulting, infrastructure, cloud, networking, application development, and technology support services from Dawood Technologies.", path: "/services" });
+export const metadata = createPageMetadata({ title: "IT Services & Consulting | Dawood Technologies", description: "Explore IT consulting, infrastructure, cloud, networking, software and application development, and technology support services from Dawood Technologies.", path: "/services" });
 
 const services: { title: string; text: string; href: string; icon: LucideIcon }[] = [
   { title: "Technology Consulting", text: "Assessments, architecture and implementation roadmaps.", href: "/services/technology-consulting", icon: Compass },
-  { title: "Application Development", text: "Web and mobile apps, portals, APIs and integrations.", href: "/services/application-development", icon: Code },
+  { title: "Software & Application Development", text: "Custom software, SaaS products, web and mobile apps, APIs and integrations.", href: "/services/application-development", icon: Code },
   { title: "Enterprise & ERP", text: "CRM, ERP and business systems that connect your operations.", href: "/services/enterprise-erp", icon: LayoutGrid },
   { title: "Cloud & DevOps", text: "Cloud architecture, migration and deployment pipelines.", href: "/services/cloud-devops", icon: Cloud },
   { title: "Data Services", text: "Integration, reporting and dashboards for decisions.", href: "/services/data-services", icon: Database },
