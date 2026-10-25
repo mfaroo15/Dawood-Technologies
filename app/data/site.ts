@@ -64,9 +64,9 @@ export const capabilities = [
   {
     code: "03", slug: "cloud-devops", title: "Cloud & DevOps",
     tagline: "Cloud architecture, migration and deployment pipelines.",
-    summary: "Cloud setup, migration and automated deployment on Azure, AWS or Google Cloud, so your applications are easier to release, monitor and keep secure.",
+    summary: "Cloud architecture, migration, CI/CD pipelines and infrastructure automation.",
     introduction: "We design, migrate and maintain cloud environments, including infrastructure, deployment workflows, monitoring and security controls.",
-    items: ["Cloud consulting", "Cloud architecture", "Cloud migration", "Cloud infrastructure", "DevOps", "Cloud optimization", "Infrastructure automation", "Managed cloud"],
+    items: ["CI/CD pipelines", "Cloud consulting", "Cloud architecture", "Cloud migration", "Cloud infrastructure", "DevOps", "Cloud optimization", "Infrastructure automation", "Managed cloud"],
     platforms: ["Microsoft Azure", "AWS", "Google Cloud", "Docker", "GitHub"],
     whoFor: ["Companies still running key applications on ageing office servers.", "Development teams whose releases are manual, slow or risky.", "Businesses with a cloud bill that keeps growing without a clear reason."],
     outcomes: ["A cloud environment that is documented, secured and easy to hand over.", "Repeatable deployments that take the manual steps out of each release.", "Monitoring and alerts that flag problems before users notice them."],
