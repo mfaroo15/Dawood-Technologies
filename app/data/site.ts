@@ -200,9 +200,6 @@ export const capabilities = [
   },
 ] as const;
 
-// Directory visibility is separate from route existence and contextual references.
-export const serviceDirectory = capabilities.filter((item) => !("listedUnderServices" in item) || item.listedUnderServices);
-
 // The Dawood operating businesses whose technology our team built and runs (shown on /company).
 export const operatingBusinesses = [
   {
@@ -227,14 +224,5 @@ export const operatingBusinesses = [
   },
 ] as const;
 
-export const engineeringLayers = [
-  { title: "Experience", items: ["Web Applications", "Mobile", "Internal Tools", "Customer Experiences"] },
-  { title: "Application", items: ["Business Logic", "APIs", "Integrations", "Enterprise Applications"] },
-  { title: "Data & Automation", items: ["Databases", "Analytics", "Data Pipelines", "Automation", "AI where appropriate"] },
-  { title: "Infrastructure", items: ["Cloud", "Deployment", "Networking", "Security"] },
-  { title: "Operations", items: ["Monitoring", "Support", "Maintenance", "Continuous Improvement"] },
-] as const;
-
-export const engineeringTechnologies = ["TypeScript", "Python", "React", "Next.js", "Node.js", "Docker", "GitHub"] as const;
 export const contactServiceOptions = capabilities.map((item) => item.title);
 

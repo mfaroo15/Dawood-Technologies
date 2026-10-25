@@ -42,6 +42,15 @@ const securityHeaders = [
     key: "X-Frame-Options",
     value: "DENY",
   },
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains",
+  },
+  {
+    // Allows popups the site opens (such as Cal.com booking) while isolating this window.
+    key: "Cross-Origin-Opener-Policy",
+    value: "same-origin-allow-popups",
+  },
 ];
 
 const nextConfig: NextConfig = {

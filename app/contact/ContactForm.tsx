@@ -18,8 +18,8 @@ const fieldLimits = {
   name: 100,
   email: 254,
   phone: 30,
-  company: 150,
-  description: 3000,
+  company: 120,
+  description: 5000,
 } as const;
 
 type ReCaptchaApi = {
