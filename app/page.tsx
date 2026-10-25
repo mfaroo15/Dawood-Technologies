@@ -27,7 +27,7 @@ export default function Home() {
       <HeroOcean />
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={`container ${styles.heroContent}`}>
-        <p className={`kicker ${styles.label}`}>DAWOOD TECHNOLOGIES</p>
+        <p className={`kicker ${styles.label}`}>SOFTWARE · ERP · CLOUD · AI</p>
         <h1 className={styles.heroHeading} id="home-title"><span className={styles.heroLine}>Technology built</span> <span className={styles.heroLine}>around how businesses</span> <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
         <p className={styles.heroDescription}>We design, develop, integrate, and support technology solutions that help organizations operate and grow.</p>
         <div className={styles.actions}>
