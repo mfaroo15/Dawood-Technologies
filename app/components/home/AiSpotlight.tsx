@@ -25,9 +25,11 @@ export function AiSpotlight() {
           </ul>
           <Link className={styles.button} href="/services/ai-automation">See AI solutions <ArrowUpRight aria-hidden="true" size={17} /></Link>
         </div>
-        <div>
-          <p className="visually-hidden">Example conversation: a customer asks whether we can build an inventory system for their warehouse. The assistant confirms and offers a free 30-minute call, the customer chooses to book, and the call is booked for Tuesday at 10:00 AM with the team notified.</p>
+        <div className={styles.demo}>
+          <p className={styles.caption}>Your assistant, your name, your brand.</p>
+          <p className="visually-hidden">Example conversation with an AI assistant carrying your own brand name and logo: a customer asks whether you can build an inventory system for their warehouse. The assistant confirms and offers a free 30-minute call, the customer chooses to book, and the call is booked for Tuesday at 10:00 AM with the team notified.</p>
           <ChatDemo />
+          <p className={styles.demoNote}>Shown on your website, WhatsApp or Teams, with your logo and colors.</p>
         </div>
       </Reveal>
     </section>

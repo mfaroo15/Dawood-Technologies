@@ -1,6 +1,5 @@
 "use client";
 
-import { Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./AiSpotlight.module.css";
 
@@ -41,9 +40,9 @@ export function ChatDemo() {
   return (
     <div ref={ref} className={styles.chat} aria-hidden="true">
       <div className={styles.chatHeader}>
-        <span className={styles.avatar}><Sparkles size={18} /></span>
+        <span className={styles.avatar}>YB</span>
         <span>
-          <span className={styles.chatName}>Dawood Assistant</span>
+          <span className={styles.chatName}>Your Brand <span className={styles.chatRole}>· AI Assistant</span></span>
           <span className={styles.online}>● Online</span>
         </span>
       </div>

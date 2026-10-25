@@ -8,10 +8,14 @@
 .button:hover { background: var(--blue-hover); }
 
 /* Chat mockup */
-.chat { max-width: 520px; margin-left: auto; overflow: hidden; background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .12); border-radius: 18px; box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .7); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.demo { max-width: 520px; margin-left: auto; }
+.caption { margin: 0 0 14px; color: var(--blue-soft); font-size: 13px; font-weight: 600; letter-spacing: .14em; line-height: 1.4; text-transform: uppercase; }
+.demoNote { margin: 14px 0 0; color: rgba(255, 255, 255, .6); font-size: .88rem; line-height: 1.5; }
+.chat { overflow: hidden; background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .12); border-radius: 18px; box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .7); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .chatHeader { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid rgba(255, 255, 255, .1); }
-.avatar { width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--blue), var(--blue-bright)); border-radius: 50%; }
+.avatar { width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .04em; background: linear-gradient(135deg, var(--blue), var(--blue-bright)); border-radius: 50%; }
 .chatName { display: block; font-weight: 600; line-height: 1.2; }
+.chatRole { color: rgba(255, 255, 255, .55); font-size: .85rem; font-weight: 400; }
 .online { display: block; color: #4ade80; font-size: 12px; line-height: 1.4; }
 .thread { min-height: 330px; display: flex; flex-direction: column; gap: 12px; padding: 20px; }
 .message { max-width: 85%; animation: messageIn .35s ease-out both; }
@@ -35,7 +39,7 @@
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
-  .chat { margin-inline: 0; }
+  .demo { margin-inline: 0; }
 }
 
 @media (max-width: 640px) {
