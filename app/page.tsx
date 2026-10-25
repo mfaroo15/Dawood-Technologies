@@ -14,7 +14,7 @@ import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
 
 const capabilityLinks: Capability[] = [
-  { title: "Software Development", description: "Custom software, SaaS products, web and mobile apps.", href: "/services/application-development", image: "/capability-images/application-development.webp" },
+  { title: "Software & Web Development", description: "Websites, custom software, SaaS products and mobile apps.", href: "/services/application-development", image: "/capability-images/application-development.webp" },
   { title: "Enterprise & ERP", description: "CRM, ERP and business systems that connect your operations.", href: "/services/enterprise-erp", image: "/capability-images/enterprise-erp.webp" },
   { title: "Cloud & Infrastructure", description: "Cloud architecture, migration and deployment pipelines.", href: "/services/cloud-devops", image: "/capability-images/cloud-infrastructure.webp" },
   { title: "AI & Automation", description: "AI applications and automation for real workflows.", href: "/services/ai-automation", image: "/capability-images/ai-automation.webp" },

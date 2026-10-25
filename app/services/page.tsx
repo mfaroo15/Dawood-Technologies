@@ -14,7 +14,7 @@ export const metadata = createPageMetadata({ title: "IT Services & Consulting | 
 
 const services: { title: string; text: string; href: string; icon: LucideIcon }[] = [
   { title: "Technology Consulting", text: "Assessments, architecture and implementation roadmaps.", href: "/services/technology-consulting", icon: Compass },
-  { title: "Software & Application Development", text: "Custom software, SaaS products, web and mobile apps, APIs and integrations.", href: "/services/application-development", icon: Code },
+  { title: "Software & Application Development", text: "Websites, custom software, SaaS products, web and mobile apps.", href: "/services/application-development", icon: Code },
   { title: "Enterprise & ERP", text: "CRM, ERP and business systems that connect your operations.", href: "/services/enterprise-erp", icon: LayoutGrid },
   { title: "Cloud & DevOps", text: "Cloud architecture, migration and deployment pipelines.", href: "/services/cloud-devops", icon: Cloud },
   { title: "Data Services", text: "Integration, reporting and dashboards for decisions.", href: "/services/data-services", icon: Database },

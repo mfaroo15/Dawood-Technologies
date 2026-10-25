@@ -56,9 +56,9 @@ export const capabilities = [
   },
   {
     code: "04", slug: "application-development", title: "Software & Application Development",
-    summary: "Custom software, SaaS product development, web and mobile apps, portals, APIs and integrations — built and supported by Dawood Technologies.",
-    introduction: "We build custom software, SaaS products, web and mobile applications, internal platforms, APIs and integrations around your business requirements.",
-    items: ["Custom software development", "SaaS product development", "Web application development", "Mobile application development", "Enterprise application development", "Customer and employee portals", "API development and integration", "E-commerce development", "Application modernization", "UI/UX engineering"],
+    summary: "Website design and development, custom software, SaaS products, web and mobile apps, APIs and integrations — built and supported by Dawood Technologies.",
+    introduction: "We design and build websites, custom software, SaaS products, web and mobile applications, APIs and integrations around your business requirements.",
+    items: ["Website design & development", "Custom software development", "SaaS product development", "Web application development", "Mobile application development", "Enterprise application development", "Customer and employee portals", "API development and integration", "E-commerce development", "CMS & website management", "Application modernization", "UI/UX engineering"],
     ctaHeading: "Let's talk about your software project.",
     platforms: [{ name: "Vercel", category: "Application delivery" }, { name: "Shopify", category: "Commerce" }],
     engineeringTechnologies: ["TypeScript", "Python", "React", "Next.js", "Node.js"],
