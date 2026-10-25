@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
+import { TechnologyLogo, hasLogo } from "@/app/components/TechnologyLogo";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
@@ -36,7 +37,7 @@ export default function WorkPage() {
                 <p className={styles.text}>{build}</p>
                 <h3 className={styles.label}>Typical stack</h3>
                 <ul className={styles.stack}>
-                  {stack.map((item) => <li key={item}>{item}</li>)}
+                  {stack.map((item) => <li key={item}>{hasLogo(item) ? <TechnologyLogo name={item} /> : null}{item}</li>)}
                 </ul>
                 <Link className={styles.link} href={service.href}>{service.label} <ArrowRight aria-hidden="true" size={16} /></Link>
               </li>

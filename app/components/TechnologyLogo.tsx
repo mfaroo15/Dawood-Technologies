@@ -1,56 +1,41 @@
-import type { CSSProperties } from "react";
 import type { IconifyIcon } from "@iconify/types";
-import aws from "@iconify-icons/logos/aws";
-import microsoftAzure from "@iconify-icons/logos/microsoft-azure";
-import googleCloud from "@iconify-icons/logos/google-cloud";
-import salesforce from "@iconify-icons/logos/salesforce";
-import microsoft from "@iconify-icons/logos/microsoft";
-import powerBi from "@iconify-icons/logos/microsoft-power-bi";
-import docker from "@iconify-icons/logos/docker";
+import databricks from "@iconify-icons/logos/databricks-icon";
+import docker from "@iconify-icons/logos/docker-icon";
 import github from "@iconify-icons/logos/github-icon";
-import shopify from "@iconify-icons/logos/shopify";
-import react from "@iconify-icons/logos/react";
+import googleCloud from "@iconify-icons/logos/google-cloud";
 import nextjs from "@iconify-icons/logos/nextjs-icon";
-import typescript from "@iconify-icons/logos/typescript-icon";
 import nodejs from "@iconify-icons/logos/nodejs-icon";
 import python from "@iconify-icons/logos/python";
-import vercel from "@iconify-icons/logos/vercel-icon";
+import react from "@iconify-icons/logos/react";
+import shopify from "@iconify-icons/logos/shopify";
+import typescript from "@iconify-icons/logos/typescript-icon";
+import styles from "./TechnologyLogo.module.css";
 
-type TechnologyLogoProps = {
-  name: string;
-  category: string;
-  visualScale?: number;
-  accessibleLabel?: string;
-};
-
+// Full-color logos from the CC0 "logos" collection (gilbarbara), shown exactly as published.
+// Vendors whose logo terms don't allow use on a services website have no entry and are
+// shown as a text wordmark instead.
 const logos: Record<string, IconifyIcon> = {
-  AWS: aws,
-  "Microsoft Azure": microsoftAzure,
   "Google Cloud": googleCloud,
-  Salesforce: salesforce,
-  "Microsoft Dynamics 365": microsoft,
   Shopify: shopify,
-  "Power BI": powerBi,
+  Databricks: databricks,
+  "Next.js": nextjs,
+  React: react,
+  "Node.js": nodejs,
+  TypeScript: typescript,
+  Python: python,
   Docker: docker,
   GitHub: github,
-  React: react,
-  "Next.js": nextjs,
-  TypeScript: typescript,
-  "Node.js": nodejs,
-  Python: python,
-  Vercel: vercel,
 };
 
-export function TechnologyLogo({ name, category, visualScale = 1, accessibleLabel }: TechnologyLogoProps) {
-  const logo = logos[name];
+export function hasLogo(name: string) {
+  return name in logos;
+}
 
+// The mark only (logo or wordmark), sized by the parent through --mark-height.
+export function TechnologyLogo({ name }: { name: string }) {
+  const logo = logos[name];
+  if (!logo) return <span className={styles.wordmark} role="img" aria-label={name}>{name}</span>;
   return (
-    <div className="technology-logo" aria-label={`${accessibleLabel ?? name}, ${category}`} role="img">
-      <span className="technology-logo-art" style={{ "--visual-scale": visualScale } as CSSProperties} aria-hidden="true">
-        {logo ? <svg viewBox={`0 0 ${logo.width ?? 24} ${logo.height ?? 24}`} focusable="false" dangerouslySetInnerHTML={{ __html: logo.body }} /> : null}
-      </span>
-      <strong>{name}</strong>
-      <small>{category}</small>
-    </div>
+    <svg className={styles.mark} role="img" aria-label={name} viewBox={`0 0 ${logo.width ?? 24} ${logo.height ?? 24}`} focusable="false" dangerouslySetInnerHTML={{ __html: logo.body }} />
   );
 }

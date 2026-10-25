@@ -44,7 +44,6 @@
 .actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
 .actions svg { flex-shrink: 0; }
 
-.techHeading { margin-bottom: 40px; }
 
 @media (max-width: 520px) {
   .heroDescription { font-size: 1rem; }

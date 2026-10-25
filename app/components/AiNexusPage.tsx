@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Bot, ChartColumn, Compass, LifeBuoy, Plug, ShieldCheck, Sparkles, Workflow } from "lucide-react";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
+import { PlatformLogos } from "@/app/components/PlatformLogos";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { IconTiles } from "@/app/components/sections/IconTiles";
 import { PageHero } from "@/app/components/sections/PageHero";
@@ -28,7 +29,6 @@ const relatedServices = [
 
 export function AiNexusPage() {
   const aiService = capabilities.find((item) => item.slug === "ai-automation")!;
-  const technologies = [...aiService.engineeringTechnologies, ...aiService.platforms.map((platform) => platform.name)];
 
   return (
     <main id="main-content">
@@ -94,7 +94,7 @@ export function AiNexusPage() {
             <p className={styles.prose}>Selection starts with the existing application environment, information requirements and operating constraints.</p>
           </div>
           <div>
-            <TechChips items={technologies} />
+            <PlatformLogos names={aiService.platforms} />
             <h3 className={styles.subheading}>Related services</h3>
             <p className={styles.prose}>AI work connects with the applications, data and support that surround it.</p>
             <ul className={styles.related}>

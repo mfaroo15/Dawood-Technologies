@@ -1,4 +1,5 @@
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
+import { PlatformLogos, trademarkNote } from "@/app/components/PlatformLogos";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { IconTiles } from "@/app/components/sections/IconTiles";
 import { PageHero } from "@/app/components/sections/PageHero";
@@ -6,6 +7,7 @@ import { Reveal } from "@/app/components/sections/Reveal";
 import typography from "@/app/components/sections/typography.module.css";
 import { industries } from "@/app/data/industries";
 import { createPageMetadata } from "@/app/lib/metadata";
+import styles from "./industries.module.css";
 
 export const metadata = createPageMetadata({
   title: "Industries | Dawood Technologies",
@@ -24,7 +26,8 @@ export default function IndustriesPage() {
           <p className={typography.kicker}>Where we deliver</p>
           <h2 className={typography.heading} id="industries-title">Where our team has delivered.</h2>
           <p className={typography.intro}>Hands-on experience across operating environments, ready to apply to your business.</p>
-          <IconTiles columns={5} items={industries} />
+          <IconTiles columns={5} items={industries.map((industry) => ({ ...industry, footer: <PlatformLogos variant="compact" names={industry.platforms} /> }))} />
+          <p className={styles.note}>{trademarkNote}</p>
         </Reveal>
       </section>
 

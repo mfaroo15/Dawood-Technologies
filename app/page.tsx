@@ -10,12 +10,9 @@ import { CtaBand } from "@/app/components/sections/CtaBand";
 import { ProcessSteps } from "@/app/components/sections/ProcessSteps";
 import { Reveal } from "@/app/components/sections/Reveal";
 import { StatCards } from "@/app/components/sections/StatCards";
-import { TechChips } from "@/app/components/sections/TechChips";
 import typography from "@/app/components/sections/typography.module.css";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
-
-const technologies = ["Microsoft Azure", "AWS", "Google Cloud", "Next.js", "React", "Node.js", "TypeScript", "Python", "Shopify", "Docker", "GitHub", "Microsoft 365"];
 
 const homeDescription = "Dawood Technologies provides IT consulting, software development, cloud infrastructure, enterprise networking, automation, and business technology solutions.";
 
@@ -61,14 +58,6 @@ export default function Home() {
         <h2 className={typography.heading} id="process-title">From first conversation to running system.</h2>
         <p className={typography.intro}>A clear process, with the same team responsible from planning through day-to-day support.</p>
         <ProcessSteps />
-      </Reveal>
-    </section>
-
-    <section className={typography.lightSection} aria-labelledby="tech-title">
-      <Reveal className="container">
-        <p className={typography.kicker}>Technologies</p>
-        <h2 className={`${typography.heading} ${styles.techHeading}`} id="tech-title">Built with proven platforms.</h2>
-        <TechChips items={technologies} />
       </Reveal>
     </section>
 

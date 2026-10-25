@@ -3,10 +3,10 @@ import { CircleCheck } from "lucide-react";
 import { notFound } from "next/navigation";
 import { AiNexusPage } from "@/app/components/AiNexusPage";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
+import { PlatformLogos } from "@/app/components/PlatformLogos";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
-import { TechChips } from "@/app/components/sections/TechChips";
 import typography from "@/app/components/sections/typography.module.css";
 import { aiNexusMetadata } from "@/app/data/ai-nexus";
 import { capabilities } from "@/app/data/site";
@@ -14,8 +14,6 @@ import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "../services.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
-
-const fallbackTechnologies = ["Microsoft Azure", "AWS", "Google Cloud", "Microsoft 365"];
 
 export function generateStaticParams() { return capabilities.map(({ slug }) => ({ slug })); }
 
@@ -32,8 +30,6 @@ export default async function ServicePage({ params }: Props) {
   if (!item) notFound();
   if (slug === "ai-automation") return <AiNexusPage />;
 
-  const listed = [...item.platforms.map((platform) => platform.name), ...item.engineeringTechnologies];
-  const technologies = listed.length ? listed : fallbackTechnologies;
 
   return (
     <main id="main-content">
@@ -53,17 +49,12 @@ export default async function ServicePage({ params }: Props) {
             <h2 className={`${typography.heading} ${styles.splitHeading}`} id="scope-title">Scope of work.</h2>
             <p className={styles.splitIntro}>Each project is scoped around your users, workflows and existing systems.</p>
           </div>
-          <ul className={styles.checklist}>
-            {item.items.map((entry) => <li key={entry}><CircleCheck aria-hidden="true" size={20} />{entry}</li>)}
-          </ul>
-        </Reveal>
-      </section>
-
-      <section className={typography.tintedSection} aria-labelledby="tech-title">
-        <Reveal className="container">
-          <p className={typography.kicker}>Technologies</p>
-          <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="tech-title">What we build with.</h2>
-          <TechChips items={technologies} />
+          <div>
+            <ul className={styles.checklist}>
+              {item.items.map((entry) => <li key={entry}><CircleCheck aria-hidden="true" size={20} />{entry}</li>)}
+            </ul>
+            <PlatformLogos names={item.platforms} />
+          </div>
         </Reveal>
       </section>
 

@@ -32,8 +32,7 @@ export const capabilities = [
     summary: "Technology assessments, architecture decisions and implementation roadmaps based on business requirements and existing systems.",
     introduction: "We assess existing systems, document requirements and define architecture, platform and delivery priorities before or alongside implementation.",
     items: ["Technology strategy", "Digital transformation consulting", "Technology assessments", "Solution architecture", "Systems and platform advisory", "Cloud strategy", "Technology roadmapping"],
-    platforms: [],
-    engineeringTechnologies: [],
+    platforms: ["Microsoft 365", "Microsoft Azure", "AWS", "Google Cloud", "Salesforce"],
     industries: ["FinTech", "HealthTech", "Retail & E-commerce", "Manufacturing & Infrastructure", "Professional Services"],
   },
   {
@@ -41,8 +40,7 @@ export const capabilities = [
     summary: "AI applications and workflow automation integrated into defined business processes with appropriate controls.",
     introduction: "We identify repeatable workflows, evaluate where AI or automation is appropriate, and build the applications, integrations and controls required for production use.",
     items: ["AI consulting", "AI application development", "AI agents and chatbots", "AI integration", "Intelligent automation", "Workflow automation", "Business process automation", "AI-enabled business applications"],
-    platforms: [{ name: "Microsoft Azure", category: "Cloud" }, { name: "AWS", category: "Cloud" }, { name: "Google Cloud", category: "Cloud" }],
-    engineeringTechnologies: ["Python"],
+    platforms: ["OpenAI", "Microsoft Azure", "Databricks", "Power BI", "Python"],
     industries: ["FinTech", "HealthTech", "Retail & E-commerce", "Manufacturing & Infrastructure", "Professional Services"],
   },
   {
@@ -50,8 +48,7 @@ export const capabilities = [
     summary: "Cloud architecture, migration, infrastructure automation and deployment pipelines for business applications.",
     introduction: "We design, migrate and maintain cloud environments, including infrastructure, deployment workflows, monitoring and security controls.",
     items: ["Cloud consulting", "Cloud architecture", "Cloud migration", "Cloud infrastructure", "DevOps", "Cloud optimization", "Infrastructure automation", "Managed cloud"],
-    platforms: [{ name: "AWS", category: "Cloud" }, { name: "Microsoft Azure", category: "Cloud" }, { name: "Google Cloud", category: "Cloud" }, { name: "Vercel", category: "Application delivery" }],
-    engineeringTechnologies: ["Docker", "GitHub"],
+    platforms: ["Microsoft Azure", "AWS", "Google Cloud", "Docker", "GitHub"],
     industries: ["Media & Entertainment", "FinTech", "Retail & E-commerce", "Logistics & Supply Chain", "Professional Services"],
   },
   {
@@ -59,9 +56,8 @@ export const capabilities = [
     summary: "Website design and development, custom software, SaaS products, web and mobile apps, APIs and integrations — built and supported by Dawood Technologies.",
     introduction: "We design and build websites, custom software, SaaS products, web and mobile applications, APIs and integrations around your business requirements.",
     items: ["Website design & development", "Custom software development", "SaaS product development", "Web application development", "Mobile application development", "Enterprise application development", "Customer and employee portals", "API development and integration", "E-commerce development", "CMS & website management", "Application modernization", "UI/UX engineering"],
+    platforms: ["Next.js", "React", "Node.js", "TypeScript", "Python", "Shopify", "GitHub", "Docker"],
     ctaHeading: "Let's talk about your software project.",
-    platforms: [{ name: "Vercel", category: "Application delivery" }, { name: "Shopify", category: "Commerce" }],
-    engineeringTechnologies: ["TypeScript", "Python", "React", "Next.js", "Node.js"],
     industries: ["Manufacturing & Infrastructure", "International Trade & Commerce", "Retail & Commerce", "Professional Services"],
   },
   {
@@ -69,8 +65,7 @@ export const capabilities = [
     summary: "CRM, ERP and workflow systems configured and integrated around day-to-day business operations.",
     introduction: "We select, configure and connect CRM, ERP and workflow platforms around business data, responsibilities and operating processes.",
     items: ["CRM solutions", "ERP solutions", "Systems integration", "Workflow automation", "Business process digitization", "Platform implementation", "Application integration", "Enterprise support"],
-    platforms: [{ name: "Salesforce", category: "Enterprise" }, { name: "Microsoft Dynamics 365", category: "Enterprise" }],
-    engineeringTechnologies: [],
+    platforms: ["NetSuite", "Salesforce", "Microsoft 365", "Power BI"],
     industries: ["Manufacturing & Infrastructure", "International Trade & Commerce", "Retail & Commerce", "Professional Services"],
   },
   {
@@ -78,8 +73,7 @@ export const capabilities = [
     summary: "Data pipelines, integrations, reporting and analytics for operational and management information.",
     introduction: "We organize data from business systems, build integrations and reporting pipelines, and deliver dashboards and analysis for operational use.",
     items: ["Data engineering", "Business intelligence", "Data visualization", "Data analytics", "Data strategy", "Reporting solutions", "Data integration", "Operational analytics"],
-    platforms: [{ name: "Power BI", category: "Data & Analytics" }],
-    engineeringTechnologies: ["Python"],
+    platforms: ["Power BI", "Databricks", "Microsoft Azure", "Google Cloud", "Python"],
     industries: ["FinTech", "Retail & E-commerce", "Manufacturing & Infrastructure", "Logistics & Supply Chain", "International Trade & Commerce"],
   },
   {
@@ -87,8 +81,7 @@ export const capabilities = [
     summary: "Security assessments and controls for identities, applications, cloud environments and infrastructure.",
     introduction: "We assess security risks and implement prioritized controls across user access, applications, cloud environments and infrastructure.",
     items: ["Security assessments", "Application security", "Cloud security", "Identity and access management", "Security hardening", "Vulnerability management", "Security monitoring", "Security architecture"],
-    platforms: [],
-    engineeringTechnologies: [],
+    platforms: ["Microsoft Azure", "Microsoft 365", "AWS", "Google Cloud", "GitHub"],
     industries: ["Manufacturing & Infrastructure", "International Trade & Commerce", "Retail & Commerce", "Professional Services"],
   },
   {
@@ -96,8 +89,7 @@ export const capabilities = [
     summary: "Ongoing monitoring, administration, support and maintenance for applications and infrastructure.",
     introduction: "We operate and maintain deployed systems through monitoring, administration, incident support, updates and planned improvements.",
     items: ["Managed IT", "Application support", "Infrastructure management", "Systems administration", "Technology operations", "Monitoring and maintenance", "Platform support", "Continuous improvement"],
-    platforms: [],
-    engineeringTechnologies: [],
+    platforms: ["Microsoft 365", "Microsoft Azure", "AWS", "Google Cloud"],
     industries: ["Manufacturing & Infrastructure", "International Trade & Commerce", "Retail & Commerce", "Agriculture & Dairy", "Professional Services"],
   },
 ] as const;
@@ -137,23 +129,6 @@ export const engineeringLayers = [
   { title: "Operations", items: ["Monitoring", "Support", "Maintenance", "Continuous Improvement"] },
 ] as const;
 
-export const technologyCategories = [
-  { title: "Cloud", logos: [
-    { name: "AWS", category: "Cloud" },
-    { name: "Microsoft Azure", category: "Cloud" },
-    { name: "Google Cloud", category: "Cloud" },
-  ] },
-  { title: "Enterprise", logos: [
-    { name: "Salesforce", category: "Enterprise" },
-    { name: "Microsoft Dynamics 365", category: "Enterprise" },
-  ] },
-  { title: "Data & Analytics", logos: [
-    { name: "Power BI", category: "Data & Analytics" },
-  ] },
-  { title: "Commerce", logos: [
-    { name: "Shopify", category: "Commerce" },
-  ] },
-] as const;
 export const engineeringTechnologies = ["TypeScript", "Python", "React", "Next.js", "Node.js", "Docker", "GitHub"] as const;
 export const contactServiceOptions = capabilities.map((item) => item.title);
 
