@@ -11,6 +11,7 @@ const defaultItems: FaqItem[] = [
   { question: "Do you work with our existing systems?", answer: "Yes. We review what you already use and integrate with it wherever that makes sense, rather than replacing everything." },
   { question: "Who owns the work when the project ends?", answer: "You do. Code, data and accounts are set up in your name." },
   { question: "Do you provide support after launch?", answer: "Yes. We host, monitor and keep improving the systems we build." },
+  { question: "Can we hire dedicated developers?", answer: "Yes. We provide dedicated developers, designers and QA engineers who work as part of your team, with flexible team size and a point of contact in your time zone." },
 ];
 
 export function Faq({ items = defaultItems }: { items?: readonly FaqItem[] }) {

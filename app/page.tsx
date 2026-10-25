@@ -7,6 +7,7 @@ import { HomeServices } from "@/app/components/home/HomeServices";
 import { WhatWeBuildPanel } from "@/app/components/home/WhatWeBuildPanel";
 import HeroOcean from "@/app/components/HeroOcean";
 import { CtaBand } from "@/app/components/sections/CtaBand";
+import { EngagementModels } from "@/app/components/sections/EngagementModels";
 import { ProcessSteps } from "@/app/components/sections/ProcessSteps";
 import { Reveal } from "@/app/components/sections/Reveal";
 import { StatCards } from "@/app/components/sections/StatCards";
@@ -29,7 +30,7 @@ export default function Home() {
       <div className={`container ${styles.heroContent}`}>
         <p className={`kicker ${styles.label}`}>SOFTWARE · ERP · CLOUD · AI</p>
         <h1 className={styles.heroHeading} id="home-title"><span className={styles.heroLine}>Technology built</span> <span className={styles.heroLine}>around how businesses</span> <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
-        <p className={styles.heroDescription}>We design, develop, integrate, and support technology solutions that help organizations operate and grow.</p>
+        <p className={styles.heroDescription}>We build websites, custom software, ERP systems and AI assistants, and run the cloud and IT behind them, for businesses worldwide.</p>
         <div className={styles.actions}>
           <ButtonLink href="/services" variant="primary">Explore Our Services <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
           <ButtonLink href="/company" variant="secondary">About Us <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
@@ -51,8 +52,9 @@ export default function Home() {
     <AiSpotlight />
     <HomeIndustries />
     <WhatWeBuildPanel />
+    <EngagementModels tinted />
 
-    <section className={typography.tintedSection} aria-labelledby="process-title">
+    <section className={typography.lightSection} aria-labelledby="process-title">
       <Reveal className="container">
         <p className={typography.kicker}>How we work</p>
         <h2 className={typography.heading} id="process-title">From first conversation to running system.</h2>

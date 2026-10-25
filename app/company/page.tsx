@@ -5,6 +5,7 @@ import { IconTiles } from "@/app/components/sections/IconTiles";
 import { Locations } from "@/app/components/sections/Locations";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
+import { SecurityTrust } from "@/app/components/sections/SecurityTrust";
 import typography from "@/app/components/sections/typography.module.css";
 import { BrowserFrame } from "@/app/components/sections/BrowserFrame";
 import { foundingYear, operatingBusinesses } from "@/app/data/site";
@@ -92,6 +93,7 @@ export default function CompanyPage() {
       </section>
 
       <Locations intro="A remote-first team across three time zones, so someone is always working on your project." />
+      <SecurityTrust />
       <CtaBand heading="Work with a team that stays after launch." />
     </main>
   );

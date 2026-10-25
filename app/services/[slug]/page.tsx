@@ -15,6 +15,9 @@ import styles from "../services.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
 
+// Lowercase a service name for use mid-sentence, keeping acronyms and mixed-case names (ERP, MVP, DevOps).
+const sentenceCase = (title: string) => title.split(" ").map((word) => (/[A-Z].*[A-Z]/.test(word) ? word : word.toLowerCase())).join(" ");
+
 export function generateStaticParams() { return capabilities.map(({ slug }) => ({ slug })); }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -58,7 +61,7 @@ export default async function ServicePage({ params }: Props) {
         </Reveal>
       </section>
 
-      <CtaBand heading={"ctaHeading" in item ? item.ctaHeading : `Let's talk about ${item.title.toLowerCase()}.`} />
+      <CtaBand heading={"ctaHeading" in item ? item.ctaHeading : `Let's talk about ${sentenceCase(item.title)}.`} />
     </main>
   );
 }

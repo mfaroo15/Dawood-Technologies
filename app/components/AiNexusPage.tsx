@@ -34,7 +34,7 @@ export function AiNexusPage() {
     <main id="main-content">
       <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "AI Nexus", path: "/services/ai-automation" }]} />
       <PageHero
-        kicker="Artificial intelligence & automation"
+        kicker="AI Solutions"
         title="AI that works with your business."
         lead="From identifying opportunities to integrating intelligent capabilities into existing systems, we help businesses use AI where it improves real workflows."
         buttons={[{ label: "Book an AI consultation", href: "/contact" }]}

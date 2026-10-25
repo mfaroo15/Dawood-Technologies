@@ -3,6 +3,7 @@ import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredD
 import BookingCalendar from "@/app/components/BookingCalendar";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
+import { SecurityTrust } from "@/app/components/sections/SecurityTrust";
 import typography from "@/app/components/sections/typography.module.css";
 import { ContactForm } from "@/app/contact/ContactForm";
 import { contactEmail, contactPhone, contactPresence } from "@/app/data/site";
@@ -64,6 +65,7 @@ export default function ContactPage() {
                 </ul>
                 <p className={styles.remoteNote}>We&apos;re a remote-first company and work with clients anywhere.</p>
               </div>
+              <SecurityTrust variant="compact" />
             </aside>
           </div>
         </Reveal>

@@ -26,7 +26,7 @@ export default function IndustriesPage() {
           <p className={typography.kicker}>Where we deliver</p>
           <h2 className={typography.heading} id="industries-title">Where our team has delivered.</h2>
           <p className={typography.intro}>Hands-on experience across operating environments, ready to apply to your business.</p>
-          <IconTiles columns={5} items={industries.map((industry) => ({ ...industry, footer: <PlatformLogos variant="compact" names={industry.platforms} /> }))} />
+          <IconTiles items={industries.map((industry) => ({ ...industry, footer: <PlatformLogos variant="compact" names={industry.platforms} /> }))} />
           <p className={styles.note}>{trademarkNote}</p>
         </Reveal>
       </section>

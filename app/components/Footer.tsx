@@ -11,7 +11,7 @@ const companyLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const serviceOrder = ["technology-consulting", "application-development", "enterprise-erp", "cloud-devops", "data-services", "ai-automation", "cybersecurity", "managed-technology"];
+const serviceOrder = ["technology-consulting", "application-development", "product-design-mvp", "quality-assurance", "enterprise-erp", "cloud-devops", "data-services", "ai-automation", "cybersecurity", "managed-technology"];
 const serviceLinks = serviceOrder.flatMap((slug) => capabilities.filter((item) => item.slug === slug));
 
 export function Footer() {
