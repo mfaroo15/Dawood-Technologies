@@ -43,7 +43,7 @@ export default async function ServicePage({ params }: Props) {
         title={item.title}
         lead={item.introduction}
         breadcrumb={[{ label: "Services", href: "/services" }, { label: item.title }]}
-        buttons={[{ label: "Book an introduction call", href: "/contact" }, { label: "See our work", href: "/work", variant: "secondary" }]}
+        buttons={[{ label: "Book an introduction call", href: "/contact" }, { label: "See what we build", href: "/work", variant: "secondary" }]}
       />
 
       <section className={typography.lightSection} aria-labelledby="scope-title">

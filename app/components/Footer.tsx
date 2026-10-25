@@ -6,7 +6,7 @@ import styles from "./Footer.module.css";
 
 const companyLinks = [
   { href: "/company", label: "About Us" },
-  { href: "/work", label: "Our Work" },
+  { href: "/work", label: "What We Build" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];

@@ -53,6 +53,9 @@ const nextConfig: NextConfig = {
       { source: "/capabilities/:path*", destination: "/services", permanent: true },
       { source: "/process", destination: "/services", permanent: true },
       { source: "/solutions", destination: "/services", permanent: true },
+      // The operating businesses moved from case-study pages to the About page.
+      { source: "/work/dawood-rcc-pipe", destination: "/company#foundation", statusCode: 301 },
+      { source: "/work/dawood-traders", destination: "/company#foundation", statusCode: 301 },
     ];
   },
   async headers() {

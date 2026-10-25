@@ -16,7 +16,7 @@ export const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
   { href: "/services/ai-automation", label: "AI Nexus" },
-  { href: "/work", label: "Our Work" },
+  { href: "/work", label: "What We Build" },
   { href: "/company", label: "About Us" },
   { href: "/careers", label: "Careers" },
 ];
@@ -105,63 +105,27 @@ export const capabilities = [
 // Directory visibility is separate from route existence and contextual references.
 export const serviceDirectory = capabilities.filter((item) => !("listedUnderServices" in item) || item.listedUnderServices);
 
-export const industries = [
-  { code: "01", basis: "operating", title: "Construction & Infrastructure", text: "Technology supporting operational businesses across manufacturing, construction, infrastructure and related environments.", needs: ["Business applications", "Digital presence", "Reporting", "Technology infrastructure"] },
-  { code: "02", basis: "operating", title: "International Trade & Commerce", text: "Technology supporting digital operations, business systems, communications and infrastructure for organizations operating across markets.", needs: ["Business systems", "Digital presence", "Communications", "Technology infrastructure"] },
-  { code: "03", basis: "team", title: "FinTech", text: "Team experience and technology applications involving secure systems, data, integrations and controlled workflows.", needs: ["Secure applications", "Systems integration", "Data workflows", "Automation"] },
-  { code: "04", basis: "team", title: "EdTech", text: "Team experience and technology applications for learning platforms, portals, content and education workflows.", needs: ["Learning platforms", "Portals", "Content systems", "Workflow support"] },
-  { code: "05", basis: "team", title: "Aviation", text: "Team experience and technology applications across passenger, operational and enterprise environments, including systems supporting airport ground handling teams and service coordination.", needs: ["Digital experiences", "Ground Handling technology", "Ground Support Equipment (GSE) and service coordination systems", "Baggage and cargo workflow systems", "Catering and aircraft service operations software", "Workforce and operational scheduling", "Maintenance and operational tracking", "Enterprise systems integration and operational visibility"] },
-  { code: "06", basis: "team", title: "Sports", text: "Team experience and technology applications spanning digital platforms, fan experiences and operational data.", needs: ["Digital platforms", "Fan Experiences", "Web and mobile applications", "Data and analytics"] },
-  { code: "07", basis: "team", title: "Media & Entertainment", text: "Team experience and technology applications involving content, audiences, analytics and scalable infrastructure.", needs: ["Content platforms", "Audience applications", "Analytics", "Cloud infrastructure"] },
-  { code: "08", basis: "team", title: "HealthTech", text: "Team experience and technology applications involving secure data workflows, operational systems and automation.", needs: ["Digital applications", "Secure data workflows", "Operational systems", "Automation"] },
-  { code: "09", basis: "team", title: "PropTech", text: "Team experience and technology applications for property workflows, CRM integration, analytics and customer experiences.", needs: ["Property workflows", "CRM integration", "Operational systems", "Analytics"] },
-  { code: "10", basis: "team", title: "AdTech", text: "Team experience and technology applications involving campaign workflows, reporting, automation and data integration.", needs: ["Campaign workflows", "Data integration", "Analytics", "Automation"] },
-] as const;
-
-export const work = [
+// The Dawood operating businesses whose technology our team built and runs (shown on /company).
+export const operatingBusinesses = [
   {
     slug: "dawood-rcc-pipe",
     name: "Dawood RCC Pipe",
     industry: "Construction & Infrastructure",
-    summary: "Website, ERP and operations platform for an established infrastructure manufacturer.",
-    title: "Website, ERP and operations platform for an infrastructure manufacturer.",
     image: "/work/rcc-pipe.png",
     domain: "dawoodrccpipe.com",
-    services: "Web, ERP, CRM, Managed technology",
-    challengeHeading: "A manufacturer with a lot to manage.",
-    challenge: "An established RCC pipe manufacturer needed a professional online presence for its products and quality standards, with quote requests, inventory and business records managed together in one place.",
-    builtHeading: "Built for manufacturing.",
-    built: [
-      { title: "Company website", text: "Presents the company, its products and quality standards." },
-      { title: "Product catalogue", text: "Pipe ranges and specifications, managed in one place." },
-      { title: "Inventory", text: "Stock levels and movement tracked day to day." },
-      { title: "CRM", text: "Quote requests and client records in one pipeline." },
-      { title: "ERP", text: "Core operations connected in a single system." },
-      { title: "Reporting", text: "Records and reports for management decisions." },
-    ],
-    ctaHeading: "Running a manufacturing business?",
+    about: "Our family's RCC pipe manufacturing business, established in Karachi in 1967. We built and run its website, product catalogue, quote requests, inventory and business records in one place.",
+    built: ["Company website", "Product catalogue", "Inventory", "CRM", "ERP", "Reporting"],
+    supported: "Website, ERP, CRM and managed IT — live and supported every day.",
   },
   {
     slug: "dawood-traders",
     name: "Dawood Traders",
     industry: "International Trade & Commerce",
-    summary: "Products, clients and enquiries managed in one system for an international trading business.",
-    title: "Connected systems for an international trading business.",
     image: "/work/traders.png",
     domain: "dawoodtraderspk.com",
-    services: "Web, CRM, ERP, Managed technology",
-    challengeHeading: "Many clients, many enquiries, one team.",
-    challenge: "An international trading business needed one place to manage its product range, client relationships and incoming enquiries, with records the team could rely on.",
-    builtHeading: "Built for trade.",
-    built: [
-      { title: "Company website", text: "Presents the business and its trading capabilities." },
-      { title: "Product range", text: "Products and details, managed in one place." },
-      { title: "Inventory", text: "Stock and availability tracked across the business." },
-      { title: "CRM & enquiries", text: "Every client and enquiry followed up from one system." },
-      { title: "ERP", text: "Trading operations connected in one system." },
-      { title: "Records & reporting", text: "Business records and reports in one place." },
-    ],
-    ctaHeading: "Working across markets?",
+    about: "Our international trading and export business. We built and run the systems that manage its product range, buyer relationships, enquiries and records.",
+    built: ["Company website", "Product range", "Inventory", "CRM & enquiries", "ERP", "Records & reporting"],
+    supported: "Website, ERP, CRM and managed IT — live and supported every day.",
   },
 ] as const;
 

@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
+import { AiSpotlight } from "@/app/components/home/AiSpotlight";
+import { HomeIndustries } from "@/app/components/home/HomeIndustries";
+import { HomeServices } from "@/app/components/home/HomeServices";
+import { WhatWeBuildPanel } from "@/app/components/home/WhatWeBuildPanel";
 import HeroOcean from "@/app/components/HeroOcean";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { ProcessSteps } from "@/app/components/sections/ProcessSteps";
@@ -37,6 +40,8 @@ export default function Home() {
       </div>
     </section>
 
+    <HomeServices />
+
     <section className={typography.lightSection} aria-labelledby="why-title">
       <Reveal className="container">
         <p className={typography.kicker}>Why Dawood Technologies</p>
@@ -46,20 +51,11 @@ export default function Home() {
       </Reveal>
     </section>
 
-    <section className={styles.workBanner} aria-labelledby="work-title">
-      <Reveal className="container">
-        <div className={styles.workCard}>
-          <div>
-            <p className={typography.kicker}>Our work</p>
-            <h2 className={styles.workHeading} id="work-title">See how we run technology for manufacturing and trade businesses.</h2>
-            <p className={styles.workText}>Systems our team builds, hosts and supports every day.</p>
-          </div>
-          <Link className={styles.workButton} href="/work">View our work <ArrowUpRight size={17} aria-hidden="true" /></Link>
-        </div>
-      </Reveal>
-    </section>
+    <AiSpotlight />
+    <HomeIndustries />
+    <WhatWeBuildPanel />
 
-    <section className={typography.lightSection} aria-labelledby="process-title">
+    <section className={typography.tintedSection} aria-labelledby="process-title">
       <Reveal className="container">
         <p className={typography.kicker}>How we work</p>
         <h2 className={typography.heading} id="process-title">From first conversation to running system.</h2>
@@ -68,7 +64,7 @@ export default function Home() {
       </Reveal>
     </section>
 
-    <section className={typography.tintedSection} aria-labelledby="tech-title">
+    <section className={typography.lightSection} aria-labelledby="tech-title">
       <Reveal className="container">
         <p className={typography.kicker}>Technologies</p>
         <h2 className={`${typography.heading} ${styles.techHeading}`} id="tech-title">Built with proven platforms.</h2>

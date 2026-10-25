@@ -6,7 +6,8 @@ import { Locations } from "@/app/components/sections/Locations";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
 import typography from "@/app/components/sections/typography.module.css";
-import { foundingYear } from "@/app/data/site";
+import { BrowserFrame } from "@/app/components/sections/BrowserFrame";
+import { foundingYear, operatingBusinesses } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./company.module.css";
 
@@ -44,7 +45,36 @@ export default function CompanyPage() {
         </Reveal>
       </section>
 
-      <section className={`${typography.lightSection} ${styles.divided}`} aria-labelledby="engage-title">
+      <section id="foundation" className={`${typography.tintedSection} ${styles.anchor}`} aria-labelledby="foundation-title">
+        <Reveal className="container">
+          <p className={typography.kicker}>Our foundation</p>
+          <h2 className={typography.heading} id="foundation-title">Where our experience comes from</h2>
+          <p className={typography.intro}>Before working with clients, we built and ran the technology behind our own operating businesses. These systems run every day, and they shape how we design, deliver and support technology for others.</p>
+          <ul className={styles.businesses}>
+            {operatingBusinesses.map((business) => (
+              <li key={business.slug} className={styles.business}>
+                <div className={styles.shotArea}>
+                  <BrowserFrame src={business.image} alt={`${business.name} website`} domain={business.domain} sizes="(max-width: 900px) 100vw, 50vw" />
+                </div>
+                <div className={styles.businessBody}>
+                  <p className={styles.tagWrap}><span className={typography.tag}>Operating business</span></p>
+                  <h3 className={styles.businessName}>{business.name}</h3>
+                  <p className={styles.industry}>{business.industry}</p>
+                  <p className={styles.about}>{business.about}</p>
+                  <h4 className={styles.label}>What we built</h4>
+                  <ul className={styles.chips}>
+                    {business.built.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                  <h4 className={styles.label}>What we run and support</h4>
+                  <p className={styles.supported}>{business.supported}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
+
+      <section className={typography.lightSection} aria-labelledby="engage-title">
         <Reveal className="container">
           <p className={typography.kicker}>How we engage</p>
           <h2 className={typography.heading} id="engage-title">Remote by design.</h2>

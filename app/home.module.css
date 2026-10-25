@@ -43,21 +43,10 @@
 .heroDescription { max-width: 66ch; margin-bottom: 0; color: var(--muted); font-size: 1.08rem; line-height: 1.75; }
 .actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
 .actions svg { flex-shrink: 0; }
-.workBanner { padding-block: 72px; background: var(--section-bg); }
-.workCard { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 36px 40px; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
-.workHeading { max-width: 30ch; margin: 0 0 12px; font-size: 1.75rem; font-weight: 600; letter-spacing: -.015em; line-height: 1.2; }
-.workText { margin: 0; color: var(--muted); }
-.workButton { flex-shrink: 0; min-height: 50px; display: inline-flex; align-items: center; gap: 10px; padding: 0 22px; color: #fff; font-weight: 600; background: var(--blue); border-radius: 4px; transition: background .2s ease; }
-.workButton:hover { background: var(--blue-hover); }
 
 .techHeading { margin-bottom: 40px; }
 
-@media (max-width: 760px) {
-  .workCard { flex-direction: column; align-items: flex-start; }
-}
 @media (max-width: 520px) {
   .heroDescription { font-size: 1rem; }
   .actions { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .workBanner { padding-block: 56px; }
-  .workCard { padding: 28px 24px; }
 }
