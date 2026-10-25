@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { CircleCheck } from "lucide-react";
 import { notFound } from "next/navigation";
-import { AiNexusPage } from "@/app/components/AiNexusPage";
+import { AiSolutionsPage } from "@/app/components/AiSolutionsPage";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { PlatformLogos } from "@/app/components/PlatformLogos";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
 import typography from "@/app/components/sections/typography.module.css";
-import { aiNexusMetadata } from "@/app/data/ai-nexus";
+import { aiSolutionsMetadata } from "@/app/data/ai-solutions";
 import { capabilities } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "../services.module.css";
@@ -22,7 +22,7 @@ export function generateStaticParams() { return capabilities.map(({ slug }) => (
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  if (slug === "ai-automation") return createPageMetadata(aiNexusMetadata);
+  if (slug === "ai-automation") return createPageMetadata(aiSolutionsMetadata);
   const item = capabilities.find((entry) => entry.slug === slug);
   return item ? createPageMetadata({ title: item.title, description: item.summary, path: `/services/${slug}` }) : {};
 }
@@ -31,7 +31,7 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const item = capabilities.find((entry) => entry.slug === slug);
   if (!item) notFound();
-  if (slug === "ai-automation") return <AiNexusPage />;
+  if (slug === "ai-automation") return <AiSolutionsPage />;
 
 
   return (

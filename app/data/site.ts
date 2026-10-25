@@ -37,7 +37,7 @@ export const capabilities = [
     industries: ["FinTech", "HealthTech", "Retail & E-commerce", "Construction & Infrastructure"],
   },
   {
-    code: "02", slug: "ai-automation", title: "AI Nexus", listedUnderServices: false,
+    code: "02", slug: "ai-automation", title: "AI Solutions", listedUnderServices: false,
     tagline: "AI agents, chatbots and automation for your website, WhatsApp and internal systems.",
     summary: "AI applications and workflow automation integrated into defined business processes with appropriate controls.",
     introduction: "We identify repeatable workflows, evaluate where AI or automation is appropriate, and build the applications, integrations and controls required for production use.",

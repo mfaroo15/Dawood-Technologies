@@ -24,7 +24,7 @@ export const solutions: Solution[] = [
     build: "Assistants that answer from approved information, capture enquiries, book calls and act in connected systems, with handover to a person.",
     stack: ["OpenAI / Claude APIs", "WhatsApp Business API", "Node.js", "Vector search"],
     icon: Bot,
-    service: { label: "AI Nexus", href: "/services/ai-automation" },
+    service: { label: "AI Solutions", href: "/services/ai-automation" },
   },
   {
     title: "Business Websites with Booking & Payments",

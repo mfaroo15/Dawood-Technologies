@@ -1,26 +1,10 @@
 import { TechnologyLogo, hasLogo } from "@/app/components/TechnologyLogo";
 import styles from "./PlatformLogos.module.css";
 
-export const trademarkNote = "Trademarks and logos belong to their respective owners. Use does not imply endorsement or partnership.";
+const trademarkNote = "Trademarks and logos belong to their respective owners. Use does not imply endorsement or partnership.";
 
-type PlatformLogosProps = {
-  names: readonly string[];
-  /** "row": tiles with a heading and the trademark line. "compact": small chips labelled "Common platforms". */
-  variant?: "row" | "compact";
-};
-
-export function PlatformLogos({ names, variant = "row" }: PlatformLogosProps) {
-  if (variant === "compact") {
-    return (
-      <div className={styles.compact}>
-        <p className={styles.compactLabel}>Common platforms</p>
-        <ul className={styles.chips}>
-          {names.map((name) => <li key={name} className={styles.chip}><TechnologyLogo name={name} />{hasLogo(name) ? <span>{name}</span> : null}</li>)}
-        </ul>
-      </div>
-    );
-  }
-
+// "Platforms we work with" row: logo tiles, a heading and the trademark line.
+export function PlatformLogos({ names }: { names: readonly string[] }) {
   return (
     <div className={styles.block}>
       <p className={styles.heading}>Platforms we work with</p>

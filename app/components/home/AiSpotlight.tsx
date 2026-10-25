@@ -17,7 +17,7 @@ export function AiSpotlight() {
     <section className={styles.section} aria-labelledby="ai-spotlight-title">
       <Reveal className={`container ${styles.layout}`}>
         <div>
-          <p className={typography.kickerOnDark}>AI Nexus</p>
+          <p className={typography.kickerOnDark}>AI Solutions</p>
           <h2 className={typography.heading} id="ai-spotlight-title">An AI assistant that works while your team sleeps.</h2>
           <p className={styles.lead}>Chatbots and agents that answer from your approved information and take real actions in your systems.</p>
           <ul className={styles.points}>

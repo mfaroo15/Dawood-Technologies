@@ -5,7 +5,7 @@ import typography from "@/app/components/sections/typography.module.css";
 import { serviceCards } from "@/app/data/service-cards";
 import styles from "./HomeServices.module.css";
 
-// AI Nexus is the dark featured card.
+// AI Solutions is the dark featured card.
 const featuredSlug = "ai-automation";
 
 export function HomeServices() {

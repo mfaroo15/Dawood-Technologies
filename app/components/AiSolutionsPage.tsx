@@ -8,9 +8,9 @@ import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
 import { TechChips } from "@/app/components/sections/TechChips";
 import typography from "@/app/components/sections/typography.module.css";
-import { aiApplications, aiServiceAreas } from "@/app/data/ai-nexus";
+import { aiApplications, aiServiceAreas } from "@/app/data/ai-solutions";
 import { capabilities } from "@/app/data/site";
-import styles from "./AiNexusPage.module.css";
+import styles from "./AiSolutionsPage.module.css";
 
 const areaIcons = [Compass, Sparkles, Bot, Workflow, Plug, ChartColumn, ShieldCheck, LifeBuoy];
 
@@ -27,12 +27,12 @@ const relatedServices = [
   { label: "Managed Technology", href: "/services/managed-technology" },
 ];
 
-export function AiNexusPage() {
+export function AiSolutionsPage() {
   const aiService = capabilities.find((item) => item.slug === "ai-automation")!;
 
   return (
     <main id="main-content">
-      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "AI Nexus", path: "/services/ai-automation" }]} />
+      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "AI Solutions", path: "/services/ai-automation" }]} />
       <PageHero
         kicker="AI Solutions"
         title="AI that works with your business."
@@ -42,7 +42,7 @@ export function AiNexusPage() {
 
       <section className={typography.lightSection} aria-labelledby="ai-scope-title">
         <Reveal className="container">
-          <p className={typography.kicker}>AI Nexus capabilities</p>
+          <p className={typography.kicker}>Capabilities</p>
           <h2 className={typography.heading} id="ai-scope-title">Explore our AI capabilities.</h2>
           <p className={typography.intro}>From strategy and application development to automation, integration and governance, explore how AI can support different business needs.</p>
           <IconTiles items={aiServiceAreas.map((area, index) => ({ title: area.title, text: area.summary, icon: areaIcons[index] }))} />
