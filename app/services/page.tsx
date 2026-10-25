@@ -18,7 +18,7 @@ const services: { title: string; text: string; href: string; icon: LucideIcon }[
   { title: "Enterprise & ERP", text: "CRM, ERP and business systems that connect your operations.", href: "/services/enterprise-erp", icon: LayoutGrid },
   { title: "Cloud & DevOps", text: "Cloud architecture, migration and deployment pipelines.", href: "/services/cloud-devops", icon: Cloud },
   { title: "Data Services", text: "Integration, reporting and dashboards for decisions.", href: "/services/data-services", icon: Database },
-  { title: "AI Nexus", text: "AI applications and automation for real workflows.", href: "/services/ai-automation", icon: Cpu },
+  { title: "AI Nexus", text: "AI agents, chatbots and automation for real workflows.", href: "/services/ai-automation", icon: Cpu },
   { title: "Cybersecurity", text: "Risk assessments and practical security controls.", href: "/services/cybersecurity", icon: ShieldCheck },
   { title: "Managed Technology", text: "Monitoring, support and continuous improvement.", href: "/services/managed-technology", icon: Settings },
 ];

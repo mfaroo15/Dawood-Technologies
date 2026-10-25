@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ChartColumn, Compass, LifeBuoy, Plug, ShieldCheck, Sparkles, Workflow } from "lucide-react";
+import { ArrowRight, Bot, ChartColumn, Compass, LifeBuoy, Plug, ShieldCheck, Sparkles, Workflow } from "lucide-react";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { IconTiles } from "@/app/components/sections/IconTiles";
@@ -11,7 +11,7 @@ import { aiApplications, aiServiceAreas } from "@/app/data/ai-nexus";
 import { capabilities } from "@/app/data/site";
 import styles from "./AiNexusPage.module.css";
 
-const areaIcons = [Compass, Sparkles, Workflow, Plug, ChartColumn, ShieldCheck, LifeBuoy];
+const areaIcons = [Compass, Sparkles, Bot, Workflow, Plug, ChartColumn, ShieldCheck, LifeBuoy];
 
 const useCases = [
   { title: "Enquiries", text: "Answer and route customer enquiries automatically, around the clock." },
@@ -45,7 +45,7 @@ export function AiNexusPage() {
           <p className={typography.kicker}>AI Nexus capabilities</p>
           <h2 className={typography.heading} id="ai-scope-title">Explore our AI capabilities.</h2>
           <p className={typography.intro}>From strategy and application development to automation, integration and governance, explore how AI can support different business needs.</p>
-          <IconTiles columns={3} items={aiServiceAreas.map((area, index) => ({ title: area.title, text: area.summary, icon: areaIcons[index] }))} />
+          <IconTiles items={aiServiceAreas.map((area, index) => ({ title: area.title, text: area.summary, icon: areaIcons[index] }))} />
         </Reveal>
       </section>
 

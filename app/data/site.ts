@@ -40,7 +40,7 @@ export const capabilities = [
     code: "02", slug: "ai-automation", title: "AI Nexus", listedUnderServices: false,
     summary: "AI applications and workflow automation integrated into defined business processes with appropriate controls.",
     introduction: "We identify repeatable workflows, evaluate where AI or automation is appropriate, and build the applications, integrations and controls required for production use.",
-    items: ["AI consulting", "AI application development", "AI integration", "Intelligent automation", "Workflow automation", "Business process automation", "AI-enabled business applications"],
+    items: ["AI consulting", "AI application development", "AI agents and chatbots", "AI integration", "Intelligent automation", "Workflow automation", "Business process automation", "AI-enabled business applications"],
     platforms: [{ name: "Microsoft Azure", category: "Cloud" }, { name: "AWS", category: "Cloud" }, { name: "Google Cloud", category: "Cloud" }],
     engineeringTechnologies: ["Python"],
     industries: ["FinTech", "HealthTech", "Retail & E-commerce", "Manufacturing & Infrastructure", "Professional Services"],
