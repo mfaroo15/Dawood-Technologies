@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
-import CapabilityShowcase, { type Capability } from "@/app/components/CapabilityShowcase";
 import HeroOcean from "@/app/components/HeroOcean";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { ProcessSteps } from "@/app/components/sections/ProcessSteps";
@@ -12,13 +11,6 @@ import { TechChips } from "@/app/components/sections/TechChips";
 import typography from "@/app/components/sections/typography.module.css";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
-
-const capabilityLinks: Capability[] = [
-  { title: "Software & Web Development", description: "Websites, custom software, SaaS products and mobile apps.", href: "/services/application-development", image: "/capability-images/application-development.webp" },
-  { title: "Enterprise & ERP", description: "CRM, ERP and business systems that connect your operations.", href: "/services/enterprise-erp", image: "/capability-images/enterprise-erp.webp" },
-  { title: "Cloud & Infrastructure", description: "Cloud architecture, migration and deployment pipelines.", href: "/services/cloud-devops", image: "/capability-images/cloud-infrastructure.webp" },
-  { title: "AI & Automation", description: "AI applications and automation for real workflows.", href: "/services/ai-automation", image: "/capability-images/ai-automation.webp" },
-];
 
 const technologies = ["Microsoft Azure", "AWS", "Google Cloud", "Next.js", "React", "Node.js", "TypeScript", "Python", "Shopify", "Docker", "GitHub", "Microsoft 365"];
 
@@ -42,16 +34,6 @@ export default function Home() {
           <ButtonLink href="/services" variant="primary">Explore Our Services <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
           <ButtonLink href="/company" variant="secondary">About Us <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
         </div>
-      </div>
-    </section>
-
-    <section className={`${styles.section} ${styles.tinted} ${styles.capabilitiesSection}`} aria-labelledby="capabilities-title">
-      <div className="container">
-        <div className={styles.sectionIntro}>
-          <p className={`kicker ${styles.label}`}>WHAT WE DO</p>
-          <h2 className={styles.sectionHeading} id="capabilities-title">Explore our capabilities.</h2>
-        </div>
-        <CapabilityShowcase items={capabilityLinks} />
       </div>
     </section>
 
