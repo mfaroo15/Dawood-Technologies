@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
-import { TechnologyLogo, hasLogo } from "@/app/components/TechnologyLogo";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
@@ -20,7 +19,7 @@ export default function WorkPage() {
   return (
     <main id="main-content">
       <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "What We Build", path: "/work" }]} />
-      <PageHero kicker="What we build" title="Solutions built around how your business runs." lead="Practical systems we design, build and support, from first idea to day-to-day use." />
+      <PageHero kicker="What we build" title="Solutions designed for real business problems." lead="Practical systems we design, build and support, from first idea to day-to-day use." />
 
       <section className={typography.lightSection} aria-label="Solutions">
         <Reveal className="container">
@@ -37,7 +36,7 @@ export default function WorkPage() {
                 <p className={styles.text}>{build}</p>
                 <h3 className={styles.label}>Typical stack</h3>
                 <ul className={styles.stack}>
-                  {stack.map((item) => <li key={item}>{hasLogo(item) ? <TechnologyLogo name={item} /> : null}{item}</li>)}
+                  {stack.map((item) => <li key={item}>{item}</li>)}
                 </ul>
                 <Link className={styles.link} href={service.href}>{service.label} <ArrowRight aria-hidden="true" size={16} /></Link>
               </li>
@@ -46,7 +45,7 @@ export default function WorkPage() {
         </Reveal>
       </section>
 
-      <CtaBand heading="Have a project in mind?" button={{ label: "Book a consultation", href: "/contact" }} />
+      <CtaBand heading="Have a project in mind?" text="Share what you want to build and we'll show you how we'd approach it." button={{ label: "Book a consultation", href: "/contact" }} />
     </main>
   );
 }

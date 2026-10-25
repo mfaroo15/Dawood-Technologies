@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { IndustryPills } from "@/app/components/sections/IndustryPills";
 import { Reveal } from "@/app/components/sections/Reveal";
 import typography from "@/app/components/sections/typography.module.css";
 import { industries } from "@/app/data/industries";
@@ -16,11 +17,7 @@ export function HomeIndustries() {
           </div>
           <Link className={styles.all} href="/industries">View all industries <ArrowRight aria-hidden="true" size={16} /></Link>
         </div>
-        <ul className={styles.pills}>
-          {industries.map((industry) => (
-            <li key={industry.title}><Link className={styles.pill} href="/industries"><span className={styles.dot} aria-hidden="true" />{industry.title}</Link></li>
-          ))}
-        </ul>
+        <IndustryPills names={industries.map((industry) => industry.title)} />
       </Reveal>
     </section>
   );

@@ -13,7 +13,7 @@ export function HomeServices() {
     <section className={styles.section} aria-labelledby="home-services-title">
       <Reveal className="container">
         <p className={typography.kicker}>What we do</p>
-        <h2 className={typography.heading} id="home-services-title">Services built around how your business runs.</h2>
+        <h2 className={typography.heading} id="home-services-title">Everything your business runs on, from one team.</h2>
         <p className={typography.intro}>From the first website to the systems behind daily operations, one team designs, builds and supports it.</p>
         <ul className={styles.grid}>
           {serviceCards.filter((card) => card.onHome).map(({ slug, title, text, href, icon: Icon }) => {

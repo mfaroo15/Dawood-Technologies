@@ -18,8 +18,8 @@ import styles from "./home.module.css";
 const homeDescription = "Dawood Technologies provides IT consulting, software development, cloud infrastructure, enterprise networking, automation, and business technology solutions.";
 
 export const metadata: Metadata = {
-  ...createPageMetadata({ title: "Dawood Technologies | IT Infrastructure & Business Systems", description: homeDescription, path: "/" }),
-  title: { absolute: "Dawood Technologies | IT Infrastructure & Business Systems" },
+  ...createPageMetadata({ title: "Dawood Technologies | Digital Engineering & IT Services", description: homeDescription, path: "/" }),
+  title: { absolute: "Dawood Technologies | Digital Engineering & IT Services" },
 };
 
 export default function Home() {
@@ -63,6 +63,6 @@ export default function Home() {
       </Reveal>
     </section>
 
-    <CtaBand heading="Bring us the business challenge." />
+    <CtaBand heading="Bring us the business challenge." text="Book a 30-minute call and leave with a clear next step for your project." />
   </main>;
 }

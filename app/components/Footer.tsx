@@ -23,7 +23,7 @@ export function Footer() {
           <Link href="/" aria-label="Dawood Technologies home">
             <Image className={styles.logo} src="/dawood-technologies-logo.png" alt="" width={1714} height={221} />
           </Link>
-          <p>Business applications, enterprise systems, cloud infrastructure and ongoing technology operations.</p>
+          <p>Software, ERP, cloud, AI and managed IT for businesses worldwide.</p>
           <ul className={styles.list}>
             <li><a href={contactPhone.href}>{contactPhone.display}</a></li>
             <li><a href={`mailto:${contactEmail}`}>{contactEmail}</a></li>
@@ -49,7 +49,7 @@ export function Footer() {
         </div>
       </div>
       <div className={`container ${styles.bottom}`}>
-        <span>Copyright {new Date().getFullYear()} Dawood Technologies</span>
+        <span>© {new Date().getFullYear()} Dawood Technologies. All rights reserved.</span>
         <ul className={styles.legal}>{legalLinks.map((item) => <li key={item.href}><Link href={item.href}>{item.label}</Link></li>)}</ul>
       </div>
     </footer>

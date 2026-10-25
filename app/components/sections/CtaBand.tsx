@@ -5,13 +5,14 @@ import styles from "./CtaBand.module.css";
 
 type CtaBandProps = {
   heading?: string;
-  text?: string;
+  /** Each page writes its own closing line. */
+  text: string;
   button?: { label: string; href: string };
 };
 
 export function CtaBand({
   heading = "Bring us the business challenge.",
-  text = "Book a 30-minute introduction call. We'll help define the right technology path.",
+  text,
   button = { label: "Book an introduction call", href: "/contact" },
 }: CtaBandProps) {
   return (

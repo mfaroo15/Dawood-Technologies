@@ -12,11 +12,11 @@ import { foundingYear, operatingBusinesses } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./company.module.css";
 
-export const metadata = createPageMetadata({ title: "About Dawood Technologies | Company & Expertise", description: "Learn about Dawood Technologies, our expertise, our approach, and how we help organizations implement and support business technology.", path: "/company" });
+export const metadata = createPageMetadata({ title: "About Dawood Technologies | Company & Expertise", description: "How Dawood Technologies grew from running the technology of its own operating businesses into a remote-first team serving clients around the world.", path: "/company" });
 
 const beliefs = [
   { title: "Ownership", text: "We take responsibility beyond initial delivery.", icon: BadgeCheck },
-  { title: "Practical engineering", text: "Built around real requirements, not unnecessary complexity.", icon: Wrench },
+  { title: "Practical engineering", text: "Shaped by real requirements, not unnecessary complexity.", icon: Wrench },
   { title: "Connected thinking", text: "Applications, infrastructure, data and operations together.", icon: Network },
   { title: "Continuous improvement", text: "Technology keeps evolving after launch.", icon: RefreshCw },
 ];
@@ -94,7 +94,7 @@ export default function CompanyPage() {
 
       <Locations intro="A remote-first team across three time zones, so someone is always working on your project." />
       <SecurityTrust />
-      <CtaBand heading="Work with a team that stays after launch." />
+      <CtaBand heading="Work with a team that stays after launch." text="Meet the team, ask your questions and see if we're the right fit." />
     </main>
   );
 }

@@ -6,7 +6,7 @@ import "./globals.css";
 import { contactEmail, contactPhone, foundingYear, linkedInUrl, siteUrl } from "@/app/data/site";
 import { shareImage } from "@/app/lib/metadata";
 
-const siteTitle = "Dawood Technologies | IT Infrastructure & Business Systems";
+const siteTitle = "Dawood Technologies | Digital Engineering & IT Services";
 const siteDescription = "Business applications, enterprise integrations, cloud infrastructure, data, AI automation and ongoing technology operations.";
 
 // Favicons come from the file conventions in this folder: favicon.ico, icon.png, icon.svg and apple-icon.png.

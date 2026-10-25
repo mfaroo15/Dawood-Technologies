@@ -1,4 +1,5 @@
 import { Clock, Globe, Layers, Sparkles, type LucideIcon } from "lucide-react";
+import { capabilities } from "@/app/data/site";
 import { Reveal } from "./Reveal";
 import styles from "./StatCards.module.css";
 
@@ -6,9 +7,9 @@ type Stat = { icon: LucideIcon; label: string; value: string; text: string };
 
 const defaultStats: Stat[] = [
   { icon: Sparkles, label: "Full Stack Developers", value: "10+", text: "Engineers building web, cloud and AI solutions" },
-  { icon: Clock, label: "Global Delivery", value: "24/7", text: "Round-the-clock development and support" },
+  { icon: Clock, label: "Response time", value: "1 day", text: "We reply to every enquiry within one business day" },
   { icon: Globe, label: "Global Presence", value: "3", text: "Teams in Chicago, Karachi and Dubai" },
-  { icon: Layers, label: "End-to-End Systems", value: "6", text: "From website and CRM to ERP and reporting" },
+  { icon: Layers, label: "Services", value: String(capabilities.length), text: "From consulting and software to AI, cloud and managed IT" },
 ];
 
 export function StatCards({ stats = defaultStats }: { stats?: Stat[] }) {

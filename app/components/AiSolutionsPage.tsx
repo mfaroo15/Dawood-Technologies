@@ -6,7 +6,7 @@ import { CtaBand } from "@/app/components/sections/CtaBand";
 import { IconTiles } from "@/app/components/sections/IconTiles";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
-import { TechChips } from "@/app/components/sections/TechChips";
+import { ServiceDetails } from "@/app/components/sections/ServiceDetails";
 import typography from "@/app/components/sections/typography.module.css";
 import { aiApplications, aiServiceAreas } from "@/app/data/ai-solutions";
 import { capabilities } from "@/app/data/site";
@@ -86,7 +86,9 @@ export function AiSolutionsPage() {
         </Reveal>
       </section>
 
-      <section className={typography.tintedSection} aria-labelledby="ai-technology-title">
+      <ServiceDetails whoFor={aiService.whoFor} outcomes={aiService.outcomes} industries={aiService.industries} faqs={aiService.faqs} />
+
+      <section className={typography.lightSection} aria-labelledby="ai-technology-title">
         <Reveal className={`container ${styles.split}`}>
           <div>
             <p className={typography.kicker}>Technology &amp; integration</p>
@@ -100,13 +102,11 @@ export function AiSolutionsPage() {
             <ul className={styles.related}>
               {relatedServices.map((item) => <li key={item.href}><Link href={item.href}>{item.label} <ArrowRight size={16} aria-hidden="true" /></Link></li>)}
             </ul>
-            <h3 className={styles.subheading}>Relevant operating contexts</h3>
-            <TechChips items={aiService.industries} />
           </div>
         </Reveal>
       </section>
 
-      <CtaBand heading="Explore what AI can do for your business." text="Book a 30-minute AI consultation with our team." button={{ label: "Book an AI consultation", href: "/contact" }} />
+      <CtaBand heading="Explore what AI can do for your business." text={aiService.ctaText} button={{ label: "Book an AI consultation", href: "/contact" }} />
     </main>
   );
 }

@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/app/lib/metadata";
 
 export const metadata = createPageMetadata({
   title: "Terms & Conditions",
-  description: "Terms and Conditions for using the Dawood Technologies website and requesting services.",
+  description: "The terms that apply when you use the Dawood Technologies website, contact our team or ask about our services, including acceptable use and liability.",
   path: "/terms",
 });
 

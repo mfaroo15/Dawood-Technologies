@@ -28,7 +28,7 @@ export default function IndustriesPage() {
         </Reveal>
       </section>
 
-      <CtaBand heading="Tell us about your industry." />
+      <CtaBand heading="Tell us about your industry." text="We'll walk you through how businesses like yours use technology to work better." />
     </main>
   );
 }

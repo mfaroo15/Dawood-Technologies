@@ -48,7 +48,7 @@ export default function ServicesPage() {
         </Reveal>
       </section>
 
-      <CtaBand heading="Not sure which service you need?" />
+      <CtaBand heading="Not sure which service you need?" text="Tell us what you're trying to achieve and we'll recommend the right mix of services." />
     </main>
   );
 }
