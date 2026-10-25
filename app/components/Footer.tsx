@@ -12,6 +12,8 @@ const companyLinks = [
 ];
 
 const serviceOrder = ["technology-consulting", "application-development", "product-design-mvp", "quality-assurance", "enterprise-erp", "cloud-devops", "data-services", "ai-automation", "cybersecurity", "managed-technology"];
+// Footer wording that differs from the service name; the page itself stays "AI Nexus".
+const footerLabels: Record<string, string> = { "ai-automation": "AI Solutions" };
 const serviceLinks = serviceOrder.flatMap((slug) => capabilities.filter((item) => item.slug === slug));
 
 export function Footer() {
@@ -41,7 +43,7 @@ export function Footer() {
         </nav>
         <nav aria-labelledby="footer-services">
           <h2 id="footer-services" className={styles.heading}>Services</h2>
-          <ul className={styles.list}>{serviceLinks.map((item) => <li key={item.slug}><Link href={`/services/${item.slug}`}>{item.title}</Link></li>)}</ul>
+          <ul className={styles.list}>{serviceLinks.map((item) => <li key={item.slug}><Link href={`/services/${item.slug}`}>{footerLabels[item.slug] ?? item.title}</Link></li>)}</ul>
         </nav>
         <div>
           <h2 className={styles.heading}>Our teams</h2>
