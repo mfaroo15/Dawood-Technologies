@@ -1,24 +1,25 @@
-.hero { padding-block: 104px 88px; color: #fff; background: radial-gradient(55% 70% at 80% 20%, rgba(18, 104, 232, .25), transparent 70%), linear-gradient(180deg, var(--navy-2), var(--navy)); }
+/* Same compact spacing on every page, so the jump pills below show on a 1366×768 laptop without scrolling.
+   Content is centered: the title within 760px (two lines on desktop), the intro within 640px (two lines). */
+.hero { padding-block: 72px 64px; color: #fff; text-align: center; background: radial-gradient(55% 70% at 80% 20%, rgba(18, 104, 232, .25), transparent 70%), linear-gradient(180deg, var(--navy-2), var(--navy)); }
+.inner { max-width: 760px; }
 
-.breadcrumb { margin-bottom: 28px; font-size: 13px; }
-.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.breadcrumb { margin-bottom: 20px; font-size: var(--type-small); line-height: var(--leading-small); }
+.breadcrumb ol { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .breadcrumb li { color: rgba(255, 255, 255, .62); }
 .breadcrumb li + li::before { content: "/"; margin-right: 8px; color: rgba(255, 255, 255, .4); }
 .breadcrumb a:hover { color: #fff; }
 .breadcrumb [aria-current="page"] { color: var(--blue-soft); }
 
-.tag { margin: 0 0 20px; }
-.title { max-width: 17ch; margin: 0 0 24px; font-size: clamp(2.25rem, 1.2rem + 3.4vw, 3.75rem); font-weight: 600; letter-spacing: -.025em; line-height: 1.05; }
-.wide { max-width: 26ch; }
-.lead { max-width: 56ch; margin: 0; color: rgba(255, 255, 255, .74); font-size: 1.2rem; line-height: 1.6; }
+.title { margin: 0 auto 16px; font-size: var(--type-h1); font-weight: var(--weight-heading); letter-spacing: var(--tracking-h1); line-height: var(--leading-h1); text-wrap: balance; }
+.lead { max-width: 640px; margin: 0 auto; color: rgba(255, 255, 255, .74); font-size: var(--type-intro); line-height: var(--leading-intro); text-wrap: balance; }
 
-.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
-.primary, .secondary { min-height: 50px; display: inline-flex; align-items: center; gap: 10px; padding: 0 22px; color: #fff; font-size: .95rem; font-weight: 600; border: 1px solid transparent; border-radius: 4px; transition: background .2s ease, border-color .2s ease; }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 32px; }
+.primary, .secondary { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; color: #fff; font-size: var(--type-button); font-weight: var(--weight-heading); letter-spacing: var(--tracking-caps); text-transform: uppercase; line-height: 1.18; border: 1px solid transparent; border-radius: var(--radius-pill); transition: background .2s ease, border-color .2s ease; }
 .primary { background: var(--blue); border-color: var(--blue); }
 .primary:hover { background: var(--blue-hover); border-color: var(--blue-hover); }
 .secondary { background: transparent; border-color: rgba(255, 255, 255, .45); }
 .secondary:hover { background: rgba(255, 255, 255, .08); border-color: #fff; }
 
 @media (max-width: 640px) {
-  .hero { padding-block: 80px 64px; }
+  .hero { padding-block: 56px 48px; }
 }

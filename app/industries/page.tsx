@@ -13,18 +13,23 @@ export const metadata = createPageMetadata({
   path: "/industries",
 });
 
+const breadcrumb = [{ name: "Home", path: "/" }, { name: "Industries", path: "/industries" }] as const;
+
+// One pill and one tile per industry, in page order, each linking to that industry's page.
+const tiles = industries.map(({ name, text, icon, href }) => ({ title: name, text, icon, href, more: `Explore ${name}` }));
+
 export default function IndustriesPage() {
   return (
     <main id="main-content">
-      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Industries", path: "/industries" }]} />
-      <PageHero kicker="Industries" title="Industries we serve." lead="We design, build and run the systems behind day-to-day operations, from websites and CRM to ERP and reporting, for businesses across industries and time zones." />
+      <BreadcrumbStructuredData items={[...breadcrumb]} />
+      <PageHero breadcrumb={breadcrumb} title="Industries we serve." lead="We design, build and run the systems behind daily operations, from websites and CRM to ERP and reporting." pills={industries.map(({ name, shortTitle, href }) => ({ href, label: shortTitle ?? name }))} pillsLabel="Industry pages" />
 
       <section className={typography.tintedSection} aria-labelledby="industries-title">
         <Reveal className="container">
           <p className={typography.kicker}>Where we deliver</p>
           <h2 className={typography.heading} id="industries-title">Where our team has delivered.</h2>
           <p className={typography.intro}>Hands-on experience across operating environments, ready to apply to your business.</p>
-          <IconTiles items={industries} />
+          <IconTiles items={tiles} />
         </Reveal>
       </section>
 

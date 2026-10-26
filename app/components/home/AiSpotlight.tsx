@@ -17,13 +17,13 @@ export function AiSpotlight() {
     <section className={styles.section} aria-labelledby="ai-spotlight-title">
       <Reveal className={`container ${styles.layout}`}>
         <div>
-          <p className={typography.kickerOnDark}>AI Solutions</p>
+          <p className={typography.kickerOnDark}>Artificial Intelligence</p>
           <h2 className={typography.heading} id="ai-spotlight-title">An AI assistant that works while your team sleeps.</h2>
           <p className={styles.lead}>Chatbots and agents that answer from your approved information and take real actions in your systems.</p>
           <ul className={styles.points}>
             {points.map((point) => <li key={point}><span className={styles.dot} aria-hidden="true" />{point}</li>)}
           </ul>
-          <Link className={styles.button} href="/services/ai-automation">See AI solutions <ArrowUpRight aria-hidden="true" size={17} /></Link>
+          <Link className={styles.button} href="/services/ai-automation">Explore Artificial Intelligence <ArrowUpRight aria-hidden="true" size={17} /></Link>
         </div>
         <div className={styles.demo}>
           <p className={styles.caption}>Your assistant, your name, your brand.</p>

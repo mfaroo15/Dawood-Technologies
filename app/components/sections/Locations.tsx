@@ -18,14 +18,14 @@ export function Locations({
   intro = "US management, South Asia engineering and a Middle East presence, so someone is always working on your project.",
 }: LocationsProps) {
   return (
-    <section className={styles.section} aria-labelledby="locations-title">
+    <section id="where-we-operate" className={styles.section} aria-labelledby="locations-title">
       <Reveal className="container">
         <p className={typography.kickerOnDark}>{kicker}</p>
         <h2 id="locations-title" className={typography.heading}>{heading}</h2>
         <p className={typography.introOnDark}>{intro}</p>
         <ul className={styles.grid}>
           {locations.map((location) => (
-            <li key={location.city} className={styles.card}>
+            <li key={location.city}>
               <LocalTime className={styles.time} timeZone={location.timeZone} />
               <h3 className={styles.city}>{location.city}</h3>
               <p className={styles.country}>{location.country}</p>

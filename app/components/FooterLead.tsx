@@ -14,7 +14,7 @@ export function FooterLead() {
   return (
     <div className={`container footer-lead${isContactPage ? " footer-lead-contact" : ""}`}>
       <div>
-        <p className="kicker">BUILD WITH US</p>
+        <p className="kicker">Build with us</p>
         <h2>{isContactPage ? "Let's Build Something Together" : "Technology should keep working after launch."}</h2>
         {isContactPage && (
           <p className="footer-lead-description">Have a project in mind? Tell us about your goals using the inquiry form above, and our team will help you explore the next steps.</p>

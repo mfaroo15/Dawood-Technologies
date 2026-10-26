@@ -27,20 +27,32 @@ const relatedServices = [
   { label: "Managed Technology", href: "/services/managed-technology" },
 ];
 
+const breadcrumb = [{ name: "Home", path: "/" }, { name: "Artificial Intelligence", path: "/services/ai-automation" }] as const;
+
+const pills = [
+  { id: "capabilities", label: "Capabilities" },
+  { id: "use-cases", label: "Use cases" },
+  { id: "applications", label: "Applications" },
+  { id: "responsible-ai", label: "Responsible AI" },
+  { id: "platforms", label: "Platforms" },
+];
+
 export function AiSolutionsPage() {
   const aiService = capabilities.find((item) => item.slug === "ai-automation")!;
 
   return (
     <main id="main-content">
-      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "AI Solutions", path: "/services/ai-automation" }]} />
+      <BreadcrumbStructuredData items={[...breadcrumb]} />
       <PageHero
-        kicker="AI Solutions"
+        breadcrumb={breadcrumb}
+        eyebrow="Artificial Intelligence"
         title="AI that works with your business."
-        lead="From identifying opportunities to integrating intelligent capabilities into existing systems, we help businesses use AI where it improves real workflows."
+        lead="We find where AI improves real workflows, then build and integrate it into your existing systems."
+        pills={pills}
         buttons={[{ label: "Book an AI consultation", href: "/contact" }]}
       />
 
-      <section className={typography.lightSection} aria-labelledby="ai-scope-title">
+      <section id="capabilities" className={typography.lightSection} aria-labelledby="ai-scope-title">
         <Reveal className="container">
           <p className={typography.kicker}>Capabilities</p>
           <h2 className={typography.heading} id="ai-scope-title">Explore our AI capabilities.</h2>
@@ -49,7 +61,7 @@ export function AiSolutionsPage() {
         </Reveal>
       </section>
 
-      <section className={typography.darkSection} aria-labelledby="ai-usecases-title">
+      <section id="use-cases" className={typography.darkSection} aria-labelledby="ai-usecases-title">
         <Reveal className="container">
           <p className={typography.kickerOnDark}>Use cases</p>
           <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="ai-usecases-title">Where businesses start with AI.</h2>
@@ -64,7 +76,7 @@ export function AiSolutionsPage() {
         </Reveal>
       </section>
 
-      <section className={typography.tintedSection} aria-labelledby="ai-applications-title">
+      <section id="applications" className={typography.tintedSection} aria-labelledby="ai-applications-title">
         <Reveal className="container">
           <p className={typography.kicker}>Possible applications</p>
           <h2 className={typography.heading} id="ai-applications-title">Where AI fits into everyday operations.</h2>
@@ -73,7 +85,7 @@ export function AiSolutionsPage() {
         </Reveal>
       </section>
 
-      <section className={typography.lightSection} aria-labelledby="ai-responsible-title">
+      <section id="responsible-ai" className={typography.lightSection} aria-labelledby="ai-responsible-title">
         <Reveal className={`container ${styles.split}`}>
           <div>
             <p className={typography.kicker}>Responsible implementation</p>
@@ -88,7 +100,7 @@ export function AiSolutionsPage() {
 
       <ServiceDetails whoFor={aiService.whoFor} outcomes={aiService.outcomes} industries={aiService.industries} faqs={aiService.faqs} />
 
-      <section className={typography.lightSection} aria-labelledby="ai-technology-title">
+      <section id="platforms" className={typography.lightSection} aria-labelledby="ai-technology-title">
         <Reveal className={`container ${styles.split}`}>
           <div>
             <p className={typography.kicker}>Technology &amp; integration</p>

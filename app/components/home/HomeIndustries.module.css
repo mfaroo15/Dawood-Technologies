@@ -1,10 +1,9 @@
-.section { padding-block: 80px; background: #fff; }
-.top { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.section { padding-block: var(--space-section); background: #fff; }
+.top { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px; }
 .top h2 { margin-bottom: 0; }
-.all { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; padding-bottom: 6px; color: var(--blue); font-weight: 600; }
-.all:hover { color: var(--blue-hover); }
+.all { flex-shrink: 0; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 6px; color: var(--blue); }
+.all:hover { text-decoration: underline; }
 
 @media (max-width: 640px) {
-  .section { padding-block: 64px; }
   .top { flex-direction: column; align-items: flex-start; }
 }

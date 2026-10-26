@@ -15,7 +15,7 @@ const items = [
 export function SecurityTrust({ variant = "section" }: { variant?: "section" | "compact" }) {
   if (variant === "compact") {
     return (
-      <div className={styles.card}>
+      <div>
         <h3 className={styles.cardTitle}>Your ideas, data and code stay protected.</h3>
         <ul className={styles.list}>
           {items.map(({ title, text, icon: Icon }) => (
@@ -30,7 +30,7 @@ export function SecurityTrust({ variant = "section" }: { variant?: "section" | "
   }
 
   return (
-    <section className={typography.lightSection} aria-labelledby="security-title">
+    <section id="security-trust" className={typography.lightSection} aria-labelledby="security-title">
       <Reveal className="container">
         <p className={typography.kicker}>Security &amp; trust</p>
         <h2 className={`${typography.heading} ${styles.heading}`} id="security-title">Your ideas, data and code stay protected.</h2>

@@ -18,18 +18,18 @@ export function ServiceDetails({ whoFor, outcomes, industries, faqs }: ServiceDe
     <>
       <section className={typography.tintedSection} aria-label="Who it's for and what you get">
         <Reveal className={`container ${styles.columns}`}>
-          <div>
+          <div id="who-its-for">
             <h2 className={styles.heading}>Who it&apos;s for</h2>
             <ul className={styles.list}>{whoFor.map((item) => <li key={item}><CircleCheck aria-hidden="true" size={20} />{item}</li>)}</ul>
           </div>
-          <div>
+          <div id="what-you-get">
             <h2 className={styles.heading}>What you get</h2>
             <ul className={styles.list}>{outcomes.map((item) => <li key={item}><CircleCheck aria-hidden="true" size={20} />{item}</li>)}</ul>
           </div>
         </Reveal>
       </section>
 
-      <section className={typography.lightSection} aria-labelledby="service-industries-title">
+      <section id="industries" className={typography.lightSection} aria-labelledby="service-industries-title">
         <Reveal className="container">
           <p className={typography.kicker}>Industries</p>
           <h2 className={`${typography.heading} ${styles.spaced}`} id="service-industries-title">Industries we serve</h2>
@@ -37,7 +37,7 @@ export function ServiceDetails({ whoFor, outcomes, industries, faqs }: ServiceDe
         </Reveal>
       </section>
 
-      <section className={typography.tintedSection} aria-labelledby="service-faq-title">
+      <section id="faq" className={typography.tintedSection} aria-labelledby="service-faq-title">
         <Reveal className={`container ${styles.split}`}>
           <div>
             <p className={typography.kicker}>FAQ</p>

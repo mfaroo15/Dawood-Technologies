@@ -27,13 +27,24 @@ const engagement = [
   { title: "Regular updates", text: "Demos and progress updates throughout the project.", icon: MessagesSquare },
 ];
 
+const breadcrumb = [{ name: "Home", path: "/" }, { name: "About Us", path: "/company" }] as const;
+
+const pills = [
+  { id: "our-story", label: "Our story" },
+  { id: "foundation", label: "Our foundation" },
+  { id: "how-we-engage", label: "How we engage" },
+  { id: "principles", label: "Principles" },
+  { id: "where-we-operate", label: "Locations" },
+  { id: "security-trust", label: "Trust" },
+];
+
 export default function CompanyPage() {
   return (
     <main id="main-content">
-      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "About Us", path: "/company" }]} />
-      <PageHero kicker="About us" title="Technology capability built from operating experience." lead="We began by running the technology behind manufacturing and trading businesses. Today we bring that same ownership to every organization we work with." />
+      <BreadcrumbStructuredData items={[...breadcrumb]} />
+      <PageHero breadcrumb={breadcrumb} title="Technology built on operating experience." lead="We began running technology for manufacturing and trading businesses, and bring that ownership to every client." pills={pills} />
 
-      <section className={typography.lightSection} aria-labelledby="story-title">
+      <section id="our-story" className={typography.lightSection} aria-labelledby="story-title">
         <Reveal className={`container ${styles.split}`}>
           <div>
             <p className={typography.kicker}>Our story</p>
@@ -75,7 +86,7 @@ export default function CompanyPage() {
         </Reveal>
       </section>
 
-      <section className={typography.lightSection} aria-labelledby="engage-title">
+      <section id="how-we-engage" className={typography.lightSection} aria-labelledby="engage-title">
         <Reveal className="container">
           <p className={typography.kicker}>How we engage</p>
           <h2 className={typography.heading} id="engage-title">Remote by design.</h2>
@@ -84,7 +95,7 @@ export default function CompanyPage() {
         </Reveal>
       </section>
 
-      <section className={typography.tintedSection} aria-labelledby="beliefs-title">
+      <section id="principles" className={typography.tintedSection} aria-labelledby="beliefs-title">
         <Reveal className="container">
           <p className={typography.kicker}>What we believe</p>
           <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="beliefs-title">Our principles.</h2>

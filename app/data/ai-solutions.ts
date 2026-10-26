@@ -1,5 +1,6 @@
 export const aiSolutionsMetadata = {
-  title: "AI Solutions | Artificial Intelligence & Automation | Dawood Technologies",
+  title: "Artificial Intelligence | Dawood Technologies",
+  description: "Artificial Intelligence services from Dawood Technologies: AI assistants, chatbots and workflow automation connected to your own data, with people in charge.",
   path: "/services/ai-automation",
 } as const;
 

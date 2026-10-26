@@ -1,23 +1,23 @@
-.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
-.story { max-width: 62ch; color: var(--muted); font-size: 1.15rem; line-height: 1.7; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px clamp(32px, 5vw, 80px); align-items: start; }
+.story { max-width: var(--measure); color: var(--muted); font-size: var(--type-intro); line-height: var(--leading-intro); }
 .story p:last-child { margin-bottom: 0; }
-.spacedHeading { margin-bottom: 40px; }
+.spacedHeading { margin-bottom: 56px; }
 /* Keeps the #foundation anchor clear of the sticky header. */
 .anchor { scroll-margin-top: var(--header-height); }
 
-/* Operating business cards */
-.businesses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin: 0; padding: 0; list-style: none; }
-.business { display: flex; flex-direction: column; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
-.shotArea { padding: 28px 36px 0; background: linear-gradient(160deg, #edf4fc, #dbe8f8); }
-.businessBody { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 30px; }
-.tagWrap { margin: 0 0 14px; }
-.businessName { margin: 0 0 4px; font-size: 1.6rem; font-weight: 600; letter-spacing: -.01em; }
-.industry { margin: 0 0 16px; color: var(--muted); font-size: .95rem; }
-.about { margin: 0 0 24px; color: var(--muted); }
-.label { margin: 0 0 12px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+/* Operating businesses: screenshot panel, then plain text below. */
+.businesses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 40px; margin: 0; padding: 0; list-style: none; }
+.business { display: flex; flex-direction: column; }
+.shotArea { overflow: hidden; padding: 28px 36px 0; background: #fff; border-radius: 18px; }
+.businessBody { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding-top: 32px; }
+.tagWrap { margin: 0 0 16px; }
+.businessName { margin: 0 0 4px; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
+.industry { margin: 0 0 16px; color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); }
+.about { margin: 0 0 24px; color: var(--muted); font-size: var(--type-card); }
+.label { margin: 0 0 12px; color: var(--muted); font-family: var(--font-text); font-size: var(--type-small); font-weight: 400; line-height: var(--leading-small); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
-.chips li { padding: 6px 12px; color: #2c3a52; font-size: 13px; font-weight: 500; line-height: 1.3; background: #edf4fc; border-radius: 20px; }
-.supported { margin: 0; color: var(--ink); font-weight: 500; }
+.chips li { padding: 6px 14px; color: var(--ink); font-size: var(--type-small); line-height: var(--leading-small); background: #fff; border-radius: var(--radius-pill); }
+.supported { margin: 0; color: var(--ink); }
 
 @media (max-width: 900px) {
   .businesses { grid-template-columns: 1fr; }
@@ -29,5 +29,4 @@
 
 @media (max-width: 640px) {
   .shotArea { padding: 18px 18px 0; }
-  .businessBody { padding: 24px; }
 }

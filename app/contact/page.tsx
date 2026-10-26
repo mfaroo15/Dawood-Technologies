@@ -16,14 +16,21 @@ export const metadata = createPageMetadata({
   path: "/contact",
 });
 
+const breadcrumb = [{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }] as const;
+
 export default function ContactPage() {
   return (
     <main id="main-content">
-      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
-      <PageHero kicker="Contact" title="Let's talk." lead="Tell us about your organization and what you're looking to build. We reply within one business day." />
+      <BreadcrumbStructuredData items={[...breadcrumb]} />
+      <PageHero
+        breadcrumb={breadcrumb}
+        title="Let's talk."
+        lead="Tell us about your organization and what you're looking to build. We reply within one business day."
+        buttons={[{ label: "Book a call", href: "#booking" }, { label: "Send an inquiry", href: "#inquiry", variant: "secondary" }]}
+      />
 
       {/* The Cal.com embed sizes itself from its container, so this section is not animated. */}
-      <section className={typography.lightSection} aria-labelledby="booking-title">
+      <section id="booking" className={typography.lightSection} aria-labelledby="booking-title">
         <div className="container">
           <p className={typography.kicker}>Book a call</p>
           <h2 className={typography.heading} id="booking-title">Schedule an introduction call.</h2>
@@ -34,7 +41,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className={typography.tintedSection} aria-labelledby="inquiry-title">
+      <section id="inquiry" className={typography.tintedSection} aria-labelledby="inquiry-title">
         <Reveal className="container">
           <p className={typography.kicker}>Send an inquiry</p>
           <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="inquiry-title">Prefer to write?</h2>
@@ -42,18 +49,18 @@ export default function ContactPage() {
             <ContactForm />
 
             <aside className={styles.aside} aria-label="Contact information">
-              <div className={styles.card}>
+              <div>
                 <h3 className={styles.cardTitle}>Contact information</h3>
                 <a className={styles.contactLink} href={contactPhone.href}>
-                  <span className={styles.icon}><Phone aria-hidden="true" size={20} /></span>
+                  <span className={styles.icon}><Phone aria-hidden="true" size={24} strokeWidth={1.75} /></span>
                   <span><span className={styles.label}>Phone</span>{contactPhone.display}</span>
                 </a>
                 <a className={styles.contactLink} href={`mailto:${contactEmail}`}>
-                  <span className={styles.icon}><Mail aria-hidden="true" size={20} /></span>
+                  <span className={styles.icon}><Mail aria-hidden="true" size={24} strokeWidth={1.75} /></span>
                   <span><span className={styles.label}>Email</span>{contactEmail}</span>
                 </a>
               </div>
-              <div className={styles.card}>
+              <div>
                 <h3 className={styles.cardTitle}>Where our team works</h3>
                 <ul className={styles.teams}>
                   {contactPresence.map((location) => (

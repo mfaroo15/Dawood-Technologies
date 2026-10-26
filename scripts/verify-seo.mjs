@@ -12,7 +12,7 @@ const expectedTitles = {
   "/": "Dawood Technologies | IT Infrastructure & Business Systems",
   "/services": "IT Services & Consulting | Dawood Technologies",
   "/company": "About Dawood Technologies | Company & Expertise",
-  "/work": "What We Build | Dawood Technologies",
+  "/work": "Solutions | Dawood Technologies",
   "/contact": "Contact Dawood Technologies | IT Consulting & Support",
 };
 const titles = new Set();

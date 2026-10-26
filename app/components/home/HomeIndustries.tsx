@@ -17,7 +17,7 @@ export function HomeIndustries() {
           </div>
           <Link className={styles.all} href="/industries">View all industries <ArrowRight aria-hidden="true" size={16} /></Link>
         </div>
-        <IndustryPills names={industries.map((industry) => industry.title)} />
+        <IndustryPills names={industries.map((industry) => industry.name)} />
       </Reveal>
     </section>
   );

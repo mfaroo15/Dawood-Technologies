@@ -1,0 +1,28 @@
+/* Sticky pill bar, directly below the site header. Target sections get scroll-margin in globals.css. */
+.bar { position: sticky; z-index: 50; top: calc(var(--header-height) + 1px); background: rgba(255, 255, 255, .92); border-bottom: 1px solid #d2d2d7; -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
+/* Always one row: when the pills don't fit, the row scrolls sideways instead of wrapping or widening the page. */
+.track { --fade-start: 0px; --fade-end: 0px; position: relative; }
+.track[data-more-start] { --fade-start: 40px; }
+.track[data-more-end] { --fade-end: 40px; }
+.scroller { overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scroll-padding-inline: var(--page-gutter); scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--fade-start), #000 calc(100% - var(--fade-end)), transparent); mask-image: linear-gradient(to right, transparent, #000 var(--fade-start), #000 calc(100% - var(--fade-end)), transparent); }
+.scroller::-webkit-scrollbar { display: none; }
+.pills { width: max-content; display: flex; flex-wrap: nowrap; gap: 8px; margin: 0 auto; padding: 12px var(--page-gutter); list-style: none; }
+.pills li { flex: none; scroll-snap-align: start; }
+.pill { min-height: 36px; display: inline-flex; align-items: center; padding: 8px 18px; color: var(--ink); font-size: var(--type-small); line-height: var(--leading-small); white-space: nowrap; background: #f5f5f7; border-radius: var(--radius-pill); transition: background .2s ease, color .2s ease; }
+.pill:hover { background: #e8e8ed; }
+.pill[aria-current] { color: #fff; background: #1d1d1f; }
+/* The row's 12px padding keeps the outline clear of the scroller's clipping; brand blue shows on both pill states. */
+.pill:focus-visible { outline: 2px solid #1268e8; outline-offset: 2px; }
+
+/* Arrows sit over the fades on pointer devices and show only while there is more to scroll that way. */
+.arrow { position: absolute; top: 50%; width: 32px; height: 32px; display: none; align-items: center; justify-content: center; padding: 0; color: var(--ink); background: #fff; border: 1px solid #d2d2d7; border-radius: 50%; box-shadow: 0 2px 8px rgba(0, 0, 0, .08); cursor: pointer; transform: translateY(-50%); transition: background .2s ease; }
+.arrow:hover { background: #f5f5f7; }
+.prev { left: 8px; }
+.next { right: 8px; }
+@media (hover: hover) and (pointer: fine) {
+  .track[data-more-start] .prev, .track[data-more-end] .next { display: inline-flex; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroller { scroll-behavior: smooth; }
+}

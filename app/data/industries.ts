@@ -1,17 +1,34 @@
-import { Building2, CreditCard, GraduationCap, HeartPulse, Megaphone, MonitorPlay, Package, Plane, Ship, ShoppingCart, Trophy, Truck } from "lucide-react";
+import { Building2, CreditCard, GraduationCap, HeartPulse, Megaphone, MonitorPlay, Package, Plane, Ship, ShoppingCart, Trophy, Truck, type LucideIcon } from "lucide-react";
+import content from "./industry-content.json";
 
-// Shared by the /industries page and the homepage industry pills.
-export const industries = [
-  { title: "Construction & Infrastructure", text: "Manufacturing, inventory, ERP and operations systems.", icon: Package },
-  { title: "Trade & Commerce", text: "Products, clients, enquiries and records in one system.", icon: Ship },
-  { title: "FinTech", text: "Secure applications, integrations and controlled data workflows.", icon: CreditCard },
-  { title: "Aviation", text: "Ground handling, GSE coordination, cargo and workforce scheduling.", icon: Plane },
-  { title: "EdTech", text: "Learning platforms, portals and education workflows.", icon: GraduationCap },
-  { title: "HealthTech", text: "Secure data workflows and operational systems.", icon: HeartPulse },
-  { title: "PropTech", text: "Property workflows, CRM integration and analytics.", icon: Building2 },
-  { title: "Media & Entertainment", text: "Content platforms, audiences and cloud infrastructure.", icon: MonitorPlay },
-  { title: "Sports", text: "Digital platforms, fan experiences, web and mobile apps, and performance data.", icon: Trophy },
-  { title: "Retail & E-commerce", text: "Online stores, inventory, order management, payments and customer systems working together.", icon: ShoppingCart },
-  { title: "Logistics & Transportation", text: "Shipment tracking, fleet and warehouse systems, customer portals and operational reporting.", icon: Truck },
-  { title: "AdTech", text: "Campaign workflows, reporting, automation and data integration.", icon: Megaphone },
-];
+// industry-content.json is the single source of truth for industry names, order and page copy.
+// This file adds what only the site needs: the /industries card summary, icon and a shorter pill label.
+const extras: Record<string, { text: string; icon: LucideIcon; shortTitle?: string }> = {
+  "construction-infrastructure": { shortTitle: "Construction", text: "Manufacturing, inventory, ERP and operations systems.", icon: Package },
+  "trade-commerce": { text: "Products, clients, enquiries and records in one system.", icon: Ship },
+  fintech: { text: "Secure applications, integrations and controlled data workflows.", icon: CreditCard },
+  aviation: { text: "Ground handling, GSE coordination, cargo and workforce scheduling.", icon: Plane },
+  edtech: { text: "Learning platforms, portals and education workflows.", icon: GraduationCap },
+  healthtech: { text: "Secure data workflows and operational systems.", icon: HeartPulse },
+  proptech: { text: "Property workflows, CRM integration and analytics.", icon: Building2 },
+  "media-entertainment": { shortTitle: "Media", text: "Content platforms, audiences and cloud infrastructure.", icon: MonitorPlay },
+  sports: { text: "Digital platforms, fan experiences, web and mobile apps, and performance data.", icon: Trophy },
+  "retail-ecommerce": { shortTitle: "Retail", text: "Online stores, inventory, order management, payments and customer systems working together.", icon: ShoppingCart },
+  "logistics-transportation": { shortTitle: "Logistics", text: "Shipment tracking, fleet and warehouse systems, customer portals and operational reporting.", icon: Truck },
+  adtech: { text: "Campaign workflows, reporting, automation and data integration.", icon: Megaphone },
+};
+
+export const industries = content.industries.map((industry) => {
+  const extra = extras[industry.slug];
+  if (!extra) throw new Error(`Missing card details for industry "${industry.slug}"`);
+  return { ...industry, ...extra, href: `/industries/${industry.slug}` as const };
+});
+
+export type Industry = (typeof industries)[number];
+
+/** Industry page link for a name used elsewhere (e.g. a service's industry list). */
+export function industryHref(name: string) {
+  const industry = industries.find((item) => item.name === name);
+  if (!industry) throw new Error(`Unknown industry "${name}"`);
+  return industry.href;
+}

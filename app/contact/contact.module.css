@@ -1,19 +1,17 @@
-.layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(32px, 4vw, 64px); align-items: start; }
-.spacedHeading { margin-bottom: 40px; }
-.aside { display: grid; gap: 20px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 56px clamp(32px, 4vw, 64px); align-items: start; }
+.spacedHeading { margin-bottom: 56px; }
+.aside { display: grid; gap: 48px; }
 
-.card { padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
-.cardTitle { margin: 0 0 12px; font-size: 1.15rem; font-weight: 600; }
-.contactLink { display: flex; align-items: center; gap: 16px; padding-block: 12px; color: var(--ink); font-size: 1.15rem; font-weight: 600; overflow-wrap: anywhere; }
-.contactLink + .contactLink { border-top: 1px solid var(--line); }
+.cardTitle { margin: 0 0 16px; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
+.contactLink { display: flex; align-items: center; gap: 16px; padding-block: 8px; color: var(--ink); font-size: var(--type-intro); font-weight: 600; line-height: var(--leading-intro); overflow-wrap: anywhere; }
 .contactLink:hover { color: var(--blue); }
-.icon { width: 44px; height: 44px; flex-shrink: 0; display: grid; place-items: center; color: var(--blue); background: #edf4fc; border-radius: 8px; }
-.label { display: block; margin-bottom: 2px; color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-.teams { display: grid; gap: 14px; margin: 16px 0 0; padding: 0; list-style: none; color: var(--ink); }
-.teams li { display: flex; align-items: flex-start; gap: 10px; font-weight: 500; }
+.icon { flex-shrink: 0; display: grid; place-items: center; color: var(--blue); }
+.label { display: block; color: var(--muted); font-size: var(--type-small); font-weight: 400; line-height: var(--leading-small); }
+.teams { display: grid; gap: 16px; margin: 16px 0 0; padding: 0; list-style: none; color: var(--ink); }
+.teams li { display: flex; align-items: flex-start; gap: 12px; font-weight: 500; }
 .teams svg { flex-shrink: 0; margin-top: 3px; color: var(--blue); }
-.teamLabel { display: block; color: var(--muted); font-size: 13px; font-weight: 400; }
-.remoteNote { margin: 20px 0 0; padding-top: 16px; color: var(--muted); border-top: 1px solid var(--line); }
+.teamLabel { display: block; color: var(--muted); font-size: var(--type-small); font-weight: 400; line-height: var(--leading-small); }
+.remoteNote { margin: 20px 0 0; color: var(--muted); }
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { PageHero } from "@/app/components/sections/PageHero";
@@ -10,40 +9,55 @@ import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./work.module.css";
 
 export const metadata = createPageMetadata({
-  title: "What We Build | Dawood Technologies",
-  description: "Dawood Technologies builds ERP and inventory systems, AI chatbots and agents, business websites, custom web apps, cloud and IT support, and dashboards.",
+  title: "Solutions | Dawood Technologies",
+  description: "ERP and inventory systems, AI assistants, business websites, web apps and SaaS, cloud and IT, and dashboards, designed, built and supported by one team.",
   path: "/work",
 });
+
+const breadcrumb = [{ name: "Home", path: "/" }, { name: "Solutions", path: "/work" }] as const;
 
 export default function WorkPage() {
   return (
     <main id="main-content">
-      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "What We Build", path: "/work" }]} />
-      <PageHero kicker="What we build" title="Solutions designed for real business problems." lead="Practical systems we design, build and support, from first idea to day-to-day use." />
+      <BreadcrumbStructuredData items={[...breadcrumb]} />
+      <PageHero
+        breadcrumb={breadcrumb}
+        title="Solutions."
+        lead="Proven systems for the problems growing businesses face every day. Designed, built and supported by one team."
+        pills={solutions.map(({ id, shortTitle }) => ({ id, label: shortTitle }))}
+      />
 
-      <section className={typography.lightSection} aria-label="Solutions">
-        <Reveal className="container">
-          <p className={styles.note}>These are solutions we offer. Client case studies will be added here as projects are delivered.</p>
-          <ul className={styles.solutions}>
-            {solutions.map(({ title, audience, problem, build, stack, icon: Icon, service }) => (
-              <li key={title} className={styles.solution}>
-                <span className={styles.icon}><Icon aria-hidden="true" size={22} /></span>
-                <h2 className={styles.title}>{title}</h2>
-                {audience ? <p className={styles.audience}>{audience}</p> : null}
-                <h3 className={styles.label}>The problem</h3>
-                <p className={styles.text}>{problem}</p>
-                <h3 className={styles.label}>What we build</h3>
-                <p className={styles.text}>{build}</p>
-                <h3 className={styles.label}>Typical stack</h3>
-                <ul className={styles.stack}>
-                  {stack.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-                <Link className={styles.link} href={service.href}>{service.label} <ArrowRight aria-hidden="true" size={16} /></Link>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-      </section>
+      {solutions.map((solution, index) => (
+        <section key={solution.id} id={solution.id} className={`${styles.solution} ${index % 2 ? styles.alt : ""}`} aria-labelledby={`${solution.id}-title`}>
+          <Reveal className="container-text">
+            <p className={typography.kicker}>{solution.eyebrow}</p>
+            <h2 className={styles.title} id={`${solution.id}-title`}>{solution.title}</h2>
+            <p className={styles.intro}>{solution.intro}</p>
+
+            <dl className={styles.facts}>
+              <div><dt>The challenge</dt><dd>{solution.challenge}</dd></div>
+              <div><dt>What we deliver</dt><dd>{solution.deliver}</dd></div>
+              <div><dt>What changes</dt><dd>{solution.changes}</dd></div>
+            </dl>
+
+            <ul className={styles.features}>
+              {solution.features.map((feature) => (
+                <li key={feature.title}>
+                  <h3 className={styles.featureTitle}>{feature.title}</h3>
+                  <p className={styles.featureText}>{feature.text}</p>
+                </li>
+              ))}
+            </ul>
+
+            <div className={styles.footer}>
+              <p className={styles.builtWith}>Built with {solution.builtWith.join(" · ")}</p>
+              <Link className={styles.discuss} href="/contact">Discuss this solution<span className="visually-hidden">: {solution.title}</span> <span aria-hidden="true">›</span></Link>
+            </div>
+          </Reveal>
+        </section>
+      ))}
+
+      <p className={`container-text ${styles.caseNote}`}>Client case studies will be added as projects are delivered.</p>
 
       <CtaBand heading="Have a project in mind?" text="Share what you want to build and we'll show you how we'd approach it." button={{ label: "Book a consultation", href: "/contact" }} />
     </main>

@@ -4,11 +4,10 @@ import { ButtonLink } from "@/app/components/ButtonLink";
 import { AiSpotlight } from "@/app/components/home/AiSpotlight";
 import { HomeIndustries } from "@/app/components/home/HomeIndustries";
 import { HomeServices } from "@/app/components/home/HomeServices";
-import { WhatWeBuildPanel } from "@/app/components/home/WhatWeBuildPanel";
+import { HomeSolutions } from "@/app/components/home/HomeSolutions";
 import HeroOcean from "@/app/components/HeroOcean";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { EngagementModels } from "@/app/components/sections/EngagementModels";
-import { ProcessSteps } from "@/app/components/sections/ProcessSteps";
 import { Reveal } from "@/app/components/sections/Reveal";
 import { StatCards } from "@/app/components/sections/StatCards";
 import typography from "@/app/components/sections/typography.module.css";
@@ -28,7 +27,7 @@ export default function Home() {
       <HeroOcean />
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={`container ${styles.heroContent}`}>
-        <p className={`kicker ${styles.label}`}>SOFTWARE · ERP · CLOUD · AI</p>
+        <p className={`kicker ${styles.label}`}>Software · ERP · Cloud · AI</p>
         <h1 className={styles.heroHeading} id="home-title"><span className={styles.heroLine}>Technology built</span> <span className={styles.heroLine}>around how businesses</span> <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
         <p className={styles.heroDescription}>We build websites, custom software, ERP systems and AI assistants, and run the cloud and IT behind them, for businesses worldwide.</p>
         <div className={styles.actions}>
@@ -51,17 +50,8 @@ export default function Home() {
 
     <AiSpotlight />
     <HomeIndustries />
-    <WhatWeBuildPanel />
-    <EngagementModels tinted />
-
-    <section className={typography.lightSection} aria-labelledby="process-title">
-      <Reveal className="container">
-        <p className={typography.kicker}>How we work</p>
-        <h2 className={typography.heading} id="process-title">From first conversation to running system.</h2>
-        <p className={typography.intro}>A clear process, with the same team responsible from planning through day-to-day support.</p>
-        <ProcessSteps />
-      </Reveal>
-    </section>
+    <HomeSolutions />
+    <EngagementModels />
 
     <CtaBand heading="Bring us the business challenge." text="Book a 30-minute call and leave with a clear next step for your project." />
   </main>;

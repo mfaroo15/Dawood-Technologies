@@ -23,13 +23,20 @@ const reasons = [
 
 const cvLink = `mailto:${contactEmail}?subject=CV%20-%20Dawood%20Technologies`;
 
+const breadcrumb = [{ name: "Home", path: "/" }, { name: "Careers", path: "/careers" }] as const;
+
+const pills = [
+  { id: "why-work-with-us", label: "Why join us" },
+  { id: "open-positions", label: "Open positions" },
+];
+
 export default function CareersPage() {
   return (
     <main id="main-content">
-      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Careers", path: "/careers" }]} />
-      <PageHero kicker="Careers" title="Build technology that stays useful." lead="Work across applications, cloud, data and AI, on systems that real businesses depend on every day." />
+      <BreadcrumbStructuredData items={[...breadcrumb]} />
+      <PageHero breadcrumb={breadcrumb} title="Build technology that stays useful." lead="Work across applications, cloud, data and AI, on systems that real businesses depend on every day." pills={pills} />
 
-      <section className={typography.lightSection} aria-labelledby="why-title">
+      <section id="why-work-with-us" className={typography.lightSection} aria-labelledby="why-title">
         <Reveal className="container">
           <p className={typography.kicker}>Why work with us</p>
           <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="why-title">What you can expect.</h2>
@@ -37,7 +44,7 @@ export default function CareersPage() {
         </Reveal>
       </section>
 
-      <section className={typography.tintedSection} aria-labelledby="positions-title">
+      <section id="open-positions" className={typography.tintedSection} aria-labelledby="positions-title">
         <Reveal className="container">
           <p className={typography.kicker}>Open positions</p>
           <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="positions-title">Current openings.</h2>

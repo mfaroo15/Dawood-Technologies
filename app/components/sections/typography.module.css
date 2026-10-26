@@ -1,14 +1,10 @@
-/* Shared section typography for redesigned pages. */
-.kicker { margin: 0 0 18px; color: var(--blue); font-size: 13px; font-weight: 600; letter-spacing: .14em; line-height: 1.2; text-transform: uppercase; }
+/* Shared section typography. Sizes come from the global type scale in globals.css. */
+.kicker { margin: 0 0 8px; color: var(--blue); font-size: var(--type-eyebrow); font-weight: var(--weight-heading); letter-spacing: var(--tracking-caps); line-height: var(--leading-small); text-transform: uppercase; }
 .kickerOnDark { composes: kicker; color: var(--blue-soft); }
-.heading { margin: 0 0 20px; font-size: clamp(1.9rem, 1.3rem + 1.8vw, 3rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.1; }
-.intro { max-width: 60ch; margin: 0 0 48px; color: var(--muted); font-size: 1.1rem; line-height: 1.6; }
-.introOnDark { composes: intro; color: rgba(255, 255, 255, .7); }
-.lightSection { padding-block: 96px; background: #fff; }
+.heading { max-width: var(--container-text); margin: 0 0 16px; font-size: var(--type-h2); font-weight: var(--weight-heading); letter-spacing: var(--tracking-h2); line-height: var(--leading-h2); }
+.intro { max-width: var(--measure); margin: 0 0 56px; color: var(--muted); font-size: var(--type-intro); line-height: var(--leading-intro); }
+.introOnDark { composes: intro; color: rgba(255, 255, 255, .72); }
+.lightSection { padding-block: var(--space-section); background: #fff; }
 .tintedSection { composes: lightSection; background: var(--section-bg); }
 .darkSection { composes: lightSection; color: #fff; background: radial-gradient(50% 70% at 15% 100%, rgba(18, 104, 232, .22), transparent 70%), linear-gradient(180deg, #0e121b, var(--navy)); }
-.tag { display: inline-block; padding: 7px 12px; color: #fff; font-size: 12px; font-weight: 600; letter-spacing: .1em; line-height: 1.2; text-transform: uppercase; background: var(--blue); border-radius: 3px; }
-
-@media (max-width: 640px) {
-  .lightSection { padding-block: 64px; }
-}
+.tag { display: inline-block; padding: 4px 12px; color: #fff; font-size: var(--type-small); font-weight: 600; line-height: var(--leading-small); background: var(--blue); border-radius: var(--radius-pill); }

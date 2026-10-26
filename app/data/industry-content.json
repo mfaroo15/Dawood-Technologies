@@ -1,0 +1,1121 @@
+{
+  "note": "Original content written for Dawood Technologies industry pages. Possible outcomes only, not past client results.",
+  "industries": [
+    {
+      "slug": "construction-infrastructure",
+      "name": "Construction & Infrastructure",
+      "heading": "Technology for Construction & Infrastructure",
+      "intro": "Connected systems for projects, sites, materials and equipment, so leadership sees progress and cost in one place.",
+      "challenges": [
+        {
+          "title": "Disconnected site data",
+          "text": "Progress, labour and material usage are reported by phone and spreadsheet, so head office sees problems late."
+        },
+        {
+          "title": "Material leakage",
+          "text": "Stock moves between yards and sites without a reliable record, making shortages and over-ordering common."
+        },
+        {
+          "title": "Slow, manual tendering",
+          "text": "Quotes and tenders are assembled by hand from old files, which delays bids and introduces pricing errors."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Project & Site Operations",
+          "text": "A single system for planning work, recording daily progress and tracking labour across every active site.",
+          "points": [
+            "Daily site reports from mobile devices",
+            "Task, milestone and labour tracking",
+            "Photo and document records per site"
+          ]
+        },
+        {
+          "title": "Materials & Inventory ERP",
+          "text": "End-to-end control of materials from purchase order to site consumption, linked to suppliers and finance.",
+          "points": [
+            "Multi-yard and multi-site stock",
+            "Purchase requests and approvals",
+            "Consumption against budget"
+          ]
+        },
+        {
+          "title": "Equipment & Maintenance",
+          "text": "Keep plant and machinery productive with scheduled maintenance, usage logs and fault reporting.",
+          "points": [
+            "Asset register and usage hours",
+            "Preventive maintenance schedules",
+            "Breakdown reporting and history"
+          ]
+        },
+        {
+          "title": "Estimating & Tender Management",
+          "text": "Build accurate quotes faster from a structured library of rates, materials and past bids.",
+          "points": [
+            "Rate and material libraries",
+            "Versioned quotes and approvals",
+            "Tender pipeline and win/loss view"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Earlier visibility of overruns",
+          "text": "Cost and schedule variances surface while there is still time to act, not at month-end."
+        },
+        {
+          "title": "Tighter material control",
+          "text": "Every movement is recorded, reducing waste, theft and emergency purchases."
+        },
+        {
+          "title": "More competitive bids",
+          "text": "Consistent pricing data lets teams respond to tenders faster and with greater confidence."
+        }
+      ],
+      "services": [
+        "enterprise-erp",
+        "data-services",
+        "application-development",
+        "managed-technology"
+      ],
+      "faqs": [
+        {
+          "question": "Can site teams use the system without reliable internet?",
+          "answer": "Yes. Mobile forms can capture reports offline and sync automatically when a connection returns."
+        },
+        {
+          "question": "Can it connect to our existing accounting software?",
+          "answer": "We integrate with common accounting and ERP platforms so financial data is not entered twice."
+        },
+        {
+          "question": "Do we have to replace everything at once?",
+          "answer": "No. Most companies start with one area, such as materials or site reporting, and expand from there."
+        }
+      ],
+      "cta": "Tell us how your projects run today and we'll show where a connected system saves time and cost."
+    },
+    {
+      "slug": "trade-commerce",
+      "name": "Trade & Commerce",
+      "heading": "Technology for Trade & Commerce",
+      "intro": "Systems that connect buyers, products, orders and shipments, giving trading businesses one reliable record from enquiry to delivery.",
+      "challenges": [
+        {
+          "title": "Enquiries lost in inboxes",
+          "text": "Buyer requests arrive through email, WhatsApp and calls, and follow-ups depend on individual memory."
+        },
+        {
+          "title": "Paperwork-heavy shipments",
+          "text": "Export documents are prepared manually for every consignment, slowing dispatch and risking costly errors."
+        },
+        {
+          "title": "No single view of orders",
+          "text": "Sales, stock and shipment status sit in different files, so answering a buyer's question takes hours."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Buyer CRM & Enquiry Management",
+          "text": "Capture every enquiry in one pipeline, assign it to the right person and track it through to an order.",
+          "points": [
+            "Unified enquiries from email, web and WhatsApp",
+            "Quotations and follow-up reminders",
+            "Buyer history and preferences"
+          ]
+        },
+        {
+          "title": "Export Documentation & Shipment Tracking",
+          "text": "Generate trade documents from order data and keep buyers informed at every stage of a shipment.",
+          "points": [
+            "Invoice, packing list and certificate templates",
+            "Shipment milestones and status updates",
+            "Document archive per consignment"
+          ]
+        },
+        {
+          "title": "B2B Catalogues & Buyer Portals",
+          "text": "Present products professionally and let approved buyers browse specifications, request samples and reorder online.",
+          "points": [
+            "Specification-rich product catalogue",
+            "Sample and quote requests",
+            "Secure buyer accounts"
+          ]
+        },
+        {
+          "title": "Order & Inventory Management",
+          "text": "Link sales orders to supplier sourcing and stock, so commitments to buyers are always based on real availability.",
+          "points": [
+            "Order lifecycle from confirmation to dispatch",
+            "Supplier sourcing and purchase orders",
+            "Stock and allocation by order"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Faster, more professional responses",
+          "text": "Buyers receive accurate quotes and status updates quickly, building confidence in repeat business."
+        },
+        {
+          "title": "Fewer shipment delays",
+          "text": "Correct documents generated from a single source reduce rework at ports and customs."
+        },
+        {
+          "title": "Reliable commercial insight",
+          "text": "Management sees which products, markets and buyers drive margin."
+        }
+      ],
+      "services": [
+        "enterprise-erp",
+        "application-development",
+        "ai-automation",
+        "data-services"
+      ],
+      "faqs": [
+        {
+          "question": "Can buyers track their orders themselves?",
+          "answer": "Yes. A buyer portal can show order and shipment status without them needing to email your team."
+        },
+        {
+          "question": "Can you handle documents for different destination countries?",
+          "answer": "Templates can be configured for the document sets each market requires, maintained in one place."
+        },
+        {
+          "question": "Will this work alongside WhatsApp, which our buyers prefer?",
+          "answer": "Yes. WhatsApp conversations can feed into the CRM so nothing important stays in personal phones."
+        }
+      ],
+      "cta": "Share how your trading operation works and we'll map the shortest path from enquiry to delivery."
+    },
+    {
+      "slug": "fintech",
+      "name": "FinTech",
+      "heading": "Technology for FinTech",
+      "intro": "Secure, reliable digital products for financial services, built to scale with demanding customers and regulators.",
+      "challenges": [
+        {
+          "title": "High expectations, low tolerance",
+          "text": "Customers expect instant, flawless digital experiences, and a single failed release can damage trust."
+        },
+        {
+          "title": "Complex onboarding",
+          "text": "Verifying and onboarding customers involves many steps that frustrate users when they are poorly designed."
+        },
+        {
+          "title": "Data spread across systems",
+          "text": "Reporting depends on data from core systems, apps and partners that rarely line up cleanly."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Digital Banking & Payment Products",
+          "text": "Design and build web and mobile products for accounts, wallets, transfers and payments with security at the core.",
+          "points": [
+            "Mobile and web app engineering",
+            "Secure authentication and session handling",
+            "Payment and partner API integrations"
+          ]
+        },
+        {
+          "title": "Customer Onboarding & Verification",
+          "text": "Create onboarding journeys that are fast for customers and thorough for compliance teams.",
+          "points": [
+            "Guided digital onboarding flows",
+            "Identity and document verification integrations",
+            "Case management for manual review"
+          ]
+        },
+        {
+          "title": "Quality Engineering & Test Automation",
+          "text": "Release with confidence through structured testing across functionality, performance and security.",
+          "points": [
+            "Automated regression suites",
+            "Performance and load testing",
+            "Release and UAT support"
+          ]
+        },
+        {
+          "title": "Data, Reporting & Risk Analytics",
+          "text": "Consolidate operational and transaction data into trusted reporting and analytics.",
+          "points": [
+            "Data pipelines from core and app systems",
+            "Management and regulatory reporting views",
+            "Risk and anomaly monitoring dashboards"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Faster, safer releases",
+          "text": "Automated testing and disciplined delivery reduce the risk of production issues."
+        },
+        {
+          "title": "Higher onboarding completion",
+          "text": "Clear, well-designed journeys help more applicants finish signing up."
+        },
+        {
+          "title": "Decisions from trusted data",
+          "text": "Leadership and risk teams work from consistent, timely numbers."
+        }
+      ],
+      "services": [
+        "application-development",
+        "quality-assurance",
+        "data-services",
+        "cybersecurity"
+      ],
+      "faqs": [
+        {
+          "question": "Can you provide dedicated QA engineers for our app team?",
+          "answer": "Yes. Our QA engineers can join your team to build and run automated and manual test cycles."
+        },
+        {
+          "question": "How do you approach security in financial products?",
+          "answer": "Security is designed in from the start, with secure coding practices, access controls and testing before every release."
+        },
+        {
+          "question": "Can you work within our existing architecture and vendors?",
+          "answer": "Yes. We integrate with your core systems and partners rather than requiring a rebuild."
+        }
+      ],
+      "cta": "Tell us about your product roadmap and we'll show how we can strengthen delivery and quality."
+    },
+    {
+      "slug": "aviation",
+      "name": "Aviation",
+      "heading": "Technology for Aviation",
+      "intro": "Operational systems for ground handling, cargo and workforce coordination, where timing and accuracy matter every minute.",
+      "challenges": [
+        {
+          "title": "Time-critical coordination",
+          "text": "Turnarounds depend on equipment, crews and information arriving at the right stand at the right time."
+        },
+        {
+          "title": "Manual rostering",
+          "text": "Shift planning across licences, breaks and flight schedules is often done in spreadsheets."
+        },
+        {
+          "title": "Limited real-time visibility",
+          "text": "Supervisors lack a live view of resources, delays and cargo status across the operation."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Ground Handling & GSE Coordination",
+          "text": "Allocate ground support equipment and teams to flights, and track readiness throughout each turnaround.",
+          "points": [
+            "Equipment allocation by flight and stand",
+            "Turnaround task tracking",
+            "Equipment availability and faults"
+          ]
+        },
+        {
+          "title": "Cargo Tracking & Handling",
+          "text": "Follow cargo from acceptance to loading and delivery with clear status at every handover.",
+          "points": [
+            "Acceptance and handover records",
+            "Status tracking by consignment",
+            "Exception and damage reporting"
+          ]
+        },
+        {
+          "title": "Workforce & Shift Scheduling",
+          "text": "Build compliant rosters that match staffing to the flight schedule and individual qualifications.",
+          "points": [
+            "Shift planning against flight schedules",
+            "Qualification and licence tracking",
+            "Swap requests and attendance"
+          ]
+        },
+        {
+          "title": "Operations Control Dashboards",
+          "text": "Give supervisors and management one live picture of flights, resources and delays.",
+          "points": [
+            "Live flight and resource status",
+            "Delay codes and root causes",
+            "On-time performance reporting"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Smoother turnarounds",
+          "text": "Teams and equipment are where they need to be, reducing avoidable delays."
+        },
+        {
+          "title": "Better use of people",
+          "text": "Rosters align staff and skills with actual demand across the day."
+        },
+        {
+          "title": "Clear accountability",
+          "text": "Every delay and handover is recorded, supporting faster resolution and improvement."
+        }
+      ],
+      "services": [
+        "application-development",
+        "data-services",
+        "enterprise-erp",
+        "managed-technology"
+      ],
+      "faqs": [
+        {
+          "question": "Can the system work with our flight schedule data?",
+          "answer": "Yes. We can integrate flight schedules from your existing sources so planning stays current."
+        },
+        {
+          "question": "Will staff on the ramp be able to use it?",
+          "answer": "Interfaces are designed for tablets and phones, with large controls suitable for operational environments."
+        },
+        {
+          "question": "Can we start with one function, such as rostering?",
+          "answer": "Yes. Many operations start with one module and extend once it is proven."
+        }
+      ],
+      "cta": "Walk us through a typical day on your operation and we'll identify where coordination can improve."
+    },
+    {
+      "slug": "edtech",
+      "name": "EdTech",
+      "heading": "Technology for EdTech",
+      "intro": "Learning platforms and school systems that make teaching, administration and communication simpler for everyone involved.",
+      "challenges": [
+        {
+          "title": "Fragmented tools",
+          "text": "Teachers, students and parents juggle separate apps for lessons, grades, fees and messages."
+        },
+        {
+          "title": "Paper-heavy administration",
+          "text": "Admissions, attendance and fee collection still rely on forms and manual follow-up."
+        },
+        {
+          "title": "Limited learning insight",
+          "text": "Educators struggle to see which students need help until results are already in."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Learning Platforms",
+          "text": "Deliver courses, assignments and assessments online in a platform shaped around how you teach.",
+          "points": [
+            "Course and content management",
+            "Assignments, quizzes and grading",
+            "Live and recorded class support"
+          ]
+        },
+        {
+          "title": "Student & Parent Portals",
+          "text": "Give families one secure place for timetables, progress, announcements and communication.",
+          "points": [
+            "Progress and attendance views",
+            "Announcements and messaging",
+            "Mobile-friendly access"
+          ]
+        },
+        {
+          "title": "Admissions & Fee Management",
+          "text": "Move applications, enrolment and fee payments online, with automatic reminders and receipts.",
+          "points": [
+            "Online application forms",
+            "Enrolment workflows and approvals",
+            "Fee invoicing and online payments"
+          ]
+        },
+        {
+          "title": "AI Study Assistants",
+          "text": "Support learners outside class with assistants that answer questions from approved course material.",
+          "points": [
+            "Answers grounded in course content",
+            "Revision and practice prompts",
+            "Teacher-controlled scope"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Less administrative load",
+          "text": "Staff spend less time on forms, chasing fees and answering routine questions."
+        },
+        {
+          "title": "Better-informed families",
+          "text": "Parents see progress and updates without waiting for meetings."
+        },
+        {
+          "title": "Earlier support for learners",
+          "text": "Educators spot students who are falling behind sooner."
+        }
+      ],
+      "services": [
+        "application-development",
+        "ai-automation",
+        "product-design-mvp",
+        "cloud-devops"
+      ],
+      "faqs": [
+        {
+          "question": "Can you build on an existing learning platform?",
+          "answer": "Yes. We can extend or integrate with platforms you already use instead of replacing them."
+        },
+        {
+          "question": "Are AI assistants safe for students?",
+          "answer": "Assistants answer only from approved material, within limits set by your teachers."
+        },
+        {
+          "question": "Can parents pay fees online?",
+          "answer": "Yes. Fee payments can be integrated with local and international payment providers."
+        }
+      ],
+      "cta": "Tell us about your learners and staff, and we'll suggest where digital tools make the biggest difference."
+    },
+    {
+      "slug": "healthtech",
+      "name": "HealthTech",
+      "heading": "Technology for HealthTech",
+      "intro": "Patient-friendly digital services and secure clinical workflows that give care teams more time for patients.",
+      "challenges": [
+        {
+          "title": "Overloaded front desks",
+          "text": "Appointment calls and routine questions take staff away from patients in the clinic."
+        },
+        {
+          "title": "Paper-based workflows",
+          "text": "Forms, referrals and records move slowly between people and systems."
+        },
+        {
+          "title": "Disconnected patient experience",
+          "text": "Patients use different channels for booking, results and follow-up, often with long waits."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Patient Booking & Portals",
+          "text": "Let patients book, reschedule and manage appointments online, with reminders that reduce no-shows.",
+          "points": [
+            "Online scheduling across clinics",
+            "Automated reminders",
+            "Patient profiles and history"
+          ]
+        },
+        {
+          "title": "Secure Clinical Workflows",
+          "text": "Digitize intake forms, referrals and internal approvals with role-based access to sensitive information.",
+          "points": [
+            "Digital intake and consent forms",
+            "Referral and task routing",
+            "Access controls and audit trails"
+          ]
+        },
+        {
+          "title": "Telehealth Features",
+          "text": "Extend care beyond the clinic with secure video consultations and remote follow-up.",
+          "points": [
+            "Video consultation scheduling",
+            "Pre-visit questionnaires",
+            "Follow-up and care plans"
+          ]
+        },
+        {
+          "title": "AI Patient Assistants",
+          "text": "Answer common patient questions instantly and route anything clinical to the right person.",
+          "points": [
+            "Answers from approved clinic information",
+            "Appointment and service guidance",
+            "Escalation to staff"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "More time for care",
+          "text": "Staff handle fewer routine calls and less paperwork."
+        },
+        {
+          "title": "Easier access for patients",
+          "text": "Booking and information are available any time, on any device."
+        },
+        {
+          "title": "Safer handling of information",
+          "text": "Defined access and audit trails protect sensitive data."
+        }
+      ],
+      "services": [
+        "application-development",
+        "ai-automation",
+        "cybersecurity",
+        "cloud-devops"
+      ],
+      "faqs": [
+        {
+          "question": "How do you protect patient information?",
+          "answer": "We apply role-based access, encryption and audit logging, and design workflows around the data protection rules that apply to you."
+        },
+        {
+          "question": "Can booking connect to our current clinic system?",
+          "answer": "Where your system offers an integration, we connect to it so schedules stay in sync."
+        },
+        {
+          "question": "Can an AI assistant give medical advice?",
+          "answer": "No. Assistants provide general information and route clinical questions to qualified staff."
+        }
+      ],
+      "cta": "Share how patients reach you today and we'll show where digital services can ease the load."
+    },
+    {
+      "slug": "proptech",
+      "name": "PropTech",
+      "heading": "Technology for PropTech",
+      "intro": "Digital tools for property developers, agencies and managers, from first enquiry to long-term tenancy.",
+      "challenges": [
+        {
+          "title": "Leads that go cold",
+          "text": "Enquiries from portals, social media and calls aren't followed up quickly or consistently."
+        },
+        {
+          "title": "Maintenance by phone",
+          "text": "Tenants report issues through calls and messages that are easy to lose."
+        },
+        {
+          "title": "Scattered portfolio data",
+          "text": "Occupancy, rent and costs are tracked in separate sheets, hiding performance trends."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Property Listing Websites",
+          "text": "Showcase developments and listings with fast, search-optimized sites that convert visitors into enquiries.",
+          "points": [
+            "Listing and project pages",
+            "Search and filtering",
+            "Enquiry and viewing requests"
+          ]
+        },
+        {
+          "title": "Lead & Sales CRM",
+          "text": "Route every enquiry to the right agent and track it through viewings, offers and closing.",
+          "points": [
+            "Lead capture from all channels",
+            "Automatic assignment and reminders",
+            "Sales pipeline by project"
+          ]
+        },
+        {
+          "title": "Tenant & Maintenance Portals",
+          "text": "Give tenants a simple way to report issues, track progress and receive updates.",
+          "points": [
+            "Online maintenance requests",
+            "Contractor assignment and tracking",
+            "Tenant notices and documents"
+          ]
+        },
+        {
+          "title": "Portfolio Analytics",
+          "text": "See occupancy, income and costs across your portfolio in one dashboard.",
+          "points": [
+            "Occupancy and rent tracking",
+            "Cost and maintenance spend",
+            "Performance by property"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Faster lead follow-up",
+          "text": "Enquiries reach the right agent instantly, so fewer opportunities are lost."
+        },
+        {
+          "title": "Happier tenants",
+          "text": "Issues are logged, tracked and resolved with clear communication."
+        },
+        {
+          "title": "Clearer investment decisions",
+          "text": "Portfolio performance is visible without manual reporting."
+        }
+      ],
+      "services": [
+        "application-development",
+        "enterprise-erp",
+        "data-services",
+        "ai-automation"
+      ],
+      "faqs": [
+        {
+          "question": "Can enquiries from property portals flow into the CRM?",
+          "answer": "Yes, where the portal supports it, enquiries can be imported automatically."
+        },
+        {
+          "question": "Can contractors update maintenance jobs?",
+          "answer": "Yes. Contractors can receive jobs and update status from their phones."
+        },
+        {
+          "question": "Do you build websites for new developments?",
+          "answer": "Yes. We design and build project sites that showcase plans, amenities and availability."
+        }
+      ],
+      "cta": "Tell us about your portfolio or projects and we'll show where better systems drive results."
+    },
+    {
+      "slug": "media-entertainment",
+      "name": "Media & Entertainment",
+      "heading": "Technology for Media & Entertainment",
+      "intro": "Platforms and infrastructure for publishing, streaming and understanding audiences at any scale.",
+      "challenges": [
+        {
+          "title": "Traffic spikes",
+          "text": "Premieres, live events and viral content can overwhelm platforms at the worst moment."
+        },
+        {
+          "title": "Slow publishing",
+          "text": "Editorial teams wait on developers or clunky tools to get content live."
+        },
+        {
+          "title": "Fragmented audience data",
+          "text": "Viewing and engagement data sits in many tools, limiting insight."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Content & Streaming Platforms",
+          "text": "Build web and app experiences for video, audio and editorial content that perform on every device.",
+          "points": [
+            "Video and audio playback experiences",
+            "Subscriptions and access control",
+            "Multi-device apps"
+          ]
+        },
+        {
+          "title": "Content Management",
+          "text": "Give editors fast, flexible tools to plan, publish and update content without engineering help.",
+          "points": [
+            "Structured content and workflows",
+            "Scheduling and approvals",
+            "Multi-channel publishing"
+          ]
+        },
+        {
+          "title": "Audience Analytics",
+          "text": "Bring viewing, engagement and subscription data together to understand what audiences value.",
+          "points": [
+            "Unified audience dashboards",
+            "Content performance insights",
+            "Subscriber and churn analysis"
+          ]
+        },
+        {
+          "title": "Scalable Cloud Infrastructure",
+          "text": "Prepare platforms for peak demand with cloud architecture that scales automatically.",
+          "points": [
+            "Auto-scaling and caching",
+            "Content delivery optimization",
+            "Monitoring and alerting"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Reliable launches",
+          "text": "Platforms stay fast and available when audiences arrive in large numbers."
+        },
+        {
+          "title": "Faster publishing",
+          "text": "Editorial teams move from idea to live content without bottlenecks."
+        },
+        {
+          "title": "Content decisions backed by data",
+          "text": "Teams invest in what audiences actually watch and share."
+        }
+      ],
+      "services": [
+        "application-development",
+        "cloud-devops",
+        "data-services",
+        "quality-assurance"
+      ],
+      "faqs": [
+        {
+          "question": "Can you help us prepare for a major live event?",
+          "answer": "Yes. We review architecture, run load tests and put scaling and monitoring in place ahead of the event."
+        },
+        {
+          "question": "Do you build apps for smart TVs and mobile?",
+          "answer": "We build web and mobile experiences, and can extend to TV platforms based on your audience."
+        },
+        {
+          "question": "Can editors publish without developers?",
+          "answer": "Yes. We set up content tools so editorial teams control publishing themselves."
+        }
+      ],
+      "cta": "Tell us about your audience and content plans, and we'll show how to deliver at scale."
+    },
+    {
+      "slug": "sports",
+      "name": "Sports",
+      "heading": "Technology for Sports",
+      "intro": "Digital experiences for clubs, leagues and broadcasters that bring fans closer and turn performance data into an advantage.",
+      "challenges": [
+        {
+          "title": "Fans spread across channels",
+          "text": "Supporters follow scores, news and tickets across many apps and social platforms."
+        },
+        {
+          "title": "Match-day pressure",
+          "text": "Content, notifications and ticketing must work flawlessly at peak moments."
+        },
+        {
+          "title": "Underused performance data",
+          "text": "Training and match data is collected but rarely turned into clear decisions."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Fan Experience & Engagement",
+          "text": "Build websites and apps that become the home for supporters, with personalized content and rewards.",
+          "points": [
+            "Club and league websites and apps",
+            "Personalized news and content feeds",
+            "Loyalty and rewards programs"
+          ]
+        },
+        {
+          "title": "Match-Day Content & Notifications",
+          "text": "Keep fans informed in real time with live scores, line-ups, highlights and timely alerts.",
+          "points": [
+            "Live scores and match centres",
+            "Push and WhatsApp notifications",
+            "Highlights and media publishing"
+          ]
+        },
+        {
+          "title": "Membership & Ticketing Integrations",
+          "text": "Connect memberships, ticketing and merchandise so fans enjoy one seamless account.",
+          "points": [
+            "Single fan account and profile",
+            "Ticketing and membership integrations",
+            "Merchandise and e-commerce"
+          ]
+        },
+        {
+          "title": "Performance Data Dashboards",
+          "text": "Turn training, fitness and match data into dashboards coaches and analysts can act on.",
+          "points": [
+            "Player load and fitness tracking",
+            "Match statistics and trends",
+            "Coach and analyst views"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Stronger fan loyalty",
+          "text": "Supporters return to your own channels for content, offers and community."
+        },
+        {
+          "title": "Smoother match days",
+          "text": "Fans get information and access without frustration at peak times."
+        },
+        {
+          "title": "Better-informed coaching",
+          "text": "Staff make training and selection decisions from clear, current data."
+        }
+      ],
+      "services": [
+        "application-development",
+        "ai-automation",
+        "data-services",
+        "quality-assurance"
+      ],
+      "faqs": [
+        {
+          "question": "Can fans get match alerts on WhatsApp?",
+          "answer": "Yes. Notifications can be delivered through apps, the web and WhatsApp, based on fan preferences."
+        },
+        {
+          "question": "Can you connect to our existing ticketing provider?",
+          "answer": "Where the provider offers an integration, we connect it so fans manage everything in one account."
+        },
+        {
+          "question": "Can performance data come from wearables and video tools?",
+          "answer": "Yes. We integrate data from the tracking and analysis tools your staff already use."
+        }
+      ],
+      "cta": "Tell us about your fans and teams, and we'll design the experience they'll come back to."
+    },
+    {
+      "slug": "retail-ecommerce",
+      "name": "Retail & E-commerce",
+      "heading": "Technology for Retail & E-commerce",
+      "intro": "Online stores and connected retail systems that unify stock, orders and customers across every channel.",
+      "challenges": [
+        {
+          "title": "Stock out of sync",
+          "text": "Online and in-store inventory don't match, causing cancelled orders and missed sales."
+        },
+        {
+          "title": "Slow customer service",
+          "text": "Shoppers ask the same questions about sizes, delivery and returns all day."
+        },
+        {
+          "title": "Limited customer insight",
+          "text": "Purchase data isn't used to personalize offers or predict demand."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "E-commerce Stores",
+          "text": "Launch fast, conversion-focused stores on Shopify or custom platforms, built for mobile shoppers.",
+          "points": [
+            "Store design and development",
+            "Checkout and payment integration",
+            "Search, filters and merchandising"
+          ]
+        },
+        {
+          "title": "Omnichannel Inventory & Orders",
+          "text": "Sync stock and orders across stores, warehouses and online channels in real time.",
+          "points": [
+            "Live inventory across locations",
+            "Click-and-collect and returns",
+            "Order routing and fulfilment"
+          ]
+        },
+        {
+          "title": "WhatsApp Shopping Assistants",
+          "text": "Let customers ask questions, check availability and track orders through WhatsApp.",
+          "points": [
+            "Product and size guidance",
+            "Order tracking and updates",
+            "Handover to sales staff"
+          ]
+        },
+        {
+          "title": "Customer & Sales Analytics",
+          "text": "Understand what sells, to whom and where, with dashboards that guide buying and marketing.",
+          "points": [
+            "Sales and margin dashboards",
+            "Customer segments and repeat purchase",
+            "Demand and stock insights"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Fewer missed sales",
+          "text": "Accurate stock means customers can buy what they see."
+        },
+        {
+          "title": "Faster answers for shoppers",
+          "text": "Common questions are handled instantly, any time of day."
+        },
+        {
+          "title": "Smarter buying and marketing",
+          "text": "Decisions are based on real customer and sales patterns."
+        }
+      ],
+      "services": [
+        "application-development",
+        "ai-automation",
+        "data-services",
+        "quality-assurance"
+      ],
+      "faqs": [
+        {
+          "question": "Do you work with Shopify?",
+          "answer": "Yes. We build and extend Shopify stores and also develop custom platforms when needed."
+        },
+        {
+          "question": "Can online and store stock be combined?",
+          "answer": "Yes. We connect your point-of-sale and warehouse systems so stock updates everywhere."
+        },
+        {
+          "question": "Can the WhatsApp assistant take orders?",
+          "answer": "It can guide customers to checkout or create orders, depending on how you prefer to sell."
+        }
+      ],
+      "cta": "Tell us about your stores and channels, and we'll show where connected retail pays off."
+    },
+    {
+      "slug": "logistics-transportation",
+      "name": "Logistics & Transportation",
+      "heading": "Technology for Logistics & Transportation",
+      "intro": "Visibility and control across shipments, fleets and warehouses, with customers kept informed at every step.",
+      "challenges": [
+        {
+          "title": "\"Where is my shipment?\" calls",
+          "text": "Customer service spends hours answering status questions by phone and email."
+        },
+        {
+          "title": "Limited fleet visibility",
+          "text": "Dispatchers lack a live view of vehicles, routes and delays."
+        },
+        {
+          "title": "Warehouse errors",
+          "text": "Manual picking and stock records lead to mis-shipments and lost inventory."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Shipment Tracking Portals",
+          "text": "Give customers self-service tracking with live status, proof of delivery and documents.",
+          "points": [
+            "Branded tracking pages",
+            "Proof of delivery and documents",
+            "Customer accounts and history"
+          ]
+        },
+        {
+          "title": "Fleet & Dispatch Systems",
+          "text": "Plan, dispatch and monitor vehicles and drivers from one control screen.",
+          "points": [
+            "Job assignment and dispatch",
+            "Driver mobile app",
+            "Vehicle status and maintenance"
+          ]
+        },
+        {
+          "title": "Warehouse Management",
+          "text": "Control receiving, storage, picking and dispatch with accurate, real-time stock.",
+          "points": [
+            "Barcode-based receiving and picking",
+            "Bin and location management",
+            "Stock counts and adjustments"
+          ]
+        },
+        {
+          "title": "Delivery Dashboards & Notifications",
+          "text": "Monitor performance and keep customers updated automatically at every milestone.",
+          "points": [
+            "On-time delivery reporting",
+            "Exception alerts",
+            "SMS, email and WhatsApp updates"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Fewer status calls",
+          "text": "Customers check progress themselves and receive proactive updates."
+        },
+        {
+          "title": "Better fleet utilization",
+          "text": "Dispatchers assign work with a live view of capacity."
+        },
+        {
+          "title": "More accurate fulfilment",
+          "text": "Scanning and live stock reduce picking errors and losses."
+        }
+      ],
+      "services": [
+        "application-development",
+        "data-services",
+        "ai-automation",
+        "cloud-devops"
+      ],
+      "faqs": [
+        {
+          "question": "Can drivers update deliveries from their phones?",
+          "answer": "Yes. A driver app records pickups, deliveries and proof of delivery, even with weak signal."
+        },
+        {
+          "question": "Can tracking be branded with our company name?",
+          "answer": "Yes. Tracking pages and notifications carry your branding."
+        },
+        {
+          "question": "Can you integrate with GPS trackers we already use?",
+          "answer": "Yes. We connect to common tracking providers so location data appears in your dashboard."
+        }
+      ],
+      "cta": "Tell us how goods move through your business, and we'll show where visibility saves time and money."
+    },
+    {
+      "slug": "adtech",
+      "name": "AdTech",
+      "heading": "Technology for AdTech",
+      "intro": "Automation, data integration and reporting for agencies and media teams managing campaigns across many platforms.",
+      "challenges": [
+        {
+          "title": "Manual reporting",
+          "text": "Teams export data from each ad platform and rebuild reports by hand every week."
+        },
+        {
+          "title": "Fragmented campaign data",
+          "text": "Spend, performance and conversions sit in separate tools with different definitions."
+        },
+        {
+          "title": "Repetitive campaign operations",
+          "text": "Launching, naming and updating campaigns consumes hours of specialist time."
+        }
+      ],
+      "capabilities": [
+        {
+          "title": "Campaign Workflow Automation",
+          "text": "Automate repetitive campaign tasks so specialists focus on strategy and creative.",
+          "points": [
+            "Templated campaign setup",
+            "Naming and tagging rules",
+            "Approval and launch workflows"
+          ]
+        },
+        {
+          "title": "Cross-Platform Data Integration",
+          "text": "Bring data from search, social, programmatic and analytics platforms into one consistent model.",
+          "points": [
+            "Automated data connectors",
+            "Unified metrics and definitions",
+            "Data warehouse setup"
+          ]
+        },
+        {
+          "title": "Performance Reporting Dashboards",
+          "text": "Deliver live, client-ready dashboards that replace manual weekly reports.",
+          "points": [
+            "Client and internal dashboards",
+            "Budget pacing and alerts",
+            "Attribution views"
+          ]
+        },
+        {
+          "title": "API & Platform Integrations",
+          "text": "Connect ad platforms, CRMs and internal tools to build the workflows your team needs.",
+          "points": [
+            "Ad platform API integrations",
+            "CRM and conversion syncing",
+            "Custom internal tools"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "title": "Hours saved every week",
+          "text": "Reporting and routine operations run automatically."
+        },
+        {
+          "title": "One version of the truth",
+          "text": "Teams and clients see consistent numbers across every platform."
+        },
+        {
+          "title": "Faster optimization",
+          "text": "Live data lets teams adjust budgets and creative sooner."
+        }
+      ],
+      "services": [
+        "data-services",
+        "ai-automation",
+        "application-development",
+        "cloud-devops"
+      ],
+      "faqs": [
+        {
+          "question": "Which ad platforms can you connect?",
+          "answer": "We work with the major search, social and programmatic platforms, plus analytics and CRM tools."
+        },
+        {
+          "question": "Can clients see their own dashboards?",
+          "answer": "Yes. Each client can have secure access to their own live reports."
+        },
+        {
+          "question": "Can you automate campaign setup?",
+          "answer": "Yes. We build tools that create and update campaigns from templates and rules."
+        }
+      ],
+      "cta": "Tell us how your team runs campaigns, and we'll show where automation and data save the most time."
+    }
+  ]
+}

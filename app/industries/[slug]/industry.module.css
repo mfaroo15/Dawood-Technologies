@@ -1,0 +1,40 @@
+.spacedHeading { margin-bottom: 48px; }
+
+/* Unboxed item rows: 3 columns (challenges, outcomes) or 2x2 (capabilities). Phones swipe sideways instead. */
+.row { display: grid; gap: 40px; margin: 0; padding: 0; list-style: none; }
+.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px clamp(40px, 5vw, 80px); }
+.row > li { min-width: 0; }
+.title { margin: 0 0 8px; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
+.text { max-width: var(--measure); margin: 0; color: var(--muted); font-size: var(--type-card); }
+.points { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; font-size: var(--type-card); }
+.points li { display: flex; align-items: flex-start; gap: 10px; }
+.points svg { flex-shrink: 0; margin-top: .3em; color: var(--blue); }
+.note { margin: 40px 0 0; color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); }
+
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 40px clamp(32px, 5vw, 80px); align-items: start; }
+
+/* Previous / next industry. */
+.pager { display: flex; justify-content: space-between; gap: 24px; padding-block: 40px; }
+.previous, .next { display: flex; flex-direction: column; gap: 4px; min-width: 0; color: var(--ink); font-family: var(--font-display); font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
+.next { align-items: flex-end; text-align: right; }
+.previous:hover, .next:hover { color: var(--blue); }
+.direction { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); font-family: var(--font-text); font-size: var(--type-small); font-weight: 400; line-height: var(--leading-small); }
+
+@media (max-width: 900px) {
+  .three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+/* Swipe rows run edge to edge, one item per ~card width, with the next one peeking in. */
+@media (max-width: 640px) {
+  .spacedHeading { margin-bottom: 32px; }
+  .row, .three, .two { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 85%; gap: 24px; margin-inline: calc(var(--page-gutter) * -1); padding-inline: var(--page-gutter); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--page-gutter); scrollbar-width: none; }
+  .row::-webkit-scrollbar { display: none; }
+  .row > li { scroll-snap-align: start; }
+  .note { margin-top: 24px; }
+  .pager { padding-block: 32px; }
+}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageHero } from "@/app/components/PageHero";
+import { PageHero } from "@/app/components/sections/PageHero";
 import { contactEmail, legalUpdated } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 
@@ -12,11 +12,7 @@ export const metadata = createPageMetadata({
 export default function TermsPage() {
   return (
     <main className="legal-page" id="main-content">
-      <PageHero
-        eyebrow="LEGAL"
-        title="Terms & Conditions"
-        text="These terms explain the basic conditions for using this website, requesting information and engaging Dawood Technologies for business technology services."
-      />
+      <PageHero breadcrumb={[{ name: "Home", path: "/" }, { name: "Terms & Conditions", path: "/terms" }]} title="Terms & Conditions" lead={`Last updated ${legalUpdated}`} />
 
       <section className="section">
         <div className="container legal-layout">

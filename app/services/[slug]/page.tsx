@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const item = capabilities.find((entry) => entry.slug === slug);
   if (!item) return {};
-  if (slug === "ai-automation") return createPageMetadata({ ...aiSolutionsMetadata, description: item.summary });
+  if (slug === "ai-automation") return createPageMetadata(aiSolutionsMetadata);
   return createPageMetadata({ title: item.title, description: item.summary, path: `/services/${slug}` });
 }
 
@@ -35,17 +35,28 @@ export default async function ServicePage({ params }: Props) {
   if (!item) notFound();
   if (slug === "ai-automation") return <AiSolutionsPage />;
 
+  const breadcrumb = [{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: item.title, path: `/services/${slug}` }] as const;
+  const pills = [
+    { id: "scope", label: "Scope of work" },
+    { id: "who-its-for", label: "Who it's for" },
+    { id: "what-you-get", label: "What you get" },
+    ...(item.industries.length ? [{ id: "industries", label: "Industries" }] : []),
+    ...(item.platforms.length ? [{ id: "platforms", label: "Platforms" }] : []),
+    ...(item.faqs.length ? [{ id: "faq", label: "FAQ" }] : []),
+  ];
+
   return (
     <main id="main-content">
-      <BreadcrumbStructuredData items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: item.title, path: `/services/${slug}` }]} />
+      <BreadcrumbStructuredData items={[...breadcrumb]} />
       <PageHero
         title={item.title}
         lead={item.introduction}
-        breadcrumb={[{ label: "Services", href: "/services" }, { label: item.title }]}
-        buttons={[{ label: "Book an introduction call", href: "/contact" }, { label: "See what we build", href: "/work", variant: "secondary" }]}
+        breadcrumb={breadcrumb}
+        pills={pills}
+        buttons={[{ label: "Book an introduction call", href: "/contact" }, { label: "Explore solutions", href: "/work", variant: "secondary" }]}
       />
 
-      <section className={typography.lightSection} aria-labelledby="scope-title">
+      <section id="scope" className={typography.lightSection} aria-labelledby="scope-title">
         <Reveal className={`container ${styles.split}`}>
           <div>
             <p className={typography.kicker}>What we deliver</p>
@@ -60,7 +71,7 @@ export default async function ServicePage({ params }: Props) {
 
       <ServiceDetails whoFor={item.whoFor} outcomes={item.outcomes} industries={item.industries} faqs={item.faqs} />
 
-      <section className={typography.lightSection} aria-label="Platforms we work with">
+      <section id="platforms" className={typography.lightSection} aria-label="Platforms we work with">
         <Reveal className="container">
           <PlatformLogos names={item.platforms} />
         </Reveal>

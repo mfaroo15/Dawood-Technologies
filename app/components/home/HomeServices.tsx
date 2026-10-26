@@ -5,7 +5,7 @@ import typography from "@/app/components/sections/typography.module.css";
 import { serviceCards } from "@/app/data/service-cards";
 import styles from "./HomeServices.module.css";
 
-// AI Solutions is the dark featured card.
+// Artificial Intelligence is the dark featured card.
 const featuredSlug = "ai-automation";
 
 export function HomeServices() {
@@ -21,7 +21,7 @@ export function HomeServices() {
             return (
               <li key={slug}>
                 <Link className={`${styles.card} ${featured ? styles.featured : ""}`} href={href}>
-                  <span className={styles.icon}><Icon aria-hidden="true" size={22} /></span>
+                  <span className={styles.icon}><Icon aria-hidden="true" size={28} strokeWidth={1.75} /></span>
                   <h3 className={styles.title}>
                     {title}
                     {featured ? <span className={styles.badge}>New</span> : null}

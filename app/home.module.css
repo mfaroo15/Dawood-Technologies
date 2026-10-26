@@ -1,5 +1,5 @@
 .home { background: var(--white); }
-.tinted { background: #f4f8fd; }
+.tinted { background: var(--section-bg); }
 /* Dark hero: the CSS background paints first and is the fallback when WebGL is unavailable. */
 .hero {
   position: relative;
@@ -12,7 +12,7 @@
 .heroOverlay { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(11, 15, 23, .9) 0%, rgba(11, 15, 23, .55) 38%, rgba(11, 15, 23, 0) 66%); }
 .heroContent { position: relative; z-index: 2; padding-block: 96px; }
 .label { display: flex; align-items: center; gap: 12px; }
-.hero .label { color: #83bfff; letter-spacing: .14em; }
+.hero .label { color: #83bfff; }
 .hero .heroHeading { color: #fff; }
 .hero :global(.hero-word-rotator) { color: #4aa6ff; }
 .hero .heroDescription { color: rgba(255, 255, 255, .74); }
@@ -24,7 +24,7 @@
   border: 1px solid rgba(255, 255, 255, .45);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
 }
 .hero :global(.button:not(.button-primary)):hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .7); }
 .hero a:focus-visible { outline: 2px solid #83bfff; outline-offset: 3px; }
@@ -32,20 +32,18 @@
   .heroOverlay { background: linear-gradient(180deg, rgba(11, 15, 23, .55) 0%, rgba(11, 15, 23, .85) 100%); }
 }
 .heroHeading {
-  margin-bottom: 28px;
-  font-size: var(--type-home-hero);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -.035em;
+  margin-bottom: 24px;
+  font-size: var(--type-h1);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-h1);
+  letter-spacing: var(--tracking-h1);
 }
 /* Art-directed lines; each may still wrap internally on narrow screens. */
 .heroLine { display: block; }
-.heroDescription { max-width: 66ch; margin-bottom: 0; color: var(--muted); font-size: 1.08rem; line-height: 1.75; }
-.actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
+.heroDescription { max-width: 34em; margin-bottom: 0; font-size: var(--type-intro); line-height: var(--leading-intro); }
+.actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
 .actions svg { flex-shrink: 0; }
 
-
 @media (max-width: 520px) {
-  .heroDescription { font-size: 1rem; }
   .actions { flex-direction: column; align-items: flex-start; gap: 12px; }
 }

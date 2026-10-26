@@ -1,4 +1,5 @@
 .pills { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
-.pill { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; color: var(--ink); font-weight: 500; line-height: 1.3; background: #fff; border: 1px solid var(--line); border-radius: 40px; transition: border-color .2s ease, color .2s ease; }
-.pill:hover { color: var(--blue); border-color: var(--blue); }
-.dot { width: 7px; height: 7px; flex-shrink: 0; background: var(--blue); border-radius: 50%; }
+.pill { display: inline-flex; align-items: center; padding: 12px 22px; color: var(--ink); line-height: 1.18; background: var(--section-bg); border-radius: var(--radius-pill); transition: background .2s ease, color .2s ease; }
+.pill:hover { color: var(--blue); background: #e8e8ed; }
+.onTint .pill { background: #fff; }
+.onTint .pill:hover { background: #e8e8ed; }

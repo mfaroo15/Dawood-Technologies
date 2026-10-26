@@ -13,14 +13,14 @@ const models = [
 // "Ways to work with us" section, shared by the homepage and /services.
 export function EngagementModels({ tinted = false }: { tinted?: boolean }) {
   return (
-    <section className={tinted ? typography.tintedSection : typography.lightSection} aria-labelledby="engagement-title">
+    <section id="engagement-models" className={tinted ? typography.tintedSection : typography.lightSection} aria-labelledby="engagement-title">
       <Reveal className="container">
         <p className={typography.kicker}>Engagement models</p>
         <h2 className={`${typography.heading} ${styles.heading}`} id="engagement-title">Work with us the way that suits you.</h2>
         <ul className={styles.grid}>
           {models.map(({ title, text, icon: Icon }) => (
             <li key={title} className={styles.card}>
-              <span className={styles.icon}><Icon aria-hidden="true" size={22} /></span>
+              <span className={styles.icon}><Icon aria-hidden="true" size={28} strokeWidth={1.75} /></span>
               <h3 className={styles.title}>{title}</h3>
               <p className={styles.text}>{text}</p>
               <Link className={styles.link} href="/contact">Book a call<span className="visually-hidden">: {title}</span> <ArrowRight aria-hidden="true" size={16} /></Link>

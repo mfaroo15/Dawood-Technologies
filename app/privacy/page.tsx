@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageHero } from "@/app/components/PageHero";
+import { PageHero } from "@/app/components/sections/PageHero";
 import { contactEmail } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 
@@ -15,11 +15,7 @@ const emailLink = <a href={`mailto:${contactEmail}`}>{contactEmail}</a>;
 export default function PrivacyPolicyPage() {
   return (
     <main className="legal-page" id="main-content">
-      <PageHero
-        eyebrow="LEGAL"
-        title="Privacy Policy"
-        text="How we collect, use and look after the personal information you share with us through this website and when working with our team."
-      />
+      <PageHero breadcrumb={[{ name: "Home", path: "/" }, { name: "Privacy Policy", path: "/privacy" }]} title="Privacy Policy" lead={`Last updated ${effectiveDate}`} />
 
       <section className="section">
         <div className="container legal-layout">
