@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/app/lib/metadata";
 
 export const metadata = createPageMetadata({
   title: "Industries | Dawood Technologies",
-  description: "We design, build and run the systems behind day-to-day operations: websites, CRM, ERP and reporting, with teams in Chicago, Karachi and Dubai.",
+  description: "We design, build and run the systems behind day-to-day operations: websites, CRM, ERP and reporting, with teams in Karachi and Dubai.",
   path: "/industries",
 });
 

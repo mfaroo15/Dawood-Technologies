@@ -17,7 +17,7 @@ export const metadata = createPageMetadata({
 const reasons = [
   { title: "Real impact", text: "Build systems that businesses rely on every day.", icon: Target },
   { title: "Modern stack", text: "Next.js, cloud platforms and AI tools.", icon: Code },
-  { title: "Remote-first", text: "Work with colleagues in Chicago, Karachi and Dubai.", icon: Globe },
+  { title: "Remote-first", text: "Work with colleagues in Karachi and Dubai.", icon: Globe },
   { title: "Room to grow", text: "Take on more responsibility as you and the team grow.", icon: TrendingUp },
 ];
 

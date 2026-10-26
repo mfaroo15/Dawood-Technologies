@@ -5,9 +5,9 @@ export const foundingYear = 2022;
 export const contactEmail = "info@dawoodtech.com";
 export const linkedInUrl = "https://www.linkedin.com/company/dawoodtech/";
 export const contactPhone = {
-  display: "224-598-7275",
-  href: "tel:+12245987275",
-  schema: "+1-224-598-7275",
+  display: "+92 332 313 2729",
+  href: "tel:+923323132729",
+  schema: "+92-332-313-2729",
 } as const;
 export const contactPresence = teamLocations.map(({ city, countryState }) => `${city}, ${countryState.split(", ").at(-1)}`);
 export const legalUpdated = "September 21, 2026";

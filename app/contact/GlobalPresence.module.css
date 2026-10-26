@@ -1,0 +1,18 @@
+/* The image keeps the full 900x450 projection; the frame crops the empty southern margin (390 units).
+   Labels sit outside the frame so they are never clipped. */
+.map { position: relative; aspect-ratio: 900 / 390; }
+.frame { position: absolute; inset: 0; overflow: hidden; }
+.land { display: block; width: 100%; height: auto; }
+
+.marker { --stem: clamp(20px, 4vw, 48px); position: absolute; width: 0; height: 0; }
+.marker::before { content: ""; position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 4px rgba(18, 104, 232, .2); }
+.marker::after { content: ""; position: absolute; left: 0; width: 1px; height: var(--stem); background: var(--blue); }
+.marker[data-side="above"]::after { bottom: 5px; }
+.marker[data-side="below"]::after { top: 5px; }
+
+/* A white halo keeps the labels legible where they cross the dotted land. */
+.label { position: absolute; display: grid; white-space: nowrap; line-height: var(--leading-small); text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 6px #fff; }
+.marker[data-side="above"] .label { left: 0; bottom: calc(var(--stem) + 8px); padding-left: 8px; }
+.marker[data-side="below"] .label { right: 0; top: calc(var(--stem) + 8px); padding-right: 8px; text-align: right; }
+.city { color: var(--ink); font-size: var(--type-card); font-weight: var(--weight-heading); }
+.country { color: var(--muted); font-size: var(--type-small); }

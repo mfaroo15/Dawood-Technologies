@@ -8,7 +8,7 @@ type Stat = { icon: LucideIcon; label: string; value: string; text: string };
 const defaultStats: Stat[] = [
   { icon: Sparkles, label: "Full Stack Developers", value: "10+", text: "Engineers building web, cloud and AI systems" },
   { icon: Clock, label: "Response time", value: "1 day", text: "We reply to every enquiry within one business day" },
-  { icon: Globe, label: "Global Presence", value: "3", text: "Teams in Chicago, Karachi and Dubai" },
+  { icon: Globe, label: "Global teams", value: "2", text: "Karachi and Dubai" },
   { icon: Layers, label: "Services", value: String(capabilities.length), text: "From consulting and software to AI, cloud and managed IT" },
 ];
 

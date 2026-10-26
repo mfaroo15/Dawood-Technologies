@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { BreadcrumbStructuredData } from "@/app/components/BreadcrumbStructuredData";
 import BookingCalendar from "@/app/components/BookingCalendar";
 import { PageHero } from "@/app/components/sections/PageHero";
@@ -6,7 +6,8 @@ import { Reveal } from "@/app/components/sections/Reveal";
 import { SecurityTrust } from "@/app/components/sections/SecurityTrust";
 import typography from "@/app/components/sections/typography.module.css";
 import { ContactForm } from "@/app/contact/ContactForm";
-import { contactEmail, contactPhone, contactPresence } from "@/app/data/site";
+import { GlobalPresence } from "@/app/contact/GlobalPresence";
+import { contactEmail, contactPhone } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./contact.module.css";
 
@@ -60,21 +61,18 @@ export default function ContactPage() {
                   <span><span className={styles.label}>Email</span>{contactEmail}</span>
                 </a>
               </div>
-              <div>
-                <h3 className={styles.cardTitle}>Where our team works</h3>
-                <ul className={styles.teams}>
-                  {contactPresence.map((location) => (
-                    <li key={location}>
-                      <MapPin aria-hidden="true" size={18} />
-                      <span>{location}<span className={styles.teamLabel}>Remote team</span></span>
-                    </li>
-                  ))}
-                </ul>
-                <p className={styles.remoteNote}>We&apos;re a remote-first company and work with clients anywhere.</p>
-              </div>
               <SecurityTrust variant="compact" />
             </aside>
           </div>
+        </Reveal>
+      </section>
+
+      <section id="where-our-team-works" className={typography.lightSection} aria-labelledby="teams-title">
+        <Reveal className="container">
+          <p className={typography.kicker}>Where our team works</p>
+          <h2 className={typography.heading} id="teams-title">Karachi and Dubai.</h2>
+          <p className={typography.intro}>A remote team across Karachi and Dubai, working with clients worldwide.</p>
+          <GlobalPresence />
         </Reveal>
       </section>
     </main>

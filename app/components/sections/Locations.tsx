@@ -4,8 +4,7 @@ import styles from "./Locations.module.css";
 import typography from "./typography.module.css";
 
 const locations = [
-  { city: "Chicago", country: "United States", timeZone: "America/Chicago", role: "Your point of contact in US hours" },
-  { city: "Karachi", country: "Pakistan", timeZone: "Asia/Karachi", role: "Work progresses overnight" },
+  { city: "Karachi", country: "Pakistan", timeZone: "Asia/Karachi", role: "Engineering, delivery and support" },
   { city: "Dubai", country: "United Arab Emirates", timeZone: "Asia/Dubai", role: "Close to clients in the Gulf" },
 ];
 
@@ -14,8 +13,8 @@ type LocationsProps = { kicker?: string; heading?: string; intro?: string };
 // Dark "where we operate" section with live local times.
 export function Locations({
   kicker = "Where we operate",
-  heading = "One team across your working day.",
-  intro = "US management, South Asia engineering and a Middle East presence, so someone is always working on your project.",
+  heading = "Two cities, one team.",
+  intro = "A remote team across Karachi and Dubai, working with clients worldwide.",
 }: LocationsProps) {
   return (
     <section id="where-we-operate" className={styles.section} aria-labelledby="locations-title">

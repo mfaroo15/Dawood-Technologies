@@ -102,7 +102,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2>International transfers</h2>
               <p>
-                Our team works across the United States, Pakistan and the United Arab Emirates, and our service providers may process data in other countries. When information moves between countries, we take reasonable steps to keep it protected.
+                Our team works across Pakistan and the United Arab Emirates, and our service providers may process data in other countries. When information moves between countries, we take reasonable steps to keep it protected.
               </p>
             </section>
 

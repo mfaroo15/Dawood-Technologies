@@ -90,7 +90,7 @@ export default function CompanyPage() {
         <Reveal className="container">
           <p className={typography.kicker}>How we engage</p>
           <h2 className={typography.heading} id="engage-title">Remote by design.</h2>
-          <p className={typography.intro}>Our team works remotely across Chicago, Karachi and Dubai. That gives clients access to talent across regions, longer working hours and the same accountable team from start to finish.</p>
+          <p className={typography.intro}>Our team works remotely across Karachi and Dubai. That gives clients access to experienced engineers, a presence close to the Gulf and the same accountable team from start to finish.</p>
           <IconTiles columns={3} items={engagement} />
         </Reveal>
       </section>
@@ -103,7 +103,7 @@ export default function CompanyPage() {
         </Reveal>
       </section>
 
-      <Locations intro="A remote-first team across three time zones, so someone is always working on your project." />
+      <Locations />
       <SecurityTrust />
       <CtaBand heading="Work with a team that stays after launch." text="Meet the team, ask your questions and see if we're the right fit." />
     </main>

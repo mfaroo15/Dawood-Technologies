@@ -46,7 +46,7 @@ const structuredData = {
       alternateName: "Dawood Tech",
       url: `${siteUrl}/`,
       logo: { "@type": "ImageObject", url: `${siteUrl}/logo-square.png`, width: 512, height: 512 },
-      description: "Dawood Technologies designs, builds and runs business systems: websites, CRM, ERP, cloud and AI, with remote teams in Chicago, Karachi and Dubai.",
+      description: "Dawood Technologies designs, builds and runs business systems: websites, CRM, ERP, cloud and AI, with remote teams in Karachi and Dubai.",
       areaServed: "Worldwide",
       telephone: contactPhone.schema,
       email: contactEmail,
