@@ -118,6 +118,10 @@ h3 { font-size: var(--type-h3); line-height: var(--leading-h3); letter-spacing: 
    Both logos render at the same size and swap by opacity, so nothing shifts or flashes. */
 .brand-logo-white { position: absolute; inset: 0; opacity: 0; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .35)); pointer-events: none; }
 .site-header.is-home { position: fixed; left: 0; right: 0; background-color: #fff; border-bottom-color: transparent; box-shadow: 0 2px 12px rgba(23, 27, 36, .08); transition: background-color .2s ease, box-shadow .2s ease; }
+/* Same container as the hero content, so the logo and headline share a left edge at every width.
+   The logo image has about 1px of transparent padding on its left, which the margin removes. */
+.is-home .header-inner { width: min(calc(100% - var(--page-gutter) - var(--page-gutter)), var(--container)); }
+.is-home .brand { margin-left: -1px; }
 .site-header.is-home::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10, 14, 22, .65), rgba(10, 14, 22, 0)); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
 .is-home .brand-logo { transition: opacity .2s ease; }
 .is-home .desktop-nav a { color: #171b24; transition: color .2s ease, text-shadow .2s ease; }

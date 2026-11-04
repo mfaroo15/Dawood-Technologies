@@ -5,8 +5,10 @@
 .hero {
   position: relative;
   overflow: hidden;
-  /* The fixed homepage header overlays the top of the hero, so the hero extends up beneath it. */
-  min-height: calc(clamp(560px, 88vh, 820px) + var(--header-height));
+  /* Fills the screen, with the fixed header over its top. svh is the height with mobile browser bars
+     showing; browsers without it use the vh line. The content can still make it taller on short screens. */
+  min-height: max(560px, 100vh);
+  min-height: max(560px, 100svh);
   padding-top: var(--header-height);
   display: flex;
   align-items: center;
@@ -35,7 +37,6 @@
 .hero :global(.button:not(.button-primary)):hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .7); }
 .hero a:focus-visible { outline: 2px solid #83bfff; outline-offset: 3px; }
 @media (max-width: 767px) {
-  .hero { min-height: 0; }
   .heroOverlay { background: linear-gradient(180deg, rgba(11, 15, 23, .6), rgba(11, 15, 23, .88)); }
   .heroContent { padding-block: 88px 80px; }
 }
@@ -48,7 +49,13 @@
 }
 /* Art-directed lines; each may still wrap internally on narrow screens. */
 .heroLine { display: block; }
-.heroDescription { max-width: 34em; margin-bottom: 0; font-size: var(--type-intro); line-height: var(--leading-intro); }
+/* Two lines on desktop: the full sentence, then the rotating word. */
+@media (min-width: 1280px) {
+  .heroHeading { max-width: 60rem; text-wrap: balance; }
+  .heroLine { display: inline; }
+  .heroOverlay { --hero-text-end: min(calc(max(var(--page-gutter), (100% - var(--container)) / 2) + 860px), 85%); }
+}
+.heroDescription { max-width: 29em; margin-bottom: 0; font-size: var(--type-intro); line-height: var(--leading-intro); }
 .actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
 .actions svg { flex-shrink: 0; }
 
