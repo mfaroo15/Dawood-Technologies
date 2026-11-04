@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
-    "@iconify-icons/logos": "2.0.1",
-    "lucide-react": "^1.14.0",
+    "@iconify-icons/logos": "2.0.5",
+    "lucide-react": "^1.66.0",
     "next": "16.4.5",
     "react": "19.3.1",
     "react-dom": "19.3.1"
