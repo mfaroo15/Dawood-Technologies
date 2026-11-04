@@ -7,3 +7,9 @@
 @media (max-width: 640px) {
   .top { flex-direction: column; align-items: flex-start; }
 }
+
+/* Touch screens: a larger tap area with no change to layout or appearance. */
+@media (pointer: coarse) {
+  .all { position: relative; }
+  .all::after { content: ""; position: absolute; inset: -6px 0; }
+}

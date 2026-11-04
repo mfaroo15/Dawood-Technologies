@@ -13,14 +13,14 @@
 .tagWrap { margin: 0 0 16px; }
 .businessName { margin: 0 0 4px; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
 .industry { margin: 0 0 16px; color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); }
-.about { margin: 0 0 24px; color: var(--muted); font-size: var(--type-card); }
+.about { max-width: var(--measure); margin: 0 0 24px; color: var(--muted); font-size: var(--type-card); }
 .label { margin: 0 0 12px; color: var(--muted); font-family: var(--font-text); font-size: var(--type-small); font-weight: 400; line-height: var(--leading-small); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
 .chips li { padding: 6px 14px; color: var(--ink); font-size: var(--type-small); line-height: var(--leading-small); background: #fff; border-radius: var(--radius-pill); }
 .supported { margin: 0; color: var(--ink); }
 
 @media (max-width: 900px) {
-  .businesses { grid-template-columns: 1fr; }
+  .businesses { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 760px) {

@@ -1,0 +1,58 @@
+.figure { width: min(290px, 100%); margin: 0 auto; }
+/* 1em = 10px when the phone is 290px wide; everything below scales with the available width. */
+.stage { container-type: inline-size; }
+.scale { position: relative; font-size: calc(100cqw / 29); line-height: 1.25; text-align: left; }
+.scale span { display: block; }
+.frame { padding: .9em; background: #0d1016; border: .1em solid #2b3140; border-radius: 4.4em; box-shadow: 0 2.8em 6em rgba(0, 0, 0, .5); }
+.screen { position: relative; display: flex; min-height: 55em; flex-direction: column; overflow: hidden; color: #171b24; background: #f4f6fb; border-radius: 3.5em; }
+.scale .notch { position: absolute; top: .9em; left: 50%; width: 8em; height: 2em; background: #0d1016; border-radius: 1em; transform: translateX(-50%); }
+
+.head { display: flex; align-items: flex-start; justify-content: space-between; padding: 4em 1.6em 1em; }
+.greeting { color: #5b6472; font-size: 1.1em; }
+.heading { font-size: 1.7em; font-weight: 700; letter-spacing: -.01em; }
+.scale .bell { position: relative; display: flex; align-items: center; justify-content: center; width: 3.2em; height: 3.2em; color: #171b24; background: #fff; border-radius: 50%; box-shadow: 0 .2em .6em rgba(23, 27, 36, .12); }
+.scale .badge { position: absolute; top: -.25em; right: -.25em; min-width: 1.5em; color: #fff; background: #dc2626; border-radius: 1em; font-size: .95em; font-weight: 700; line-height: 1.5em; text-align: center; }
+
+.indexes { display: grid; grid-template-columns: 1fr 1fr; margin: 0 1.2em 1em; padding: 1.1em 1.2em; color: #fff; background: linear-gradient(135deg, #0b55c9, #1268e8 55%, #4aa6ff); border-radius: 1.6em; }
+.indexes > div + div { padding-left: 1.1em; border-left: .1em solid rgba(255, 255, 255, .3); }
+.indexName { font-size: 1em; font-weight: 600; opacity: .9; }
+.indexValue { font-size: 1.6em; font-weight: 700; letter-spacing: -.01em; }
+.indexChange { font-size: 1em; font-weight: 600; }
+
+.rows { display: grid; flex: 1; grid-auto-rows: 1fr; gap: .8em; margin: 0 1.2em 1.2em; }
+.row { display: grid; grid-template-columns: 3.7em minmax(0, 1fr) auto; align-items: center; gap: .8em; padding: 1em .9em; background: #fff; border-radius: 1.3em; box-shadow: 0 .1em .4em rgba(23, 27, 36, .06); }
+.scale .ticker { display: flex; align-items: center; justify-content: center; height: 3.4em; color: #0b55c9; background: #e8f1fe; border-radius: .9em; font-size: .85em; font-weight: 800; letter-spacing: -.02em; }
+.info { min-width: 0; }
+.name { overflow: hidden; font-size: 1.15em; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.status { overflow: hidden; color: #5b6472; font-size: .92em; text-overflow: ellipsis; white-space: nowrap; }
+.scale .track { height: .35em; margin-top: .4em; overflow: hidden; background: #e7eaf0; border-radius: 1em; }
+.scale .fill { height: 100%; border-radius: 1em; }
+.amber { background: #f59e0b; }
+.green { background: #16a34a; }
+.blue { background: #1268e8; }
+.gray { background: #9aa3b0; }
+.price { text-align: right; }
+.priceValue { font-size: 1.15em; font-weight: 700; }
+.up, .down { font-size: 1em; font-weight: 600; }
+.up { color: #15803d; }
+.down { color: #b91c1c; }
+
+.tabs { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: auto; padding: .9em .6em 1.5em; background: #fff; border-top: .1em solid #e7eaf0; }
+.scale .tab, .scale .tabActive { display: flex; flex-direction: column; align-items: center; gap: .2em; color: #6b7484; font-size: .9em; font-weight: 500; }
+.scale .tabActive { color: #1268e8; font-weight: 700; }
+
+/* Overlaps the phone's top-right corner on wide screens, above the screen's text. On narrow
+   screens it sits inside the screen, and the header moves down to make room for it. */
+.notification { position: absolute; z-index: 1; top: -2em; right: -3.4em; display: flex; align-items: center; gap: .9em; width: 25em; padding: .9em 1.1em; color: #171b24; background: rgba(255, 255, 255, .88); border: .1em solid rgba(255, 255, 255, .7); border-radius: 1.6em; box-shadow: 0 1.2em 3em rgba(0, 0, 0, .32); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.scale .appIcon { display: flex; align-items: center; justify-content: center; width: 3em; height: 3em; flex-shrink: 0; color: #fff; background: linear-gradient(135deg, #0b55c9, #1268e8); border-radius: .8em; }
+.notificationText { min-width: 0; }
+.notificationApp { color: #4b5563; font-size: .95em; font-weight: 600; }
+.notificationBody { font-size: 1.15em; font-weight: 700; line-height: 1.2; }
+
+.caption { margin-top: 18px; color: rgba(255, 255, 255, .62); font-size: var(--type-small); line-height: var(--leading-small); text-align: center; }
+
+@media (max-width: 899px) {
+  .notification { top: 1.9em; right: 1.7em; left: 1.7em; width: auto; }
+  .head { padding-top: 8.6em; }
+  .screen { min-height: 60em; }
+}

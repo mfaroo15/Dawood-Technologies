@@ -2,7 +2,7 @@
 .block:first-child { margin-top: 0; }
 .heading { margin: 0 0 32px; color: var(--blue); font-size: var(--type-eyebrow); font-weight: var(--weight-heading); letter-spacing: var(--tracking-caps); line-height: var(--leading-small); text-transform: uppercase; }
 /* Each logo with its name below, no tile box. */
-.tiles { --mark-height: 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 40px 24px; margin: 0; padding: 0; list-style: none; }
+.tiles { --mark-height: 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 7rem), 1fr)); gap: 40px 24px; margin: 0; padding: 0; list-style: none; }
 .tile { min-width: 0; min-height: 76px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 12px; text-align: center; }
 .name { color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); }
 .note { margin: 40px 0 0; color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); }

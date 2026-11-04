@@ -4,13 +4,16 @@ import { CtaBand } from "@/app/components/sections/CtaBand";
 import { PageHero } from "@/app/components/sections/PageHero";
 import { Reveal } from "@/app/components/sections/Reveal";
 import typography from "@/app/components/sections/typography.module.css";
+import { BuiltByUs } from "@/app/components/work/BuiltByUs";
+import { CaseStudyCard } from "@/app/components/work/CaseStudyCard";
+import { caseStudies, caseStudyNote } from "@/app/data/case-studies";
 import { solutions } from "@/app/data/solutions";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./work.module.css";
 
 export const metadata = createPageMetadata({
-  title: "Solutions | Dawood Technologies",
-  description: "ERP and inventory systems, AI assistants, business websites, web apps and SaaS, cloud and IT, and dashboards, designed, built and supported by one team.",
+  title: "Our Work and Solutions | Dawood Technologies",
+  description: "Websites, ERP and CRM we have designed, built and continue to operate, plus the PSX Sharia Alerts product and the solutions we build for growing businesses.",
   path: "/work",
 });
 
@@ -22,10 +25,23 @@ export default function WorkPage() {
       <BreadcrumbStructuredData items={[...breadcrumb]} />
       <PageHero
         breadcrumb={breadcrumb}
-        title="Solutions."
-        lead="Proven systems for the problems growing businesses face every day. Designed, built and supported by one team."
-        pills={solutions.map(({ id, shortTitle }) => ({ id, label: shortTitle }))}
+        eyebrow="Our work"
+        title="Systems that run real businesses."
+        lead="Websites, ERP and CRM we have designed, built and continue to operate."
+        pills={[{ id: "case-studies", label: "Case studies" }, { id: "built-by-us", label: "Built by us" }]}
       />
+
+      <section className={styles.caseStudies} id="case-studies" aria-labelledby="case-studies-title">
+        <Reveal className="container">
+          <h2 className="visually-hidden" id="case-studies-title">Case studies</h2>
+          <div className={styles.caseGrid}>
+            {caseStudies.map((study) => <CaseStudyCard study={study} key={study.slug} />)}
+          </div>
+          <p className={styles.caseNote}>{caseStudyNote}</p>
+        </Reveal>
+      </section>
+
+      <BuiltByUs />
 
       {solutions.map((solution, index) => (
         <section key={solution.id} id={solution.id} className={`${styles.solution} ${index % 2 ? styles.alt : ""}`} aria-labelledby={`${solution.id}-title`}>
@@ -56,8 +72,6 @@ export default function WorkPage() {
           </Reveal>
         </section>
       ))}
-
-      <p className={`container-text ${styles.caseNote}`}>Client case studies will be added as projects are delivered.</p>
 
       <CtaBand heading="Have a project in mind?" text="Share what you want to build and we'll show you how we'd approach it." button={{ label: "Book a consultation", href: "/contact" }} />
     </main>

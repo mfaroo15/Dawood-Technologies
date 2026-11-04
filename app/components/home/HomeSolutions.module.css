@@ -8,3 +8,9 @@
 @media (max-width: 640px) {
   .list { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
 }
+
+/* Touch screens: a larger tap area with no change to layout or appearance. */
+@media (pointer: coarse) {
+  .list a { position: relative; }
+  .list a::after { content: ""; position: absolute; inset: -9px 0; }
+}

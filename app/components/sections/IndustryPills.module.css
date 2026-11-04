@@ -3,3 +3,9 @@
 .pill:hover { color: var(--blue); background: #e8e8ed; }
 .onTint .pill { background: #fff; }
 .onTint .pill:hover { background: #e8e8ed; }
+
+/* Touch screens: a larger tap area with no change to layout or appearance. */
+@media (pointer: coarse) {
+  .pill { position: relative; }
+  .pill::after { content: ""; position: absolute; inset: -1px 0; }
+}

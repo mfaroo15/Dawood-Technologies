@@ -16,10 +16,23 @@
 .discuss { color: var(--blue); }
 .discuss:hover { text-decoration: underline; }
 
-.caseNote { margin-block: 48px; color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); text-align: center; }
 
 @media (max-width: 734px) {
   .facts, .features { grid-template-columns: 1fr; }
   .features { gap: 24px; }
   .footer { flex-direction: column; align-items: flex-start; }
+}
+
+.caseStudies { padding-block: var(--space-section); background: #fff; }
+.caseGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.caseNote { margin: 28px 0 0; color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); text-align: center; }
+
+@media (max-width: 899px) {
+  .caseGrid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Touch screens: a larger tap area with no change to layout or appearance. */
+@media (pointer: coarse) {
+  .discuss { position: relative; }
+  .discuss::after { content: ""; position: absolute; inset: -9px 0; }
 }

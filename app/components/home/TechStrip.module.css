@@ -1,0 +1,9 @@
+.strip { padding-block: 40px 44px; background: #fff; border-bottom: 1px solid var(--line); }
+.label { margin: 0 0 24px; padding-inline: var(--page-gutter); color: var(--muted); font-size: var(--type-small); font-weight: 500; line-height: var(--leading-small); text-align: center; }
+.platform { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-size: var(--type-body); font-weight: 600; line-height: 1; white-space: nowrap; }
+.logo { --mark-height: 32px; display: inline-flex; }
+
+@media (max-width: 640px) {
+  .strip { padding-block: 32px 36px; }
+  .label { margin-bottom: 20px; }
+}

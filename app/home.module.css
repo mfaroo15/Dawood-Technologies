@@ -1,21 +1,27 @@
 .home { background: var(--white); }
 .tinted { background: var(--section-bg); }
-/* Dark hero: the CSS background paints first and is the fallback when WebGL is unavailable. */
+/* Dark hero: navy paints first, then the poster image, then the video fades in once it
+   plays, so the section never flashes white. See components/home/HeroVideo. */
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 640px;
+  /* The fixed homepage header overlays the top of the hero, so the hero extends up beneath it. */
+  min-height: calc(clamp(560px, 88vh, 820px) + var(--header-height));
+  padding-top: var(--header-height);
   display: flex;
   align-items: center;
-  background: radial-gradient(55% 65% at 72% 45%, rgba(18, 104, 232, .22), transparent 70%), linear-gradient(180deg, #121722 0%, #0b0f17 100%);
+  background: #0b0f17;
 }
-.heroOverlay { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(11, 15, 23, .9) 0%, rgba(11, 15, 23, .55) 38%, rgba(11, 15, 23, 0) 66%); }
+/* The middle stop follows where the hero text ends, not a fixed percentage: the text takes up
+   a different share of the screen on each device, and the video stays bright beyond it. */
+.heroOverlay { --hero-text-end: min(calc(max(var(--page-gutter), (100% - var(--container)) / 2) + 660px), 85%); position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(20, 24, 30, .72) 0, rgba(20, 24, 30, .54) var(--hero-text-end), rgba(20, 24, 30, .12) 100%); }
 .heroContent { position: relative; z-index: 2; padding-block: 96px; }
 .label { display: flex; align-items: center; gap: 12px; }
-.hero .label { color: #83bfff; }
+.hero .label { color: #fff; }
 .hero .heroHeading { color: #fff; }
-.hero :global(.hero-word-rotator) { color: #4aa6ff; }
-.hero .heroDescription { color: rgba(255, 255, 255, .74); }
+.hero :global(.hero-word-rotator) { color: #8cc8ff; }
+.hero .heroDescription { color: #fff; }
+.hero .label, .hero .heroHeading, .hero .heroDescription { text-shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 0 18px rgba(0, 0, 0, .45); }
 .hero :global(.button-primary) { background: #1268e8; border-color: #1268e8; }
 .hero :global(.button-primary):hover { background: #0f5ad0; border-color: #0f5ad0; }
 .hero :global(.button:not(.button-primary)) {
@@ -28,8 +34,10 @@
 }
 .hero :global(.button:not(.button-primary)):hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .7); }
 .hero a:focus-visible { outline: 2px solid #83bfff; outline-offset: 3px; }
-@media (max-width: 699px) {
-  .heroOverlay { background: linear-gradient(180deg, rgba(11, 15, 23, .55) 0%, rgba(11, 15, 23, .85) 100%); }
+@media (max-width: 767px) {
+  .hero { min-height: 0; }
+  .heroOverlay { background: linear-gradient(180deg, rgba(11, 15, 23, .6), rgba(11, 15, 23, .88)); }
+  .heroContent { padding-block: 88px 80px; }
 }
 .heroHeading {
   margin-bottom: 24px;

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { JumpPills, type JumpPill } from "./JumpPills";
@@ -19,10 +20,12 @@ type PageHeroProps = {
   /** Accessible name for the pill row; defaults to "On this page". */
   pillsLabel?: string;
   buttons?: readonly HeroButton[];
+  /** Optional content under the header text, such as a product visual. */
+  children?: ReactNode;
 };
 
 // Centered dark header shared by every page except the homepage.
-export function PageHero({ breadcrumb, eyebrow, title, lead, pills, pillsLabel, buttons }: PageHeroProps) {
+export function PageHero({ breadcrumb, eyebrow, title, lead, pills, pillsLabel, buttons, children }: PageHeroProps) {
   return (
     <>
       <section className={styles.hero}>
@@ -48,6 +51,7 @@ export function PageHero({ breadcrumb, eyebrow, title, lead, pills, pillsLabel, 
               ))}
             </div>
           ) : null}
+          {children}
         </div>
       </section>
       {pills?.length ? <JumpPills items={pills} label={pillsLabel} /> : null}

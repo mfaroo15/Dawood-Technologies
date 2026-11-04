@@ -1,0 +1,8 @@
+.frame { width: 100%; min-width: 0; }
+.loading { margin: 0; padding-top: 48px; color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); text-align: center; }
+
+/* Reserves the height the calendar will take at each width, so nothing below it moves when it loads.
+   Above 835px the calendar switches to its wide layout and the 700px minimum on .booking-calendar covers it. */
+@media (max-width: 835px) { .reserved { min-height: calc(552px + 60vw); } }
+@media (max-width: 767px) { .reserved { min-height: max(calc(520px + 58vw), calc(355px + 85.7vw)); } }
+@media (max-width: 430px) { .reserved { min-height: calc(650px + 28vw); } }

@@ -3,9 +3,11 @@ import { ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
 import { AiSpotlight } from "@/app/components/home/AiSpotlight";
 import { HomeIndustries } from "@/app/components/home/HomeIndustries";
+import { HomeIntegrations } from "@/app/components/home/HomeIntegrations";
 import { HomeServices } from "@/app/components/home/HomeServices";
 import { HomeSolutions } from "@/app/components/home/HomeSolutions";
-import HeroOcean from "@/app/components/HeroOcean";
+import { TechStrip } from "@/app/components/home/TechStrip";
+import { HeroVideo } from "@/app/components/home/HeroVideo";
 import { CtaBand } from "@/app/components/sections/CtaBand";
 import { EngagementModels } from "@/app/components/sections/EngagementModels";
 import { Reveal } from "@/app/components/sections/Reveal";
@@ -24,7 +26,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return <main id="main-content" className={styles.home}>
     <section className={`${styles.hero} ${styles.tinted}`} aria-labelledby="home-title">
-      <HeroOcean />
+      <HeroVideo />
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={`container ${styles.heroContent}`}>
         <p className={`kicker ${styles.label}`}>Software · ERP · Cloud · AI</p>
@@ -37,7 +39,10 @@ export default function Home() {
       </div>
     </section>
 
+    <TechStrip />
+
     <HomeServices />
+    <HomeIntegrations />
 
     <section className={typography.lightSection} aria-labelledby="why-title">
       <Reveal className="container">

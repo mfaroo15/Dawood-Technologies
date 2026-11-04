@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local QA output and source video
+/.qa-screens/
+/public/hero/hero-source*
+
+# internal audit and QA documents, kept locally
+/.private-docs/
+/production-seo-evidence.json
+
+# Windows folder settings
+desktop.ini

@@ -3,10 +3,16 @@
 .card { display: flex; flex-direction: column; align-items: flex-start; }
 .icon { display: block; margin-bottom: 16px; color: var(--blue); }
 .title { margin: 0 0 8px; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
-.text { margin: 0 0 16px; color: var(--muted); font-size: var(--type-card); }
+.text { max-width: var(--measure); margin: 0 0 16px; color: var(--muted); font-size: var(--type-card); }
 .link { display: inline-flex; align-items: center; gap: 4px; margin-top: auto; color: var(--blue); }
 .link:hover { text-decoration: underline; }
 
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }
+}
+
+/* Touch screens: a larger tap area with no change to layout or appearance. */
+@media (pointer: coarse) {
+  .link { position: relative; }
+  .link::after { content: ""; position: absolute; inset: -9px 0; }
 }

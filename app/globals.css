@@ -36,7 +36,7 @@
   --type-stat: clamp(1.875rem, 1.5rem + 1.5vw, 2.75rem);   /* 30-44px */
   --type-intro: clamp(1.0625rem, 1rem + .3vw, 1.25rem);    /* 17-20px */
   --type-body: clamp(1rem, .95rem + .2vw, 1.0625rem);      /* 16-17px */
-  --type-card: clamp(.9375rem, .9rem + .15vw, 1rem);       /* 15-16px: card and list descriptions */
+  --type-card: 1rem;          /* 16px: card and list descriptions */
   --type-small: .875rem;      /* 14px: small text and labels */
   --type-eyebrow: .875rem;    /* 14px, with --weight-heading, uppercase and --tracking-caps */
   --type-nav: 1rem;           /* 16px menu links */
@@ -46,7 +46,8 @@
   --type-fine: .75rem;        /* 12px: illustrative UI mockups only (browser bar, chat status) */
   --weight-heading: 700;
   --tracking-caps: .06em;
-  --measure: 65ch;
+  /* About 75 characters per line; this typeface is narrow, so a character averages well under 1ch. */
+  --measure: 52ch;
   --leading-h1: 1.12;
   --leading-h2: 1.15;
   --leading-h3: 1.3;
@@ -97,21 +98,39 @@ h3 { font-size: var(--type-h3); line-height: var(--leading-h3); letter-spacing: 
 .site-header { position: sticky; z-index: 100; top: 0; color: var(--ink); background: var(--white); border-bottom: 1px solid var(--line); }
 /* Wider than .container so the logo and CTA sit near the viewport edges on large screens. */
 .header-inner { width: min(calc(100% - var(--page-gutter) - var(--page-gutter)), 1680px); min-height: var(--header-height); display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content; align-items: center; gap: 40px; }
-.brand { margin-right: auto; display: flex; align-items: center; }
+.brand { position: relative; margin-right: auto; display: flex; align-items: center; }
 .brand-logo { width: clamp(168px, 13vw, 208px); height: auto; }
 .desktop-nav { min-width: 0; display: flex; flex-wrap: nowrap; justify-self: end; align-items: center; gap: 44px; }
 .desktop-nav a { display: block; padding: 3px 0; color: var(--ink); font-size: var(--type-nav); font-weight: 400; letter-spacing: normal; white-space: nowrap; transition: color .2s ease; }
 .desktop-nav a:hover, .desktop-nav a[aria-current="page"] { color: var(--teal); }
 /* Header-only button, shared by the desktop CTA and the mobile menu's contact link. 14 + 17 + 14 = 45px tall. */
-.header-cta, .mobile-nav .mobile-contact { display: flex; justify-self: end; align-items: center; justify-content: center; padding: 14px 16px; color: #1268e8; background: #e8f1fe; border-radius: 8px; font-size: var(--type-button); font-weight: var(--weight-heading); letter-spacing: var(--tracking-caps); line-height: 17px; text-transform: uppercase; white-space: nowrap; transition: background-color .2s ease, color .2s ease; }
-.header-cta:hover, .mobile-nav .mobile-contact:hover { color: #fff; background: #1268e8; }
-.header-cta:focus-visible, .mobile-nav .mobile-contact:focus-visible { outline: 2px solid #1268e8; outline-offset: 2px; }
+.header-cta, .mobile-nav .mobile-contact { display: flex; justify-self: end; align-items: center; justify-content: center; padding: 12px 22px; color: #fff; background: #1268e8; border-radius: 999px; font-size: var(--type-button); font-weight: 600; letter-spacing: var(--tracking-caps); line-height: 17px; text-transform: uppercase; white-space: nowrap; transition: background-color .2s ease, color .2s ease; }
+.header-cta:hover, .mobile-nav .mobile-contact:hover { color: #fff; background: #0b55c9; }
+.header-cta:focus-visible, .mobile-nav .mobile-contact:focus-visible { outline: 2px solid #1268e8; outline-offset: 3px; }
 .menu-toggle { width: 44px; height: 44px; display: none; align-items: center; justify-content: center; padding: 0; color: var(--ink); background: transparent; border: 0; border-radius: var(--radius-pill); }
 .mobile-panel { display: none; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; color: var(--ink); background: var(--white); border-top: 1px solid var(--line); }
 .mobile-nav { display: grid; padding-block: 16px 32px; }
 .mobile-nav a { padding: 12px 0; font-size: var(--type-nav); font-weight: 500; }
 .mobile-nav a[aria-current="page"] { color: var(--teal); }
 .mobile-nav .mobile-contact { justify-self: start; margin-top: 16px; }
+
+/* Homepage header: floats over the hero video, then turns solid after 40px of scroll.
+   Both logos render at the same size and swap by opacity, so nothing shifts or flashes. */
+.brand-logo-white { position: absolute; inset: 0; opacity: 0; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .35)); pointer-events: none; }
+.site-header.is-home { position: fixed; left: 0; right: 0; background-color: #fff; border-bottom-color: transparent; box-shadow: 0 2px 12px rgba(23, 27, 36, .08); transition: background-color .2s ease, box-shadow .2s ease; }
+.site-header.is-home::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10, 14, 22, .65), rgba(10, 14, 22, 0)); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.is-home .brand-logo { transition: opacity .2s ease; }
+.is-home .desktop-nav a { color: #171b24; transition: color .2s ease, text-shadow .2s ease; }
+.is-home .desktop-nav a:hover, .is-home .desktop-nav a[aria-current="page"] { color: #1268e8; }
+.is-home .menu-toggle { color: #171b24; transition: color .2s ease; }
+.site-header[data-overlay] { background-color: transparent; box-shadow: none; }
+.site-header[data-overlay]::before { opacity: 1; }
+.site-header[data-overlay] .brand-logo-color { opacity: 0; }
+.site-header[data-overlay] .brand-logo-white { opacity: 1; }
+.site-header[data-overlay] .desktop-nav a { color: #fff; text-shadow: 0 1px 8px rgba(0, 0, 0, .35); }
+.site-header[data-overlay] .desktop-nav a:hover, .site-header[data-overlay] .desktop-nav a[aria-current="page"] { color: #8cc8ff; }
+.site-header[data-overlay] .menu-toggle { color: #fff; filter: drop-shadow(0 1px 6px rgba(0, 0, 0, .35)); }
+.site-header[data-overlay] .header-cta:focus-visible { outline-color: #8cc8ff; }
 
 /* Hero */
 
@@ -212,4 +231,15 @@ main [id] { scroll-margin-top: calc(var(--header-height) + 62px); }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .hero-word-rotator > span { display: none; opacity: 1; transform: none; animation: none !important; }
   .hero-word-rotator > span:first-child { display: block; }
+}
+
+/* Touch screens: larger tap areas with no change to layout or appearance. */
+@media (pointer: coarse) {
+  .brand::after { content: ""; position: absolute; inset: -12px 0; }
+  .desktop-nav a { position: relative; }
+  .desktop-nav a::after { content: ""; position: absolute; inset: -6px 0; }
+  .header-cta { position: relative; }
+  .header-cta::after { content: ""; position: absolute; inset: -2px 0; }
+  .footer-talk { position: relative; }
+  .footer-talk::after { content: ""; position: absolute; inset: -9px 0; }
 }

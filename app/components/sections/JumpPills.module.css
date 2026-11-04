@@ -26,3 +26,9 @@
 @media (prefers-reduced-motion: no-preference) {
   .scroller { scroll-behavior: smooth; }
 }
+
+/* Touch screens: a larger tap area with no change to layout or appearance. */
+@media (pointer: coarse) {
+  .pill { position: relative; }
+  .pill::after { content: ""; position: absolute; inset: -4px 0; }
+}

@@ -1,0 +1,64 @@
+.visual { --active-bg: #e8f1fe; --active-text: #0b55c9; height: 250px; overflow: hidden; padding: 22px 22px 0; line-height: 1.2; }
+.blue { background: linear-gradient(145deg, #e7f0ff, #f4f8ff); }
+.green { --active-bg: #e6f5ec; --active-text: #1a7a45; background: linear-gradient(145deg, #e4f6ec, #f3fbf6); }
+
+.window { display: flex; height: 100%; flex-direction: column; overflow: hidden; container-type: inline-size; background: #fff; border-radius: 10px 10px 0 0; box-shadow: 0 18px 40px rgba(18, 40, 90, .16); }
+
+.titleBar { position: relative; display: flex; height: 26px; flex-shrink: 0; align-items: center; justify-content: center; padding-inline: 44px; background: #fafbfc; border-bottom: 1px solid #eef1f5; }
+.dots { position: absolute; left: 10px; display: flex; gap: 4px; }
+.dots span { width: 7px; height: 7px; background: #e1e5ea; border-radius: 50%; }
+.windowTitle { overflow: hidden; color: #667080; font-size: 9.5px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+
+.body { display: grid; min-height: 0; flex: 1; grid-template-columns: 104px minmax(0, 1fr); }
+.sidebar { display: flex; flex-direction: column; gap: 2px; padding: 8px 6px; background: #fbfcfd; border-right: 1px solid #eef1f5; }
+.nav, .navActive { display: flex; align-items: center; gap: 6px; padding: 5px 6px; color: #596375; border-radius: 6px; font-size: 9.5px; font-weight: 500; white-space: nowrap; }
+.nav svg, .navActive svg { flex-shrink: 0; }
+.navActive { color: var(--active-text); background: var(--active-bg); font-weight: 700; }
+
+.main { display: flex; min-width: 0; flex-direction: column; gap: 7px; padding: 9px 11px 0; }
+.mainHead { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.mainTitle { color: #1f2633; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.tag { flex-shrink: 0; padding: 2px 6px; color: #596375; border: 1px solid #dfe4ea; border-radius: 5px; font-size: 8.5px; font-weight: 600; white-space: nowrap; }
+
+.chart { display: flex; min-height: 0; flex: 1 1 0; flex-direction: column; gap: 3px; padding: 6px 8px 0; overflow: hidden; border: 1px solid #eef1f5; border-radius: 7px; }
+.chartHead { display: flex; justify-content: space-between; gap: 8px; }
+.chartTitle { color: #1f2633; font-size: 9.5px; font-weight: 600; white-space: nowrap; }
+.chartMeta { color: #667080; font-size: 8.5px; white-space: nowrap; }
+.chartPlot { display: block; width: 100%; height: 0; min-height: 0; flex: 1 1 0; }
+
+.warehouses { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.warehouse { display: grid; gap: 6px; padding: 7px 8px 8px; border: 1px solid #eef1f5; border-radius: 7px; }
+.warehouseName { overflow: hidden; color: #1f2633; font-size: 9.5px; font-weight: 600; text-overflow: clip; white-space: nowrap; }
+.track { display: block; height: 3px; overflow: hidden; background: #eaeef2; border-radius: 2px; }
+.fill { display: block; height: 100%; background: #22a35f; border-radius: 2px; }
+
+.table { --columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, .95fr); flex-shrink: 0; margin-bottom: 6px; font-size: 9.5px; }
+.tableStock { --columns: minmax(0, .6fr) minmax(0, 1.3fr) minmax(0, .85fr); }
+.headRow, .row { display: grid; grid-template-columns: var(--columns); align-items: center; column-gap: 8px; padding-inline: 6px; }
+.headRow { height: 18px; color: #667080; background: #f6f7f9; border-radius: 4px; font-weight: 600; }
+.row { height: 21px; color: #596375; border-bottom: 1px solid #f1f3f6; }
+.row:last-child { border-bottom: 0; }
+.cellStrong { color: #1f2633; font-weight: 600; white-space: nowrap; }
+.cell { white-space: nowrap; }
+.status { justify-self: start; padding: 2px 6px; border-radius: 999px; font-size: 8.5px; font-weight: 600; white-space: nowrap; }
+.toneGreen { color: #1a7a45; background: #e6f5ec; }
+.toneAmber { color: #985c0c; background: #fff3e0; }
+.toneBlue { color: #0b55c9; background: #e8f1fe; }
+
+/* Narrow windows: icons only, then no sidebar, so table text is never squeezed. */
+@container (max-width: 420px) {
+  .body { grid-template-columns: 35px minmax(0, 1fr); }
+  .sidebar { align-items: center; padding-inline: 4px; }
+  .nav, .navActive { padding: 5px; }
+  .navLabel { display: none; }
+  .main { padding-inline: 8px; }
+  .headRow, .row { column-gap: 5px; padding-inline: 4px; }
+}
+@container (max-width: 275px) {
+  .body { grid-template-columns: minmax(0, 1fr); }
+  .sidebar { display: none; }
+}
+
+@media (max-width: 520px) {
+  .visual { padding: 16px 16px 0; }
+}

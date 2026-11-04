@@ -1,0 +1,50 @@
+/* Bottom-right, clear of the iPhone home indicator and rounded corners. */
+.button {
+  position: fixed;
+  z-index: 90;
+  right: calc(20px + env(safe-area-inset-right, 0px));
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .18));
+  transition: transform .2s ease;
+}
+.button:hover { transform: translateY(-2px); }
+/* Small enough that the bubble's tail, at the file's corner, stays inside the circle. */
+.logo { display: block; width: 34px; height: 34px; }
+.button:focus-visible { outline: 2px solid #1268e8; outline-offset: 3px; }
+
+/* "Message us" appears to the left on hover, on devices with a real pointer. */
+.label {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  padding: 8px 14px;
+  color: #fff;
+  background: #171b24;
+  border-radius: 999px;
+  font-size: var(--type-small);
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(6px, -50%);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+@media (hover: hover) and (min-width: 768px) {
+  .button:hover .label, .button:focus-visible .label { opacity: 1; transform: translate(0, -50%); }
+}
+@media (hover: none), (max-width: 767px) {
+  .label { display: none; }
+}
+
+@media (max-width: 767px) {
+  .button { width: 52px; height: 52px; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .logo { width: 32px; height: 32px; }
+}

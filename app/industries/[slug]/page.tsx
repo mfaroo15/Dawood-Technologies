@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const industry = industries.find((item) => item.slug === slug);
   if (!industry) return {};
-  return createPageMetadata({ title: `${industry.name} Technology Solutions | Dawood Technologies`, description: describe(industry), path: industry.href });
+  return createPageMetadata({ title: `${industry.name} Software | Dawood Technologies`, description: describe(industry), path: industry.href });
 }
 
 export default async function IndustryPage({ params }: Props) {

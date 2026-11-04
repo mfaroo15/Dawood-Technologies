@@ -1,0 +1,24 @@
+/* Continuous auto-scrolling row. --marquee-gap is the space between items, including
+   between the end of one copy and the start of the next, so the seam is invisible. */
+.marquee {
+  --marquee-gap: 48px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.track { display: flex; width: max-content; animation: marquee-scroll var(--marquee-duration, 40s) linear infinite; }
+.marquee:hover .track { animation-play-state: paused; }
+.group { display: flex; flex-shrink: 0; align-items: center; gap: var(--marquee-gap); margin: 0; padding: 0 var(--marquee-gap) 0 0; list-style: none; }
+.item { flex-shrink: 0; }
+
+@keyframes marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee { -webkit-mask-image: none; mask-image: none; }
+  .track { width: auto; animation: none !important; transform: none; }
+  .group { flex: 1; flex-wrap: wrap; justify-content: center; row-gap: 16px; padding: 0; }
+  .group[aria-hidden] { display: none; }
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Footer } from "@/app/components/Footer";
 import { Header } from "@/app/components/Header";
+import { WhatsAppButton } from "@/app/components/WhatsAppButton";
 import "./globals.css";
 import { contactEmail, contactPhone, foundingYear, linkedInUrl, siteUrl } from "@/app/data/site";
 import { shareImage } from "@/app/lib/metadata";
@@ -77,6 +78,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
