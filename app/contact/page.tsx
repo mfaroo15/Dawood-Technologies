@@ -36,7 +36,7 @@ export default function ContactPage() {
           <p className={typography.kicker}>Book a call</p>
           <h2 className={typography.heading} id="booking-title">Schedule an introduction call.</h2>
           <p className={typography.intro}>Pick a time that works for you. We&apos;ll meet on Microsoft Teams for 30 minutes to understand your business and what you&apos;re building.</p>
-          <div className="booking-calendar">
+          <div className="booking-calendar" data-wa-avoid>
             <BookingCalendar />
           </div>
         </div>

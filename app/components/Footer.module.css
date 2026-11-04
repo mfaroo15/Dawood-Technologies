@@ -6,8 +6,8 @@
 .list a:hover, .legal a:hover { color: #fff; text-decoration: underline; }
 .social { width: 44px; height: 44px; display: inline-grid; place-items: center; margin-top: 16px; margin-left: -13px; color: rgba(255, 255, 255, .78); border-radius: var(--radius-pill); transition: color .2s ease, background .2s ease; }
 .social:hover { color: #fff; background: rgba(255, 255, 255, .08); }
-/* Right padding keeps the last row clear of the floating WhatsApp button. */
-.bottom { display: flex; justify-content: space-between; gap: 24px; padding-block: 20px; padding-inline-end: max(0px, calc(88px - var(--page-gutter))); color: rgba(255, 255, 255, .62); border-top: 1px solid rgba(255, 255, 255, .12); font-size: var(--type-small); line-height: var(--leading-small); }
+/* Padding keeps the last row clear of the floating WhatsApp button and its label: beside it on wider screens, above it on phones. */
+.bottom { display: flex; justify-content: space-between; gap: 24px; padding-block: 20px; padding-inline-end: max(0px, calc(210px - var(--page-gutter))); color: rgba(255, 255, 255, .62); border-top: 1px solid rgba(255, 255, 255, .12); font-size: var(--type-small); line-height: var(--leading-small); }
 .legal { display: flex; gap: 20px; margin: 0; padding: 0; list-style: none; }
 
 @media (max-width: 1024px) {
@@ -28,4 +28,8 @@
   .brand a::after, .legal a::after { content: ""; position: absolute; }
   .brand a::after { inset: -9px 0; }
   .legal a::after { inset: -13px -4px; }
+}
+
+@media (max-width: 767px) {
+  .bottom { padding-inline-end: 0; padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
 }

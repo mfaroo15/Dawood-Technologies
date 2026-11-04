@@ -248,6 +248,7 @@ export function ContactForm() {
   return (
     <form
       className={styles.form}
+      data-wa-avoid
       // Keep contact details out of the URL if hydration or JavaScript fails.
       method="post"
       onSubmit={onSubmit}

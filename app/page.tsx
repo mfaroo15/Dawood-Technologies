@@ -32,7 +32,7 @@ export default function Home() {
         <p className={`kicker ${styles.label}`}>Software · ERP · Cloud · AI</p>
         <h1 className={styles.heroHeading} id="home-title"><span className={styles.heroLine}>Technology built</span> <span className={styles.heroLine}>around how businesses</span> <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
         <p className={styles.heroDescription}>We build websites, custom software, ERP systems and AI assistants, and run the cloud and IT behind them, for businesses worldwide.</p>
-        <div className={styles.actions}>
+        <div className={styles.actions} data-wa-avoid="children">
           <ButtonLink href="/services" variant="primary">Explore Our Services <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
           <ButtonLink href="/company" variant="secondary">About Us <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
         </div>
