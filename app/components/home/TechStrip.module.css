@@ -2,7 +2,6 @@
 .label { margin: 0 0 24px; padding-inline: var(--page-gutter); color: var(--muted); font-size: var(--type-small); font-weight: 500; line-height: var(--leading-small); text-align: center; }
 .platform { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: var(--type-body); font-weight: 600; line-height: 1; white-space: nowrap; }
 .logo { --mark-height: 32px; display: inline-flex; }
-.tile { width: 30px; height: 30px; display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; color: #3a4a63; background: #eef3fa; border: 1px solid #dfe7f2; border-radius: 8px; }
 .trademark { margin: 20px 0 0; padding-inline: var(--page-gutter); color: var(--muted); font-size: var(--type-fine); line-height: var(--leading-small); text-align: center; }
 
 @media (max-width: 640px) {

@@ -1,9 +1,9 @@
-import { TechnologyLogo, hasLogo } from "@/app/components/TechnologyLogo";
+import { TechnologyLogo, hasLogo, hasNeutralIcon } from "@/app/components/TechnologyLogo";
 import styles from "./PlatformLogos.module.css";
 
 const trademarkNote = "Trademarks and logos belong to their respective owners. Use does not imply endorsement or partnership.";
 
-// "Platforms we work with" row: logo tiles, a heading and the trademark line.
+// "Platforms we work with" row: neutral icons, logos or wordmarks, a heading and the trademark line.
 export function PlatformLogos({ names }: { names: readonly string[] }) {
   return (
     <div className={styles.block}>
@@ -11,9 +11,9 @@ export function PlatformLogos({ names }: { names: readonly string[] }) {
       <ul className={styles.tiles}>
         {names.map((name) => (
           <li key={name} className={styles.tile}>
-            <TechnologyLogo name={name} />
-            {/* Wordmarks already show the name. */}
-            {hasLogo(name) ? <span className={styles.name} aria-hidden="true">{name}</span> : null}
+            <span className={styles.markBox}><TechnologyLogo name={name} /></span>
+            {/* Wordmarks already show the name, and a logo labels itself for screen readers. A neutral icon does neither. */}
+            {hasNeutralIcon(name) ? <span className={styles.name}>{name}</span> : hasLogo(name) ? <span className={styles.name} aria-hidden="true">{name}</span> : null}
           </li>
         ))}
       </ul>

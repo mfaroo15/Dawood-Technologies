@@ -32,6 +32,8 @@ export function WhatsAppButton() {
       let next: Display = "full";
       const avoid = [...document.querySelectorAll("[data-wa-avoid]")].flatMap((element) => (element.getAttribute("data-wa-avoid") === "children" ? [...element.children] : [element]));
       for (const element of avoid) {
+        // Measuring a section the browser is skipping would force it to render. It is off screen anyway.
+        if (element.checkVisibility?.({ contentVisibilityAuto: true }) === false) continue;
         const box = element.getBoundingClientRect();
         if (overlaps(circleBox, box)) {
           next = "hidden";
@@ -44,7 +46,7 @@ export function WhatsAppButton() {
     const schedule = () => {
       if (!frame) frame = requestAnimationFrame(update);
     };
-    update();
+    schedule();
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
     // Page content can change height after load, such as when the booking calendar appears.
