@@ -1,22 +1,5 @@
 .home { background: var(--white); }
 .tinted { background: var(--section-bg); }
-/* Everything below the hero: the browser skips layout and paint until a section nears the screen.
-   Heights are estimates in place of the unrendered content; once rendered, the real height is remembered. */
-.home > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: auto 800px; }
-.home > section:nth-of-type(2) { contain-intrinsic-size: auto 205px; }
-.home > section:nth-of-type(3) { contain-intrinsic-size: auto 825px; }
-.home > section:nth-of-type(4) { contain-intrinsic-size: auto 900px; }
-.home > section:nth-of-type(5) { contain-intrinsic-size: auto 730px; }
-.home > section:nth-of-type(6) { contain-intrinsic-size: auto 665px; }
-.home > section:nth-of-type(7) { contain-intrinsic-size: auto 310px; }
-@media (max-width: 767px) {
-  .home > section:nth-of-type(2) { contain-intrinsic-size: auto 190px; }
-  .home > section:nth-of-type(3) { contain-intrinsic-size: auto 1290px; }
-  .home > section:nth-of-type(4) { contain-intrinsic-size: auto 1465px; }
-  .home > section:nth-of-type(5) { contain-intrinsic-size: auto 985px; }
-  .home > section:nth-of-type(6) { contain-intrinsic-size: auto 1650px; }
-  .home > section:nth-of-type(7) { contain-intrinsic-size: auto 330px; }
-}
 /* Dark hero: navy paints first, then the poster image, then the video fades in once it
    plays, so the section never flashes white. See components/home/HeroVideo. */
 .hero {

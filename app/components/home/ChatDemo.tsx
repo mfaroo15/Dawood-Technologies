@@ -35,7 +35,7 @@ export function ChatDemo() {
     return () => { observer.disconnect(); timers.forEach(window.clearTimeout); };
   }, []);
 
-  const shown = frame ? messages.slice(0, frame.count) : messages;
+  const shownCount = frame ? frame.count : messages.length;
 
   return (
     <div ref={ref} className={styles.chat} aria-hidden="true">
@@ -47,13 +47,14 @@ export function ChatDemo() {
         </span>
       </div>
       <div className={styles.thread}>
-        {shown.map((message) => (
-          <div key={message.text} className={`${styles.message} ${styles[message.from]}`}>
+        {/* Messages still to come keep their space, so the page's height doesn't change while this plays. */}
+        {messages.map((message, index) => (
+          <div key={message.text} className={`${styles.message} ${styles[message.from]} ${index >= shownCount ? styles.pending : ""}`}>
             <p>{message.text}</p>
             {"chips" in message ? <div className={styles.chips}>{message.chips.map((chip) => <span key={chip}>{chip}</span>)}</div> : null}
+            {frame?.typing && index === frame.count ? <div className={`${styles.message} ${styles.bot} ${styles.typing}`}><span /><span /><span /></div> : null}
           </div>
         ))}
-        {frame?.typing ? <div className={`${styles.message} ${styles.bot} ${styles.typing}`}><span /><span /><span /></div> : null}
       </div>
       <div className={styles.input}>Type a message…</div>
     </div>

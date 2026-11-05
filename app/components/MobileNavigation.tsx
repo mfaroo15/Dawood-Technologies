@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLinks } from "@/app/data/site";
+import { navLinks } from "@/app/data/navigation";
 
 type MobileNavigationProps = {
   pathname: string;

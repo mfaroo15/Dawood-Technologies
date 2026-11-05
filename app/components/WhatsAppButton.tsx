@@ -56,7 +56,7 @@ export function WhatsAppButton() {
       let next: Display = "full";
       const avoid = [...document.querySelectorAll("[data-wa-avoid]")].flatMap((element) => (element.getAttribute("data-wa-avoid") === "children" ? [...element.children] : [element]));
       for (const element of avoid) {
-        // Measuring a section the browser is skipping would force it to render. It is off screen anyway.
+        // Something not being rendered can't be covered, so there's no need to measure it.
         if (element.checkVisibility?.({ contentVisibilityAuto: true }) === false) continue;
         const box = element.getBoundingClientRect();
         if (overlaps(circleBox, box)) {

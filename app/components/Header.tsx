@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore, type MouseEvent } from "react";
 import { MobileNavigation } from "@/app/components/MobileNavigation";
-import { navLinks } from "@/app/data/site";
+import { navLinks } from "@/app/data/navigation";
 import { logoImageSize, logoLoader } from "@/app/lib/logo-image";
 
 // The homepage header is transparent over the hero until the page scrolls past this point.

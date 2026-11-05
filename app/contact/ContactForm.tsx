@@ -3,7 +3,6 @@
 import type { FormEvent } from "react";
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
-import { contactServiceOptions } from "@/app/data/site";
 import styles from "./ContactForm.module.css";
 
 const budgetRanges = ["Not sure yet", "Under $5,000", "$5,000 - $15,000", "$15,000 - $50,000", "$50,000+"];
@@ -49,7 +48,7 @@ function getFieldValue(formData: FormData, field: string) {
   return typeof value === "string" ? value.trim() : "";
 }
 
-function isValidSubmission(formData: FormData) {
+function isValidSubmission(formData: FormData, serviceOptions: readonly string[]) {
   const name = getFieldValue(formData, "name");
   const email = getFieldValue(formData, "email");
   const phone = getFieldValue(formData, "phone");
@@ -67,7 +66,7 @@ function isValidSubmission(formData: FormData) {
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) &&
     phone.length <= fieldLimits.phone &&
     company.length <= fieldLimits.company &&
-    (contactServiceOptions as readonly string[]).includes(service) &&
+    serviceOptions.includes(service) &&
     budgetRanges.includes(budget) &&
     timelines.includes(timeline) &&
     contactMethods.includes(contactMethod) &&
@@ -82,7 +81,8 @@ function logSubmissionEvent(event: string, details?: Record<string, unknown>) {
   }
 }
 
-export function ContactForm() {
+// The service names come from the page, which keeps the rest of the service copy out of the browser.
+export function ContactForm({ serviceOptions }: { serviceOptions: readonly string[] }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [recaptchaError, setRecaptchaError] = useState("");
   const [recaptchaReady, setRecaptchaReady] = useState(false);
@@ -181,7 +181,7 @@ export function ContactForm() {
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    if (!isValidSubmission(formData)) {
+    if (!isValidSubmission(formData, serviceOptions)) {
       logSubmissionEvent("validation rejected");
       setStatus("error");
       return;
@@ -284,7 +284,7 @@ export function ContactForm() {
             <option value="" disabled>
               Select a service
             </option>
-            {contactServiceOptions.map((service) => (
+            {serviceOptions.map((service) => (
               <option value={service} key={service}>
                 {service}
               </option>

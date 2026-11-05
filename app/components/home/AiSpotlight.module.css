@@ -20,6 +20,8 @@
 .thread { min-height: 330px; display: flex; flex-direction: column; gap: 12px; padding: 20px; }
 .message { max-width: 85%; animation: messageIn .35s ease-out both; }
 .message p { margin: 0; padding: 10px 14px; font-size: var(--type-small); line-height: var(--leading-small); border-radius: 18px; }
+.pending { position: relative; visibility: hidden; animation: none; }
+.pending > .typing { position: absolute; top: 0; left: 0; visibility: visible; }
 .user { align-self: flex-end; }
 .user p { color: #fff; background: var(--blue); border-bottom-right-radius: 4px; }
 .bot { align-self: flex-start; }

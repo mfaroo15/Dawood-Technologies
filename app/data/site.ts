@@ -12,15 +12,6 @@ export const contactPhone = {
 export const contactPresence = teamLocations.map(({ city, countryState }) => `${city}, ${countryState.split(", ").at(-1)}`);
 export const legalUpdated = "September 21, 2026";
 
-export const navLinks = [
-  { href: "/services", label: "Services" },
-  { href: "/industries", label: "Industries" },
-  { href: "/services/ai-automation", label: "Artificial Intelligence" },
-  { href: "/work", label: "Solutions" },
-  { href: "/company", label: "About Us" },
-  { href: "/careers", label: "Careers" },
-];
-
 export const legalLinks = [
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },

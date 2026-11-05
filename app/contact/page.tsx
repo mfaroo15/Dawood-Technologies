@@ -7,7 +7,7 @@ import { SecurityTrust } from "@/app/components/sections/SecurityTrust";
 import typography from "@/app/components/sections/typography.module.css";
 import { ContactForm } from "@/app/contact/ContactForm";
 import { GlobalPresence } from "@/app/contact/GlobalPresence";
-import { contactEmail, contactPhone } from "@/app/data/site";
+import { contactEmail, contactPhone, contactServiceOptions } from "@/app/data/site";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./contact.module.css";
 
@@ -47,7 +47,7 @@ export default function ContactPage() {
           <p className={typography.kicker}>Send an inquiry</p>
           <h2 className={`${typography.heading} ${styles.spacedHeading}`} id="inquiry-title">Prefer to write?</h2>
           <div className={styles.layout}>
-            <ContactForm />
+            <ContactForm serviceOptions={contactServiceOptions} />
 
             <aside className={styles.aside} aria-label="Contact information">
               <div>
