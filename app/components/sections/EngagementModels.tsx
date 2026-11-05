@@ -10,7 +10,7 @@ const models = [
   { title: "Ongoing support & managed IT", text: "Monthly support, maintenance and improvements for the systems you already run, with a named point of contact.", icon: LifeBuoy },
 ];
 
-// "Ways to work with us" section, shared by the homepage and /services.
+// "Ways to work with us" section on /services. The homepage's Explore section links to it.
 export function EngagementModels({ tinted = false }: { tinted?: boolean }) {
   return (
     <section id="engagement-models" className={tinted ? typography.tintedSection : typography.lightSection} aria-labelledby="engagement-title">

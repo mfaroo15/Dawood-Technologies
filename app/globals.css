@@ -34,6 +34,7 @@
   --type-h2: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);       /* 28-40px */
   --type-h3: clamp(1.25rem, 1.1rem + .6vw, 1.5rem);        /* 20-24px */
   --type-stat: clamp(1.875rem, 1.5rem + 1.5vw, 2.75rem);   /* 30-44px */
+  --type-row: clamp(1.125rem, 1.05rem + .45vw, 1.375rem);  /* 18-22px: large list rows and compact card headings */
   --type-intro: clamp(1.0625rem, 1rem + .3vw, 1.25rem);    /* 17-20px */
   --type-body: clamp(1rem, .95rem + .2vw, 1.0625rem);      /* 16-17px */
   --type-card: 1rem;          /* 16px: card and list descriptions */
@@ -43,7 +44,7 @@
   --type-footer: .9375rem;    /* 15px footer links */
   --type-button: .8125rem;    /* 13px, with --weight-heading, uppercase and --tracking-caps */
   --type-input: 1rem;         /* 16px, which also stops iOS zooming into form fields */
-  --type-fine: .75rem;        /* 12px: illustrative UI mockups only (browser bar, chat status) */
+  --type-fine: .75rem;        /* 12px: illustrative UI mockups (browser bar, chat status) and trademark lines */
   --weight-heading: 700;
   --tracking-caps: .06em;
   /* About 75 characters per line; this typeface is narrow, so a character averages well under 1ch. */

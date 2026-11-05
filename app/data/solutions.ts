@@ -1,4 +1,4 @@
-// Shared by the /work (Solutions) page and the homepage Solutions teaser.
+// Shared by the /work (Solutions) page and the homepage Explore section.
 // `id` is the section anchor on /work, e.g. /work#erp.
 type Solution = {
   id: string;

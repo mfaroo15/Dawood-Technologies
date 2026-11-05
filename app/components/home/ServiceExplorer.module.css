@@ -1,0 +1,60 @@
+.section { padding-block: var(--space-section); background: #fff; }
+.side .intro { margin-bottom: 24px; }
+.layout { display: grid; gap: 40px; }
+
+/* Detail card: only from 1024px with a mouse. Its panels share one grid cell, and the hidden sizers hold the height. */
+.detail { display: none; margin-top: 28px; padding: 24px; background: linear-gradient(160deg, #fff, #f4f8fe); border: 1px solid #e4e9f0; border-radius: 18px; }
+.sizer, .panel { grid-area: 1 / 1; min-width: 0; }
+.sizer { visibility: hidden; }
+.panel { animation: detail-in .2s ease; }
+@keyframes detail-in { from { opacity: 0; } to { opacity: 1; } }
+.detailHead { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.tile { width: 46px; height: 46px; display: flex; flex-shrink: 0; align-items: center; justify-content: center; color: #fff; background: linear-gradient(135deg, #1268e8, #4aa6ff); border-radius: 12px; box-shadow: 0 6px 14px rgba(18, 104, 232, .25); }
+.detailTitle { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin: 0; font-family: var(--font-display); font-size: var(--type-row); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
+.detailText { margin: 0 0 8px; color: var(--muted); font-size: var(--type-card); line-height: var(--leading-small); }
+.detailLink { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-size: var(--type-card); font-weight: 600; }
+.detailLink:hover { text-decoration: underline; }
+.detailLink:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+
+.badge { flex-shrink: 0; padding: 2px 10px; color: #fff; font-family: var(--font-text); font-size: var(--type-small); font-weight: 600; line-height: 1.5; background: var(--blue); border-radius: var(--radius-pill); }
+
+.list { min-width: 0; margin: 0; padding: 0; border-top: 1px solid #e4e9f0; list-style: none; }
+.list > li { border-bottom: 1px solid #e4e9f0; }
+.row { position: relative; min-height: 64px; display: flex; align-items: center; gap: 16px; padding: 16px 12px; color: var(--ink); isolation: isolate; }
+.row:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+/* The bar and the wash fade in without changing the row's size. */
+.row::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--blue); opacity: 0; transition: opacity .18s ease; }
+.row::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(18, 104, 232, .07), rgba(18, 104, 232, 0)); opacity: 0; transition: opacity .18s ease; }
+.number { flex-shrink: 0; width: 2ch; color: var(--muted); font-size: var(--type-small); font-weight: 600; font-variant-numeric: tabular-nums; transition: color .18s ease; }
+.rowBody { min-width: 0; flex: 1; }
+.rowTitle { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+.title { margin: 0; font-size: var(--type-row); font-weight: 600; letter-spacing: -.01em; line-height: 1.25; transition: color .18s ease; }
+.tagline { margin: 4px 0 0; color: var(--muted); font-size: var(--type-small); line-height: var(--leading-small); }
+.arrow { flex-shrink: 0; color: var(--muted); transition: color .18s ease; }
+
+/* Any device with a mouse: the row under it responds, at every width. */
+@media (hover: hover) {
+  .row:hover .title, .row:hover .number, .row:hover .arrow { color: var(--blue); }
+  .row:hover::before, .row:hover::after { opacity: 1; }
+}
+.row:focus-visible .title, .row:focus-visible .number, .row:focus-visible .arrow { color: var(--blue); }
+.row:focus-visible::before, .row:focus-visible::after { opacity: 1; }
+
+@media (min-width: 1024px) {
+  .layout { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(48px, 5vw, 72px); align-items: start; }
+  .row { min-height: 78px; padding: 22px 20px; gap: 20px; }
+}
+/* Sticky only where the whole column fits below the header. */
+@media (min-width: 1024px) and (min-height: 640px) {
+  .side { position: sticky; top: calc(var(--header-height) + 24px); }
+}
+@media (min-width: 1024px) and (min-height: 640px) and (max-height: 720px) {
+  .detail { margin-top: 20px; padding-block: 18px; }
+}
+/* A mouse and two columns: the card takes over from the row taglines, and the active row stays lit. */
+@media (min-width: 1024px) and (hover: hover) {
+  .detail { display: grid; }
+  .tagline { display: none; }
+  .row[data-active="true"] .title, .row[data-active="true"] .number, .row[data-active="true"] .arrow { color: var(--blue); }
+  .row[data-active="true"]::before, .row[data-active="true"]::after { opacity: 1; }
+}

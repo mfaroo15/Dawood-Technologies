@@ -2,17 +2,12 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
 import { AiSpotlight } from "@/app/components/home/AiSpotlight";
-import { HomeIndustries } from "@/app/components/home/HomeIndustries";
+import { HomeExplore } from "@/app/components/home/HomeExplore";
 import { HomeIntegrations } from "@/app/components/home/HomeIntegrations";
 import { HomeServices } from "@/app/components/home/HomeServices";
-import { HomeSolutions } from "@/app/components/home/HomeSolutions";
 import { TechStrip } from "@/app/components/home/TechStrip";
 import { HeroVideo } from "@/app/components/home/HeroVideo";
 import { CtaBand } from "@/app/components/sections/CtaBand";
-import { EngagementModels } from "@/app/components/sections/EngagementModels";
-import { Reveal } from "@/app/components/sections/Reveal";
-import { StatCards } from "@/app/components/sections/StatCards";
-import typography from "@/app/components/sections/typography.module.css";
 import { createPageMetadata } from "@/app/lib/metadata";
 import styles from "./home.module.css";
 
@@ -44,19 +39,8 @@ export default function Home() {
     <HomeServices />
     <HomeIntegrations />
 
-    <section className={typography.lightSection} aria-labelledby="why-title">
-      <Reveal className="container">
-        <p className={typography.kicker}>Why Dawood Technologies</p>
-        <h2 className={typography.heading} id="why-title">A team built for delivery.</h2>
-        <p className={typography.intro}>The people, presence and experience behind every project.</p>
-        <StatCards />
-      </Reveal>
-    </section>
-
     <AiSpotlight />
-    <HomeIndustries />
-    <HomeSolutions />
-    <EngagementModels />
+    <HomeExplore />
 
     <CtaBand heading="Bring us the business challenge." text="Book a 30-minute call and leave with a clear next step for your project." />
   </main>;
