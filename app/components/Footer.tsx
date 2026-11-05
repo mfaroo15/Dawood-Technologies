@@ -51,7 +51,7 @@ export function Footer() {
           <ul className={styles.list}>{contactPresence.map((location) => <li key={location}>{location}</li>)}</ul>
         </div>
       </div>
-      <div className={`container ${styles.bottom}`}>
+      <div className={`container ${styles.bottom}`} data-wa-dock>
         <span>© {new Date().getFullYear()} Dawood Technologies. All rights reserved.</span>
         <ul className={styles.legal}>{legalLinks.map((item) => <li key={item.href}><Link href={item.href}>{item.label}</Link></li>)}</ul>
       </div>
