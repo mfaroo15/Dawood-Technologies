@@ -1,19 +1,13 @@
-/* Bottom-right, clear of the iPhone home indicator and rounded corners. The pill and circle are one link. */
-.button {
-  position: fixed;
-  z-index: 90;
-  right: calc(20px + env(safe-area-inset-right, 0px));
-  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+/* The pill and circle are one link. */
+.link {
   min-height: 44px;
   display: flex;
   align-items: center;
   gap: 8px;
   border-radius: 999px;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .18));
-  transition: transform .2s ease, opacity .2s ease;
 }
-.button:hover { transform: translateY(-2px); }
-.button:focus-visible { outline: 2px solid #1268e8; outline-offset: 3px; }
+.link:focus-visible { outline: 2px solid #83bfff; outline-offset: 3px; }
 
 .circle { width: 56px; height: 56px; display: flex; flex-shrink: 0; align-items: center; justify-content: center; background: #fff; border-radius: 50%; }
 /* Small enough that the bubble's tail, at the file's corner, stays inside the circle. */
@@ -32,25 +26,45 @@
   transition: opacity .2s ease;
 }
 
-/* Over content that must stay usable: only the circle shows, or nothing does. The label keeps its
-   place so its position can still be measured, and it no longer catches taps. */
-.button[data-display="circle"] { pointer-events: none; }
-.button[data-display="circle"] .circle { pointer-events: auto; }
-.button[data-display="circle"] .label { visibility: hidden; opacity: 0; }
-.button[data-display="hidden"] { visibility: hidden; opacity: 0; }
+/* Floating: bottom-right, clear of the iPhone home indicator and rounded corners. */
+.floating {
+  position: fixed;
+  z-index: 90;
+  right: calc(20px + env(safe-area-inset-right, 0px));
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  transition: transform .2s ease, opacity .2s ease, visibility .2s;
+}
+.floating:hover { transform: translateY(-2px); }
+.floating:focus-visible { outline-color: #1268e8; }
+
+/* Over the hero's buttons only the circle shows, and the label no longer catches taps. */
+.floating[data-display="circle"] { pointer-events: none; }
+.floating[data-display="circle"] .circle { pointer-events: auto; }
+.floating[data-display="circle"] .label { visibility: hidden; opacity: 0; }
+.floating[data-display="hidden"] { visibility: hidden; opacity: 0; pointer-events: none; }
 
 /* The open mobile menu takes priority over the button. */
-:global(body:has(#mobile-navigation)) .button { display: none; }
+:global(body:has(#mobile-navigation)) .floating { visibility: hidden; opacity: 0; pointer-events: none; transition: none; }
+
+/* In the footer: appears once the floating one has finished fading, so only one ever shows.
+   Going the other way it is already off screen, so it goes at once. */
+.inFooter { visibility: hidden; opacity: 0; flex-shrink: 0; }
+:global(html[data-wa-footer]) .inFooter { visibility: visible; opacity: 1; transition: opacity .2s ease .2s, visibility 0s linear .2s; }
 
 @media (max-width: 767px) {
-  .button { right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .floating { right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
   .circle { width: 52px; height: 52px; }
   .logo { width: 32px; height: 32px; }
 }
 /* Small phones: smaller, but still a 44px+ tap target, leaving room beside the hero's full-width buttons. */
 @media (max-width: 359px) {
-  .button { right: calc(12px + env(safe-area-inset-right, 0px)); }
+  .floating { right: calc(12px + env(safe-area-inset-right, 0px)); }
   .circle { width: 48px; height: 48px; }
   .logo { width: 30px; height: 30px; }
   .label { padding: 7px 12px; font-size: .8125rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating, .label, :global(html[data-wa-footer]) .inFooter { transition: none; }
+  .floating:hover { transform: none; }
 }

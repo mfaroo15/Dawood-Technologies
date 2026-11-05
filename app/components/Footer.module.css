@@ -6,11 +6,13 @@
 .list a:hover, .legal a:hover { color: #fff; text-decoration: underline; }
 .social { width: 44px; height: 44px; display: inline-grid; place-items: center; margin-top: 16px; margin-left: -13px; color: rgba(255, 255, 255, .78); border-radius: var(--radius-pill); transition: color .2s ease, background .2s ease; }
 .social:hover { color: #fff; background: rgba(255, 255, 255, .08); }
-/* The WhatsApp button docks in this row at the end of the page. The row is the button's height plus its distance
-   from the screen edge, twice over (20 + 56 + 20), so the floating button arrives centred with nothing to jump.
-   The sizes follow WhatsAppButton.module.css. The end padding is the button's width and a gap. */
-.bottom { min-height: calc(96px + env(safe-area-inset-bottom, 0px)); display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-inline-end: 188px; padding-bottom: env(safe-area-inset-bottom, 0px); color: rgba(255, 255, 255, .62); border-top: 1px solid rgba(255, 255, 255, .12); font-size: var(--type-small); line-height: var(--leading-small); }
+/* The last row holds the footer's WhatsApp button, with 20px above and below it. It paints above the floating button
+   (z-index 90), so in a scroll too fast for the swap to keep up, that button passes behind the line and links, never over them. */
+.bottom { position: relative; z-index: 91; background: var(--navy); min-height: calc(96px + env(safe-area-inset-bottom, 0px)); display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: env(safe-area-inset-bottom, 0px); color: rgba(255, 255, 255, .62); border-top: 1px solid rgba(255, 255, 255, .12); font-size: var(--type-small); line-height: var(--leading-small); }
+.end { display: flex; align-items: center; gap: 24px; }
 .legal { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0; padding: 0; list-style: none; }
+/* Read by WhatsAppButton: invisible space above the row, which sets when the two buttons swap. */
+.marker { position: absolute; bottom: 100%; left: 0; width: 1px; height: 220px; pointer-events: none; }
 
 @media (max-width: 1024px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -31,13 +33,14 @@
   .legal a::after { inset: -13px -4px; }
 }
 
-/* Phones: the copyright on its own line, then Privacy and Terms beside the docked button (16 + 52 + 16). */
+/* Phones: the copyright on its own line, then Privacy and Terms beside the button, with 16px above and below it. */
 @media (max-width: 767px) {
-  .bottom { min-height: 0; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0; padding-top: 20px; padding-inline-end: 0; }
-  .legal { width: 100%; min-height: 84px; align-items: center; align-content: center; padding-inline-end: 176px; }
+  .bottom { min-height: 0; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; padding-top: 20px; }
+  .end { justify-content: space-between; gap: 16px; padding-block: 16px; }
 }
-/* The narrowest phones have no room for both on one row, so the button gets its own line below them (16 + 48 + 16). */
+/* The narrowest phones have no room for both on one row, so the button gets its own line below them. */
 @media (max-width: 359px) {
-  .bottom { gap: 12px; padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
-  .legal { min-height: 0; padding-inline-end: 0; }
+  .bottom { gap: 12px; }
+  .end { flex-direction: column; align-items: flex-start; gap: 16px; padding-block: 0 16px; }
+  .end > a { align-self: flex-end; }
 }

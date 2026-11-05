@@ -1,97 +1,127 @@
 "use client";
 
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { WhatsAppLink } from "@/app/components/WhatsAppLink";
 import styles from "./WhatsAppButton.module.css";
 
-const whatsappUrl = "https://wa.me/923323132729?text=Hi%20Dawood%20Technologies%2C%20I%27d%20like%20to%20discuss%20a%20project.";
+// Everything here is decided by IntersectionObservers: nothing runs while scrolling, and a change in the
+// browser's toolbar height can't flip a decision, because each one has two boundaries further apart than that change.
+// Wider than a 200px swing, about twice what Safari's toolbars add or remove.
+const HYSTERESIS = 220;
+// The floating button starts to leave this far before the footer's last row comes on screen. Also more than the
+// toolbars' change, so they can't reveal the row while it is still showing.
+const HANDOVER_BUFFER = 120;
 
-type Display = "full" | "circle" | "hidden";
+type Box = { top: number; right: number; bottom: number; left: number };
 
-// The slide to the docked position starts this far (at most) before the row comes on screen.
-const MAX_DOCK_LEAD = 200;
+const percent = (value: number, of: number) => `${(value / of) * 100}%`;
 
-const overlaps = (a: DOMRect, b: DOMRect) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+// The viewport cut down to one box. Percentages keep it in about the same place if the toolbars change the height.
+function rootMargin(box: Box, grow: number) {
+  return [
+    percent(grow - box.top, window.innerHeight),
+    percent(box.right - window.innerWidth, window.innerWidth),
+    percent(grow - (window.innerHeight - box.bottom), window.innerHeight),
+    percent(-box.left, window.innerWidth),
+  ].join(" ");
+}
 
-// Floating chat button on every page. The official glyph-only logo sits on a white circle,
-// scaled only (a lossless 96px copy of the original in public/brand): no recoloring or cropping.
-// It skips the image optimizer because lossy re-encoding shifts the brand green. The link's aria-label names it, so alt is empty.
+// Reports whether any of the elements is over the box: true once one touches it,
+// false only once they are all HYSTERESIS clear of it.
+function watchOverlap(elements: Element[], box: Box, onChange: (over: boolean) => void) {
+  const over = new Set<Element>();
+  const enter = new IntersectionObserver((entries) => {
+    for (const entry of entries) if (entry.isIntersecting) over.add(entry.target);
+    onChange(over.size > 0);
+  }, { rootMargin: rootMargin(box, 0) });
+  const leave = new IntersectionObserver((entries) => {
+    for (const entry of entries) if (!entry.isIntersecting) over.delete(entry.target);
+    onChange(over.size > 0);
+  }, { rootMargin: rootMargin(box, HYSTERESIS) });
+  for (const element of elements) {
+    enter.observe(element);
+    leave.observe(element);
+  }
+  return () => {
+    enter.disconnect();
+    leave.disconnect();
+  };
+}
+
+// The floating button. Near the end of the page it hands over to the static copy in the footer's last row.
 //
-// Elements marked data-wa-avoid must stay usable: over them the label steps aside, and if the circle
-// would cover them too, the whole button does. data-wa-avoid="children" checks each child separately,
-// for a row whose box is wider than what it holds.
-//
-// The element marked data-wa-dock (the footer's last row) is where the button comes to rest at the end of the page.
-// That row is tall enough for the button to arrive centred, so the docking only moves it sideways to the container's
-// edge, in step with the scroll. Without motion, it moves only once the row is fully on screen.
+// Elements marked data-wa-avoid must stay usable, so the button hides while over them.
+// Over the children of data-wa-avoid="children" (the hero's buttons) only the label steps aside.
 export function WhatsAppButton() {
-  const [display, setDisplay] = useState<Display>("full");
-  const label = useRef<HTMLSpanElement>(null);
-  const circle = useRef<HTMLSpanElement>(null);
-  const link = useRef<HTMLAnchorElement>(null);
+  const pathname = usePathname();
+  const [nearFooter, setNearFooter] = useState(false);
+  const [overContent, setOverContent] = useState(false);
+  const [overButtons, setOverButtons] = useState(false);
+  const label = useRef<HTMLDivElement>(null);
 
+  // The marker is the 220px of empty space directly above the footer's last row. Taking over when all of it is on
+  // screen and handing back when none of it is keeps the two boundaries HYSTERESIS apart, with one observer.
   useEffect(() => {
-    let frame = 0;
-    let dockedX = 0;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const dock = () => {
-      const row = document.querySelector("[data-wa-dock]")?.getBoundingClientRect();
-      if (!link.current || !row) return;
-      // Where the button sits when floating, whatever it is showing now.
-      const toEdge = row.right - (link.current.getBoundingClientRect().right - dockedX);
-      const lead = Math.min(Math.abs(toEdge), MAX_DOCK_LEAD);
-      const progress = Math.min(1, Math.max(0, (window.innerHeight + lead - row.top) / (lead + row.height)));
-      const x = toEdge * (reducedMotion.matches ? Math.floor(progress) : progress);
-      if (x !== dockedX) {
-        dockedX = x;
-        link.current.style.translate = `${x}px 0`;
-      }
-    };
-    const update = () => {
-      frame = 0;
-      dock();
-      if (!label.current || !circle.current) return;
-      const labelBox = label.current.getBoundingClientRect();
-      const circleBox = circle.current.getBoundingClientRect();
-      let next: Display = "full";
-      const avoid = [...document.querySelectorAll("[data-wa-avoid]")].flatMap((element) => (element.getAttribute("data-wa-avoid") === "children" ? [...element.children] : [element]));
-      for (const element of avoid) {
-        // Something not being rendered can't be covered, so there's no need to measure it.
-        if (element.checkVisibility?.({ contentVisibilityAuto: true }) === false) continue;
-        const box = element.getBoundingClientRect();
-        if (overlaps(circleBox, box)) {
-          next = "hidden";
-          break;
-        }
-        if (overlaps(labelBox, box)) next = "circle";
-      }
-      setDisplay(next);
-    };
-    const schedule = () => {
-      if (!frame) frame = requestAnimationFrame(update);
-    };
-    schedule();
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    // Page content can change height after load, such as when the booking calendar appears.
-    const observer = new ResizeObserver(schedule);
-    observer.observe(document.body);
-    return () => {
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-      observer.disconnect();
-      if (frame) cancelAnimationFrame(frame);
-    };
+    const marker = document.querySelector("[data-wa-footer-marker]");
+    if (!marker) return;
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[entries.length - 1];
+      if (entry.intersectionRatio >= 0.99) setNearFooter(true);
+      else if (!entry.isIntersecting && entry.rootBounds) setNearFooter(entry.boundingClientRect.top < entry.rootBounds.bottom);
+    }, { rootMargin: `0px 0px ${HANDOVER_BUFFER}px 0px`, threshold: [0, 0.99] });
+    observer.observe(marker);
+    return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    document.documentElement.toggleAttribute("data-wa-footer", nearFooter);
+    return () => document.documentElement.removeAttribute("data-wa-footer");
+  }, [nearFooter]);
+
+  // Each page has its own elements to avoid. The boxes are measured once, and again only if the width changes.
+  useEffect(() => {
+    const link = label.current?.firstElementChild;
+    if (!link) return;
+    let stop = () => {};
+    const start = () => {
+      stop();
+      const button = link.getBoundingClientRect();
+      const pill = link.firstElementChild!.getBoundingClientRect();
+      const stopContent = watchOverlap([...document.querySelectorAll("[data-wa-avoid]:not([data-wa-avoid='children'])")], button, setOverContent);
+      const stopButtons = watchOverlap([...document.querySelectorAll("[data-wa-avoid='children'] > *")], pill, setOverButtons);
+      stop = () => {
+        stopContent();
+        stopButtons();
+      };
+    };
+    let width = window.innerWidth;
+    const onResize = () => {
+      if (window.innerWidth === width) return;
+      width = window.innerWidth;
+      start();
+    };
+    start();
+    window.addEventListener("resize", onResize);
+    return () => {
+      stop();
+      window.removeEventListener("resize", onResize);
+      setOverContent(false);
+      setOverButtons(false);
+    };
+  }, [pathname]);
+
+  const hidden = nearFooter || overContent;
   return (
     <aside aria-label="Contact shortcut">
-      <a ref={link} className={styles.button} data-display={display} href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp">
-        <span ref={label} className={styles.label} aria-hidden="true">Message us</span>
-        <span ref={circle} className={styles.circle}>
-          <Image className={styles.logo} src="/brand/whatsapp-logo-96.png" alt="" width={34} height={34} unoptimized />
-        </span>
-      </a>
+      <div ref={label} className={styles.floatingWrap}>
+        <WhatsAppLink
+          className={styles.floating}
+          data-display={hidden ? "hidden" : overButtons ? "circle" : "full"}
+          aria-hidden={hidden ? true : undefined}
+          tabIndex={hidden ? -1 : undefined}
+        />
+      </div>
     </aside>
   );
 }
