@@ -17,11 +17,12 @@
 /* The middle stop follows where the hero text ends, not a fixed percentage: the text takes up
    a different share of the screen on each device, and the video stays bright beyond it. */
 .heroOverlay { --hero-text-end: min(calc(max(var(--page-gutter), (100% - var(--container)) / 2) + 660px), 85%); position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(20, 24, 30, .72) 0, rgba(20, 24, 30, .54) var(--hero-text-end), rgba(20, 24, 30, .12) 100%); }
-.heroContent { position: relative; z-index: 2; padding-block: 96px; }
+.heroContent { position: relative; z-index: 2; min-width: 0; padding-block: clamp(64px, 7vw, 96px); }
 .label { display: flex; align-items: center; gap: 12px; }
 .hero .label { color: #fff; }
 .hero .heroHeading { color: #fff; }
-.hero :global(.hero-word-rotator) { color: #8cc8ff; }
+/* Overlapping grid items reserve the longest word's width throughout the cycle. */
+.hero :global(.hero-word-rotator) { display: inline-grid; vertical-align: bottom; white-space: nowrap; color: #8cc8ff; }
 .hero .heroDescription { color: #fff; }
 .hero .label, .hero .heroHeading, .hero .heroDescription { text-shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 0 18px rgba(0, 0, 0, .45); }
 .hero :global(.button-primary) { background: #1268e8; border-color: #1268e8; }
@@ -38,25 +39,28 @@
 .hero a:focus-visible { outline: 2px solid #83bfff; outline-offset: 3px; }
 @media (max-width: 767px) {
   .heroOverlay { background: linear-gradient(180deg, rgba(11, 15, 23, .6), rgba(11, 15, 23, .88)); }
-  .heroContent { padding-block: 88px 80px; }
 }
 .heroHeading {
-  margin-bottom: 24px;
-  font-size: var(--type-h1);
+  max-width: 24ch;
+  margin-bottom: clamp(20px, 2.5vw, 28px);
+  font-size: clamp(2.25rem, 1.65rem + 2.2vw, 3.75rem);
   font-weight: var(--weight-heading);
-  line-height: var(--leading-h1);
-  letter-spacing: var(--tracking-h1);
+  line-height: 1.12;
+  letter-spacing: -.025em;
+  text-wrap: wrap;
+  overflow-wrap: normal;
 }
-/* Art-directed lines; each may still wrap internally on narrow screens. */
-.heroLine { display: block; }
-/* Two lines on desktop: the full sentence, then the rotating word. */
+/* Natural phone wrapping; explicit phrase boundaries when there is room. */
+.heroLine { display: inline; }
+@media (min-width: 768px) {
+  .heroHeading { max-width: 100%; }
+  .heroLine { display: block; }
+}
 @media (min-width: 1280px) {
-  .heroHeading { max-width: 60rem; text-wrap: balance; }
-  .heroLine { display: inline; }
   .heroOverlay { --hero-text-end: min(calc(max(var(--page-gutter), (100% - var(--container)) / 2) + 860px), 85%); }
 }
-.heroDescription { max-width: 29em; margin-bottom: 0; font-size: var(--type-intro); line-height: var(--leading-intro); }
-.actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+.heroDescription { max-width: min(100%, 52ch); margin-bottom: 0; font-size: clamp(1.0625rem, 1rem + .3vw, 1.25rem); line-height: 1.65; text-wrap: pretty; }
+.actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: clamp(28px, 3vw, 40px); }
 .actions svg { flex-shrink: 0; }
 
 @media (max-width: 520px) {

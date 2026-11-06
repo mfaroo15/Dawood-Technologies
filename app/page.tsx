@@ -25,7 +25,10 @@ export default function Home() {
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={`container ${styles.heroContent}`}>
         <p className={`kicker ${styles.label}`}>Software · ERP · Cloud · AI</p>
-        <h1 className={styles.heroHeading} id="home-title"><span className={styles.heroLine}>Technology built</span> <span className={styles.heroLine}>around how businesses</span> <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></h1>
+        <h1 className={styles.heroHeading} id="home-title">
+          <span className={styles.heroLine}>Technology built around</span>{" "}
+          <span className={styles.heroLine}>how businesses <span className="hero-word-rotator" aria-hidden="true"><span>operate.</span><span>connect.</span><span>scale.</span><span>evolve.</span></span><span className="visually-hidden">operate.</span></span>
+        </h1>
         <p className={styles.heroDescription}>We build websites, custom software, ERP systems and AI assistants, and run the cloud and IT behind them, for businesses worldwide.</p>
         <div className={styles.actions} data-wa-avoid="children">
           <ButtonLink href="/services" variant="primary">Explore Our Services <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
